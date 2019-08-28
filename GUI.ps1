@@ -22,4 +22,6 @@ $img3 = [System.Drawing.Image]::Fromfile($Picture3)
 $Button13.BackgroundImage = $img3
 $Button13.Text = ""
 
+#Download Tools
+$Button5.Add_Click({& '.\Tools\Download all Tools.ps1'})
 $Form1.ShowDialog()
