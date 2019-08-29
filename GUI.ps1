@@ -1,3 +1,4 @@
+$MyDir = Split-Path $script:MyInvocation.MyCommand.Path
 $icon = New-Object system.drawing.icon (".\Images\favicon.ico")
 Add-Type -AssemblyName System.Windows.Forms
 . (Join-Path $PSScriptRoot 'GUI.designer.ps1')
@@ -63,6 +64,10 @@ $CheckBox61.Text = "Create System Recovery Point"
 
 #Close when Click Close
 $button17.Add_Click{(Get-Process powershell | Stop-Process -Force)}
+
+#Open Tool Folder
+$Button6.Add_Click{(Start "$($MyDir)\Tools\")}
+
 
 
 
