@@ -49,9 +49,12 @@ $Form1 = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.Panel]$Panel1 = $null
 [System.Windows.Forms.TabControl]$TabControl1 = $null
 [System.Windows.Forms.TabPage]$TabPage3 = $null
+[System.Windows.Forms.Label]$Label9 = $null
+[System.Windows.Forms.Label]$Label8 = $null
+[System.Windows.Forms.Label]$Label7 = $null
+[System.Windows.Forms.Label]$Label6 = $null
 [System.Windows.Forms.Button]$Button18 = $null
 [System.Windows.Forms.CheckBox]$CheckBox63 = $null
-[System.Windows.Forms.RichTextBox]$RichTextBox1 = $null
 [System.Windows.Forms.TabPage]$TabPage1 = $null
 [System.Windows.Forms.TabPage]$TabPage2 = $null
 [System.Windows.Forms.CheckBox]$CheckBox60 = $null
@@ -147,6 +150,12 @@ $CheckBox38 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $Panel1 = (New-Object -TypeName System.Windows.Forms.Panel)
 $TabControl1 = (New-Object -TypeName System.Windows.Forms.TabControl)
 $TabPage3 = (New-Object -TypeName System.Windows.Forms.TabPage)
+$Label9 = (New-Object -TypeName System.Windows.Forms.Label)
+$Label8 = (New-Object -TypeName System.Windows.Forms.Label)
+$Label7 = (New-Object -TypeName System.Windows.Forms.Label)
+$Label6 = (New-Object -TypeName System.Windows.Forms.Label)
+$Button18 = (New-Object -TypeName System.Windows.Forms.Button)
+$CheckBox63 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $TabPage1 = (New-Object -TypeName System.Windows.Forms.TabPage)
 $TabPage2 = (New-Object -TypeName System.Windows.Forms.TabPage)
 $CheckBox60 = (New-Object -TypeName System.Windows.Forms.CheckBox)
@@ -190,9 +199,6 @@ $CheckBox61 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $Button16 = (New-Object -TypeName System.Windows.Forms.Button)
 $Button17 = (New-Object -TypeName System.Windows.Forms.Button)
 $CheckBox62 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$RichTextBox1 = (New-Object -TypeName System.Windows.Forms.RichTextBox)
-$CheckBox63 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$Button18 = (New-Object -TypeName System.Windows.Forms.Button)
 ([System.ComponentModel.ISupportInitialize]$PictureBox1).BeginInit()
 $Panel1.SuspendLayout()
 $TabControl1.SuspendLayout()
@@ -699,9 +705,12 @@ $TabControl1.TabIndex = [System.Int32]48
 #
 #TabPage3
 #
+$TabPage3.Controls.Add($Label9)
+$TabPage3.Controls.Add($Label8)
+$TabPage3.Controls.Add($Label7)
+$TabPage3.Controls.Add($Label6)
 $TabPage3.Controls.Add($Button18)
 $TabPage3.Controls.Add($CheckBox63)
-$TabPage3.Controls.Add($RichTextBox1)
 $TabPage3.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]22))
 $TabPage3.Name = [System.String]'TabPage3'
 $TabPage3.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]932,[System.Int32]682))
@@ -709,6 +718,61 @@ $TabPage3.TabIndex = [System.Int32]2
 $TabPage3.Text = [System.String]'Home'
 $TabPage3.UseVisualStyleBackColor = $true
 $TabPage3.Visible = $false
+#
+#Label9
+#
+$Label9.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]6,[System.Int32]79))
+$Label9.Name = [System.String]'Label9'
+$Label9.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]32))
+$Label9.TabIndex = [System.Int32]6
+$Label9.UseCompatibleTextRendering = $true
+#
+#Label8
+#
+$Label8.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]59))
+$Label8.Name = [System.String]'Label8'
+$Label8.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]100,[System.Int32]23))
+$Label8.TabIndex = [System.Int32]5
+$Label8.Text = [System.String]'German: '
+$Label8.UseCompatibleTextRendering = $true
+#
+#Label7
+#
+$Label7.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]10,[System.Int32]23))
+$Label7.Name = [System.String]'Label7'
+$Label7.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]926,[System.Int32]33))
+$Label7.TabIndex = [System.Int32]4
+$Label7.UseCompatibleTextRendering = $true
+#
+#Label6
+#
+$Label6.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]9))
+$Label6.Name = [System.String]'Label6'
+$Label6.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]100,[System.Int32]23))
+$Label6.TabIndex = [System.Int32]3
+$Label6.Text = [System.String]'English:'
+$Label6.UseCompatibleTextRendering = $true
+#
+#Button18
+#
+$Button18.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]816,[System.Int32]126))
+$Button18.Name = [System.String]'Button18'
+$Button18.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]75,[System.Int32]23))
+$Button18.TabIndex = [System.Int32]2
+$Button18.Text = [System.String]'Lets Go!'
+$Button18.UseCompatibleTextRendering = $true
+$Button18.UseVisualStyleBackColor = $true
+#
+#CheckBox63
+#
+$CheckBox63.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]583,[System.Int32]126))
+$CheckBox63.Name = [System.String]'CheckBox63'
+$CheckBox63.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]227,[System.Int32]24))
+$CheckBox63.TabIndex = [System.Int32]1
+$CheckBox63.Text = [System.String]'I take the Risk! GIVE ME THE JUICE!'
+$CheckBox63.UseCompatibleTextRendering = $true
+$CheckBox63.UseVisualStyleBackColor = $true
+$CheckBox63.add_CheckedChanged($CheckBox63_CheckedChanged)
 #
 #TabPage1
 #
@@ -1178,7 +1242,6 @@ $CheckBox61.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList 
 $CheckBox61.Name = [System.String]'CheckBox61'
 $CheckBox61.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]196,[System.Int32]38))
 $CheckBox61.TabIndex = [System.Int32]51
-$CheckBox61.Text = [System.String]'Create System Recovery Point'
 $CheckBox61.UseCompatibleTextRendering = $true
 $CheckBox61.UseVisualStyleBackColor = $true
 #
@@ -1214,34 +1277,6 @@ $CheckBox62.Text = [System.String]'Backup Registry'
 $CheckBox62.UseCompatibleTextRendering = $true
 $CheckBox62.UseVisualStyleBackColor = $true
 #
-#RichTextBox1
-#
-$RichTextBox1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]19,[System.Int32]15))
-$RichTextBox1.Name = [System.String]'RichTextBox1'
-$RichTextBox1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]894,[System.Int32]634))
-$RichTextBox1.TabIndex = [System.Int32]0
-$RichTextBox1.Text = [System.String]''
-#
-#CheckBox63
-#
-$CheckBox63.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]547,[System.Int32]654))
-$CheckBox63.Name = [System.String]'CheckBox63'
-$CheckBox63.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]285,[System.Int32]24))
-$CheckBox63.TabIndex = [System.Int32]1
-$CheckBox63.Text = [System.String]'I take the Risk! GIVE ME THE JUICE!'
-$CheckBox63.UseCompatibleTextRendering = $true
-$CheckBox63.UseVisualStyleBackColor = $true
-#
-#Button18
-#
-$Button18.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]838,[System.Int32]655))
-$Button18.Name = [System.String]'Button18'
-$Button18.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]75,[System.Int32]23))
-$Button18.TabIndex = [System.Int32]2
-$Button18.Text = [System.String]'Let's Go!'
-$Button18.UseCompatibleTextRendering = $true
-$Button18.UseVisualStyleBackColor = $true
-#
 #Form1
 #
 $Form1.ClientSize = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]1242,[System.Int32]783))
@@ -1256,7 +1291,8 @@ $Form1.Controls.Add($TabControl1)
 $Form1.Controls.Add($Panel1)
 $Form1.Controls.Add($Label3)
 $Form1.Controls.Add($Label1)
-$Form1.Text = [System.String]'Form1'
+$Form1.Icon = $icon
+$Form1.Text = [System.String]'The Geek Freaks Tuning Pack 4.0'
 $Form1.add_Load($Form1_Load)
 ([System.ComponentModel.ISupportInitialize]$PictureBox1).EndInit()
 $Panel1.ResumeLayout($false)
@@ -1319,9 +1355,12 @@ Add-Member -InputObject $Form1 -Name CheckBox38 -Value $CheckBox38 -MemberType N
 Add-Member -InputObject $Form1 -Name Panel1 -Value $Panel1 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name TabControl1 -Value $TabControl1 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name TabPage3 -Value $TabPage3 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Label9 -Value $Label9 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Label8 -Value $Label8 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Label7 -Value $Label7 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Label6 -Value $Label6 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button18 -Value $Button18 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox63 -Value $CheckBox63 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name RichTextBox1 -Value $RichTextBox1 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name TabPage1 -Value $TabPage1 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name TabPage2 -Value $TabPage2 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox60 -Value $CheckBox60 -MemberType NoteProperty
