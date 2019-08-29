@@ -1,3 +1,5 @@
+$Form1_Load = {
+}
 $CheckBox11_CheckedChanged = {
 }
 Add-Type -AssemblyName System.Windows.Forms
