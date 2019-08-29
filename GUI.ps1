@@ -50,7 +50,7 @@ function Accept-Everything{
         $CheckBox61.Enabled = $true
         $Button16.Enabled = $true  
     } else {
-        [System.Windows.Forms.MessageBox]::Show("Please Accept|Bitte Akzeptieren","TGF Tuning Pack 4.0",1)
+        [System.Windows.Forms.MessageBox]::Show("Please Accept | Bitte Akzeptieren","TGF Tuning Pack 4.0",1)
     }
 }
 
@@ -61,7 +61,8 @@ $Label8.Text = "German: "
 $Label9.Text = "Wir übernehmen keine Verantwortung für Probleme, die mit der Ausführung unseres Programms einhergehen! Dies ist ein hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr! Probleme und Bugs können gerne im Discord gemeldet werden: https://discordapp.com/invite/k5kMSa "
 $CheckBox61.Text = "Create System Recovery Point"
 
-
+#Close when Click Close
+$button17.Add_Click{(Get-Process powershell | Stop-Process -Force)}
 
 
 
