@@ -1,37 +1,37 @@
-## Welcome to GitHub Pages
+## The Geek Freaks Tuning Pack 4.0
 
-You can use the [editor on GitHub](https://github.com/MinersWin/TGF-Tuning-Pack-4.0/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+DIES IST EIN SEHR FRÜHER ALPHASTATUS, IN WELCHEM SICH DAS PROJEKT BEFINDET!
+WIR ÜBERNEHMEN KEINE VERANTWORTUNG FÜR PROBLEME DIE MIT DER AUSFÜHRUNG UNSERES PROGRAMMS EINHERGEHEN!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr!
 
-### Markdown
+Bugs, Verbesserungsvorschläge und Feedback wird gerne gesehen. Dafür bitte den Discord nutzen: https://discordapp.com/invite/k5kMSa
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Funktionen
 
-```markdown
-Syntax highlighted code block
+Hier nochmal alle Funktionen grob aufgelistet:
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```Dinge werden gschehen!
+Windows beschleunigen
+Bloatware entfernen
+Ultimativer Leistungsmodus (per Hand bitte in Energieeinstellungen aktivieren)
+Windows Spionage ausschalten
+Mehr FPS in Games
+geheime Menüs freigeschalten
+Komfort Funktionen
+Cortana endlich ganz entfernen?
+ENDLICH MIT GUI?
+Virenscan
+Rootkit entfernung
+Höhere Batterielaufzeit (Nur bei Laptops, hierführ die Akkutweaks nutzen)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Für mehr Details [Die offizielle GeekFreaks Seite](https://thegeekfreaks.de).
 
-### Jekyll Themes
+### Das alte Tuning Pack 3.1
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/MinersWin/TGF-Tuning-Pack-4.0/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Du kannst dir [hier](https://thegeekfreaks.de/download/the-geek-freaks-tuning-pack-3-1/) das alte Tuning Pack herunterladen. Das neue baut größtenteils auf dem Neuen auf, aber beinhaltet einige neue Funktionen und endlich eine GUI. Um Virenvorwürfen oder ähnlichem aus dem Weg zu gehen wird das komplette Projekt auf GitHub veröffentlicht und die Entwicklung ist von anfang an nachzuvollziehen. Das Tuning Pack 4.0 wurde zu einem Großteil von [MinersWin](https://www.youtube.com/minerswin) entwickelt.
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Du hast Probleme mit dem Tuning Pack? [Discord](https://discordapp.com/invite/k5kMSa) oder schreibe eine Mail an TuningPack@MinersWin.de
