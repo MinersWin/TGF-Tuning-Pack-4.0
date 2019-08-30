@@ -1,3 +1,9 @@
+$Form1_Load = {
+}
+$CheckBox63_CheckedChanged = {
+}
+$CheckBox11_CheckedChanged = {
+}
 $MyDir = Split-Path $script:MyInvocation.MyCommand.Path
 $icon = New-Object system.drawing.icon (".\Images\favicon.ico")
 Add-Type -AssemblyName System.Windows.Forms
