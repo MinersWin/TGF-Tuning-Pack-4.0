@@ -1,3 +1,4 @@
+Set-ExecutionPolicy Unrestricted -Scope Process
 $Form1_Load = {
 }
 $CheckBox63_CheckedChanged = {
