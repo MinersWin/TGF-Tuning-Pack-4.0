@@ -1,4 +1,5 @@
-Set-ExecutionPolicy Unrestricted -Scope Process
+$TabPage4_Click = {
+}
 $Form1_Load = {
 }
 $CheckBox63_CheckedChanged = {
@@ -6,9 +7,9 @@ $CheckBox63_CheckedChanged = {
 $CheckBox11_CheckedChanged = {
 }
 $MyDir = Split-Path $script:MyInvocation.MyCommand.Path
-$icon = New-Object system.drawing.icon (".\Images\favicon.ico")
 Add-Type -AssemblyName System.Windows.Forms
 . (Join-Path $PSScriptRoot 'GUI.designer.ps1')
+
 #Alles Ausgrauen
 $Panel1.Enabled = $false
 $Panel3.Enabled = $false
@@ -66,11 +67,11 @@ function Accept-Everything{
 $Label6.Text = "English:    "
 $Label7.Text = "We do not take responsibility for problems that accompany the execution of our program! This is a hobby project! Everything can create errors and problems! Use at your own risk! Problems and bugs are welcome in the Discord: https://discordapp.com/invite/k5kMSa    "
 $Label8.Text = "German: "
-$Label9.Text = "Wir übernehmen keine Verantwortung für Probleme, die mit der Ausführung unseres Programms einhergehen! Dies ist ein hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr! Probleme und Bugs können gerne im Discord gemeldet werden: https://discordapp.com/invite/k5kMSa "
+$Label9.Text = "Wir Ã¼bernehmen keine Verantwortung fÃ¼r Probleme, die mit der AusfÃ¼hrung unseres Programms einhergehen! Dies ist ein hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr! Probleme und Bugs kÃ¶nnen gerne im Discord gemeldet werden: https://discordapp.com/invite/k5kMSa "
 $CheckBox61.Text = "Create System Recovery Point"
 
 #Close when Click Close
-$button17.Add_Click{(Get-Process powershell | Stop-Process -Force)}
+$button17.Add_Click{($Form1.Close())}
 
 #Open Tool Folder
 $Button6.Add_Click{(Start "$($MyDir)\Tools\")}
