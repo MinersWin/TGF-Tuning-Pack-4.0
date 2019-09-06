@@ -1,3 +1,9 @@
+$CheckBox39_CheckedChanged = {
+}
+$CheckBox40_CheckedChanged = {
+}
+$TabPage2_Click = {
+}
 $TabPage4_Click = {
 }
 $Form1_Load = {
