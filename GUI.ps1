@@ -98,6 +98,8 @@ function Make-German{
     $checkBox4.Text = "Fixiere die Taskleiste"
     $CheckBox5.Text = "Zeige immer alle Icons in der Taskleiste"
     $checkBox6.Text = "Verzögere die Anzeige von Miniaturansichten in der Taskleiste um 10 Sekunden"
+    $CheckBox7.Text = "Aktiviere die Klassische Systemsteuerungsansicht"
+    $CheckBox8.Text = "Deaktivieren der Einrastfunktion beim 5 maligen Drücken der SHIFT Taste"
 }
 
 

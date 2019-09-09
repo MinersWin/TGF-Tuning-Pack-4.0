@@ -1,0 +1,95 @@
+1	Chrome:							chrome
+2	Opera:							operaChromium
+3	Firefox:						firefox
+
+4	qBittorrent:						qbittorrent
+
+5	7-Zip:							7zip
+6	PeaZip:							peazip
+7	WinRar:							winrar
+
+8	Discord:						discord
+9	Skype:							skype
+10	Pidgin:							pidgin
+11	Thunderbird:						thunderbird
+12	Trillian:						trillian
+
+13	Dropbox:						dropbox
+14	Google Backup & Sync:					googlebackupandsync
+15	OneDrive:						onedrive
+16	SugarSync:						sugarsync
+
+17	iTunes:							itunes
+18	VLC:							vlc
+19	AIMP:							aimp
+20	foobar2000:						foobar
+21	Winamp:							winamp
+22	MusicBee:						musicbee
+23	Audacity:						audacity
+24	K-Lite Codecs:						klitecodecs
+25	GOM:							gom
+26	Spotify:						spotify
+27	CCCP:							cccp
+28	MediaMonkey:						mediamonkey
+29	HandBrake:						handbrake
+
+31	Java (AdoptOpenJDK) 8:					adoptjava8
+33	.NET 4.8:						.net4.8
+34	Silverlight:						silverlight
+35	Air:							air
+
+36	Evernote:						evernote
+37	Google Earth:						googleearth
+38	Steam:							steam
+39	KeePass 2:						keepass2
+40	Everything:						everything
+41	NV Access:						nvda
+
+42	Krita:							krita
+43	Blender:						blender
+44	Paint.NET:						paint.net
+45	GIMP:							gimp
+46	IrfanView:						irfanview
+47	XnView:							xnview
+48	Inkscape:						inkscape
+49	FastStone:						faststone
+50	Greenshot:						greenshot
+51	ShareX:							sharex
+
+52	Foxit Reader:						foxit
+53	LibreOffice:						libreoffice
+54	SumatraPDF:						sumatrapdf
+55	CutePDF:						cutepdf
+56	PDFCreator:						pdfcreator
+57	OpenOffice:						openoffice
+
+58	TeamViewer 14:						teamviewer14
+59	ImgBurn:						imgburn
+60	RealVNC:						realvnc
+61	TeraCopy:						teracopy
+62	CDBurnerXP:						cdburnerxp
+63	Revo:							revo
+64	Launchy:						launchy
+65	WinDirStat:						windirstat
+66	Glary:							glary
+67	InfraRecorder:						infrarecorder
+68	Classic Start						classicstart
+
+69	Essentials:						essentials
+70	Malwarebytes:						malwarebytes
+71	Avast:							avast
+72	AVG:							avg
+73	Spybot 2:						spybot2
+74	Avira:							avira
+75	SUPERAntiSpyware:					super
+
+76	Python:							python
+77	FileZilla:						filezilla
+78	Notepad++:						notepadplusplus
+80	JDK (AdoptOpenJDK) 8:					adoptjdk8
+79	JDK (Amazon Corretto) 8:				correttojdk8
+81	WinSCP:							winscp
+82	PuTTY:							putty
+83	WinMerge:						winmerge
+84	Eclipse:						eclipse
+85	Visual Studio Code:					vscode
