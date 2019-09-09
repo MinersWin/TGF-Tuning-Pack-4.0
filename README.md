@@ -34,8 +34,10 @@ Du kannst dir [hier](https://thegeekfreaks.de/download/the-geek-freaks-tuning-pa
 
 ### Bekannte Fehler
 
-```Es gibt noch keine Funktion bis auf den Installer, Ninite, German und Virenscan
-Es entstehen mitten in Sätzen fehlerhafte Zeichen, wie ð£ð¥Ðüð║ð▓ð░□? Dies passiert, weil die Daten in UTF-8 Codiert wurden. Dies wird in naher Zukunft behoben werden.
+```
+Es gibt noch keine Funktion bis auf den Installer, Ninite, German und Virenscan
+Es entstehen mitten in Sätzen fehlerhafte Zeichen, wie ð£ð¥Ðüð║ð▓ð░□? 
+Dies passiert, weil die Daten in UTF-8 Codiert wurden. Dies wird in naher Zukunft behoben werden.
 ```
 
 ### Support or Contact
