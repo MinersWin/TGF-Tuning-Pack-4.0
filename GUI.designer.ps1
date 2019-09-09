@@ -38,15 +38,12 @@ $Form1 = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.CheckBox]$CheckBox33 = $null
 [System.Windows.Forms.CheckBox]$CheckBox34 = $null
 [System.Windows.Forms.CheckBox]$CheckBox35 = $null
-[System.Windows.Forms.Button]$Button1 = $null
 [System.Windows.Forms.Label]$Label4 = $null
-[System.Windows.Forms.Button]$Button2 = $null
-[System.Windows.Forms.Button]$Button3 = $null
-[System.Windows.Forms.Button]$Button4 = $null
 [System.Windows.Forms.CheckBox]$CheckBox36 = $null
 [System.Windows.Forms.CheckBox]$CheckBox37 = $null
 [System.Windows.Forms.CheckBox]$CheckBox38 = $null
 [System.Windows.Forms.Panel]$Panel1 = $null
+[System.Windows.Forms.ComboBox]$ComboBox1 = $null
 [System.Windows.Forms.TabControl]$TabControl1 = $null
 [System.Windows.Forms.TabPage]$TabPage3 = $null
 [System.Windows.Forms.Label]$Label9 = $null
@@ -56,6 +53,8 @@ $Form1 = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.Button]$Button18 = $null
 [System.Windows.Forms.CheckBox]$CheckBox63 = $null
 [System.Windows.Forms.TabPage]$TabPage1 = $null
+[System.Windows.Forms.Panel]$Panel5 = $null
+[System.Windows.Forms.TabPage]$TabPage5 = $null
 [System.Windows.Forms.TabPage]$TabPage2 = $null
 [System.Windows.Forms.CheckBox]$CheckBox75 = $null
 [System.Windows.Forms.CheckBox]$CheckBox74 = $null
@@ -153,11 +152,7 @@ $CheckBox32 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox33 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox34 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox35 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$Button1 = (New-Object -TypeName System.Windows.Forms.Button)
 $Label4 = (New-Object -TypeName System.Windows.Forms.Label)
-$Button2 = (New-Object -TypeName System.Windows.Forms.Button)
-$Button3 = (New-Object -TypeName System.Windows.Forms.Button)
-$Button4 = (New-Object -TypeName System.Windows.Forms.Button)
 $CheckBox36 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox37 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox38 = (New-Object -TypeName System.Windows.Forms.CheckBox)
@@ -172,6 +167,16 @@ $Button18 = (New-Object -TypeName System.Windows.Forms.Button)
 $CheckBox63 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $TabPage1 = (New-Object -TypeName System.Windows.Forms.TabPage)
 $TabPage2 = (New-Object -TypeName System.Windows.Forms.TabPage)
+$CheckBox75 = (New-Object -TypeName System.Windows.Forms.CheckBox)
+$CheckBox74 = (New-Object -TypeName System.Windows.Forms.CheckBox)
+$CheckBox73 = (New-Object -TypeName System.Windows.Forms.CheckBox)
+$CheckBox72 = (New-Object -TypeName System.Windows.Forms.CheckBox)
+$CheckBox71 = (New-Object -TypeName System.Windows.Forms.CheckBox)
+$CheckBox70 = (New-Object -TypeName System.Windows.Forms.CheckBox)
+$CheckBox69 = (New-Object -TypeName System.Windows.Forms.CheckBox)
+$CheckBox68 = (New-Object -TypeName System.Windows.Forms.CheckBox)
+$CheckBox67 = (New-Object -TypeName System.Windows.Forms.CheckBox)
+$CheckBox66 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox65 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox64 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox60 = (New-Object -TypeName System.Windows.Forms.CheckBox)
@@ -216,17 +221,10 @@ $Button16 = (New-Object -TypeName System.Windows.Forms.Button)
 $Button17 = (New-Object -TypeName System.Windows.Forms.Button)
 $CheckBox62 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $Button19 = (New-Object -TypeName System.Windows.Forms.Button)
-$CheckBox66 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$CheckBox67 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$CheckBox68 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$CheckBox69 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$CheckBox70 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$CheckBox71 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $Panel4 = (New-Object -TypeName System.Windows.Forms.Panel)
-$CheckBox72 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$CheckBox73 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$CheckBox74 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$CheckBox75 = (New-Object -TypeName System.Windows.Forms.CheckBox)
+$Panel5 = (New-Object -TypeName System.Windows.Forms.Panel)
+$ComboBox1 = (New-Object -TypeName System.Windows.Forms.ComboBox)
+$TabPage5 = (New-Object -TypeName System.Windows.Forms.TabPage)
 ([System.ComponentModel.ISupportInitialize]$PictureBox1).BeginInit()
 $Panel1.SuspendLayout()
 $TabControl1.SuspendLayout()
@@ -237,6 +235,7 @@ $TabPage4.SuspendLayout()
 $Panel2.SuspendLayout()
 $Panel3.SuspendLayout()
 $Panel4.SuspendLayout()
+$Panel5.SuspendLayout()
 $Form1.SuspendLayout()
 #
 #Label1
@@ -260,7 +259,7 @@ $PictureBox1.TabStop = $false
 #Label2
 #
 $Label2.Font = (New-Object -TypeName System.Drawing.Font -ArgumentList @([System.String]'Comic Sans MS',[System.Single]11.25,[System.Drawing.FontStyle]::Regular,[System.Drawing.GraphicsUnit]::Point,([System.Byte][System.Byte]0)))
-$Label2.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]6,[System.Int32]10))
+$Label2.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]0))
 $Label2.Name = [System.String]'Label2'
 $Label2.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]127,[System.Int32]23))
 $Label2.TabIndex = [System.Int32]2
@@ -269,9 +268,9 @@ $Label2.UseCompatibleTextRendering = $true
 #
 #CheckBox1
 #
-$CheckBox1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]6,[System.Int32]36))
+$CheckBox1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]26))
 $CheckBox1.Name = [System.String]'CheckBox1'
-$CheckBox1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]127,[System.Int32]30))
+$CheckBox1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox1.TabIndex = [System.Int32]3
 $CheckBox1.Text = [System.String]'Show Computer Shortcut on Desktop'
 $CheckBox1.UseCompatibleTextRendering = $true
@@ -279,19 +278,20 @@ $CheckBox1.UseVisualStyleBackColor = $true
 #
 #CheckBox2
 #
-$CheckBox2.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]6,[System.Int32]72))
+$CheckBox2.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]47))
 $CheckBox2.Name = [System.String]'CheckBox2'
-$CheckBox2.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]127,[System.Int32]32))
+$CheckBox2.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox2.TabIndex = [System.Int32]4
 $CheckBox2.Text = [System.String]'Show Network Shortcut on Desktop'
 $CheckBox2.UseCompatibleTextRendering = $true
 $CheckBox2.UseVisualStyleBackColor = $true
+$CheckBox2.add_CheckedChanged($CheckBox2_CheckedChanged)
 #
 #CheckBox3
 #
-$CheckBox3.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]6,[System.Int32]110))
+$CheckBox3.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]68))
 $CheckBox3.Name = [System.String]'CheckBox3'
-$CheckBox3.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]127,[System.Int32]30))
+$CheckBox3.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox3.TabIndex = [System.Int32]5
 $CheckBox3.Text = [System.String]'Classic vertical icon spacing'
 $CheckBox3.UseCompatibleTextRendering = $true
@@ -299,9 +299,9 @@ $CheckBox3.UseVisualStyleBackColor = $true
 #
 #CheckBox4
 #
-$CheckBox4.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]6,[System.Int32]146))
+$CheckBox4.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]89))
 $CheckBox4.Name = [System.String]'CheckBox4'
-$CheckBox4.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]127,[System.Int32]24))
+$CheckBox4.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]904,[System.Int32]15))
 $CheckBox4.TabIndex = [System.Int32]6
 $CheckBox4.Text = [System.String]'Lock the Taskbar'
 $CheckBox4.UseCompatibleTextRendering = $true
@@ -309,9 +309,9 @@ $CheckBox4.UseVisualStyleBackColor = $true
 #
 #CheckBox5
 #
-$CheckBox5.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]6,[System.Int32]176))
+$CheckBox5.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]110))
 $CheckBox5.Name = [System.String]'CheckBox5'
-$CheckBox5.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]127,[System.Int32]31))
+$CheckBox5.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox5.TabIndex = [System.Int32]7
 $CheckBox5.Text = [System.String]'Always show all icons on the taskbar'
 $CheckBox5.UseCompatibleTextRendering = $true
@@ -319,9 +319,9 @@ $CheckBox5.UseVisualStyleBackColor = $true
 #
 #CheckBox6
 #
-$CheckBox6.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]6,[System.Int32]213))
+$CheckBox6.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]131))
 $CheckBox6.Name = [System.String]'CheckBox6'
-$CheckBox6.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]127,[System.Int32]41))
+$CheckBox6.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox6.TabIndex = [System.Int32]8
 $CheckBox6.Text = [System.String]'Delay taskbar thumbnail pop-ups to 10 seconds'
 $CheckBox6.UseCompatibleTextRendering = $true
@@ -329,9 +329,9 @@ $CheckBox6.UseVisualStyleBackColor = $true
 #
 #CheckBox7
 #
-$CheckBox7.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]6,[System.Int32]260))
+$CheckBox7.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]152))
 $CheckBox7.Name = [System.String]'CheckBox7'
-$CheckBox7.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]127,[System.Int32]34))
+$CheckBox7.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox7.TabIndex = [System.Int32]9
 $CheckBox7.Text = [System.String]'Enable classic control panel view'
 $CheckBox7.UseCompatibleTextRendering = $true
@@ -339,9 +339,9 @@ $CheckBox7.UseVisualStyleBackColor = $true
 #
 #CheckBox8
 #
-$CheckBox8.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]6,[System.Int32]300))
+$CheckBox8.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]173))
 $CheckBox8.Name = [System.String]'CheckBox8'
-$CheckBox8.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]127,[System.Int32]44))
+$CheckBox8.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox8.TabIndex = [System.Int32]10
 $CheckBox8.Text = [System.String]'Turn OFF Sticky Keys when SHIFT is pressed 5 times'
 $CheckBox8.UseCompatibleTextRendering = $true
@@ -349,9 +349,9 @@ $CheckBox8.UseVisualStyleBackColor = $true
 #
 #CheckBox9
 #
-$CheckBox9.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]6,[System.Int32]350))
+$CheckBox9.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]194))
 $CheckBox9.Name = [System.String]'CheckBox9'
-$CheckBox9.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]140,[System.Int32]43))
+$CheckBox9.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]904,[System.Int32]15))
 $CheckBox9.TabIndex = [System.Int32]11
 $CheckBox9.Text = [System.String]'Turn OFF Filter Keys when SHIFT is pressed for 8 seconds'
 $CheckBox9.UseCompatibleTextRendering = $true
@@ -359,9 +359,9 @@ $CheckBox9.UseVisualStyleBackColor = $true
 #
 #CheckBox10
 #
-$CheckBox10.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]6,[System.Int32]399))
+$CheckBox10.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]215))
 $CheckBox10.Name = [System.String]'CheckBox10'
-$CheckBox10.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]127,[System.Int32]24))
+$CheckBox10.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox10.TabIndex = [System.Int32]12
 $CheckBox10.Text = [System.String]'Disable Hibernation'
 $CheckBox10.UseCompatibleTextRendering = $true
@@ -369,9 +369,9 @@ $CheckBox10.UseVisualStyleBackColor = $true
 #
 #CheckBox11
 #
-$CheckBox11.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]6,[System.Int32]429))
+$CheckBox11.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]236))
 $CheckBox11.Name = [System.String]'CheckBox11'
-$CheckBox11.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]127,[System.Int32]44))
+$CheckBox11.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]904,[System.Int32]15))
 $CheckBox11.TabIndex = [System.Int32]13
 $CheckBox11.Text = [System.String]'Underline keyboard shortcuts and access keys'
 $CheckBox11.UseCompatibleTextRendering = $true
@@ -380,9 +380,9 @@ $CheckBox11.add_CheckedChanged($CheckBox11_CheckedChanged)
 #
 #CheckBox12
 #
-$CheckBox12.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]6,[System.Int32]479))
+$CheckBox12.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]341))
 $CheckBox12.Name = [System.String]'CheckBox12'
-$CheckBox12.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]127,[System.Int32]41))
+$CheckBox12.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox12.TabIndex = [System.Int32]14
 $CheckBox12.Text = [System.String]'Show known file extensions in Explorer'
 $CheckBox12.UseCompatibleTextRendering = $true
@@ -390,9 +390,9 @@ $CheckBox12.UseVisualStyleBackColor = $true
 #
 #CheckBox13
 #
-$CheckBox13.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]6,[System.Int32]526))
+$CheckBox13.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]362))
 $CheckBox13.Name = [System.String]'CheckBox13'
-$CheckBox13.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]104,[System.Int32]47))
+$CheckBox13.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]904,[System.Int32]15))
 $CheckBox13.TabIndex = [System.Int32]15
 $CheckBox13.Text = [System.String]'Hide indication for compressed NTFS files'
 $CheckBox13.UseCompatibleTextRendering = $true
@@ -400,9 +400,9 @@ $CheckBox13.UseVisualStyleBackColor = $true
 #
 #CheckBox14
 #
-$CheckBox14.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]6,[System.Int32]579))
+$CheckBox14.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]657))
 $CheckBox14.Name = [System.String]'CheckBox14'
-$CheckBox14.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]127,[System.Int32]31))
+$CheckBox14.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]903,[System.Int32]15))
 $CheckBox14.TabIndex = [System.Int32]16
 $CheckBox14.Text = [System.String]'Show Hidden files in Explorer'
 $CheckBox14.UseCompatibleTextRendering = $true
@@ -410,9 +410,9 @@ $CheckBox14.UseVisualStyleBackColor = $true
 #
 #CheckBox15
 #
-$CheckBox15.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]6,[System.Int32]616))
+$CheckBox15.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]636))
 $CheckBox15.Name = [System.String]'CheckBox15'
-$CheckBox15.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]127,[System.Int32]39))
+$CheckBox15.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]903,[System.Int32]15))
 $CheckBox15.TabIndex = [System.Int32]17
 $CheckBox15.Text = [System.String]'Show Super Hidden System files in Explorer'
 $CheckBox15.UseCompatibleTextRendering = $true
@@ -420,9 +420,9 @@ $CheckBox15.UseVisualStyleBackColor = $true
 #
 #CheckBox16
 #
-$CheckBox16.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]325,[System.Int32]532))
+$CheckBox16.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]778))
 $CheckBox16.Name = [System.String]'CheckBox16'
-$CheckBox16.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]140,[System.Int32]57))
+$CheckBox16.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]903,[System.Int32]15))
 $CheckBox16.TabIndex = [System.Int32]18
 $CheckBox16.Text = [System.String]'Prevent both Windows and Office from creating LNK files in the Recents folder'
 $CheckBox16.UseCompatibleTextRendering = $true
@@ -439,9 +439,9 @@ $Label3.UseCompatibleTextRendering = $true
 #
 #CheckBox17
 #
-$CheckBox17.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]179,[System.Int32]39))
+$CheckBox17.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]404))
 $CheckBox17.Name = [System.String]'CheckBox17'
-$CheckBox17.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]123,[System.Int32]27))
+$CheckBox17.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox17.TabIndex = [System.Int32]20
 $CheckBox17.Text = [System.String]'Replace Utilman with CMD'
 $CheckBox17.UseCompatibleTextRendering = $true
@@ -449,9 +449,9 @@ $CheckBox17.UseVisualStyleBackColor = $true
 #
 #CheckBox18
 #
-$CheckBox18.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]179,[System.Int32]76))
+$CheckBox18.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]278))
 $CheckBox18.Name = [System.String]'CheckBox18'
-$CheckBox18.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]123,[System.Int32]64))
+$CheckBox18.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox18.TabIndex = [System.Int32]21
 $CheckBox18.Text = [System.String]'Add the option "Processor performance core parking min cores'
 $CheckBox18.UseCompatibleTextRendering = $true
@@ -459,9 +459,9 @@ $CheckBox18.UseVisualStyleBackColor = $true
 #
 #CheckBox19
 #
-$CheckBox19.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]179,[System.Int32]146))
+$CheckBox19.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]715))
 $CheckBox19.Name = [System.String]'CheckBox19'
-$CheckBox19.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]123,[System.Int32]33))
+$CheckBox19.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]902,[System.Int32]15))
 $CheckBox19.TabIndex = [System.Int32]22
 $CheckBox19.Text = [System.String]'Disable CPU Core Parking'
 $CheckBox19.UseCompatibleTextRendering = $true
@@ -469,9 +469,9 @@ $CheckBox19.UseVisualStyleBackColor = $true
 #
 #CheckBox20
 #
-$CheckBox20.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]179,[System.Int32]183))
+$CheckBox20.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]467))
 $CheckBox20.Name = [System.String]'CheckBox20'
-$CheckBox20.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]123,[System.Int32]81))
+$CheckBox20.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]903,[System.Int32]15))
 $CheckBox20.TabIndex = [System.Int32]23
 $CheckBox20.Text = [System.String]'Remove Logon screen wallpaper/background. Will use solid color instead (Accent color)'
 $CheckBox20.UseCompatibleTextRendering = $true
@@ -479,9 +479,9 @@ $CheckBox20.UseVisualStyleBackColor = $true
 #
 #CheckBox21
 #
-$CheckBox21.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]179,[System.Int32]270))
+$CheckBox21.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]573))
 $CheckBox21.Name = [System.String]'CheckBox21'
-$CheckBox21.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]123,[System.Int32]24))
+$CheckBox21.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox21.TabIndex = [System.Int32]24
 $CheckBox21.Text = [System.String]'Disable  lockscreen'
 $CheckBox21.UseCompatibleTextRendering = $true
@@ -489,9 +489,9 @@ $CheckBox21.UseVisualStyleBackColor = $true
 #
 #CheckBox22
 #
-$CheckBox22.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]179,[System.Int32]300))
+$CheckBox22.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]320))
 $CheckBox22.Name = [System.String]'CheckBox22'
-$CheckBox22.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]123,[System.Int32]27))
+$CheckBox22.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox22.TabIndex = [System.Int32]25
 $CheckBox22.Text = [System.String]'Remove versioning tab from properties'
 $CheckBox22.UseCompatibleTextRendering = $true
@@ -499,9 +499,9 @@ $CheckBox22.UseVisualStyleBackColor = $true
 #
 #CheckBox23
 #
-$CheckBox23.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]179,[System.Int32]333))
+$CheckBox23.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]383))
 $CheckBox23.Name = [System.String]'CheckBox23'
-$CheckBox23.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]123,[System.Int32]24))
+$CheckBox23.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]904,[System.Int32]15))
 $CheckBox23.TabIndex = [System.Int32]26
 $CheckBox23.Text = [System.String]'Disable jump lists'
 $CheckBox23.UseCompatibleTextRendering = $true
@@ -509,9 +509,9 @@ $CheckBox23.UseVisualStyleBackColor = $true
 #
 #CheckBox24
 #
-$CheckBox24.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]179,[System.Int32]363))
+$CheckBox24.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]509))
 $CheckBox24.Name = [System.String]'CheckBox24'
-$CheckBox24.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]123,[System.Int32]30))
+$CheckBox24.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox24.TabIndex = [System.Int32]27
 $CheckBox24.Text = [System.String]'Disable Windows Error Reporting'
 $CheckBox24.UseCompatibleTextRendering = $true
@@ -519,9 +519,9 @@ $CheckBox24.UseVisualStyleBackColor = $true
 #
 #CheckBox25
 #
-$CheckBox25.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]179,[System.Int32]399))
+$CheckBox25.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]699))
 $CheckBox25.Name = [System.String]'CheckBox25'
-$CheckBox25.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]123,[System.Int32]83))
+$CheckBox25.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox25.TabIndex = [System.Int32]28
 $CheckBox25.Text = [System.String]'Disable Cortana (Speech Search Assistant, which also sends information to Microsoft)'
 $CheckBox25.UseCompatibleTextRendering = $true
@@ -529,9 +529,9 @@ $CheckBox25.UseVisualStyleBackColor = $true
 #
 #CheckBox26
 #
-$CheckBox26.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]179,[System.Int32]487))
+$CheckBox26.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]678))
 $CheckBox26.Name = [System.String]'CheckBox26'
-$CheckBox26.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]123,[System.Int32]102))
+$CheckBox26.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]903,[System.Int32]15))
 $CheckBox26.TabIndex = [System.Int32]29
 $CheckBox26.Text = [System.String]'Hide the search box from taskbar. You can still search by pressing the Win key and start typing what youre looking for'
 $CheckBox26.UseCompatibleTextRendering = $true
@@ -539,9 +539,9 @@ $CheckBox26.UseVisualStyleBackColor = $true
 #
 #CheckBox27
 #
-$CheckBox27.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]179,[System.Int32]595))
+$CheckBox27.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]615))
 $CheckBox27.Name = [System.String]'CheckBox27'
-$CheckBox27.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]123,[System.Int32]60))
+$CheckBox27.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox27.TabIndex = [System.Int32]30
 $CheckBox27.Text = [System.String]'Disable MRU lists (jump lists) of XAML apps in Start Menu'
 $CheckBox27.UseCompatibleTextRendering = $true
@@ -549,9 +549,9 @@ $CheckBox27.UseVisualStyleBackColor = $true
 #
 #CheckBox28
 #
-$CheckBox28.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]325,[System.Int32]467))
+$CheckBox28.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]594))
 $CheckBox28.Name = [System.String]'CheckBox28'
-$CheckBox28.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]123,[System.Int32]57))
+$CheckBox28.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox28.TabIndex = [System.Int32]31
 $CheckBox28.Text = [System.String]'Set Windows Explorer to start on This PC instead of Quick Access'
 $CheckBox28.UseCompatibleTextRendering = $true
@@ -559,9 +559,9 @@ $CheckBox28.UseVisualStyleBackColor = $true
 #
 #CheckBox29
 #
-$CheckBox29.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]325,[System.Int32]36))
+$CheckBox29.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]257))
 $CheckBox29.Name = [System.String]'CheckBox29'
-$CheckBox29.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]143,[System.Int32]65))
+$CheckBox29.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]904,[System.Int32]15))
 $CheckBox29.TabIndex = [System.Int32]32
 $CheckBox29.Text = [System.String]'Disable Disk Quota tab, which appears as a tab when right-clicking on drive letter - Properties'
 $CheckBox29.UseCompatibleTextRendering = $true
@@ -569,9 +569,9 @@ $CheckBox29.UseVisualStyleBackColor = $true
 #
 #CheckBox30
 #
-$CheckBox30.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]325,[System.Int32]107))
+$CheckBox30.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]299))
 $CheckBox30.Name = [System.String]'CheckBox30'
-$CheckBox30.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]143,[System.Int32]33))
+$CheckBox30.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox30.TabIndex = [System.Int32]33
 $CheckBox30.Text = [System.String]'Disable creation of an Advertising ID'
 $CheckBox30.UseCompatibleTextRendering = $true
@@ -579,9 +579,9 @@ $CheckBox30.UseVisualStyleBackColor = $true
 #
 #CheckBox31
 #
-$CheckBox31.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]325,[System.Int32]150))
+$CheckBox31.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]425))
 $CheckBox31.Name = [System.String]'CheckBox31'
-$CheckBox31.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]143,[System.Int32]24))
+$CheckBox31.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]904,[System.Int32]15))
 $CheckBox31.TabIndex = [System.Int32]34
 $CheckBox31.Text = [System.String]'Remove Pin to start'
 $CheckBox31.UseCompatibleTextRendering = $true
@@ -589,9 +589,9 @@ $CheckBox31.UseVisualStyleBackColor = $true
 #
 #CheckBox32
 #
-$CheckBox32.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]325,[System.Int32]176))
+$CheckBox32.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]552))
 $CheckBox32.Name = [System.String]'CheckBox32'
-$CheckBox32.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]143,[System.Int32]31))
+$CheckBox32.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox32.TabIndex = [System.Int32]35
 $CheckBox32.Text = [System.String]'Disable Cortana, Bing Search and Searchbar'
 $CheckBox32.UseCompatibleTextRendering = $true
@@ -599,9 +599,9 @@ $CheckBox32.UseVisualStyleBackColor = $true
 #
 #CheckBox33
 #
-$CheckBox33.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]325,[System.Int32]213))
+$CheckBox33.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]488))
 $CheckBox33.Name = [System.String]'CheckBox33'
-$CheckBox33.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]143,[System.Int32]31))
+$CheckBox33.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox33.TabIndex = [System.Int32]36
 $CheckBox33.Text = [System.String]'Turn off the Error Dialog'
 $CheckBox33.UseCompatibleTextRendering = $true
@@ -609,9 +609,9 @@ $CheckBox33.UseVisualStyleBackColor = $true
 #
 #CheckBox34
 #
-$CheckBox34.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]325,[System.Int32]250))
+$CheckBox34.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]799))
 $CheckBox34.Name = [System.String]'CheckBox34'
-$CheckBox34.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]143,[System.Int32]33))
+$CheckBox34.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]902,[System.Int32]15))
 $CheckBox34.TabIndex = [System.Int32]37
 $CheckBox34.Text = [System.String]'Disable Administrative shares'
 $CheckBox34.UseCompatibleTextRendering = $true
@@ -619,23 +619,13 @@ $CheckBox34.UseVisualStyleBackColor = $true
 #
 #CheckBox35
 #
-$CheckBox35.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]325,[System.Int32]289))
+$CheckBox35.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]757))
 $CheckBox35.Name = [System.String]'CheckBox35'
-$CheckBox35.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]143,[System.Int32]55))
+$CheckBox35.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]903,[System.Int32]15))
 $CheckBox35.TabIndex = [System.Int32]38
 $CheckBox35.Text = [System.String]'Add "Reboot to Recovery" to right-click menu of "This PC"'
 $CheckBox35.UseCompatibleTextRendering = $true
 $CheckBox35.UseVisualStyleBackColor = $true
-#
-#Button1
-#
-$Button1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]38,[System.Int32]35))
-$Button1.Name = [System.String]'Button1'
-$Button1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]100,[System.Int32]23))
-$Button1.TabIndex = [System.Int32]39
-$Button1.Text = [System.String]'Developer'
-$Button1.UseCompatibleTextRendering = $true
-$Button1.UseVisualStyleBackColor = $true
 #
 #Label4
 #
@@ -647,41 +637,11 @@ $Label4.TabIndex = [System.Int32]40
 $Label4.Text = [System.String]'Templates'
 $Label4.UseCompatibleTextRendering = $true
 #
-#Button2
-#
-$Button2.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]155,[System.Int32]35))
-$Button2.Name = [System.String]'Button2'
-$Button2.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]100,[System.Int32]23))
-$Button2.TabIndex = [System.Int32]41
-$Button2.Text = [System.String]'Video Editing'
-$Button2.UseCompatibleTextRendering = $true
-$Button2.UseVisualStyleBackColor = $true
-#
-#Button3
-#
-$Button3.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]38,[System.Int32]64))
-$Button3.Name = [System.String]'Button3'
-$Button3.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]100,[System.Int32]23))
-$Button3.TabIndex = [System.Int32]42
-$Button3.Text = [System.String]'Gaming'
-$Button3.UseCompatibleTextRendering = $true
-$Button3.UseVisualStyleBackColor = $true
-#
-#Button4
-#
-$Button4.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]155,[System.Int32]64))
-$Button4.Name = [System.String]'Button4'
-$Button4.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]100,[System.Int32]23))
-$Button4.TabIndex = [System.Int32]43
-$Button4.Text = [System.String]'Hardcore Tweaks'
-$Button4.UseCompatibleTextRendering = $true
-$Button4.UseVisualStyleBackColor = $true
-#
 #CheckBox36
 #
-$CheckBox36.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]325,[System.Int32]350))
+$CheckBox36.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]736))
 $CheckBox36.Name = [System.String]'CheckBox36'
-$CheckBox36.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]143,[System.Int32]43))
+$CheckBox36.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]919,[System.Int32]15))
 $CheckBox36.TabIndex = [System.Int32]44
 $CheckBox36.Text = [System.String]'Change Clock and Date formats of current user to: 24H, metric'
 $CheckBox36.UseCompatibleTextRendering = $true
@@ -689,9 +649,9 @@ $CheckBox36.UseVisualStyleBackColor = $true
 #
 #CheckBox37
 #
-$CheckBox37.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]325,[System.Int32]399))
+$CheckBox37.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]446))
 $CheckBox37.Name = [System.String]'CheckBox37'
-$CheckBox37.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]143,[System.Int32]24))
+$CheckBox37.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]904,[System.Int32]15))
 $CheckBox37.TabIndex = [System.Int32]45
 $CheckBox37.Text = [System.String]'Enable Developer Mode'
 $CheckBox37.UseCompatibleTextRendering = $true
@@ -699,9 +659,9 @@ $CheckBox37.UseVisualStyleBackColor = $true
 #
 #CheckBox38
 #
-$CheckBox38.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]325,[System.Int32]429))
+$CheckBox38.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]530))
 $CheckBox38.Name = [System.String]'CheckBox38'
-$CheckBox38.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]143,[System.Int32]32))
+$CheckBox38.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]907,[System.Int32]15))
 $CheckBox38.TabIndex = [System.Int32]46
 $CheckBox38.Text = [System.String]'Remove telemetry and data collection'
 $CheckBox38.UseCompatibleTextRendering = $true
@@ -710,26 +670,24 @@ $CheckBox38.UseVisualStyleBackColor = $true
 #Panel1
 #
 $Panel1.BorderStyle = [System.Windows.Forms.BorderStyle]::Fixed3D
+$Panel1.Controls.Add($ComboBox1)
 $Panel1.Controls.Add($Label4)
-$Panel1.Controls.Add($Button1)
-$Panel1.Controls.Add($Button2)
-$Panel1.Controls.Add($Button4)
-$Panel1.Controls.Add($Button3)
 $Panel1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]968,[System.Int32]107))
 $Panel1.Name = [System.String]'Panel1'
-$Panel1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]268,[System.Int32]98))
+$Panel1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]268,[System.Int32]72))
 $Panel1.TabIndex = [System.Int32]47
 #
 #TabControl1
 #
 $TabControl1.Controls.Add($TabPage3)
 $TabControl1.Controls.Add($TabPage1)
+$TabControl1.Controls.Add($TabPage5)
 $TabControl1.Controls.Add($TabPage2)
 $TabControl1.Controls.Add($TabPage4)
 $TabControl1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]16,[System.Int32]63))
 $TabControl1.Name = [System.String]'TabControl1'
 $TabControl1.SelectedIndex = [System.Int32]0
-$TabControl1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]940,[System.Int32]708))
+$TabControl1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]944,[System.Int32]567))
 $TabControl1.TabIndex = [System.Int32]48
 #
 #TabPage3
@@ -805,52 +763,15 @@ $CheckBox63.add_CheckedChanged($CheckBox63_CheckedChanged)
 #
 #TabPage1
 #
-$TabPage1.Controls.Add($Label2)
-$TabPage1.Controls.Add($CheckBox1)
-$TabPage1.Controls.Add($CheckBox38)
-$TabPage1.Controls.Add($CheckBox2)
-$TabPage1.Controls.Add($CheckBox37)
-$TabPage1.Controls.Add($CheckBox3)
-$TabPage1.Controls.Add($CheckBox36)
-$TabPage1.Controls.Add($CheckBox4)
-$TabPage1.Controls.Add($CheckBox35)
-$TabPage1.Controls.Add($CheckBox5)
-$TabPage1.Controls.Add($CheckBox34)
-$TabPage1.Controls.Add($CheckBox6)
-$TabPage1.Controls.Add($CheckBox33)
-$TabPage1.Controls.Add($CheckBox7)
-$TabPage1.Controls.Add($CheckBox32)
-$TabPage1.Controls.Add($CheckBox8)
-$TabPage1.Controls.Add($CheckBox31)
-$TabPage1.Controls.Add($CheckBox9)
-$TabPage1.Controls.Add($CheckBox30)
-$TabPage1.Controls.Add($CheckBox10)
-$TabPage1.Controls.Add($CheckBox29)
-$TabPage1.Controls.Add($CheckBox11)
-$TabPage1.Controls.Add($CheckBox28)
-$TabPage1.Controls.Add($CheckBox12)
-$TabPage1.Controls.Add($CheckBox27)
-$TabPage1.Controls.Add($CheckBox13)
-$TabPage1.Controls.Add($CheckBox26)
-$TabPage1.Controls.Add($CheckBox14)
-$TabPage1.Controls.Add($CheckBox25)
-$TabPage1.Controls.Add($CheckBox15)
-$TabPage1.Controls.Add($CheckBox24)
-$TabPage1.Controls.Add($CheckBox16)
-$TabPage1.Controls.Add($CheckBox23)
-$TabPage1.Controls.Add($CheckBox17)
-$TabPage1.Controls.Add($CheckBox22)
-$TabPage1.Controls.Add($CheckBox18)
-$TabPage1.Controls.Add($CheckBox21)
-$TabPage1.Controls.Add($CheckBox19)
-$TabPage1.Controls.Add($CheckBox20)
+$TabPage1.Controls.Add($Panel5)
 $TabPage1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]22))
 $TabPage1.Name = [System.String]'TabPage1'
 $TabPage1.Padding = (New-Object -TypeName System.Windows.Forms.Padding -ArgumentList @([System.Int32]3))
-$TabPage1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]932,[System.Int32]682))
+$TabPage1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]541))
 $TabPage1.TabIndex = [System.Int32]0
 $TabPage1.Text = [System.String]'Registry Tweaks'
 $TabPage1.UseVisualStyleBackColor = $true
+$TabPage1.add_Click($TabPage1_Click)
 #
 #TabPage2
 #
@@ -896,6 +817,106 @@ $TabPage2.TabIndex = [System.Int32]1
 $TabPage2.Text = [System.String]'Removing Services'
 $TabPage2.UseVisualStyleBackColor = $true
 $TabPage2.add_Click($TabPage2_Click)
+#
+#CheckBox75
+#
+$CheckBox75.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]662))
+$CheckBox75.Name = [System.String]'CheckBox75'
+$CheckBox75.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]516,[System.Int32]24))
+$CheckBox75.TabIndex = [System.Int32]33
+$CheckBox75.Text = [System.String]'Disable Superfetch (A must for SSD drives, but good to do in general)'
+$CheckBox75.UseCompatibleTextRendering = $true
+$CheckBox75.UseVisualStyleBackColor = $true
+#
+#CheckBox74
+#
+$CheckBox74.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]640))
+$CheckBox74.Name = [System.String]'CheckBox74'
+$CheckBox74.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]425,[System.Int32]24))
+$CheckBox74.TabIndex = [System.Int32]32
+$CheckBox74.Text = [System.String]'Disable Internet Connection Sharing (ICS)'
+$CheckBox74.UseCompatibleTextRendering = $true
+$CheckBox74.UseVisualStyleBackColor = $true
+#
+#CheckBox73
+#
+$CheckBox73.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]619))
+$CheckBox73.Name = [System.String]'CheckBox73'
+$CheckBox73.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]590,[System.Int32]24))
+$CheckBox73.TabIndex = [System.Int32]31
+$CheckBox73.Text = [System.String]'Disable Routing and Remote Access'
+$CheckBox73.UseCompatibleTextRendering = $true
+$CheckBox73.UseVisualStyleBackColor = $true
+#
+#CheckBox72
+#
+$CheckBox72.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]601))
+$CheckBox72.Name = [System.String]'CheckBox72'
+$CheckBox72.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]514,[System.Int32]24))
+$CheckBox72.TabIndex = [System.Int32]30
+$CheckBox72.Text = [System.String]'Disable Net.Tcp Port Sharing Service'
+$CheckBox72.UseCompatibleTextRendering = $true
+$CheckBox72.UseVisualStyleBackColor = $true
+#
+#CheckBox71
+#
+$CheckBox71.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]580))
+$CheckBox71.Name = [System.String]'CheckBox71'
+$CheckBox71.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]450,[System.Int32]24))
+$CheckBox71.TabIndex = [System.Int32]29
+$CheckBox71.Text = [System.String]'Disable HomeGroup Listener'
+$CheckBox71.UseCompatibleTextRendering = $true
+$CheckBox71.UseVisualStyleBackColor = $true
+#
+#CheckBox70
+#
+$CheckBox70.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]561))
+$CheckBox70.Name = [System.String]'CheckBox70'
+$CheckBox70.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]421,[System.Int32]24))
+$CheckBox70.TabIndex = [System.Int32]28
+$CheckBox70.Text = [System.String]'Disable Hyper-V Services'
+$CheckBox70.UseCompatibleTextRendering = $true
+$CheckBox70.UseVisualStyleBackColor = $true
+#
+#CheckBox69
+#
+$CheckBox69.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]541))
+$CheckBox69.Name = [System.String]'CheckBox69'
+$CheckBox69.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]578,[System.Int32]24))
+$CheckBox69.TabIndex = [System.Int32]27
+$CheckBox69.Text = [System.String]'Disable Enterprise App Management Service'
+$CheckBox69.UseCompatibleTextRendering = $true
+$CheckBox69.UseVisualStyleBackColor = $true
+#
+#CheckBox68
+#
+$CheckBox68.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]521))
+$CheckBox68.Name = [System.String]'CheckBox68'
+$CheckBox68.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]643,[System.Int32]24))
+$CheckBox68.TabIndex = [System.Int32]26
+$CheckBox68.Text = [System.String]'Disable Windows Update Service'
+$CheckBox68.UseCompatibleTextRendering = $true
+$CheckBox68.UseVisualStyleBackColor = $true
+#
+#CheckBox67
+#
+$CheckBox67.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]500))
+$CheckBox67.Name = [System.String]'CheckBox67'
+$CheckBox67.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]713,[System.Int32]24))
+$CheckBox67.TabIndex = [System.Int32]25
+$CheckBox67.Text = [System.String]'Disable Windows Media Player Network Sharing Service'
+$CheckBox67.UseCompatibleTextRendering = $true
+$CheckBox67.UseVisualStyleBackColor = $true
+#
+#CheckBox66
+#
+$CheckBox66.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]481))
+$CheckBox66.Name = [System.String]'CheckBox66'
+$CheckBox66.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]396,[System.Int32]24))
+$CheckBox66.TabIndex = [System.Int32]24
+$CheckBox66.Text = [System.String]'Disable Windows Mobile Hotspot Service'
+$CheckBox66.UseCompatibleTextRendering = $true
+$CheckBox66.UseVisualStyleBackColor = $true
 #
 #CheckBox65
 #
@@ -1352,66 +1373,6 @@ $Button19.Text = [System.String]'Ninite'
 $Button19.UseCompatibleTextRendering = $true
 $Button19.UseVisualStyleBackColor = $true
 #
-#CheckBox66
-#
-$CheckBox66.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]481))
-$CheckBox66.Name = [System.String]'CheckBox66'
-$CheckBox66.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]396,[System.Int32]24))
-$CheckBox66.TabIndex = [System.Int32]24
-$CheckBox66.Text = [System.String]'Disable Windows Mobile Hotspot Service'
-$CheckBox66.UseCompatibleTextRendering = $true
-$CheckBox66.UseVisualStyleBackColor = $true
-#
-#CheckBox67
-#
-$CheckBox67.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]500))
-$CheckBox67.Name = [System.String]'CheckBox67'
-$CheckBox67.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]713,[System.Int32]24))
-$CheckBox67.TabIndex = [System.Int32]25
-$CheckBox67.Text = [System.String]'Disable Windows Media Player Network Sharing Service'
-$CheckBox67.UseCompatibleTextRendering = $true
-$CheckBox67.UseVisualStyleBackColor = $true
-#
-#CheckBox68
-#
-$CheckBox68.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]521))
-$CheckBox68.Name = [System.String]'CheckBox68'
-$CheckBox68.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]643,[System.Int32]24))
-$CheckBox68.TabIndex = [System.Int32]26
-$CheckBox68.Text = [System.String]'Disable Windows Update Service'
-$CheckBox68.UseCompatibleTextRendering = $true
-$CheckBox68.UseVisualStyleBackColor = $true
-#
-#CheckBox69
-#
-$CheckBox69.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]541))
-$CheckBox69.Name = [System.String]'CheckBox69'
-$CheckBox69.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]578,[System.Int32]24))
-$CheckBox69.TabIndex = [System.Int32]27
-$CheckBox69.Text = [System.String]'Disable Enterprise App Management Service'
-$CheckBox69.UseCompatibleTextRendering = $true
-$CheckBox69.UseVisualStyleBackColor = $true
-#
-#CheckBox70
-#
-$CheckBox70.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]561))
-$CheckBox70.Name = [System.String]'CheckBox70'
-$CheckBox70.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]421,[System.Int32]24))
-$CheckBox70.TabIndex = [System.Int32]28
-$CheckBox70.Text = [System.String]'Disable Hyper-V Services'
-$CheckBox70.UseCompatibleTextRendering = $true
-$CheckBox70.UseVisualStyleBackColor = $true
-#
-#CheckBox71
-#
-$CheckBox71.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]580))
-$CheckBox71.Name = [System.String]'CheckBox71'
-$CheckBox71.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]450,[System.Int32]24))
-$CheckBox71.TabIndex = [System.Int32]29
-$CheckBox71.Text = [System.String]'Disable HomeGroup Listener'
-$CheckBox71.UseCompatibleTextRendering = $true
-$CheckBox71.UseVisualStyleBackColor = $true
-#
 #Panel4
 #
 $Panel4.BorderStyle = [System.Windows.Forms.BorderStyle]::FixedSingle
@@ -1419,54 +1380,80 @@ $Panel4.Controls.Add($CheckBox62)
 $Panel4.Controls.Add($CheckBox61)
 $Panel4.Controls.Add($Button16)
 $Panel4.Controls.Add($Button17)
-$Panel4.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]962,[System.Int32]437))
+$Panel4.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]962,[System.Int32]493))
 $Panel4.Name = [System.String]'Panel4'
 $Panel4.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]274,[System.Int32]133))
 $Panel4.TabIndex = [System.Int32]56
 #
-#CheckBox72
+#Panel5
 #
-$CheckBox72.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]601))
-$CheckBox72.Name = [System.String]'CheckBox72'
-$CheckBox72.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]514,[System.Int32]24))
-$CheckBox72.TabIndex = [System.Int32]30
-$CheckBox72.Text = [System.String]'Disable Net.Tcp Port Sharing Service'
-$CheckBox72.UseCompatibleTextRendering = $true
-$CheckBox72.UseVisualStyleBackColor = $true
+$Panel5.AutoScroll = $true
+$Panel5.Controls.Add($CheckBox17)
+$Panel5.Controls.Add($Label2)
+$Panel5.Controls.Add($CheckBox1)
+$Panel5.Controls.Add($CheckBox20)
+$Panel5.Controls.Add($CheckBox38)
+$Panel5.Controls.Add($CheckBox19)
+$Panel5.Controls.Add($CheckBox2)
+$Panel5.Controls.Add($CheckBox21)
+$Panel5.Controls.Add($CheckBox37)
+$Panel5.Controls.Add($CheckBox34)
+$Panel5.Controls.Add($CheckBox18)
+$Panel5.Controls.Add($CheckBox16)
+$Panel5.Controls.Add($CheckBox35)
+$Panel5.Controls.Add($CheckBox3)
+$Panel5.Controls.Add($CheckBox22)
+$Panel5.Controls.Add($CheckBox36)
+$Panel5.Controls.Add($CheckBox23)
+$Panel5.Controls.Add($CheckBox4)
+$Panel5.Controls.Add($CheckBox24)
+$Panel5.Controls.Add($CheckBox5)
+$Panel5.Controls.Add($CheckBox15)
+$Panel5.Controls.Add($CheckBox25)
+$Panel5.Controls.Add($CheckBox6)
+$Panel5.Controls.Add($CheckBox14)
+$Panel5.Controls.Add($CheckBox33)
+$Panel5.Controls.Add($CheckBox26)
+$Panel5.Controls.Add($CheckBox7)
+$Panel5.Controls.Add($CheckBox13)
+$Panel5.Controls.Add($CheckBox32)
+$Panel5.Controls.Add($CheckBox27)
+$Panel5.Controls.Add($CheckBox8)
+$Panel5.Controls.Add($CheckBox12)
+$Panel5.Controls.Add($CheckBox31)
+$Panel5.Controls.Add($CheckBox28)
+$Panel5.Controls.Add($CheckBox9)
+$Panel5.Controls.Add($CheckBox11)
+$Panel5.Controls.Add($CheckBox30)
+$Panel5.Controls.Add($CheckBox29)
+$Panel5.Controls.Add($CheckBox10)
+$Panel5.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]3))
+$Panel5.Name = [System.String]'Panel5'
+$Panel5.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]926,[System.Int32]537))
+$Panel5.TabIndex = [System.Int32]47
+$Panel5.add_Paint($Panel5_Paint)
 #
-#CheckBox73
+#ComboBox1
 #
-$CheckBox73.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]619))
-$CheckBox73.Name = [System.String]'CheckBox73'
-$CheckBox73.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]590,[System.Int32]24))
-$CheckBox73.TabIndex = [System.Int32]31
-$CheckBox73.Text = [System.String]'Disable Routing and Remote Access'
-$CheckBox73.UseCompatibleTextRendering = $true
-$CheckBox73.UseVisualStyleBackColor = $true
+$ComboBox1.FormattingEnabled = $true
+$ComboBox1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]1,[System.Int32]35))
+$ComboBox1.Name = [System.String]'ComboBox1'
+$ComboBox1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]259,[System.Int32]21))
+$ComboBox1.TabIndex = [System.Int32]41
 #
-#CheckBox74
+#TabPage5
 #
-$CheckBox74.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]640))
-$CheckBox74.Name = [System.String]'CheckBox74'
-$CheckBox74.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]425,[System.Int32]24))
-$CheckBox74.TabIndex = [System.Int32]32
-$CheckBox74.Text = [System.String]'Disable Internet Connection Sharing (ICS)'
-$CheckBox74.UseCompatibleTextRendering = $true
-$CheckBox74.UseVisualStyleBackColor = $true
-#
-#CheckBox75
-#
-$CheckBox75.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]8,[System.Int32]662))
-$CheckBox75.Name = [System.String]'CheckBox75'
-$CheckBox75.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]516,[System.Int32]24))
-$CheckBox75.TabIndex = [System.Int32]33
-$CheckBox75.Text = [System.String]'Disable Superfetch (A must for SSD drives, but good to do in general)'
-$CheckBox75.UseCompatibleTextRendering = $true
-$CheckBox75.UseVisualStyleBackColor = $true
+$TabPage5.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]22))
+$TabPage5.Name = [System.String]'TabPage5'
+$TabPage5.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]932,[System.Int32]682))
+$TabPage5.TabIndex = [System.Int32]4
+$TabPage5.Text = [System.String]'Registry Tweaks 2'
+$TabPage5.UseVisualStyleBackColor = $true
+$TabPage5.Visible = $false
 #
 #Form1
 #
-$Form1.ClientSize = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]1242,[System.Int32]783))
+$Form1.ClientSize = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]1242,[System.Int32]632))
 $Form1.Controls.Add($Panel4)
 $Form1.Controls.Add($Button19)
 $Form1.Controls.Add($Button15)
@@ -1488,6 +1475,7 @@ $TabPage4.ResumeLayout($false)
 $Panel2.ResumeLayout($false)
 $Panel3.ResumeLayout($false)
 $Panel4.ResumeLayout($false)
+$Panel5.ResumeLayout($false)
 $Form1.ResumeLayout($false)
 Add-Member -InputObject $Form1 -Name base -Value $base -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Label1 -Value $Label1 -MemberType NoteProperty
@@ -1529,15 +1517,12 @@ Add-Member -InputObject $Form1 -Name CheckBox32 -Value $CheckBox32 -MemberType N
 Add-Member -InputObject $Form1 -Name CheckBox33 -Value $CheckBox33 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox34 -Value $CheckBox34 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox35 -Value $CheckBox35 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button1 -Value $Button1 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Label4 -Value $Label4 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button2 -Value $Button2 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button3 -Value $Button3 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button4 -Value $Button4 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox36 -Value $CheckBox36 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox37 -Value $CheckBox37 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox38 -Value $CheckBox38 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Panel1 -Value $Panel1 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name ComboBox1 -Value $ComboBox1 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name TabControl1 -Value $TabControl1 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name TabPage3 -Value $TabPage3 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Label9 -Value $Label9 -MemberType NoteProperty
@@ -1547,6 +1532,8 @@ Add-Member -InputObject $Form1 -Name Label6 -Value $Label6 -MemberType NotePrope
 Add-Member -InputObject $Form1 -Name Button18 -Value $Button18 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox63 -Value $CheckBox63 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name TabPage1 -Value $TabPage1 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Panel5 -Value $Panel5 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name TabPage5 -Value $TabPage5 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name TabPage2 -Value $TabPage2 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox75 -Value $CheckBox75 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox74 -Value $CheckBox74 -MemberType NoteProperty

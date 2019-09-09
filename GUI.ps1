@@ -1,3 +1,9 @@
+$TabPage1_Click = {
+}
+$Panel5_Paint = {
+}
+$CheckBox2_CheckedChanged = {
+}
 $CheckBox39_CheckedChanged = {
 }
 $CheckBox40_CheckedChanged = {
@@ -82,7 +88,17 @@ $button17.Add_Click{($Form1.Close())}
 #Open Tool Folder
 $Button6.Add_Click{(Start "$($MyDir)\Tools\")}
 
-
+#Make Everything German
+$Button14.Add_Click{(Make-German)}
+function Make-German{
+    $Label3.Text = "erstellt von MinersWin"
+    $CheckBox1.Text = "Zeige die dieser Computer Verknüpfung auf dem Desktop"
+    $CheckBox2.Text = "Zeige die Netzwerk Verknüpfung auf dem Desktop"
+    $CheckBox3.Text = "Klassischer Vertikaler Symbolabstand"
+    $checkBox4.Text = "Fixiere die Taskleiste"
+    $CheckBox5.Text = "Zeige immer alle Icons in der Taskleiste"
+    $checkBox6.Text = "Verzögere die Anzeige von Miniaturansichten in der Taskleiste um 10 Sekunden"
+}
 
 
 
