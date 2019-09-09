@@ -28,7 +28,7 @@ Cortana endlich ganz entfernen?
 ENDLICH MIT GUI?
 Virenscan
 Rootkit entfernung
-Höhere Batterielaufzeit (Nur bei Laptops, hierführ die Akkutweaks nutzen)
+Höhere Batterielaufzeit (Nur bei Laptops, hierfür die Akkutweaks nutzen)
 ```
 
 Für mehr Details [Die offizielle GeekFreaks Seite](https://thegeekfreaks.de).
