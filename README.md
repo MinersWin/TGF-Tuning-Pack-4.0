@@ -38,6 +38,8 @@ Du kannst dir [hier](https://thegeekfreaks.de/download/the-geek-freaks-tuning-pa
 Es gibt noch keine Funktion bis auf den Installer, Ninite, German und Virenscan
 Es entstehen mitten in Sätzen fehlerhafte Zeichen, wie ð£ð¥Ðüð║ð▓ð░□? 
 Dies passiert, weil die Daten in UTF-8 Codiert wurden. Dies wird in naher Zukunft behoben werden.
+Es sind Teile des Programms abgeschnitten oder verschoben, dann bitte ich euch mir eine Mail zu scheiben,
+mitsamt der OS Version, PowerShell und .Net-Framework Version und Bildschirm Format und Auflösung.
 ```
 
 ### Support or Contact
