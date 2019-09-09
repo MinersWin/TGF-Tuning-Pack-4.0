@@ -102,6 +102,9 @@ function Make-German{
     $CheckBox8.Text = "Deaktivieren der Einrastfunktion beim 5 maligen Drücken der SHIFT Taste"
 }
 
+#Add Ninite
+$Button19.Add_Click{(.\Ninite\Ninite.exe)}
+
 
 
 
