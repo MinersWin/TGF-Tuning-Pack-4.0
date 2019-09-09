@@ -2,9 +2,13 @@
 
 DIES IST EIN SEHR FRÜHER ALPHASTATUS, IN WELCHEM SICH DAS PROJEKT BEFINDET!
 WIR ÜBERNEHMEN KEINE VERANTWORTUNG FÜR PROBLEME DIE MIT DER AUSFÜHRUNG UNSERES PROGRAMMS EINHERGEHEN!
+
 Bisher wurden noch keine Funktionen Implementiert. Dies wird die nächsten Monate folgen.
+
 Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr!
+
 Alles läuft auf Basis von PowerShell. An der Performance wird noch gearbeitet.
+
 Bugs, Verbesserungsvorschläge und Feedback wird gerne gesehen. Dafür bitte den Discord nutzen: https://discordapp.com/invite/k5kMSa
 
 ### Funktionen
