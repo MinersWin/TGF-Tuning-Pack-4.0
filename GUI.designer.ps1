@@ -711,9 +711,9 @@ $TabPage3.Controls.Add($Label7)
 $TabPage3.Controls.Add($Label6)
 $TabPage3.Controls.Add($Button18)
 $TabPage3.Controls.Add($CheckBox63)
-$TabPage3.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]23))
+$TabPage3.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]22))
 $TabPage3.Name = [System.String]'TabPage3'
-$TabPage3.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]536))
+$TabPage3.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]537))
 $TabPage3.TabIndex = [System.Int32]2
 $TabPage3.Text = [System.String]'Home'
 $TabPage3.ToolTipText = [System.String]'Test'
@@ -777,10 +777,10 @@ $CheckBox63.add_CheckedChanged($CheckBox63_CheckedChanged)
 #TabPage1
 #
 $TabPage1.Controls.Add($Panel5)
-$TabPage1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]23))
+$TabPage1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]22))
 $TabPage1.Name = [System.String]'TabPage1'
 $TabPage1.Padding = (New-Object -TypeName System.Windows.Forms.Padding -ArgumentList @([System.Int32]3))
-$TabPage1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]536))
+$TabPage1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]537))
 $TabPage1.TabIndex = [System.Int32]0
 $TabPage1.Text = [System.String]'Registry Tweaks'
 $TabPage1.UseVisualStyleBackColor = $true
@@ -837,10 +837,10 @@ $Panel5.add_Paint($Panel5_Paint)
 #TabPage2
 #
 $TabPage2.Controls.Add($Panel6)
-$TabPage2.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]23))
+$TabPage2.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]22))
 $TabPage2.Name = [System.String]'TabPage2'
 $TabPage2.Padding = (New-Object -TypeName System.Windows.Forms.Padding -ArgumentList @([System.Int32]3))
-$TabPage2.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]536))
+$TabPage2.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]537))
 $TabPage2.TabIndex = [System.Int32]1
 $TabPage2.Text = [System.String]'Removing Services'
 $TabPage2.UseVisualStyleBackColor = $true
@@ -892,7 +892,7 @@ $Panel6.TabIndex = [System.Int32]34
 #
 $CheckBox39.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]5,[System.Int32]3))
 $CheckBox39.Name = [System.String]'CheckBox39'
-$CheckBox39.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]507,[System.Int32]24))
+$CheckBox39.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]899,[System.Int32]24))
 $CheckBox39.TabIndex = [System.Int32]0
 $CheckBox39.Text = [System.String]'Disable Connected User Experiences and Telemetry (To turn off Telemetry and Data Collection)'
 $CheckBox39.UseCompatibleTextRendering = $true
@@ -913,7 +913,7 @@ $CheckBox75.UseVisualStyleBackColor = $true
 #
 $CheckBox40.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]5,[System.Int32]22))
 $CheckBox40.Name = [System.String]'CheckBox40'
-$CheckBox40.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]507,[System.Int32]24))
+$CheckBox40.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]899,[System.Int32]24))
 $CheckBox40.TabIndex = [System.Int32]1
 $CheckBox40.Text = [System.String]'Disable Diagnostic Policy Service'
 $CheckBox40.UseCompatibleTextRendering = $true
@@ -934,7 +934,7 @@ $CheckBox74.UseVisualStyleBackColor = $true
 #
 $CheckBox41.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]5,[System.Int32]43))
 $CheckBox41.Name = [System.String]'CheckBox41'
-$CheckBox41.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]507,[System.Int32]24))
+$CheckBox41.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]902,[System.Int32]24))
 $CheckBox41.TabIndex = [System.Int32]2
 $CheckBox41.Text = [System.String]'Disable Distributed Link Tracking Client (If your computer is not connected to any network)'
 $CheckBox41.UseCompatibleTextRendering = $true
@@ -954,7 +954,7 @@ $CheckBox73.UseVisualStyleBackColor = $true
 #
 $CheckBox42.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]5,[System.Int32]61))
 $CheckBox42.Name = [System.String]'CheckBox42'
-$CheckBox42.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]507,[System.Int32]24))
+$CheckBox42.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]899,[System.Int32]24))
 $CheckBox42.TabIndex = [System.Int32]3
 $CheckBox42.Text = [System.String]'Disable WAP Push Message Routing Service (To turn off Telemetry and Data Collection)'
 $CheckBox42.UseCompatibleTextRendering = $true
@@ -1235,9 +1235,9 @@ $CheckBox56.UseVisualStyleBackColor = $true
 $TabPage4.Controls.Add($Button6)
 $TabPage4.Controls.Add($Panel2)
 $TabPage4.Controls.Add($Button5)
-$TabPage4.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]23))
+$TabPage4.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]22))
 $TabPage4.Name = [System.String]'TabPage4'
-$TabPage4.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]536))
+$TabPage4.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]537))
 $TabPage4.TabIndex = [System.Int32]3
 $TabPage4.Text = [System.String]'Other Tools'
 $TabPage4.UseVisualStyleBackColor = $true
