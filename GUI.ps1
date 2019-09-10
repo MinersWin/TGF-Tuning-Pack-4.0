@@ -22,6 +22,13 @@ $MyDir = Split-Path $script:MyInvocation.MyCommand.Path
 Add-Type -AssemblyName System.Windows.Forms
 . (Join-Path $PSScriptRoot 'GUI.designer.ps1')
 
+#Icon
+$bitmap = [System.Drawing.Bitmap]::FromFile('.\Images\favicon.ico')
+$bitmap.MakeTransparent()
+$hicon = $bitmap.GetHicon()
+$Form1.Icon = [system.drawing.icon]::FromHandle($hicon)
+
+
 #Alles Ausgrauen
 $Panel1.Enabled = $false
 $Panel3.Enabled = $false
