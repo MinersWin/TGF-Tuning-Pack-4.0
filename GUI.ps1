@@ -171,6 +171,13 @@ function Make-German{
     $CheckBox73.Text = "Deaktiviere den Routing Remote Access"
     $CheckBox74.Text = "Deaktiviere den Internet Connection Sharing (ICS) Service"
     $CheckBox75.Text = "Disable Superfetch (Sollte bei SSDs unbedingt aktiviert werden, schadet auch bei HHDs nicht)"
+
+    #Side Menu
+    $Label4.Text = "Beispiele"
+    $CheckBox62.Text = "Registry Sichern"
+    $CheckBox61.Text = "Erstelle einen Wiederherstellungspunkt"
+    $Button17.Text = "Beenden"
+    $Button16.Text = "Make FPS Rain!"
 }
 
 #Translate to English
@@ -254,6 +261,13 @@ function Make-English{
     $CheckBox73.Text = "Disable Routing and Remote Access"
     $CheckBox74.Text = "Disavle Internet Connection Sharing (ICS)"
     $CheckBox75.Text = "Disable Superfetch (A must for SSD drives, but good in general)"
+
+    #Side Menu
+    $Label4.Text = "Templates"
+    $CheckBox62.Text = "Backup Registry"
+    $CheckBox61.Text = "Create System Recovery Point"
+    $Button17.Text = "Close"
+    $Button16.Text = "Make FPS Rain!"
 }
 
 
