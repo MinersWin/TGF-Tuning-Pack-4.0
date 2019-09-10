@@ -275,7 +275,7 @@ function Make-English{
 
 
 #Add Ninite
-$Button19.Add_Click{(.\Ninite\Ninite.exe)}
+$Button19.Add_Click{(.\Ninite\Ninite.ps1)}
 
 #ComboBox Templates
 $ComboBox1.Items.Add("Maximale Leistung")
@@ -284,6 +284,9 @@ $ComboBox1.Items.Add("Maximale Privatsphäre")
 $ComboBox1.Items.Add("Empfohlen")
 $ComboBox1.SelectedItem = "Empfohlen"
 
+
+##################################################################################################################################################################################
+[System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr frühe Alpha Version. Die Tweaks sind noch nicht funktionsfähig.","The Geek Freaks Tuning Pack 4.0 by MinersWin",1)
 
 
 
