@@ -1,23 +1,3 @@
-$TabPage1_Click = {
-}
-$Panel5_Paint = {
-}
-$CheckBox2_CheckedChanged = {
-}
-$CheckBox39_CheckedChanged = {
-}
-$CheckBox40_CheckedChanged = {
-}
-$TabPage2_Click = {
-}
-$TabPage4_Click = {
-}
-$Form1_Load = {
-}
-$CheckBox63_CheckedChanged = {
-}
-$CheckBox11_CheckedChanged = {
-}
 $MyDir = Split-Path $script:MyInvocation.MyCommand.Path
 Add-Type -AssemblyName System.Windows.Forms
 . (Join-Path $PSScriptRoot 'GUI.designer.ps1')
@@ -130,7 +110,7 @@ function Make-German{
     $CheckBox25.Text = "Deaktiviere Cortana (Sprache und Suchhilfe, welche auch Informationen an Microsoft sendet)"
     $CheckBox26.Text = "Verstecke die Suchbox aus der Taskleiste (Das Suchen über das Startmenü ist immer noch möglich)"
     $CheckBox27.Text = "MRU-Listen (Jump Lists) von XAML-Apps im Startmenü deaktivieren"
-    $CheckBox29.Text = "Deaktivieren Sie die Registerkarte Datenträgerkontingent, die als Registerkarte angezeigt wird, wenn Sie mit der rechten Maustaste auf Laufwerksbuchstabe - Eigenschaften klicken"
+    $CheckBox29.Text = "Deaktivieren Sie die Registerkarte Datenträgerkontingent, die als Registerkarte in den Eigenschaften eines Laufwerks angezeigt wird"
     $CheckBox30.Text = "Verhindere die erstellung einer Werbe-ID"
     $CheckBox31.Text = "Entferne 'An Start anheften'"
     $CheckBox32.Text = "Deaktiviere Cortana, Bing, Suche und die Suchleiste"
@@ -285,11 +265,11 @@ function Make-English{
 $Button19.Add_Click{(.\Ninite\Ninite.ps1)}
 
 #ComboBox Templates
-$ComboBox1.Items.Add("Maximale Leistung")
-$ComboBox1.Items.Add("Maximale Akkulaufzeit")
-$ComboBox1.Items.Add("Maximale Privatsphäre")
-$ComboBox1.Items.Add("Empfohlen")
-$ComboBox1.SelectedItem = "Empfohlen"
+$ComboBox1.Items.Add("Best Performance")
+$ComboBox1.Items.Add("Maximum Battery Life")
+$ComboBox1.Items.Add("Maximum Privacy")
+$ComboBox1.Items.Add("Recommended")
+$ComboBox1.SelectedItem = "Recommended"
 
 
 ##################################################################################################################################################################################
@@ -298,4 +278,80 @@ $ComboBox1.SelectedItem = "Empfohlen"
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#About Button
+$Button1.Add_Click{(About)}
+function About {
+    # About Form Objects
+    $aboutForm          = New-Object System.Windows.Forms.Form
+    $aboutFormExit      = New-Object System.Windows.Forms.Button
+    $aboutFormImage     = New-Object System.Windows.Forms.PictureBox
+    $aboutFormNameLabel = New-Object System.Windows.Forms.Label
+    $aboutFormText      = New-Object System.Windows.Forms.Label
+    # About Form
+    $aboutForm.AcceptButton  = $aboutFormExit
+    $aboutForm.CancelButton  = $aboutFormExit
+    $aboutForm.ClientSize    = "350, 110"
+    $aboutForm.ControlBox    = $false
+    $aboutForm.ShowInTaskBar = $false
+    $aboutForm.StartPosition = "CenterParent"
+    $aboutForm.Text          = "The Geek Freaks Tuning Pack 4.0"
+    $aboutForm.Add_Load($aboutForm_Load)
+    # About PictureBox
+    $icon = [System.Drawing.Bitmap]::FromFile('.\Images\favicon.ico')
+    $aboutFormImage.Image    = $icon
+    $aboutFormImage.Location = "35, 15"
+    $aboutFormImage.Size     = "64, 64"
+    $aboutFormImage.SizeMode = "StretchImage"
+    $aboutForm.Controls.Add($aboutFormImage)
+    # About Name Label
+    $aboutFormNameLabel.Font     = New-Object Drawing.Font("Microsoft Sans Serif", 9, [System.Drawing.FontStyle]::Bold)
+    $aboutFormNameLabel.Location = "110, 20"
+    $aboutFormNameLabel.Size     = "200, 18"
+    $aboutFormNameLabel.Text     = "The Geek Freaks Tuning Pack 4.0"
+    $aboutForm.Controls.Add($aboutFormNameLabel)
+    # About Text Label
+    $aboutFormText.Location = "100, 40"
+    $aboutFormText.Size     = "300, 30"
+    $aboutFormText.Text     = "          Created by MinersWin `n`r https://www.thegeekfreaks.de"
+    $aboutFormText.Add_Click{(explorer https://thegeekfreaks.de)}
+    $aboutForm.Controls.Add($aboutFormText)
+    # About Exit Button
+    $aboutFormExit.Location = "135, 70"
+    $aboutFormExit.Text     = "OK"
+    $aboutForm.Controls.Add($aboutFormExit)
+    [void]$aboutForm.ShowDialog()
+} # End About
 $Form1.ShowDialog()

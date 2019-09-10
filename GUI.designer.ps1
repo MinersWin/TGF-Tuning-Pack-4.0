@@ -100,8 +100,6 @@ $Form1 = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.Button]$Button8 = $null
 [System.Windows.Forms.Button]$Button7 = $null
 [System.Windows.Forms.Button]$Button5 = $null
-[System.Windows.Forms.ImageList]$ImageList1 = $null
-[System.ComponentModel.IContainer]$components = $null
 [System.Windows.Forms.Panel]$Panel3 = $null
 [System.Windows.Forms.Button]$Button14 = $null
 [System.Windows.Forms.Button]$Button13 = $null
@@ -113,9 +111,9 @@ $Form1 = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.CheckBox]$CheckBox62 = $null
 [System.Windows.Forms.Button]$Button19 = $null
 [System.Windows.Forms.Panel]$Panel4 = $null
+[System.Windows.Forms.Button]$Button1 = $null
 function InitializeComponent
 {
-$components = (New-Object -TypeName System.ComponentModel.Container)
 $Label1 = (New-Object -TypeName System.Windows.Forms.Label)
 $PictureBox1 = (New-Object -TypeName System.Windows.Forms.PictureBox)
 $Label2 = (New-Object -TypeName System.Windows.Forms.Label)
@@ -217,7 +215,6 @@ $Button9 = (New-Object -TypeName System.Windows.Forms.Button)
 $Button8 = (New-Object -TypeName System.Windows.Forms.Button)
 $Button7 = (New-Object -TypeName System.Windows.Forms.Button)
 $Button5 = (New-Object -TypeName System.Windows.Forms.Button)
-$ImageList1 = (New-Object -TypeName System.Windows.Forms.ImageList -ArgumentList @($components))
 $Panel3 = (New-Object -TypeName System.Windows.Forms.Panel)
 $Button14 = (New-Object -TypeName System.Windows.Forms.Button)
 $Button13 = (New-Object -TypeName System.Windows.Forms.Button)
@@ -229,6 +226,7 @@ $Button17 = (New-Object -TypeName System.Windows.Forms.Button)
 $CheckBox62 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $Button19 = (New-Object -TypeName System.Windows.Forms.Button)
 $Panel4 = (New-Object -TypeName System.Windows.Forms.Panel)
+$Button1 = (New-Object -TypeName System.Windows.Forms.Button)
 ([System.ComponentModel.ISupportInitialize]$PictureBox1).BeginInit()
 $Panel1.SuspendLayout()
 $TabControl1.SuspendLayout()
@@ -1337,12 +1335,6 @@ $Button5.Text = [System.String]'Download Tools (300MB)'
 $Button5.UseCompatibleTextRendering = $true
 $Button5.UseVisualStyleBackColor = $true
 #
-#ImageList1
-#
-$ImageList1.ColorDepth = [System.Windows.Forms.ColorDepth]::Depth8Bit
-$ImageList1.ImageSize = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]16,[System.Int32]16))
-$ImageList1.TransparentColor = [System.Drawing.Color]::Transparent
-#
 #Panel3
 #
 $Panel3.BorderStyle = [System.Windows.Forms.BorderStyle]::Fixed3D
@@ -1388,7 +1380,7 @@ $Label5.UseCompatibleTextRendering = $true
 #
 #Button15
 #
-$Button15.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]858,[System.Int32]34))
+$Button15.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]881,[System.Int32]-2))
 $Button15.Name = [System.String]'Button15'
 $Button15.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]75,[System.Int32]23))
 $Button15.TabIndex = [System.Int32]50
@@ -1441,7 +1433,7 @@ $CheckBox62.UseVisualStyleBackColor = $true
 #
 #Button19
 #
-$Button19.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]777,[System.Int32]34))
+$Button19.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]881,[System.Int32]27))
 $Button19.Name = [System.String]'Button19'
 $Button19.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]75,[System.Int32]23))
 $Button19.TabIndex = [System.Int32]55
@@ -1461,10 +1453,21 @@ $Panel4.Name = [System.String]'Panel4'
 $Panel4.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]274,[System.Int32]133))
 $Panel4.TabIndex = [System.Int32]56
 #
+#Button1
+#
+$Button1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]881,[System.Int32]56))
+$Button1.Name = [System.String]'Button1'
+$Button1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]75,[System.Int32]23))
+$Button1.TabIndex = [System.Int32]57
+$Button1.Text = [System.String]'About'
+$Button1.UseCompatibleTextRendering = $true
+$Button1.UseVisualStyleBackColor = $true
+#
 #Form1
 #
 $Form1.BackColor = [System.Drawing.SystemColors]::Control
 $Form1.ClientSize = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]1242,[System.Int32]633))
+$Form1.Controls.Add($Button1)
 $Form1.Controls.Add($Panel4)
 $Form1.Controls.Add($Button19)
 $Form1.Controls.Add($Button15)
@@ -1591,8 +1594,6 @@ Add-Member -InputObject $Form1 -Name Button9 -Value $Button9 -MemberType NotePro
 Add-Member -InputObject $Form1 -Name Button8 -Value $Button8 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button7 -Value $Button7 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button5 -Value $Button5 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name ImageList1 -Value $ImageList1 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name components -Value $components -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Panel3 -Value $Panel3 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button14 -Value $Button14 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button13 -Value $Button13 -MemberType NoteProperty
@@ -1604,5 +1605,6 @@ Add-Member -InputObject $Form1 -Name Button17 -Value $Button17 -MemberType NoteP
 Add-Member -InputObject $Form1 -Name CheckBox62 -Value $CheckBox62 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button19 -Value $Button19 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Panel4 -Value $Panel4 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button1 -Value $Button1 -MemberType NoteProperty
 }
 . InitializeComponent
