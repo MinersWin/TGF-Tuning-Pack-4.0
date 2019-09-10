@@ -173,6 +173,93 @@ function Make-German{
     $CheckBox75.Text = "Disable Superfetch (Sollte bei SSDs unbedingt aktiviert werden, schadet auch bei HHDs nicht)"
 }
 
+#Translate to English
+$Button13.Add_Click{(Make-English)}
+function Make-English{
+    #Form
+    $Label3.Text = "created by MinersWin"
+
+    #Registry Tweaks
+    $CheckBox1.Text = "Show Computer Shortcut on Desktop"
+    $CheckBox2.Text = "Show Network Shortcut on Desktop"
+    $CheckBox3.Text = "Classic vertical Icon spacing"
+    $checkBox4.Text = "Lock the Taskbar"
+    $CheckBox5.Text = "Always show all icons on the Taskbar"
+    $checkBox6.Text = "Delay taskbar thumbnail pop-ups to 10 seconds"
+    $CheckBox7.Text = "Enable Classic control panel view"
+    $CheckBox8.Text = "Turn OFF Sticky Keys when SHIFT is prssed 5 Times"
+    $CheckBox9.Text = "Turn OFF Filter Keys when SHIFT is pressed for 8 seconds"
+    $CheckBox10.Text = "Disable Hibernation"
+    $CheckBox11.Text = "Underline keyboard shortcuts and access keys"
+    $CheckBox12.Text = "Show known file extensions in Explorer"
+    $checkBox13.Text = "Hide indication for compressed NTFS Files"
+    $CheckBox14.Text = "Show Hidden files in Explorer"
+    $CheckBox15.Text = "Show super Hidden System files in Explorer"
+    $CheckBox17.Text = "Replace Utilman with CMD"
+    $CheckBox18.Text = "Add the option 'Processor performance core parking min cores'"
+    $CheckBox19.Text = "Disable CPU core Parking"
+    $CheckBox20.Text = "Remove Logon screen wallpaper/background. Will use solid color instead (Accent color)"
+    $CheckBox21.Text = "Disable lockscreen"
+    $CheckBox22.Text = "Remove versioning tab from properties"
+    $CheckBox23.Text = "Disable jump lists"
+    $CheckBox24.Text = "Disable Windows Error Reporting"
+    $CheckBox25.Text = "Disable Cortana (Speech, Search Assistant, which also sends information to Microsoft)"
+    $CheckBox26.Text = "Hide search box from taskbar. You can still search by pressing the win key and start typing what youre looking for"
+    $CheckBox27.Text = "Disable MRU lists (jump lists) of XAML apps in Start Menu"
+    $CheckBox29.Text = "Disable Disk Quota tab, which appears as a tab when right-clicking on drive letter - Properties"
+    $CheckBox30.Text = "Disable creation of an Advertising ID"
+    $CheckBox31.Text = "Remove 'Pin to Start'"
+    $CheckBox32.Text = "Disable Cortana, Bing, Search and Searchbar"
+    $CheckBox33.Text = "Turn off the Error Dialog"
+    $CheckBox34.Text = "Disable Administrative shares"
+    $CheckBox35.Text = "Add 'Reboot to Recovery' to right-click menu of 'This PC'"
+    $CheckBox36.Text = "Change Clock and Date formats of current User to: 24H, metric"
+    $CheckBox37.Text = "Enable Developer Mode"
+    $Checkbox38.Text = "remove telemetry and data collection"
+    $CheckBox28.Text = "Set Windows Explorer to start on 'This PC' instead of 'Quick Access'"
+    $CheckBox16.Text = "Prevent both windows and Office from creating LNK files in the Recents folder"
+
+    #Removing Services
+    $CheckBox39.Text = "Disable Connected User Experiences and Telemetry (To turn off Telemetry and data collection)"
+    $CheckBox40.Text = "Disable Diagnostic Policy Service"
+    $checkBox41.Text = "Disable Distributed Link Tracking Client (If your computer is not connected to any network)"
+    $CheckBox42.Text = "Disable WAP Pust Message Routing Service (To turn off Telemetry and Data Collection)"
+    $checkBox43.Text = "Disable Downloaded Maps Manager (If you dont use Maps app)"
+    $CheckBox44.Text = "Disable IP Helper (If you dont use IPv6 Connection)"
+    $checkBox45.Text = "Disable Program Compatibility Assistant Service"
+    $CheckBox46.Text = "Disable Printer Spooler (If you dont have a printer)"
+    $CheckBox47.Text = "Disable Remote Registry (You can set it to DISABLED for Security purposes"
+    $CheckBox48.Text = "Disable Secondary Logon"
+    $CheckBox49.Text = "Disable Security center"
+    $CheckBox50.Text = "Disable TCP/IP NetIOS Helper (If you are not in a workgroup network)"
+    $CheckBox51.Text = "Disable Touch Keyboard and Handwriting Panel Service (If you dont want to use touch keyboard and handwriting features)"
+    $CheckBox52.Text = "Disable Windows error Reporting Service"
+    $CheckBox53.Text = "Disable Windows Image Acquisition (WIA) (If you dont have a scanner)"
+    $checkBox54.Text = "Disable Windows Search"
+    $CheckBox55.Text = "Disable tracking services"
+    $checkBox56.Text = "disable Superfetch"
+    $checkBox57.Text = "Disable Xbox Services"
+    $CheckBox58.Text = "Disable AllJoyn Router Services (If ou dont use Peer2Peer)"
+    $CheckBox59.Text = "Disable Bluetooth Services"
+    $checkBox60.Text = "Disable Geolocation Service"
+    $CheckBox64.Text = "Disable Phone Service"
+    $CheckBox65.Text = "Disable Windows Biometric Service"
+    $checkBox66.Text = "Disable Windows Mobile Hotspot Service"
+    $checkBox67.Text = "Disable Windows Media Player Network Sharing"
+    $CheckBox68.Text = "Disable Windows Update Service"
+    $CheckBox69.Text = "Disable Enterprise App Management Service"
+    $checkBox70.Text = "Disable Hyper-V Services"
+    $CheckBox71.Text = "Disable HomeGroup Listener"
+    $CheckBox72.Text = "Disable Net.Tcp Port Sharing Service"
+    $CheckBox73.Text = "Disable Routing and Remote Access"
+    $CheckBox74.Text = "Disavle Internet Connection Sharing (ICS)"
+    $CheckBox75.Text = "Disable Superfetch (A must for SSD drives, but good in general)"
+}
+
+
+
+
+
 #Add Ninite
 $Button19.Add_Click{(.\Ninite\Ninite.exe)}
 
