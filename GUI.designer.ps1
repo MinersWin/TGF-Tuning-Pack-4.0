@@ -1331,7 +1331,7 @@ $Button5.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([
 $Button5.Name = [System.String]'Button5'
 $Button5.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]163,[System.Int32]23))
 $Button5.TabIndex = [System.Int32]0
-$Button5.Text = [System.String]'Download Tools (300MB)'
+$Button5.Text = [System.String]'Download Tools'
 $Button5.UseCompatibleTextRendering = $true
 $Button5.UseVisualStyleBackColor = $true
 #

@@ -275,8 +275,21 @@ $ComboBox1.SelectedItem = "Recommended"
 ##################################################################################################################################################################################
 [System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr frühe Alpha Version. Die Tweaks sind noch nicht funktionsfähig.","The Geek Freaks Tuning Pack 4.0 by MinersWin",1)
 
+###################################################################################################################################################################################
+#Main Tweak Function
+###################################################################################################################################################################################
+$Button16.Add_Click{(Make-Tweaks)}
+function Make-Tweaks{
 
-
+    #Show Desktop Icon on Desktop
+    if ($CheckBox1.Checked){
+    $WshShell = New-Object -ComObject WScript.Shell
+    $Shortcut = $WshShell.CreateShortcut("C:\Users\$($env:Username)\Desktop\MyPC.lnk")
+    $Shortcut.TargetPath = [environment]::getfolderpath("mycomputer")
+    $Shortcut.Save()
+    }
+    #Show Network Icon on Desktop
+}
 
 
 
