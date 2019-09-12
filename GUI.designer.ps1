@@ -113,7 +113,6 @@ $Form1 = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.CheckBox]$CheckBox62 = $null
 [System.Windows.Forms.Button]$Button19 = $null
 [System.Windows.Forms.Panel]$Panel4 = $null
-[System.Windows.Forms.Button]$Button1 = $null
 [System.Windows.Forms.ProgressBar]$ProgressBar1 = $null
 [System.Windows.Forms.Panel]$Panel7 = $null
 [System.Windows.Forms.Label]$Label12 = $null
@@ -235,12 +234,11 @@ $Button17 = (New-Object -TypeName System.Windows.Forms.Button)
 $CheckBox62 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $Button19 = (New-Object -TypeName System.Windows.Forms.Button)
 $Panel4 = (New-Object -TypeName System.Windows.Forms.Panel)
-$Button1 = (New-Object -TypeName System.Windows.Forms.Button)
 $ProgressBar1 = (New-Object -TypeName System.Windows.Forms.ProgressBar)
 $Panel7 = (New-Object -TypeName System.Windows.Forms.Panel)
-$Label10 = (New-Object -TypeName System.Windows.Forms.Label)
-$Label11 = (New-Object -TypeName System.Windows.Forms.Label)
 $Label12 = (New-Object -TypeName System.Windows.Forms.Label)
+$Label11 = (New-Object -TypeName System.Windows.Forms.Label)
+$Label10 = (New-Object -TypeName System.Windows.Forms.Label)
 ([System.ComponentModel.ISupportInitialize]$PictureBox1).BeginInit()
 $Panel1.SuspendLayout()
 $TabControl1.SuspendLayout()
@@ -1417,7 +1415,7 @@ $Label5.UseCompatibleTextRendering = $true
 #
 #Button15
 #
-$Button15.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]881,[System.Int32]-2))
+$Button15.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]800,[System.Int32]39))
 $Button15.Name = [System.String]'Button15'
 $Button15.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]75,[System.Int32]23))
 $Button15.TabIndex = [System.Int32]50
@@ -1470,7 +1468,7 @@ $CheckBox62.UseVisualStyleBackColor = $true
 #
 #Button19
 #
-$Button19.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]881,[System.Int32]27))
+$Button19.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]881,[System.Int32]39))
 $Button19.Name = [System.String]'Button19'
 $Button19.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]75,[System.Int32]23))
 $Button19.TabIndex = [System.Int32]55
@@ -1489,16 +1487,6 @@ $Panel4.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([S
 $Panel4.Name = [System.String]'Panel4'
 $Panel4.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]274,[System.Int32]133))
 $Panel4.TabIndex = [System.Int32]56
-#
-#Button1
-#
-$Button1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]881,[System.Int32]56))
-$Button1.Name = [System.String]'Button1'
-$Button1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]75,[System.Int32]23))
-$Button1.TabIndex = [System.Int32]57
-$Button1.Text = [System.String]'About'
-$Button1.UseCompatibleTextRendering = $true
-$Button1.UseVisualStyleBackColor = $true
 #
 #ProgressBar1
 #
@@ -1521,15 +1509,14 @@ $Panel7.Name = [System.String]'Panel7'
 $Panel7.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]268,[System.Int32]170))
 $Panel7.TabIndex = [System.Int32]58
 #
-#Label10
+#Label12
 #
-$Label10.Font = (New-Object -TypeName System.Drawing.Font -ArgumentList @([System.String]'Tahoma',[System.Single]11.25,[System.Drawing.FontStyle]::Regular,[System.Drawing.GraphicsUnit]::Point,([System.Byte][System.Byte]0)))
-$Label10.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]9,[System.Int32]13))
-$Label10.Name = [System.String]'Label10'
-$Label10.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]252,[System.Int32]23))
-$Label10.TabIndex = [System.Int32]59
-$Label10.Text = [System.String]'Progress'
-$Label10.UseCompatibleTextRendering = $true
+$Label12.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]76))
+$Label12.Name = [System.String]'Label12'
+$Label12.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]257,[System.Int32]82))
+$Label12.TabIndex = [System.Int32]61
+$Label12.Text = [System.String]'Some Text, just go on and Spend all your Money for Ice Cream!'
+$Label12.UseCompatibleTextRendering = $true
 #
 #Label11
 #
@@ -1540,21 +1527,21 @@ $Label11.TabIndex = [System.Int32]60
 $Label11.Text = [System.String]'5%'
 $Label11.UseCompatibleTextRendering = $true
 #
-#Label12
+#Label10
 #
-$Label12.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]76))
-$Label12.Name = [System.String]'Label12'
-$Label12.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]257,[System.Int32]82))
-$Label12.TabIndex = [System.Int32]61
-$Label12.Text = [System.String]'Some Text, just go on and Spend all your Money for Ice Cream!'
-$Label12.UseCompatibleTextRendering = $true
+$Label10.Font = (New-Object -TypeName System.Drawing.Font -ArgumentList @([System.String]'Tahoma',[System.Single]11.25,[System.Drawing.FontStyle]::Regular,[System.Drawing.GraphicsUnit]::Point,([System.Byte][System.Byte]0)))
+$Label10.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]9,[System.Int32]13))
+$Label10.Name = [System.String]'Label10'
+$Label10.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]252,[System.Int32]23))
+$Label10.TabIndex = [System.Int32]59
+$Label10.Text = [System.String]'Progress'
+$Label10.UseCompatibleTextRendering = $true
 #
 #Form1
 #
 $Form1.BackColor = [System.Drawing.SystemColors]::Control
 $Form1.ClientSize = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]1242,[System.Int32]631))
 $Form1.Controls.Add($Panel7)
-$Form1.Controls.Add($Button1)
 $Form1.Controls.Add($Panel4)
 $Form1.Controls.Add($Button19)
 $Form1.Controls.Add($Button15)
@@ -1695,7 +1682,6 @@ Add-Member -InputObject $Form1 -Name Button17 -Value $Button17 -MemberType NoteP
 Add-Member -InputObject $Form1 -Name CheckBox62 -Value $CheckBox62 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button19 -Value $Button19 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Panel4 -Value $Panel4 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button1 -Value $Button1 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name ProgressBar1 -Value $ProgressBar1 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Panel7 -Value $Panel7 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Label12 -Value $Label12 -MemberType NoteProperty

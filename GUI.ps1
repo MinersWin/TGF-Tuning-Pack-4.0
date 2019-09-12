@@ -46,7 +46,16 @@ ___________ __                                    __     ___________            
 |_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
         __/ |                                                  
        |___/     
+The Geek Freaks Tuning Pack 4.0 Update 12.09.2019
+Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0
+WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
+This is a hobby project! Everything can create errors and problems! Use at your own risk!
+
+WIR ÜBERNEHMEN KEINE VERANTWORTUNG FÜR PROBLEME DIE MIT DER AUSFÜHRUNG UNSERES PROGRAMMS EINHERGEHEN!
+Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr!
 "
+##################################################################################################################################################################################
+[System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr frühe Alpha Version. Die Tweaks sind noch nicht funktionsfähig.","The Geek Freaks Tuning Pack 4.0 by MinersWin",1)
 
 
 
@@ -67,13 +76,16 @@ $Button15.Enabled = $false
 $CheckBox62.Enabled = $false
 $CheckBox61.Enabled = $false
 $Button16.Enabled = $false
+$TabPage1.visible = $false
+$TabPage2.visible = $false
+$TabPage4.Visible = $false
 
 
 #Geek Freaks Logo
 $Picture = '.\Images\Unbenannt-1-250x90.png'
 $img = [System.Drawing.Image]::Fromfile($Picture)
 $PictureBox1.Image = $img
-$PictureBox1.Add_Click({start 'https://thegeekfreaks.de'})
+$PictureBox1.Add_Click({About})
 
 #German Language Image
 $Picture2 = ".\Images\German.jpg"
@@ -105,6 +117,10 @@ function Accept-Everything{
         $CheckBox62.Enabled = $true
         $CheckBox61.Enabled = $true
         $Button16.Enabled = $true  
+        $TabPage1.visible = $true
+        $TabPage2.visible = $true
+        $TabPage4.Visible = $true
+        $TabPage3.Visible = $false
         $TabControl1.SelectedTab = $TabPage1
     } else {
         [System.Windows.Forms.MessageBox]::Show("Please Accept | Bitte Akzeptieren","TGF Tuning Pack 4.0",1)
@@ -309,10 +325,6 @@ function Make-English{
     $Button16.Text = "Make FPS Rain!"
 }
 
-
-
-
-
 #Add Ninite
 $Button19.Add_Click{(.\Ninite\Ninite.ps1)}
 
@@ -323,59 +335,62 @@ $ComboBox1.Items.Add("Maximum Privacy")
 $ComboBox1.Items.Add("Recommended")
 $ComboBox1.SelectedItem = "Recommended"
 
-
-##################################################################################################################################################################################
-[System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr frühe Alpha Version. Die Tweaks sind noch nicht funktionsfähig.","The Geek Freaks Tuning Pack 4.0 by MinersWin",1)
-
-
+#Progressbar Reset
+$ProgressBar1.Value = 0
+$Label11.Text = "0%"
+$Label12.Text = "The Tweaks havent started yet. Click on 'Make FPS Rain!' to Start the Process!"
 
 ###################################################################################################################################################################################
 #Main Tweak Function
 ###################################################################################################################################################################################
 $Button16.Add_Click{(Make-Tweaks)}
 function Make-Tweaks{
-    $CheckBoxes = @($Window.controls | ForEach {($_ -is [System.Windows.Forms.CheckBox]-AND ($_.Checked))})
-    Write-Host $CheckBoxes
-
     #Show Desktop Icon on Desktop
     if ($CheckBox1.Checked){
-        reg import .\Scripts\Add_This-PC_Desktop_Icon.reg
+        reg import .\Scripts\Registry\Add_This-PC_Desktop_Icon.reg
         $ProgressBar1.Value = 1
         $Label11.Text = "1%"
         $Label12.Text = "The registry entry is added. The icon of 'This Computer' is now visible on the desktop."
+        Start-Sleep 0.3
     }
     #Show Network Icon on Desktop
     if ($CheckBox2.Checked){
-        reg import .\Scripts\Add_Network_Desktop_Icon.reg
+        reg import .\Scripts\Registry\Add_Network_Desktop_Icon.reg
         $ProgressBar1.Value = 2
         $Label11.Text = "2%"
         $Label12.Text = "The registry entry is added. The icon of 'Network' is now visible on the desktop."
+        Start-Sleep 0.3
     }
     #Classic vertical Icon spacing
     if ($CheckBox3.Checked){
-        reg import .\Scripts\Reset_Classic_Vertica_Icon_Spacing.reg
+        reg import .\Scripts\Registry\Reset_Classic_Vertica_Icon_Spacing.reg
         $ProgressBar1.Value = 3
         $Label11.Text = "3%"
         $Label12.Text = "The default vertical icon spacing for the desktop is now set."
+        Start-Sleep 0.3
     }
     if ($CheckBox4.Checked){
-        reg import .\Scripts\Enable_ability_to_lock_and_unlock_taskbar.reg
+        reg import .\Scripts\Registry\Enable_ability_to_lock_and_unlock_taskbar.reg
         $ProgressBar1.Value = 4
         $Label11.Text = "4%"
         $Label12.Text = "Enable the Ability to lock and unlock the Taskbar."
+        Start-Sleep 0.3
+    }
+    if ($CheckBox5.Checked){
+        reg import .\Scripts\Registry\Enable_Always_show_all_notification_area_icons_for_all_users.reg
+        $ProgressBar1.Value = 5
+        $Label11.Text = "5%"
+        $Label12.Text = "Always show all Taskbar Icons and Notifications and restart explorer.exe"
+        Start-Sleep 0.3
+    }
+    if ($CheckBox6.Checked){
+        reg import .\Scripts\Registry\Change-Delay-Time-Show-Taskbar-Thumbnails-to-10-sec.reg
+        $ProgressBar1.Value = 6
+        $Label11.Text = "6%"
+        $Label12.Text = "Change the Time to Show Taskbar Thumbnails to 10 sec."
+        Start-Sleep 0.3
     }
 }
-
-
-
-
-
-
-
-#Progressbar Reset
-$ProgressBar1.Value = 0
-$Label11.Text = "0%"
-$Label12.Text = "The Tweaks havent started yet. Click on 'Make FPS Rain!' to Start the Process!"
 
 
 
@@ -403,7 +418,6 @@ $Label12.Text = "The Tweaks havent started yet. Click on 'Make FPS Rain!' to Sta
 
 
 #About Button
-$Button1.Add_Click{(About)}
 function About {
     # About Form Objects
     $aboutForm          = New-Object System.Windows.Forms.Form
