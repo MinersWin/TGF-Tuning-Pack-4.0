@@ -1,6 +1,54 @@
+$Form1_Load = {
+}
+$ProgressBar1_Click = {
+}
+$TabPage4_Click = {
+}
+$CheckBox40_CheckedChanged = {
+}
+$CheckBox39_CheckedChanged = {
+}
+$TabPage2_Click = {
+}
+$Panel5_Paint = {
+}
+$TabPage1_Click = {
+}
+$CheckBox63_CheckedChanged = {
+}
+$CheckBox11_CheckedChanged = {
+}
+$CheckBox2_CheckedChanged = {
+}
 $MyDir = Split-Path $script:MyInvocation.MyCommand.Path
 Add-Type -AssemblyName System.Windows.Forms
 . (Join-Path $PSScriptRoot 'GUI.designer.ps1')
+
+Write-Host "
+___________ __                                    __     ___________                      __            
+\__    ___/|  |__   ____      ____   ____   ____ |  | __ \_   _____/______   ____ _____  |  | __  ______
+  |    |   |  |  \_/ __ \    / ___\_/ __ \_/ __ \|  |/ /  |    __) \_  __ \_/ __ \\__  \ |  |/ / /  ___/
+  |    |   |   Y  \  ___/   / /_/  >  ___/\  ___/|    <   |     \   |  | \/\  ___/ / __ \|    <  \___ \ 
+  |____|   |___|  /\___  >  \___  / \___  >\___  >__|_ \  \___  /   |__|    \___  >____  /__|_ \/____  >
+                \/     \/  /_____/      \/     \/     \/      \/                \/     \/     \/     \/ 
+
+                ___________           .__                                      __        _____    _______   
+                \__    ___/_ __  ____ |__| ____    ____   ___________    ____ |  | __   /  |  |   \   _  \  
+                  |    | |  |  \/    \|  |/    \  / ___\  \____ \__  \ _/ ___\|  |/ /  /   |  |_  /  /_\  \ 
+                  |    | |  |  /   |  \  |   |  \/ /_/  > |  |_> > __ \\  \___|    <  /    ^   /  \  \_/   \
+                  |____| |____/|___|  /__|___|  /\___  /  |   __(____  /\___  >__|_ \ \____   | /\ \_____  /
+                                    \/        \//_____/   |__|       \/     \/     \/      |__| \/       \/                                                                                
+ _             __  __ _                  __          ___       
+| |           |  \/  (_)                 \ \        / (_)      
+| |__  _   _  | \  / |_ _ __   ___ _ __ __\ \  /\  / / _ _ __  
+| '_ \| | | | | |\/| | | '_ \ / _ \ '__/ __\ \/  \/ / | | '_ \ 
+| |_) | |_| | | |  | | | | | |  __/ |  \__ \\  /\  /  | | | | |
+|_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
+        __/ |                                                  
+       |___/     
+"
+
+
 
 #Icon
 $bitmap = [System.Drawing.Bitmap]::FromFile('.\Images\favicon.ico')
@@ -122,6 +170,8 @@ function Make-German{
     $Checkbox38.Text = "Entferne die Nutzungs und Datenerfassung von Microsoft"
     $CheckBox28.Text = "Setze den Windows Explorer Start zu 'Dieser PC' anstatt 'Zuletzt Verwendet'"
     $CheckBox16.Text = "Hinder Windows und Office daran LNK Daten im 'Zuletzt Verwendet' Ordner zu erstellen."
+    $CheckBox76.Text = "Zeige das User Profil auf dem Desktop"
+    $CheckBox77.Text = "zeige die Systemsteuerung auf dem Desktop"
 
     #Removing Services
     $CheckBox39.Text = "Deaktivieren der Telemetrie und Datenerfassung"
@@ -212,6 +262,8 @@ function Make-English{
     $Checkbox38.Text = "remove telemetry and data collection"
     $CheckBox28.Text = "Set Windows Explorer to start on 'This PC' instead of 'Quick Access'"
     $CheckBox16.Text = "Prevent both windows and Office from creating LNK files in the Recents folder"
+    $CheckBox76.Text = "Show User Profile on Desktop"
+    $CheckBox77.Text = "Show Control Panel on Desktop"
 
     #Removing Services
     $CheckBox39.Text = "Disable Connected User Experiences and Telemetry (To turn off Telemetry and data collection)"
@@ -275,20 +327,43 @@ $ComboBox1.SelectedItem = "Recommended"
 ##################################################################################################################################################################################
 [System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr frühe Alpha Version. Die Tweaks sind noch nicht funktionsfähig.","The Geek Freaks Tuning Pack 4.0 by MinersWin",1)
 
+
+
 ###################################################################################################################################################################################
 #Main Tweak Function
 ###################################################################################################################################################################################
 $Button16.Add_Click{(Make-Tweaks)}
 function Make-Tweaks{
+    $CheckBoxes = @($Window.controls | ForEach {($_ -is [System.Windows.Forms.CheckBox]-AND ($_.Checked))})
+    Write-Host $CheckBoxes
 
     #Show Desktop Icon on Desktop
     if ($CheckBox1.Checked){
-    $WshShell = New-Object -ComObject WScript.Shell
-    $Shortcut = $WshShell.CreateShortcut("C:\Users\$($env:Username)\Desktop\MyPC.lnk")
-    $Shortcut.TargetPath = [environment]::getfolderpath("mycomputer")
-    $Shortcut.Save()
+        reg import .\Scripts\Add_This-PC_Desktop_Icon.reg
+        $ProgressBar1.Value = 1
+        $Label11.Text = "1%"
+        $Label12.Text = "The registry entry is added. The icon of 'This Computer' is now visible on the desktop."
     }
     #Show Network Icon on Desktop
+    if ($CheckBox2.Checked){
+        reg import .\Scripts\Add_Network_Desktop_Icon.reg
+        $ProgressBar1.Value = 2
+        $Label11.Text = "2%"
+        $Label12.Text = "The registry entry is added. The icon of 'Network' is now visible on the desktop."
+    }
+    #Classic vertical Icon spacing
+    if ($CheckBox3.Checked){
+        reg import .\Scripts\Reset_Classic_Vertica_Icon_Spacing.reg
+        $ProgressBar1.Value = 3
+        $Label11.Text = "3%"
+        $Label12.Text = "The default vertical icon spacing for the desktop is now set."
+    }
+    if ($CheckBox4.Checked){
+        reg import .\Scripts\Enable_ability_to_lock_and_unlock_taskbar.reg
+        $ProgressBar1.Value = 4
+        $Label11.Text = "4%"
+        $Label12.Text = "Enable the Ability to lock and unlock the Taskbar."
+    }
 }
 
 
@@ -297,7 +372,10 @@ function Make-Tweaks{
 
 
 
-
+#Progressbar Reset
+$ProgressBar1.Value = 0
+$Label11.Text = "0%"
+$Label12.Text = "The Tweaks havent started yet. Click on 'Make FPS Rain!' to Start the Process!"
 
 
 

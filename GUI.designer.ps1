@@ -54,6 +54,8 @@ $Form1 = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.CheckBox]$CheckBox63 = $null
 [System.Windows.Forms.TabPage]$TabPage1 = $null
 [System.Windows.Forms.Panel]$Panel5 = $null
+[System.Windows.Forms.CheckBox]$CheckBox77 = $null
+[System.Windows.Forms.CheckBox]$CheckBox76 = $null
 [System.Windows.Forms.TabPage]$TabPage2 = $null
 [System.Windows.Forms.Panel]$Panel6 = $null
 [System.Windows.Forms.CheckBox]$CheckBox39 = $null
@@ -112,6 +114,11 @@ $Form1 = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.Button]$Button19 = $null
 [System.Windows.Forms.Panel]$Panel4 = $null
 [System.Windows.Forms.Button]$Button1 = $null
+[System.Windows.Forms.ProgressBar]$ProgressBar1 = $null
+[System.Windows.Forms.Panel]$Panel7 = $null
+[System.Windows.Forms.Label]$Label12 = $null
+[System.Windows.Forms.Label]$Label11 = $null
+[System.Windows.Forms.Label]$Label10 = $null
 function InitializeComponent
 {
 $Label1 = (New-Object -TypeName System.Windows.Forms.Label)
@@ -169,6 +176,8 @@ $Button18 = (New-Object -TypeName System.Windows.Forms.Button)
 $CheckBox63 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $TabPage1 = (New-Object -TypeName System.Windows.Forms.TabPage)
 $Panel5 = (New-Object -TypeName System.Windows.Forms.Panel)
+$CheckBox77 = (New-Object -TypeName System.Windows.Forms.CheckBox)
+$CheckBox76 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $TabPage2 = (New-Object -TypeName System.Windows.Forms.TabPage)
 $Panel6 = (New-Object -TypeName System.Windows.Forms.Panel)
 $CheckBox39 = (New-Object -TypeName System.Windows.Forms.CheckBox)
@@ -227,6 +236,11 @@ $CheckBox62 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $Button19 = (New-Object -TypeName System.Windows.Forms.Button)
 $Panel4 = (New-Object -TypeName System.Windows.Forms.Panel)
 $Button1 = (New-Object -TypeName System.Windows.Forms.Button)
+$ProgressBar1 = (New-Object -TypeName System.Windows.Forms.ProgressBar)
+$Panel7 = (New-Object -TypeName System.Windows.Forms.Panel)
+$Label10 = (New-Object -TypeName System.Windows.Forms.Label)
+$Label11 = (New-Object -TypeName System.Windows.Forms.Label)
+$Label12 = (New-Object -TypeName System.Windows.Forms.Label)
 ([System.ComponentModel.ISupportInitialize]$PictureBox1).BeginInit()
 $Panel1.SuspendLayout()
 $TabControl1.SuspendLayout()
@@ -239,6 +253,7 @@ $TabPage4.SuspendLayout()
 $Panel2.SuspendLayout()
 $Panel3.SuspendLayout()
 $Panel4.SuspendLayout()
+$Panel7.SuspendLayout()
 $Form1.SuspendLayout()
 #
 #Label1
@@ -787,6 +802,8 @@ $TabPage1.add_Click($TabPage1_Click)
 #Panel5
 #
 $Panel5.AutoScroll = $true
+$Panel5.Controls.Add($CheckBox77)
+$Panel5.Controls.Add($CheckBox76)
 $Panel5.Controls.Add($CheckBox17)
 $Panel5.Controls.Add($Label2)
 $Panel5.Controls.Add($CheckBox1)
@@ -828,9 +845,29 @@ $Panel5.Controls.Add($CheckBox29)
 $Panel5.Controls.Add($CheckBox10)
 $Panel5.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]3))
 $Panel5.Name = [System.String]'Panel5'
-$Panel5.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]930,[System.Int32]537))
+$Panel5.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]930,[System.Int32]528))
 $Panel5.TabIndex = [System.Int32]47
 $Panel5.add_Paint($Panel5_Paint)
+#
+#CheckBox77
+#
+$CheckBox77.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]841))
+$CheckBox77.Name = [System.String]'CheckBox77'
+$CheckBox77.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]903,[System.Int32]15))
+$CheckBox77.TabIndex = [System.Int32]48
+$CheckBox77.Text = [System.String]'Show Control Panel on Desktop'
+$CheckBox77.UseCompatibleTextRendering = $true
+$CheckBox77.UseVisualStyleBackColor = $true
+#
+#CheckBox76
+#
+$CheckBox76.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]820))
+$CheckBox76.Name = [System.String]'CheckBox76'
+$CheckBox76.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]902,[System.Int32]15))
+$CheckBox76.TabIndex = [System.Int32]47
+$CheckBox76.Text = [System.String]'Show Users Profile on Desktop'
+$CheckBox76.UseCompatibleTextRendering = $true
+$CheckBox76.UseVisualStyleBackColor = $true
 #
 #TabPage2
 #
@@ -1463,10 +1500,60 @@ $Button1.Text = [System.String]'About'
 $Button1.UseCompatibleTextRendering = $true
 $Button1.UseVisualStyleBackColor = $true
 #
+#ProgressBar1
+#
+$ProgressBar1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]2,[System.Int32]39))
+$ProgressBar1.Name = [System.String]'ProgressBar1'
+$ProgressBar1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]261,[System.Int32]23))
+$ProgressBar1.TabIndex = [System.Int32]58
+$ProgressBar1.Value = [System.Int32]5
+$ProgressBar1.add_Click($ProgressBar1_Click)
+#
+#Panel7
+#
+$Panel7.BorderStyle = [System.Windows.Forms.BorderStyle]::FixedSingle
+$Panel7.Controls.Add($Label12)
+$Panel7.Controls.Add($Label11)
+$Panel7.Controls.Add($Label10)
+$Panel7.Controls.Add($ProgressBar1)
+$Panel7.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]968,[System.Int32]317))
+$Panel7.Name = [System.String]'Panel7'
+$Panel7.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]268,[System.Int32]170))
+$Panel7.TabIndex = [System.Int32]58
+#
+#Label10
+#
+$Label10.Font = (New-Object -TypeName System.Drawing.Font -ArgumentList @([System.String]'Tahoma',[System.Single]11.25,[System.Drawing.FontStyle]::Regular,[System.Drawing.GraphicsUnit]::Point,([System.Byte][System.Byte]0)))
+$Label10.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]9,[System.Int32]13))
+$Label10.Name = [System.String]'Label10'
+$Label10.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]252,[System.Int32]23))
+$Label10.TabIndex = [System.Int32]59
+$Label10.Text = [System.String]'Progress'
+$Label10.UseCompatibleTextRendering = $true
+#
+#Label11
+#
+$Label11.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]214,[System.Int32]13))
+$Label11.Name = [System.String]'Label11'
+$Label11.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]31,[System.Int32]23))
+$Label11.TabIndex = [System.Int32]60
+$Label11.Text = [System.String]'5%'
+$Label11.UseCompatibleTextRendering = $true
+#
+#Label12
+#
+$Label12.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]76))
+$Label12.Name = [System.String]'Label12'
+$Label12.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]257,[System.Int32]82))
+$Label12.TabIndex = [System.Int32]61
+$Label12.Text = [System.String]'Some Text, just go on and Spend all your Money for Ice Cream!'
+$Label12.UseCompatibleTextRendering = $true
+#
 #Form1
 #
 $Form1.BackColor = [System.Drawing.SystemColors]::Control
-$Form1.ClientSize = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]1242,[System.Int32]633))
+$Form1.ClientSize = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]1242,[System.Int32]631))
+$Form1.Controls.Add($Panel7)
 $Form1.Controls.Add($Button1)
 $Form1.Controls.Add($Panel4)
 $Form1.Controls.Add($Button19)
@@ -1491,6 +1578,7 @@ $TabPage4.ResumeLayout($false)
 $Panel2.ResumeLayout($false)
 $Panel3.ResumeLayout($false)
 $Panel4.ResumeLayout($false)
+$Panel7.ResumeLayout($false)
 $Form1.ResumeLayout($false)
 Add-Member -InputObject $Form1 -Name base -Value $base -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Label1 -Value $Label1 -MemberType NoteProperty
@@ -1548,6 +1636,8 @@ Add-Member -InputObject $Form1 -Name Button18 -Value $Button18 -MemberType NoteP
 Add-Member -InputObject $Form1 -Name CheckBox63 -Value $CheckBox63 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name TabPage1 -Value $TabPage1 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Panel5 -Value $Panel5 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name CheckBox77 -Value $CheckBox77 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name CheckBox76 -Value $CheckBox76 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name TabPage2 -Value $TabPage2 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Panel6 -Value $Panel6 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox39 -Value $CheckBox39 -MemberType NoteProperty
@@ -1606,5 +1696,10 @@ Add-Member -InputObject $Form1 -Name CheckBox62 -Value $CheckBox62 -MemberType N
 Add-Member -InputObject $Form1 -Name Button19 -Value $Button19 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Panel4 -Value $Panel4 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button1 -Value $Button1 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name ProgressBar1 -Value $ProgressBar1 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Panel7 -Value $Panel7 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Label12 -Value $Label12 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Label11 -Value $Label11 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Label10 -Value $Label10 -MemberType NoteProperty
 }
 . InitializeComponent

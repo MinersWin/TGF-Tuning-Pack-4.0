@@ -6,7 +6,7 @@ Windows Registry Editor Version 5.00
 
  
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
-"{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}"=dword:00000000
+"{59031a47-3f72-44a7-89c5-5595fe6b30ee}"=dword:00000000
  
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\ClassicStartMenu]
-"{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}"=dword:00000000
+"{59031a47-3f72-44a7-89c5-5595fe6b30ee}"=dword:00000000
