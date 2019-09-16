@@ -448,7 +448,13 @@ function Apply-Template{##############FIXME##############
 
 #Add Tooltips
 $tooltip1 = New-Object System.Windows.Forms.ToolTip
-$tooltip1.SetToolTip($CheckBox1,"Create an Desktop Icon of 'This Computer'")
+$tooltip1.SetToolTip($CheckBox1,"Add the 'My Computer' Icon to the Windows 10 Desktop")
+$tooltip2 = New-Object System.Windows.Forms.ToolTip
+$tooltip2.SetToolTip($CheckBox2,"Add the 'Network' Icon to the Windows 10 Desktop")
+$tooltip3 = New-Object System.Windows.Forms.ToolTip
+$tooltip3.SetToolTip($CheckBox3,"Icon vertical spacing is for how much vertical (up/down)empty space there is inbetween the icons on your desktop separate them wich.")
+$tooltip4 = New-Object System.Windows.Forms.ToolTip
+$tooltip4.SetToolTip($CheckBox4,"You can keep the taskbar in one place by locking it, which can prevent accidental moving or resizing. If you unlock it, you can drag the taskbar to resize or move it to the bottom, left or right side, or top of your display(s).")
 
 
 
