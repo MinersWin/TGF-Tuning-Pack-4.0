@@ -416,11 +416,11 @@ function Make-Tweaks{
     }
 }
 
-#Templates
+#Templates 
 $Button1.Add_Click{([System.Windows.Forms.MessageBox]::Show("Work in Progress!","TGF Tuning Pack 4.0",1))}
 $Button2.Add_Click{(Apply-Template)}
 
-function Apply-Template{
+function Apply-Template{##############FIXME##############
     if ($ComboBox1.SelectedItem -eq "Recommended"){
         $CheckBox1.Checked = $true
         $CheckBox2.Checked = $true
@@ -430,11 +430,25 @@ function Apply-Template{
         $CheckBox6.Checked = $false
         $CheckBox7.Checked = $true
         $CheckBox8.Checked = $true
+        $CheckBox9.Checked = $true
+        $CheckBox10.Checked = $true
+        $CheckBox11.Checked = $true
+        $CheckBox12.Checked = $true
+        $CheckBox13.Checked = $true
+        $CheckBox14.Checked = $true
+        $CheckBox15.Checked = $true
+        $CheckBox16.Checked = $true
+        $CheckBox17.Checked = $true
+        $CheckBox18.Checked = $true
+        $CheckBox19.Checked = $true
+        $CheckBox20.Checked = $true
+        $CheckBox21.Checked = $true
     }
 }
 
-
-
+#Add Tooltips
+$tooltip1 = New-Object System.Windows.Forms.ToolTip
+$tooltip1.SetToolTip($CheckBox1,"Create an Desktop Icon of 'This Computer'")
 
 
 
