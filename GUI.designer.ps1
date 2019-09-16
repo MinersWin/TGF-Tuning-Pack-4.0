@@ -43,6 +43,8 @@ $Form1 = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.CheckBox]$CheckBox37 = $null
 [System.Windows.Forms.CheckBox]$CheckBox38 = $null
 [System.Windows.Forms.Panel]$Panel1 = $null
+[System.Windows.Forms.Button]$Button2 = $null
+[System.Windows.Forms.Button]$Button1 = $null
 [System.Windows.Forms.ComboBox]$ComboBox1 = $null
 [System.Windows.Forms.TabControl]$TabControl1 = $null
 [System.Windows.Forms.TabPage]$TabPage3 = $null
@@ -239,6 +241,8 @@ $Panel7 = (New-Object -TypeName System.Windows.Forms.Panel)
 $Label12 = (New-Object -TypeName System.Windows.Forms.Label)
 $Label11 = (New-Object -TypeName System.Windows.Forms.Label)
 $Label10 = (New-Object -TypeName System.Windows.Forms.Label)
+$Button1 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button2 = (New-Object -TypeName System.Windows.Forms.Button)
 ([System.ComponentModel.ISupportInitialize]$PictureBox1).BeginInit()
 $Panel1.SuspendLayout()
 $TabControl1.SuspendLayout()
@@ -685,12 +689,14 @@ $CheckBox38.UseVisualStyleBackColor = $true
 #
 #Panel1
 #
-$Panel1.BorderStyle = [System.Windows.Forms.BorderStyle]::Fixed3D
+$Panel1.BorderStyle = [System.Windows.Forms.BorderStyle]::FixedSingle
+$Panel1.Controls.Add($Button2)
+$Panel1.Controls.Add($Button1)
 $Panel1.Controls.Add($ComboBox1)
 $Panel1.Controls.Add($Label4)
-$Panel1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]968,[System.Int32]107))
+$Panel1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]962,[System.Int32]107))
 $Panel1.Name = [System.String]'Panel1'
-$Panel1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]268,[System.Int32]72))
+$Panel1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]274,[System.Int32]98))
 $Panel1.TabIndex = [System.Int32]47
 #
 #ComboBox1
@@ -698,7 +704,7 @@ $Panel1.TabIndex = [System.Int32]47
 $ComboBox1.FormattingEnabled = $true
 $ComboBox1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]1,[System.Int32]35))
 $ComboBox1.Name = [System.String]'ComboBox1'
-$ComboBox1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]259,[System.Int32]21))
+$ComboBox1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]268,[System.Int32]21))
 $ComboBox1.TabIndex = [System.Int32]41
 #
 #TabControl1
@@ -751,7 +757,7 @@ $Label8.UseCompatibleTextRendering = $true
 #
 $Label7.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]10,[System.Int32]23))
 $Label7.Name = [System.String]'Label7'
-$Label7.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]926,[System.Int32]33))
+$Label7.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]923,[System.Int32]33))
 $Label7.TabIndex = [System.Int32]4
 $Label7.UseCompatibleTextRendering = $true
 #
@@ -1372,13 +1378,13 @@ $Button5.UseVisualStyleBackColor = $true
 #
 #Panel3
 #
-$Panel3.BorderStyle = [System.Windows.Forms.BorderStyle]::Fixed3D
+$Panel3.BorderStyle = [System.Windows.Forms.BorderStyle]::FixedSingle
 $Panel3.Controls.Add($Button14)
 $Panel3.Controls.Add($Button13)
 $Panel3.Controls.Add($Label5)
-$Panel3.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]968,[System.Int32]211))
+$Panel3.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]962,[System.Int32]211))
 $Panel3.Name = [System.String]'Panel3'
-$Panel3.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]268,[System.Int32]100))
+$Panel3.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]274,[System.Int32]100))
 $Panel3.TabIndex = [System.Int32]49
 #
 #Button14
@@ -1504,9 +1510,9 @@ $Panel7.Controls.Add($Label12)
 $Panel7.Controls.Add($Label11)
 $Panel7.Controls.Add($Label10)
 $Panel7.Controls.Add($ProgressBar1)
-$Panel7.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]968,[System.Int32]317))
+$Panel7.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]962,[System.Int32]317))
 $Panel7.Name = [System.String]'Panel7'
-$Panel7.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]268,[System.Int32]170))
+$Panel7.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]274,[System.Int32]170))
 $Panel7.TabIndex = [System.Int32]58
 #
 #Label12
@@ -1536,6 +1542,26 @@ $Label10.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([Syste
 $Label10.TabIndex = [System.Int32]59
 $Label10.Text = [System.String]'Progress'
 $Label10.UseCompatibleTextRendering = $true
+#
+#Button1
+#
+$Button1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]9,[System.Int32]65))
+$Button1.Name = [System.String]'Button1'
+$Button1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]113,[System.Int32]23))
+$Button1.TabIndex = [System.Int32]42
+$Button1.Text = [System.String]'Create Own (WIP)'
+$Button1.UseCompatibleTextRendering = $true
+$Button1.UseVisualStyleBackColor = $true
+#
+#Button2
+#
+$Button2.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]128,[System.Int32]65))
+$Button2.Name = [System.String]'Button2'
+$Button2.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]139,[System.Int32]23))
+$Button2.TabIndex = [System.Int32]43
+$Button2.Text = [System.String]'Apply'
+$Button2.UseCompatibleTextRendering = $true
+$Button2.UseVisualStyleBackColor = $true
 #
 #Form1
 #
@@ -1612,6 +1638,8 @@ Add-Member -InputObject $Form1 -Name CheckBox36 -Value $CheckBox36 -MemberType N
 Add-Member -InputObject $Form1 -Name CheckBox37 -Value $CheckBox37 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox38 -Value $CheckBox38 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Panel1 -Value $Panel1 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button2 -Value $Button2 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button1 -Value $Button1 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name ComboBox1 -Value $ComboBox1 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name TabControl1 -Value $TabControl1 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name TabPage3 -Value $TabPage3 -MemberType NoteProperty

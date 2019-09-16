@@ -351,48 +351,87 @@ function Make-Tweaks{
         $ProgressBar1.Value = 1
         $Label11.Text = "1%"
         $Label12.Text = "The registry entry is added. The icon of 'This Computer' is now visible on the desktop."
-        Start-Sleep 0.3
     }
     #Show Network Icon on Desktop
     if ($CheckBox2.Checked){
         reg import .\Scripts\Registry\Add_Network_Desktop_Icon.reg
-        $ProgressBar1.Value = 2
-        $Label11.Text = "2%"
+        $ProgressBar1.Value = 1
+        $Label11.Text = "1%"
         $Label12.Text = "The registry entry is added. The icon of 'Network' is now visible on the desktop."
-        Start-Sleep 0.3
     }
     #Classic vertical Icon spacing
     if ($CheckBox3.Checked){
         reg import .\Scripts\Registry\Reset_Classic_Vertica_Icon_Spacing.reg
-        $ProgressBar1.Value = 3
-        $Label11.Text = "3%"
+        $ProgressBar1.Value = 2
+        $Label11.Text = "2%"
         $Label12.Text = "The default vertical icon spacing for the desktop is now set."
-        Start-Sleep 0.3
     }
     if ($CheckBox4.Checked){
         reg import .\Scripts\Registry\Enable_ability_to_lock_and_unlock_taskbar.reg
-        $ProgressBar1.Value = 4
-        $Label11.Text = "4%"
+        $ProgressBar1.Value = 2
+        $Label11.Text = "2%"
         $Label12.Text = "Enable the Ability to lock and unlock the Taskbar."
-        Start-Sleep 0.3
     }
     if ($CheckBox5.Checked){
         reg import .\Scripts\Registry\Enable_Always_show_all_notification_area_icons_for_all_users.reg
-        $ProgressBar1.Value = 5
-        $Label11.Text = "5%"
+        $ProgressBar1.Value = 3
+        $Label11.Text = "3%"
         $Label12.Text = "Always show all Taskbar Icons and Notifications and restart explorer.exe"
-        Start-Sleep 0.3
     }
     if ($CheckBox6.Checked){
         reg import .\Scripts\Registry\Change-Delay-Time-Show-Taskbar-Thumbnails-to-10-sec.reg
+        $ProgressBar1.Value = 3
+        $Label11.Text = "3%"
+        $Label12.Text = "Change the Time to Show Taskbar Thumbnails to 10 sec."
+    }
+    if ($CheckBox7.Checked){
+        reg import .\Scripts\Registry\Enable_Control_Panel_and_Settings.reg
+        $ProgressBar1.Value = 4
+        $Label11.Text = "4%"
+        $Label12.Text = "Enable Classic Control Panel View."
+    }
+    if ($CheckBox8.Checked){
+        reg import .\Scripts\Registry\Permanently-disabling-sticky-keys.reg
+        $ProgressBar1.Value = 4
+        $Label11.Text = "4%"
+        $Label12.Text = "Turn of Sticky Keys."
+    }
+    if ($CheckBox9.Checked){
+        reg import .\Scripts\Registry\Permanently-disabling-sticky-keys.reg
+        $ProgressBar1.Value = 5
+        $Label11.Text = "5%"
+        $Label12.Text = "Turn of Filter Keys."
+    }
+    if ($CheckBox10.Checked){
+        reg import .\Scripts\Registry\Disable_Hibernate.reg
+        $ProgressBar1.Value = 5
+        $Label11.Text = "5%"
+        $Label12.Text = "Disable Hibernation."
+    }
+    if ($CheckBox11.Checked){
+        reg import .\Scripts\Registry\Turn_ON_underline_keyboard_shortcuts_in_menus.reg
         $ProgressBar1.Value = 6
         $Label11.Text = "6%"
-        $Label12.Text = "Change the Time to Show Taskbar Thumbnails to 10 sec."
-        Start-Sleep 0.3
+        $Label12.Text = "Turned On the Underline of KeyBoard Shortcuts in Menus."
     }
 }
 
+#Templates
+$Button1.Add_Click{([System.Windows.Forms.MessageBox]::Show("Work in Progress!","TGF Tuning Pack 4.0",1))}
+$Button2.Add_Click{(Apply-Template)}
 
+function Apply-Template{
+    if ($ComboBox1.SelectedItem -eq "Recommended"){
+        $CheckBox1.Checked = $true
+        $CheckBox2.Checked = $true
+        $CheckBox3.Checked = $true
+        $CheckBox4.Checked = $true
+        $CheckBox5.Checked = $true
+        $CheckBox6.Checked = $false
+        $CheckBox7.Checked = $true
+        $CheckBox8.Checked = $true
+    }
+}
 
 
 
