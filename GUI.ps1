@@ -51,11 +51,11 @@ Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
 
-WIR ï¿½BERNEHMEN KEINE VERANTWORTUNG Fï¿½R PROBLEME DIE MIT DER AUSFï¿½HRUNG UNSERES PROGRAMMS EINHERGEHEN!
+WIR ÜBERNEHMEN KEINE VERANTWORTUNG FÜR PROBLEME DIE MIT DER AUSFÜHRUNG UNSERES PROGRAMMS EINHERGEHEN!
 Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr!
 "
 ##################################################################################################################################################################################
-[System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr frï¿½he Alpha Version. Die Tweaks sind noch nicht funktionsfï¿½hig.","The Geek Freaks Tuning Pack 4.0 by MinersWin",1)
+[System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr frühe Alpha Version. Die Tweaks sind noch nicht funktionsfähig.","The Geek Freaks Tuning Pack 4.0 by MinersWin",1)
 
 
 
@@ -131,7 +131,7 @@ function Accept-Everything{
 $Label6.Text = "English:    "
 $Label7.Text = "We do not take responsibility for problems that accompany the execution of our program! This is a hobby project! Everything can create errors and problems! Use at your own risk! Problems and bugs are welcome in the Discord: https://discordapp.com/invite/k5kMSa    "
 $Label8.Text = "German: "
-$Label9.Text = "Wir ï¿½bernehmen keine Verantwortung fï¿½r Probleme, die mit der Ausfï¿½hrung unseres Programms einhergehen! Dies ist ein hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr! Probleme und Bugs kï¿½nnen gerne im Discord gemeldet werden: https://discordapp.com/invite/k5kMSa "
+$Label9.Text = "Wir Übernehmen keine Verantwortung für Probleme, die mit der Ausführung unseres Programms einhergehen! Dies ist ein hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr! Probleme und Bugs können gerne im Discord gemeldet werden: https://discordapp.com/invite/k5kMSa "
 $CheckBox61.Text = "Create System Recovery Point"
 
 #Close when Click Close
@@ -148,17 +148,17 @@ function Make-German{
     $Label3.Text = "erstellt von MinersWin"
 
     #Registry Tweaks
-    $CheckBox1.Text = "Zeige die 'Dieser PC' Verknï¿½pfung auf dem Desktop"
-    $CheckBox2.Text = "Zeige die 'Netzwerk' Verknï¿½pfung auf dem Desktop"
+    $CheckBox1.Text = "Zeige die 'Dieser PC' Verknüpfung auf dem Desktop"
+    $CheckBox2.Text = "Zeige die 'Netzwerk' Verknüpfung auf dem Desktop"
     $CheckBox3.Text = "Klassischer Vertikaler Symbolabstand"
     $checkBox4.Text = "Fixiere die Taskleiste"
     $CheckBox5.Text = "Zeige immer alle Icons in der Taskleiste"
-    $checkBox6.Text = "Verzï¿½gere die Anzeige von Miniaturansichten in der Taskleiste um 10 Sekunden"
+    $checkBox6.Text = "Verzögere die Anzeige von Miniaturansichten in der Taskleiste um 10 Sekunden"
     $CheckBox7.Text = "Aktiviere die Klassische Systemsteuerungsansicht"
-    $CheckBox8.Text = "Deaktivieren der Einrastfunktion beim 5 maligen Drï¿½cken der SHIFT Taste"
-    $CheckBox9.Text = "Deaktivieren der Filterfunktion beim 8 Sekunden langen drï¿½cken der SHIFT Taste"
+    $CheckBox8.Text = "Deaktivieren der Einrastfunktion beim 5 maligen Drücken der SHIFT Taste"
+    $CheckBox9.Text = "Deaktivieren der Filterfunktion beim 8 Sekunden langen drücken der SHIFT Taste"
     $CheckBox10.Text = "Deaktiviere den Ruhemodus"
-    $CheckBox11.Text = "Unterstreiche Tastenkombinationen und Zugangsschlï¿½ssel"
+    $CheckBox11.Text = "Unterstreiche Tastenkombinationen und Zugangsschlüssel"
     $CheckBox12.Text = "Zeige Dateiendungen im Windows Explorer"
     $checkBox13.Text = "Komprimierte NTFS-Dateien ausblenden"
     $CheckBox14.Text = "Zeige Versteckte Daten"
@@ -168,20 +168,20 @@ function Make-German{
     $CheckBox19.Text = "Deaktiviere CPU-Core-Parking"
     $CheckBox20.Text = "Entferne das Hintergrundbild im Anmeldebildschirm und setzte eine Statische Farbe (BLAU)"
     $CheckBox21.Text = "Deaktiviere den Sperrbildschirm"
-    $CheckBox22.Text = "Entferne den Vorgï¿½ngerversionen Tab aus den Eigenschaften"
+    $CheckBox22.Text = "Entferne den Vorgängerversionen Tab aus den Eigenschaften"
     $CheckBox23.Text = "Deaktiviere Jump Lists"
     $CheckBox24.Text = "Deaktiviere das Senden von Errormeldungen an Microsoft"
     $CheckBox25.Text = "Deaktiviere Cortana (Sprache und Suchhilfe, welche auch Informationen an Microsoft sendet)"
-    $CheckBox26.Text = "Verstecke die Suchbox aus der Taskleiste (Das Suchen ï¿½ber das Startmenï¿½ ist immer noch mï¿½glich)"
-    $CheckBox27.Text = "MRU-Listen (Jump Lists) von XAML-Apps im Startmenï¿½ deaktivieren"
-    $CheckBox29.Text = "Deaktivieren Sie die Registerkarte Datentrï¿½gerkontingent, die als Registerkarte in den Eigenschaften eines Laufwerks angezeigt wird"
+    $CheckBox26.Text = "Verstecke die Suchbox aus der Taskleiste (Das Suchen über das Startmenü ist immer noch möglich)"
+    $CheckBox27.Text = "MRU-Listen (Jump Lists) von XAML-Apps im Startmenü deaktivieren"
+    $CheckBox29.Text = "Deaktivieren Sie die Registerkarte Datenträgerkontingent, die als Registerkarte in den Eigenschaften eines Laufwerks angezeigt wird"
     $CheckBox30.Text = "Verhindere die erstellung einer Werbe-ID"
     $CheckBox31.Text = "Entferne 'An Start anheften'"
     $CheckBox32.Text = "Deaktiviere Cortana, Bing, Suche und die Suchleiste"
     $CheckBox33.Text = "Deaktiviere den Error Dialog"
     $CheckBox34.Text = "Deaktiviere Administrative Freigaben"
-    $CheckBox35.Text = "Fï¿½ge 'Reboot to Recovery' zum Rechtsklickmenï¿½ von 'Dieser PC' hinzu"
-    $CheckBox36.Text = "ï¿½nder das Uhrzeit und Datumsformat des Angemeldeten Nutzers zu 24H, metrisch"
+    $CheckBox35.Text = "Füge 'Reboot to Recovery' zum Rechtsklickmenü von 'Dieser PC' hinzu"
+    $CheckBox36.Text = "Änder das Uhrzeit und Datumsformat des Angemeldeten Nutzers zu 24H, metrisch"
     $CheckBox37.Text = "Aktiviere den Developer (Programmierer) Modus"
     $Checkbox38.Text = "Entferne die Nutzungs und Datenerfassung von Microsoft"
     $CheckBox28.Text = "Setze den Windows Explorer Start zu 'Dieser PC' anstatt 'Zuletzt Verwendet'"
@@ -196,21 +196,21 @@ function Make-German{
     $CheckBox42.Text = "Deaktiviere den WAP Push Message Routing Service (Um die Telemetrie und Datenerfassung zu unterbinden)"
     $checkBox43.Text = "Deaktiviere den Heruntergeladene Karten Manager (Wenn die Karten App nicht verwendet wird)"
     $CheckBox44.Text = "Deaktiviere den IP Helper (Wenn kein IPv6 verwendet wird)"
-    $checkBox45.Text = "Deaktiviere den Programm Kompatibilitï¿½ts Assistenten Service"
+    $checkBox45.Text = "Deaktiviere den Programm Kompatibilitäts Assistenten Service"
     $CheckBox46.Text = "Deaktiviere den Druckwarteschlangendienst (wenn kein Drucker verwendet wird)"
-    $CheckBox47.Text = "Deaktiviere die Remote Registry (aus Sicherheitsgrï¿½nden DEAKTIVIEREN)"
+    $CheckBox47.Text = "Deaktiviere die Remote Registry (aus Sicherheitsgründen DEAKTIVIEREN)"
     $CheckBox48.Text = "Deaktiviere die Zweitanmeldung"
     $CheckBox49.Text = "Deaktiviere das Security Center"
-    $CheckBox50.Text = "Deaktiviere den TCP/IP NetBIOS Helper (Wenn keine WORKGROUP oder Active Directory benï¿½tigt wird)"
-    $CheckBox51.Text = "Deaktiviere die Bildschirmtastatur und das Handschriftpanel (Wenn diese Features nicht benï¿½tigt werden)"
+    $CheckBox50.Text = "Deaktiviere den TCP/IP NetBIOS Helper (Wenn keine WORKGROUP oder Active Directory benötigt wird)"
+    $CheckBox51.Text = "Deaktiviere die Bildschirmtastatur und das Handschriftpanel (Wenn diese Features nicht benötigt werden)"
     $CheckBox52.Text = "Deaktiviere den Windows Error Melde Service"
-    $CheckBox53.Text = "Deaktiviere den Windows Image Acquisition (WIA) Service (Wenn kein Scanner benï¿½tigt wird)"
+    $CheckBox53.Text = "Deaktiviere den Windows Image Acquisition (WIA) Service (Wenn kein Scanner benötigt wird)"
     $checkBox54.Text = "Deaktiviere die Windows Suche (Senkt erheblich die Festplattenauslastung)"
     $CheckBox55.Text = "Deaktiviere die Tracking Services"
-    $checkBox56.Text = "Deaktiviere das Prï¿½ventive laden hï¿½ufig genutzter Programme in den RAM (Superfetch)"
+    $checkBox56.Text = "Deaktiviere das Präventive laden häufig genutzter Programme in den RAM (Superfetch)"
     $checkBox57.Text = "Deaktiviere die XBox Services"
     $CheckBox58.Text = "Deaktiviere den AllJoyn Router Service (Wenn kein Peer-2-Peer genutzt wird)"
-    $CheckBox59.Text = "Deaktiviere den Bluetooth Service (Wenn keine Bluethooth Gerï¿½te genutzt werden)"
+    $CheckBox59.Text = "Deaktiviere den Bluetooth Service (Wenn keine Bluethooth Geräte genutzt werden)"
     $checkBox60.Text = "Deaktiviere den Standortservice"
     $CheckBox64.Text = "Deaktiviere den Windows Phone Service"
     $CheckBox65.Text = "Deaktiviere die Biometric Services"
