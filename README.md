@@ -33,6 +33,10 @@ Höhere Batterielaufzeit (Nur bei Laptops, hierfür die Akkutweaks nutzen)
 
 Für mehr Details [Die offizielle GeekFreaks Seite](https://thegeekfreaks.de).
 
+### Changelog
+
+[Changelog](https://github.com/MinersWin/TGF-Tuning-Pack-4.0/wiki/Changelog)
+
 ### Das alte Tuning Pack 3.1
 
 Du kannst dir [hier](https://thegeekfreaks.de/download/the-geek-freaks-tuning-pack-3-1/) das alte Tuning Pack herunterladen. Das neue baut größtenteils auf dem Neuen auf, aber beinhaltet einige neue Funktionen und endlich eine GUI. Um Virenvorwürfen oder ähnlichem aus dem Weg zu gehen wird das komplette Projekt auf GitHub veröffentlicht und die Entwicklung ist von anfang an nachzuvollziehen. Das Tuning Pack 4.0 wurde zu einem Großteil von [MinersWin](https://www.youtube.com/minerswin) entwickelt.
