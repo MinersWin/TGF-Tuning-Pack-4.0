@@ -424,7 +424,18 @@ function Make-Tweaks{
         Write-Host "Show Known File Extensions for File Types"
     }
     if ($CheckBox13.Checked){
-
+        .\Scripts\Registry\hide-ntfs-compression-blue-double-arrow-icon-overlay.reg
+        $ProgressBar1.Value = 7
+        $Label11.Text = "7%"
+        $Label12.Text = "Hide indication for compressed NTFS Files"
+        Write-Host "Hide indication for compressed NTFS Files"
+    }
+    if ($CheckBox14.Checked){
+        reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v Hidden /t REG_DWORD /d 1 /f
+        $ProgressBar1.Value = 7
+        $Label11.Text = "7%"
+        $Label12.Text = "Show every Hidden Fine in Windows Explorer"
+        Write-Host = "Show every Hidden File in Windows Explorer"
     }
 }
 
