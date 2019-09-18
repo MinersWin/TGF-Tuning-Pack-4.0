@@ -1,25 +1,3 @@
-$Form1_Load = {
-}
-$ProgressBar1_Click = {
-}
-$TabPage4_Click = {
-}
-$CheckBox40_CheckedChanged = {
-}
-$CheckBox39_CheckedChanged = {
-}
-$TabPage2_Click = {
-}
-$Panel5_Paint = {
-}
-$TabPage1_Click = {
-}
-$CheckBox63_CheckedChanged = {
-}
-$CheckBox11_CheckedChanged = {
-}
-$CheckBox2_CheckedChanged = {
-}
 $MyDir = Split-Path $script:MyInvocation.MyCommand.Path
 Add-Type -AssemblyName System.Windows.Forms
 . (Join-Path $PSScriptRoot 'GUI.designer.ps1')
@@ -207,7 +185,6 @@ function Make-German{
     $CheckBox53.Text = "Deaktiviere den Windows Image Acquisition (WIA) Service (Wenn kein Scanner benötigt wird)"
     $checkBox54.Text = "Deaktiviere die Windows Suche (Senkt erheblich die Festplattenauslastung)"
     $CheckBox55.Text = "Deaktiviere die Tracking Services"
-    $checkBox56.Text = "Deaktiviere das Präventive laden häufig genutzter Programme in den RAM (Superfetch)"
     $checkBox57.Text = "Deaktiviere die XBox Services"
     $CheckBox58.Text = "Deaktiviere den AllJoyn Router Service (Wenn kein Peer-2-Peer genutzt wird)"
     $CheckBox59.Text = "Deaktiviere den Bluetooth Service (Wenn keine Bluethooth Geräte genutzt werden)"
@@ -223,7 +200,7 @@ function Make-German{
     $CheckBox72.Text = "Deaktiviere den Net.Tcp Port Sharing Service"
     $CheckBox73.Text = "Deaktiviere den Routing Remote Access"
     $CheckBox74.Text = "Deaktiviere den Internet Connection Sharing (ICS) Service"
-    $CheckBox75.Text = "Disable Superfetch (Sollte bei SSDs unbedingt aktiviert werden, schadet auch bei HHDs nicht)"
+    $CheckBox75.Text = "Disable Superfetch (Sollte bei SSDs unbedingt deaktiviert werden, schadet auch bei HHDs nicht)"
 
     #Side Menu
     $Label4.Text = "Beispiele"
@@ -299,7 +276,6 @@ function Make-English{
     $CheckBox53.Text = "Disable Windows Image Acquisition (WIA) (If you dont have a scanner)"
     $checkBox54.Text = "Disable Windows Search"
     $CheckBox55.Text = "Disable tracking services"
-    $checkBox56.Text = "disable Superfetch"
     $checkBox57.Text = "Disable Xbox Services"
     $CheckBox58.Text = "Disable AllJoyn Router Services (If ou dont use Peer2Peer)"
     $CheckBox59.Text = "Disable Bluetooth Services"
@@ -345,6 +321,21 @@ $Label12.Text = "The Tweaks havent started yet. Click on 'Make FPS Rain!' to Sta
 ###################################################################################################################################################################################
 $Button16.Add_Click{(Make-Tweaks)}
 function Make-Tweaks{
+    #Create RecoveryPoint
+    if ($CheckBox61.Checked){
+        wmic /namespace:\\root\default path SystemRestore call Enable C:\
+        Write-Host "Die erstellung von Wiederherstellungspunkten wurde aktiviert"
+        Checkpoint-Computer -Description ?TGF_Tuning_Pack_4? -RestorePointType MODIFY_SETTINGS
+        Write-Host "Der Wiederherstellungspunkt wurde erstellt. Er trägt den Namen: (Get-Date) TGF Tuning Pack"
+    }
+
+
+
+
+
+
+
+
     #Show Desktop Icon on Desktop
     if ($CheckBox1.Checked){
         reg import .\Scripts\Registry\Add_This-PC_Desktop_Icon.reg
@@ -425,6 +416,16 @@ function Make-Tweaks{
         $Label12.Text = "Turned On the Underline of KeyBoard Shortcuts in Menus."
         Write-Host "Turned On the Underline of KeyBoard Shortcuts in Menus."
     }
+    if ($CheckBox12.Checked){
+        .\Scripts\Registry\Show_Known_Extensions_for_File_Types.vbs
+        $ProgressBar1.Value = 6
+        $Label11.Text = "6%"
+        $Label12.Text = "Show Known File Extensions for File Types."
+        Write-Host "Show Known File Extensions for File Types"
+    }
+    if ($CheckBox13.Checked){
+
+    }
 }
 
 #Templates 
@@ -454,6 +455,52 @@ function Apply-Template{##############FIXME##############
         $CheckBox19.Checked = $true
         $CheckBox20.Checked = $true
         $CheckBox21.Checked = $true
+        $CheckBox22.Checked = $true
+        $CheckBox23.Checked = $true
+        $CheckBox24.Checked = $true
+        $CheckBox25.Checked = $true
+        $CheckBox26.Checked = $true
+        $CheckBox27.Checked = $true
+        $CheckBox29.Checked = $true
+        $CheckBox30.Checked = $true
+        $CheckBox31.Checked = $false
+        $CheckBox32.Checked = $true
+        $CheckBox33.Checked = $true
+        $CheckBox34.Checked = $true
+        $CheckBox35.Checked = $true
+        $CheckBox36.Checked = $true
+        $CheckBox37.Checked = $true
+        $CheckBox38.Checked = $true
+        $CheckBox28.Checked = $true
+        $CheckBox39.Checked = $true
+        $CheckBox40.Checked = $true
+        $CheckBox41.Checked = $false
+        $CheckBox42.Checked = $true
+        $CheckBox43.Checked = $true
+        $CheckBox44.Checked = $false
+        $CheckBox45.Checked = $true
+        $CheckBox46.Checked = $false
+        $CheckBox47.Checked = $true
+        $CheckBox48.Checked = $true
+        $CheckBox49.Checked = $true
+        $CheckBox50.Checked = $false
+        $CheckBox51.Checked = $true
+        $CheckBox52.Checked = $true
+        $CheckBox53.Checked = $false
+        $CheckBox54.Checked = $true
+        $CheckBox55.Checked = $true
+        $CheckBox57.Checked = $true
+        $CheckBox58.Checked = $true
+        $CheckBox60.Checked = $true
+        $CheckBox64.Checked = $true
+        $CheckBox65.Checked = $true
+        $CheckBox66.Checked = $true
+        $CheckBox69.Checked = $true
+        $CheckBox70.Checked = $true
+        $CheckBox71.Checked = $true
+        $CheckBox72.Checked = $true
+        $CheckBox74.Checked = $true
+        $CheckBox75.Checked = $true
     }
 }
 
@@ -468,6 +515,13 @@ $tooltip4 = New-Object System.Windows.Forms.ToolTip
 $tooltip4.SetToolTip($CheckBox4,"You can keep the taskbar in one place by locking it, which can prevent accidental moving or resizing. If you unlock it, you can drag the taskbar to resize or move it to the bottom, left or right side, or top of your display(s).")
 $tooltip5 = New-Object System.Windows.Forms.ToolTip
 $tooltip5.SetToolTip($CheckBox5,"Always show all Icons in the Notificationbar")
+$tooltip6 = New-Object System.Windows.Forms.ToolTip
+$tooltip6.SetToolTip($CheckBox6,"Delay the Taskbars on mouse hover to 10 Seconds")
+$tooltip7 = New-Object System.Windows.Forms.ToolTip
+$tooltip7.SetToolTip($CheckBox7,"Enables the Classic Control Panel View without Categories")
+$tooltip8 = New-Object System.Windows.Forms.ToolTip
+$tooltip8.SetToolTip($CheckBox8,"Say something")
+
 
 
 
@@ -531,4 +585,5 @@ function About {
     $aboutForm.Controls.Add($aboutFormExit)
     [void]$aboutForm.ShowDialog()
 } # End About
+Apply-Template
 $Form1.ShowDialog()
