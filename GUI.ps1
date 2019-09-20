@@ -360,6 +360,7 @@ function Make-Tweaks{
         $Label12.Text = "The default vertical icon spacing for the desktop is now set."
         Write-Host "The default vertical icon spacing for the desktop is now set."
     }
+    #Enable the ability to lock and unlock the taskbar
     if ($CheckBox4.Checked){
         reg import .\Scripts\Registry\Enable_ability_to_lock_and_unlock_taskbar.reg
         $ProgressBar1.Value = 2
