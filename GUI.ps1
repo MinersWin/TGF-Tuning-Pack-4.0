@@ -109,7 +109,7 @@ function Accept-Everything{
 $Label6.Text = "English:    "
 $Label7.Text = "We do not take responsibility for problems that accompany the execution of our program! This is a hobby project! Everything can create errors and problems! Use at your own risk! Problems and bugs are welcome in the Discord: https://discordapp.com/invite/k5kMSa    "
 $Label8.Text = "German: "
-$Label9.Text = "Wir Übernehmen keine Verantwortung für Probleme, die mit der Ausführung unseres Programms einhergehen! Dies ist ein hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr! Probleme und Bugs können gerne im Discord gemeldet werden: https://discordapp.com/invite/k5kMSa "
+$Label9.Text = "Wir übernehmen keine Verantwortung für Probleme, die mit der Ausführung unseres Programms einhergehen! Dies ist ein hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr! Probleme und Bugs können gerne im Discord gemeldet werden: https://discordapp.com/invite/k5kMSa "
 $CheckBox61.Text = "Create System Recovery Point"
 
 #Close when Click Close
@@ -159,7 +159,7 @@ function Make-German{
     $CheckBox33.Text = "Deaktiviere den Error Dialog"
     $CheckBox34.Text = "Deaktiviere Administrative Freigaben"
     $CheckBox35.Text = "Füge 'Reboot to Recovery' zum Rechtsklickmenü von 'Dieser PC' hinzu"
-    $CheckBox36.Text = "Änder das Uhrzeit und Datumsformat des Angemeldeten Nutzers zu 24H, metrisch"
+    $CheckBox36.Text = "änder das Uhrzeit und Datumsformat des Angemeldeten Nutzers zu 24H, metrisch"
     $CheckBox37.Text = "Aktiviere den Developer (Programmierer) Modus"
     $Checkbox38.Text = "Entferne die Nutzungs und Datenerfassung von Microsoft"
     $CheckBox28.Text = "Setze den Windows Explorer Start zu 'Dieser PC' anstatt 'Zuletzt Verwendet'"
@@ -535,7 +535,19 @@ $tooltip8 = New-Object System.Windows.Forms.ToolTip
 $tooltip8.SetToolTip($CheckBox8,"Say something")
 
 
+######################################################################################################################################################################################
+### All the Tools ###
+######################################################################################################################################################################################
+#Process Killer
+$Button3.Add_Click{(Kill-Process)}
+function Kill-Process{
+    [System.Windows.Forms.MessageBox]::Show("Prozesse werden beendet","TGF Tuning Pack 4.0",1)
+    Write-Host "Prozesse werden beendet."
+    & '.\Scripts\ProcessKiller-Tuning-Pack.bat'
+    Write-Host "Die Prozesse wurden beendet"
+}
 
+#
 
 
 
