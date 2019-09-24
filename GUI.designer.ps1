@@ -96,6 +96,7 @@ $Form1 = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.TabPage]$TabPage4 = $null
 [System.Windows.Forms.Button]$Button6 = $null
 [System.Windows.Forms.Panel]$Panel2 = $null
+[System.Windows.Forms.Button]$Button3 = $null
 [System.Windows.Forms.Button]$Button12 = $null
 [System.Windows.Forms.Button]$Button11 = $null
 [System.Windows.Forms.Button]$Button10 = $null
@@ -241,6 +242,7 @@ $Panel7 = (New-Object -TypeName System.Windows.Forms.Panel)
 $Label12 = (New-Object -TypeName System.Windows.Forms.Label)
 $Label11 = (New-Object -TypeName System.Windows.Forms.Label)
 $Label10 = (New-Object -TypeName System.Windows.Forms.Label)
+$Button3 = (New-Object -TypeName System.Windows.Forms.Button)
 ([System.ComponentModel.ISupportInitialize]$PictureBox1).BeginInit()
 $Panel1.SuspendLayout()
 $TabControl1.SuspendLayout()
@@ -1302,6 +1304,7 @@ $Button6.UseVisualStyleBackColor = $true
 #
 #Panel2
 #
+$Panel2.Controls.Add($Button3)
 $Panel2.Controls.Add($Button12)
 $Panel2.Controls.Add($Button11)
 $Panel2.Controls.Add($Button10)
@@ -1550,6 +1553,16 @@ $Label10.TabIndex = [System.Int32]59
 $Label10.Text = [System.String]'Progress'
 $Label10.UseCompatibleTextRendering = $true
 #
+#Button3
+#
+$Button3.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]15,[System.Int32]193))
+$Button3.Name = [System.String]'Button3'
+$Button3.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]101,[System.Int32]23))
+$Button3.TabIndex = [System.Int32]6
+$Button3.Text = [System.String]'Kill Process'
+$Button3.UseCompatibleTextRendering = $true
+$Button3.UseVisualStyleBackColor = $true
+#
 #Form1
 #
 $Form1.BackColor = [System.Drawing.SystemColors]::Control
@@ -1678,6 +1691,7 @@ Add-Member -InputObject $Form1 -Name CheckBox55 -Value $CheckBox55 -MemberType N
 Add-Member -InputObject $Form1 -Name TabPage4 -Value $TabPage4 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button6 -Value $Button6 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Panel2 -Value $Panel2 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button3 -Value $Button3 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button12 -Value $Button12 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button11 -Value $Button11 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button10 -Value $Button10 -MemberType NoteProperty
