@@ -79,7 +79,7 @@ $Button13.BackgroundImage = $img3
 $Button13.Text = ""
 
 #Download Tools
-$Button5.Add_Click({& '.\Tools\Download all Tools.ps1'})
+$Button5.Add_Click({Start-Process PowerShell.exe "Write-Host 'Der Download Startet, dies kann je nach Internetgeschwindigkeit ca. 5-10 Minuten dauern. (500MB)'; Write-Host 'The download starts, this may take about 5-10 minutes, depending on the internet speed. (500MB)'; & '.\Download all Tools.ps1'"})
 
 #Accept the Risk
 $Button18.Add_Click{(Accept-Everything)}
@@ -601,11 +601,67 @@ $Button10.Add_Click{(Sophos)}
 function Sophos{
     & '.\tools\Sophos Virus Removal Tool\Sophos Virus Removal Tool.exe'
 }
-
-
-
-
-
+#MSI installer Cleanup
+$Button11.Add_Click{(Installer-Cleanup)}
+function Installer-Cleanup{
+    [System.Windows.Forms.MessageBox]::Show("Diese funktion ist momentan nicht verfügbar, Microsoft hat dieses Feature eingestellt. Ich arbeite momentan an einer Alternative","TGF Tuning Pack 4.0 by MinersWin",1)
+}
+#System File Checker
+$Button12.Add_Click{(System-File-Checker)}
+function System-File-Checker{
+    [System.Windows.Forms.MessageBox]::Show("Es wird sich gleich ein Konsolenfenster öffnen, in welchem ein Windows Image heruntergeladen wird, mit welchem das System auf Fehler geprüft wird. Das Image wird nach Abschluss des Vorgangs wieder gelöscht. Zum Bestätigen OK drücken","TGF Tuning Pack 4.0 by MinersWin",1)
+    & '.\Tools\System File Checker\Check.bat'
+}
+#DISM image check and repair
+$Button27.Add_Click{(System-File-Checker)}
+#CheckDisk
+$button28.Add_Click{(start cmd.exe 'chkdsk C: /f /r')}
+#Network Repair
+$Button30.Add_Click{(Network-Repair)}
+function Network-Repair{
+    ipconfig /flushdns
+    netsh interface ip delete arpcache
+    netsh winsock reset catalog
+}
+#Page File Reset
+$Button32.Add_Click{(Page-File-Reset)}
+function Page-File-Reset{
+    C: computersystem where name="%computername%" set AutomaticManagedPagefile=True
+}
+#Defraggler
+$Button33.Add_Click{(Defraggler-Start)}
+function Defraggler-Start{
+    .\Tools\Defraggler\Defraggler64.exe
+}
+$Button34.Add_Click{(ADSSPy)}
+function ADSSPy{
+    .\Tools\ADSSpy\ADSSpy.exe
+}
+#Adwcleaner
+$Button35.Add_Click{(ADWCleaner)}
+function ADWCleaner{
+    .\Tools\AdwCleaner\adwcleaner_7.4.1.exe
+}
+#aswMBR
+$Button36.Add_Click{(aswMBR)}
+function aswMBR{
+    .\Tools\aswMBR\aswmbr.exe
+}
+#autorun
+$button37.Add_Click{(autorun)}
+function autorun{
+    .\Tools\autorun\Autoruns64.exe
+}
+#PCHunter
+$Button38.Add_Click{(PCHunter)}
+function PCHunter{
+    .\Tools\PCHunter\PCHunter64.exe
+}
+#Net Adapter Repair
+$Button40.Add_Click{(Net-Adapter-Repair)}
+function Net-Adapter-Repair{
+    .\tools\NetAdapterRepair\NetAdapterRepair1.2.exe
+}
 
 
 
