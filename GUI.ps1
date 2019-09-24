@@ -561,12 +561,46 @@ $Button21.Add_Click{(BleachBit)}
 function BleachBit{
     .\Tools\BleachBit\bleachbit.exe
 }
+#Temp File Cleanup
+$Button22.Add_Click{(TempCleanup)}
+function TempCleanup{
+    & '.\Tools\Temp File Cleanup\Cleanup.ps1'
+}
+#USB Device Cleanup
+$Button23.Add_Click{(USBCleanup)}
+function USBCleanup{
+    & '.\Tools\Drive Cleanup\DriveCleanup.exe'
+}
+#Cleanup Duplicate Downloads
+###FIXME###
 
 
-
-
-
-
+#Clear Windows event logs
+$Button25.Add_Click{(Clear-EventLog Application,Security,System)}
+$Button26.Add_CLick{(Clear-UpdateCache)}
+function Clear-UpdateCache{
+    & '.\Tools\Clear Update Cache\Erase_Cache.bat'
+}
+#Clear CryptNet SSL Cache
+$Button7.Add_Click{(Clear-SSL)}
+function Clear-SSL{
+    certutil -URLcache * delete
+}
+#Malwarebytes
+$Button8.Add_Click{(Malwarebytes)}
+function Malwarebytes{
+    .\Tools\Malwarebytes\mb3-setup-consumer-3.8.3.2965-1.0.613-1.0.11878.exe
+}
+#Kaspersky Virus Removal Tool
+$Button9.Add_Click{(KVRT)}
+function KVRT{
+    .\Tools\KVRT\KVRT.exe
+}
+#Sophos Virus Removal Tool
+$Button10.Add_Click{(Sophos)}
+function Sophos{
+    & '.\tools\Sophos Virus Removal Tool\Sophos Virus Removal Tool.exe'
+}
 
 
 
