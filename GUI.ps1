@@ -546,8 +546,21 @@ function Kill-Process{
     & '.\Scripts\ProcessKiller-Tuning-Pack.bat'
     Write-Host "Die Prozesse wurden beendet"
 }
-
-#
+#Internet Explorer Cleanup
+$Button4.Add_Click({IE_Clean})
+function IE_Clean{
+    & '.\Tools\IE Cleanup\Clear-IECachedData.ps1'
+}
+#CCleaner
+$Button20.Add_Click{(CCleaner)}
+function CCleaner{
+    .\Tools\CCleaner\CCleaner.exe
+}
+#BleachBit
+$Button21.Add_Click{(BleachBit)}
+function BleachBit{
+    .\Tools\BleachBit\bleachbit.exe
+}
 
 
 
