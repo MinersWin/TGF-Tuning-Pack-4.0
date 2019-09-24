@@ -96,13 +96,46 @@ $Form1 = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.TabPage]$TabPage4 = $null
 [System.Windows.Forms.Button]$Button6 = $null
 [System.Windows.Forms.Panel]$Panel2 = $null
+[System.Windows.Forms.Button]$Button41 = $null
+[System.Windows.Forms.Panel]$Panel12 = $null
+[System.Windows.Forms.Button]$Button40 = $null
+[System.Windows.Forms.Button]$Button39 = $null
+[System.Windows.Forms.Button]$Button38 = $null
+[System.Windows.Forms.Button]$Button37 = $null
+[System.Windows.Forms.Button]$Button36 = $null
 [System.Windows.Forms.Button]$Button3 = $null
-[System.Windows.Forms.Button]$Button12 = $null
+[System.Windows.Forms.Button]$Button35 = $null
+[System.Windows.Forms.Button]$Button34 = $null
+[System.Windows.Forms.Label]$Label17 = $null
+[System.Windows.Forms.Panel]$Panel11 = $null
+[System.Windows.Forms.Button]$Button33 = $null
+[System.Windows.Forms.Button]$Button32 = $null
+[System.Windows.Forms.Label]$Label16 = $null
+[System.Windows.Forms.Panel]$Panel10 = $null
+[System.Windows.Forms.Label]$Label15 = $null
+[System.Windows.Forms.Button]$Button31 = $null
 [System.Windows.Forms.Button]$Button11 = $null
+[System.Windows.Forms.Button]$Button12 = $null
+[System.Windows.Forms.Button]$Button30 = $null
+[System.Windows.Forms.Button]$Button27 = $null
+[System.Windows.Forms.Button]$Button28 = $null
+[System.Windows.Forms.Button]$Button29 = $null
+[System.Windows.Forms.Panel]$Panel9 = $null
 [System.Windows.Forms.Button]$Button10 = $null
 [System.Windows.Forms.Button]$Button9 = $null
 [System.Windows.Forms.Button]$Button8 = $null
 [System.Windows.Forms.Button]$Button7 = $null
+[System.Windows.Forms.Label]$Label14 = $null
+[System.Windows.Forms.Panel]$Panel8 = $null
+[System.Windows.Forms.Button]$Button26 = $null
+[System.Windows.Forms.Button]$Button25 = $null
+[System.Windows.Forms.Button]$Button24 = $null
+[System.Windows.Forms.Button]$Button23 = $null
+[System.Windows.Forms.Button]$Button22 = $null
+[System.Windows.Forms.Button]$Button21 = $null
+[System.Windows.Forms.Button]$Button20 = $null
+[System.Windows.Forms.Button]$Button4 = $null
+[System.Windows.Forms.Label]$Label13 = $null
 [System.Windows.Forms.Button]$Button5 = $null
 [System.Windows.Forms.Panel]$Panel3 = $null
 [System.Windows.Forms.Button]$Button14 = $null
@@ -219,12 +252,46 @@ $CheckBox55 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $TabPage4 = (New-Object -TypeName System.Windows.Forms.TabPage)
 $Button6 = (New-Object -TypeName System.Windows.Forms.Button)
 $Panel2 = (New-Object -TypeName System.Windows.Forms.Panel)
-$Button12 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button41 = (New-Object -TypeName System.Windows.Forms.Button)
+$Panel12 = (New-Object -TypeName System.Windows.Forms.Panel)
+$Button40 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button39 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button38 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button37 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button36 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button3 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button35 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button34 = (New-Object -TypeName System.Windows.Forms.Button)
+$Label17 = (New-Object -TypeName System.Windows.Forms.Label)
+$Panel11 = (New-Object -TypeName System.Windows.Forms.Panel)
+$Button33 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button32 = (New-Object -TypeName System.Windows.Forms.Button)
+$Label16 = (New-Object -TypeName System.Windows.Forms.Label)
+$Panel10 = (New-Object -TypeName System.Windows.Forms.Panel)
+$Label15 = (New-Object -TypeName System.Windows.Forms.Label)
+$Button31 = (New-Object -TypeName System.Windows.Forms.Button)
 $Button11 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button12 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button30 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button27 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button28 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button29 = (New-Object -TypeName System.Windows.Forms.Button)
+$Panel9 = (New-Object -TypeName System.Windows.Forms.Panel)
 $Button10 = (New-Object -TypeName System.Windows.Forms.Button)
 $Button9 = (New-Object -TypeName System.Windows.Forms.Button)
 $Button8 = (New-Object -TypeName System.Windows.Forms.Button)
 $Button7 = (New-Object -TypeName System.Windows.Forms.Button)
+$Label14 = (New-Object -TypeName System.Windows.Forms.Label)
+$Panel8 = (New-Object -TypeName System.Windows.Forms.Panel)
+$Button26 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button25 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button24 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button23 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button22 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button21 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button20 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button4 = (New-Object -TypeName System.Windows.Forms.Button)
+$Label13 = (New-Object -TypeName System.Windows.Forms.Label)
 $Button5 = (New-Object -TypeName System.Windows.Forms.Button)
 $Panel3 = (New-Object -TypeName System.Windows.Forms.Panel)
 $Button14 = (New-Object -TypeName System.Windows.Forms.Button)
@@ -242,7 +309,6 @@ $Panel7 = (New-Object -TypeName System.Windows.Forms.Panel)
 $Label12 = (New-Object -TypeName System.Windows.Forms.Label)
 $Label11 = (New-Object -TypeName System.Windows.Forms.Label)
 $Label10 = (New-Object -TypeName System.Windows.Forms.Label)
-$Button3 = (New-Object -TypeName System.Windows.Forms.Button)
 ([System.ComponentModel.ISupportInitialize]$PictureBox1).BeginInit()
 $Panel1.SuspendLayout()
 $TabControl1.SuspendLayout()
@@ -253,6 +319,11 @@ $TabPage2.SuspendLayout()
 $Panel6.SuspendLayout()
 $TabPage4.SuspendLayout()
 $Panel2.SuspendLayout()
+$Panel12.SuspendLayout()
+$Panel11.SuspendLayout()
+$Panel10.SuspendLayout()
+$Panel9.SuspendLayout()
+$Panel8.SuspendLayout()
 $Panel3.SuspendLayout()
 $Panel4.SuspendLayout()
 $Panel7.SuspendLayout()
@@ -1304,77 +1375,440 @@ $Button6.UseVisualStyleBackColor = $true
 #
 #Panel2
 #
-$Panel2.Controls.Add($Button3)
-$Panel2.Controls.Add($Button12)
-$Panel2.Controls.Add($Button11)
-$Panel2.Controls.Add($Button10)
-$Panel2.Controls.Add($Button9)
-$Panel2.Controls.Add($Button8)
-$Panel2.Controls.Add($Button7)
+$Panel2.Controls.Add($Button41)
+$Panel2.Controls.Add($Panel12)
+$Panel2.Controls.Add($Panel11)
+$Panel2.Controls.Add($Panel10)
+$Panel2.Controls.Add($Panel9)
+$Panel2.Controls.Add($Panel8)
 $Panel2.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]59))
 $Panel2.Name = [System.String]'Panel2'
 $Panel2.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]926,[System.Int32]620))
 $Panel2.TabIndex = [System.Int32]1
+$Panel2.add_Paint($Panel2_Paint)
 #
-#Button12
+#Button41
 #
-$Button12.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]15,[System.Int32]164))
-$Button12.Name = [System.String]'Button12'
-$Button12.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]101,[System.Int32]23))
-$Button12.TabIndex = [System.Int32]5
-$Button12.Text = [System.String]'Repair WMI'
-$Button12.UseCompatibleTextRendering = $true
-$Button12.UseVisualStyleBackColor = $true
+$Button41.BackColor = [System.Drawing.Color]::Red
+$Button41.ForeColor = [System.Drawing.Color]::White
+$Button41.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]806,[System.Int32]452))
+$Button41.Name = [System.String]'Button41'
+$Button41.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]117,[System.Int32]23))
+$Button41.TabIndex = [System.Int32]12
+$Button41.Text = [System.String]'Tuning Pack RESET!'
+$Button41.UseCompatibleTextRendering = $true
+$Button41.UseVisualStyleBackColor = $false
+#
+#Panel12
+#
+$Panel12.BorderStyle = [System.Windows.Forms.BorderStyle]::FixedSingle
+$Panel12.Controls.Add($Button40)
+$Panel12.Controls.Add($Button39)
+$Panel12.Controls.Add($Button38)
+$Panel12.Controls.Add($Button37)
+$Panel12.Controls.Add($Button36)
+$Panel12.Controls.Add($Button3)
+$Panel12.Controls.Add($Button35)
+$Panel12.Controls.Add($Button34)
+$Panel12.Controls.Add($Label17)
+$Panel12.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]540,[System.Int32]3))
+$Panel12.Name = [System.String]'Panel12'
+$Panel12.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]176,[System.Int32]250))
+$Panel12.TabIndex = [System.Int32]11
+#
+#Button40
+#
+$Button40.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-1,[System.Int32]197))
+$Button40.Name = [System.String]'Button40'
+$Button40.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]172,[System.Int32]23))
+$Button40.TabIndex = [System.Int32]18
+$Button40.Text = [System.String]'Net Adapter Repair'
+$Button40.UseCompatibleTextRendering = $true
+$Button40.UseVisualStyleBackColor = $true
+#
+#Button39
+#
+$Button39.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]0,[System.Int32]168))
+$Button39.Name = [System.String]'Button39'
+$Button39.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button39.TabIndex = [System.Int32]17
+$Button39.Text = [System.String]'Junkware Removal Tool'
+$Button39.UseCompatibleTextRendering = $true
+$Button39.UseVisualStyleBackColor = $true
+#
+#Button38
+#
+$Button38.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]0,[System.Int32]141))
+$Button38.Name = [System.String]'Button38'
+$Button38.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button38.TabIndex = [System.Int32]16
+$Button38.Text = [System.String]'PCHunter'
+$Button38.UseCompatibleTextRendering = $true
+$Button38.UseVisualStyleBackColor = $true
+#
+#Button37
+#
+$Button37.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]0,[System.Int32]112))
+$Button37.Name = [System.String]'Button37'
+$Button37.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button37.TabIndex = [System.Int32]15
+$Button37.Text = [System.String]'autorun'
+$Button37.UseCompatibleTextRendering = $true
+$Button37.UseVisualStyleBackColor = $true
+#
+#Button36
+#
+$Button36.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-1,[System.Int32]83))
+$Button36.Name = [System.String]'Button36'
+$Button36.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]172,[System.Int32]23))
+$Button36.TabIndex = [System.Int32]14
+$Button36.Text = [System.String]'aswMBR'
+$Button36.UseCompatibleTextRendering = $true
+$Button36.UseVisualStyleBackColor = $true
+#
+#Button3
+#
+$Button3.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-2,[System.Int32]226))
+$Button3.Name = [System.String]'Button3'
+$Button3.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]173,[System.Int32]23))
+$Button3.TabIndex = [System.Int32]6
+$Button3.Text = [System.String]'Kill Process'
+$Button3.UseCompatibleTextRendering = $true
+$Button3.UseVisualStyleBackColor = $true
+#
+#Button35
+#
+$Button35.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]0,[System.Int32]54))
+$Button35.Name = [System.String]'Button35'
+$Button35.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button35.TabIndex = [System.Int32]13
+$Button35.Text = [System.String]'AdwCleaner'
+$Button35.UseCompatibleTextRendering = $true
+$Button35.UseVisualStyleBackColor = $true
+#
+#Button34
+#
+$Button34.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]0,[System.Int32]25))
+$Button34.Name = [System.String]'Button34'
+$Button34.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button34.TabIndex = [System.Int32]12
+$Button34.Text = [System.String]'ADSSpy'
+$Button34.UseCompatibleTextRendering = $true
+$Button34.UseVisualStyleBackColor = $true
+#
+#Label17
+#
+$Label17.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-1,[System.Int32]1))
+$Label17.Name = [System.String]'Label17'
+$Label17.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]100,[System.Int32]23))
+$Label17.TabIndex = [System.Int32]0
+$Label17.Text = [System.String]'Manual tools'
+$Label17.UseCompatibleTextRendering = $true
+#
+#Panel11
+#
+$Panel11.BorderStyle = [System.Windows.Forms.BorderStyle]::FixedSingle
+$Panel11.Controls.Add($Button33)
+$Panel11.Controls.Add($Button32)
+$Panel11.Controls.Add($Label16)
+$Panel11.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]181,[System.Int32]147))
+$Panel11.Name = [System.String]'Panel11'
+$Panel11.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]173,[System.Int32]78))
+$Panel11.TabIndex = [System.Int32]10
+#
+#Button33
+#
+$Button33.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-1,[System.Int32]54))
+$Button33.Name = [System.String]'Button33'
+$Button33.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button33.TabIndex = [System.Int32]12
+$Button33.Text = [System.String]'Defraggler'
+$Button33.UseCompatibleTextRendering = $true
+$Button33.UseVisualStyleBackColor = $true
+#
+#Button32
+#
+$Button32.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-1,[System.Int32]25))
+$Button32.Name = [System.String]'Button32'
+$Button32.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button32.TabIndex = [System.Int32]11
+$Button32.Text = [System.String]'Page file reset'
+$Button32.UseCompatibleTextRendering = $true
+$Button32.UseVisualStyleBackColor = $true
+#
+#Label16
+#
+$Label16.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-1,[System.Int32]1))
+$Label16.Name = [System.String]'Label16'
+$Label16.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]100,[System.Int32]23))
+$Label16.TabIndex = [System.Int32]0
+$Label16.Text = [System.String]'Optimize'
+$Label16.UseCompatibleTextRendering = $true
+#
+#Panel10
+#
+$Panel10.BorderStyle = [System.Windows.Forms.BorderStyle]::FixedSingle
+$Panel10.Controls.Add($Label15)
+$Panel10.Controls.Add($Button31)
+$Panel10.Controls.Add($Button11)
+$Panel10.Controls.Add($Button12)
+$Panel10.Controls.Add($Button30)
+$Panel10.Controls.Add($Button27)
+$Panel10.Controls.Add($Button28)
+$Panel10.Controls.Add($Button29)
+$Panel10.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]358,[System.Int32]3))
+$Panel10.Name = [System.String]'Panel10'
+$Panel10.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]176,[System.Int32]221))
+$Panel10.TabIndex = [System.Int32]9
+#
+#Label15
+#
+$Label15.BackColor = [System.Drawing.SystemColors]::Control
+$Label15.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-1,[System.Int32]1))
+$Label15.Name = [System.String]'Label15'
+$Label15.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]100,[System.Int32]21))
+$Label15.TabIndex = [System.Int32]12
+$Label15.Text = [System.String]'Repair'
+$Label15.UseCompatibleTextRendering = $true
+#
+#Button31
+#
+$Button31.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-1,[System.Int32]198))
+$Button31.Name = [System.String]'Button31'
+$Button31.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button31.TabIndex = [System.Int32]11
+$Button31.Text = [System.String]'File extension repair'
+$Button31.UseCompatibleTextRendering = $true
+$Button31.UseVisualStyleBackColor = $true
 #
 #Button11
 #
-$Button11.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]15,[System.Int32]135))
+$Button11.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-1,[System.Int32]25))
 $Button11.Name = [System.String]'Button11'
-$Button11.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]101,[System.Int32]23))
-$Button11.TabIndex = [System.Int32]4
-$Button11.Text = [System.String]'No Screentimeout'
+$Button11.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button11.TabIndex = [System.Int32]5
+$Button11.Text = [System.String]'MSI installer cleanup'
 $Button11.UseCompatibleTextRendering = $true
 $Button11.UseVisualStyleBackColor = $true
 #
+#Button12
+#
+$Button12.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-1,[System.Int32]54))
+$Button12.Name = [System.String]'Button12'
+$Button12.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button12.TabIndex = [System.Int32]6
+$Button12.Text = [System.String]'System File Checker'
+$Button12.UseCompatibleTextRendering = $true
+$Button12.UseVisualStyleBackColor = $true
+#
+#Button30
+#
+$Button30.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-1,[System.Int32]170))
+$Button30.Name = [System.String]'Button30'
+$Button30.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button30.TabIndex = [System.Int32]10
+$Button30.Text = [System.String]'Network Repair'
+$Button30.UseCompatibleTextRendering = $true
+$Button30.UseVisualStyleBackColor = $true
+#
+#Button27
+#
+$Button27.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-1,[System.Int32]83))
+$Button27.Name = [System.String]'Button27'
+$Button27.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button27.TabIndex = [System.Int32]7
+$Button27.Text = [System.String]'DISM image check and repair'
+$Button27.UseCompatibleTextRendering = $true
+$Button27.UseVisualStyleBackColor = $true
+#
+#Button28
+#
+$Button28.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-1,[System.Int32]112))
+$Button28.Name = [System.String]'Button28'
+$Button28.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button28.TabIndex = [System.Int32]8
+$Button28.Text = [System.String]'chkdsk'
+$Button28.UseCompatibleTextRendering = $true
+$Button28.UseVisualStyleBackColor = $true
+#
+#Button29
+#
+$Button29.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-1,[System.Int32]141))
+$Button29.Name = [System.String]'Button29'
+$Button29.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button29.TabIndex = [System.Int32]9
+$Button29.Text = [System.String]'Disable Upgrade  nagger'
+$Button29.UseCompatibleTextRendering = $true
+$Button29.UseVisualStyleBackColor = $true
+#
+#Panel9
+#
+$Panel9.BorderStyle = [System.Windows.Forms.BorderStyle]::FixedSingle
+$Panel9.Controls.Add($Button10)
+$Panel9.Controls.Add($Button9)
+$Panel9.Controls.Add($Button8)
+$Panel9.Controls.Add($Button7)
+$Panel9.Controls.Add($Label14)
+$Panel9.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]181,[System.Int32]3))
+$Panel9.Name = [System.String]'Panel9'
+$Panel9.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]173,[System.Int32]136))
+$Panel9.TabIndex = [System.Int32]8
+$Panel9.add_Paint($Panel9_Paint)
+#
 #Button10
 #
-$Button10.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]15,[System.Int32]106))
+$Button10.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-1,[System.Int32]112))
 $Button10.Name = [System.String]'Button10'
-$Button10.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]101,[System.Int32]23))
-$Button10.TabIndex = [System.Int32]3
-$Button10.Text = [System.String]'Backup Registry'
+$Button10.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button10.TabIndex = [System.Int32]4
+$Button10.Text = [System.String]'Sophos Virus Removal Tool'
 $Button10.UseCompatibleTextRendering = $true
 $Button10.UseVisualStyleBackColor = $true
 #
 #Button9
 #
-$Button9.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]15,[System.Int32]77))
+$Button9.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-1,[System.Int32]83))
 $Button9.Name = [System.String]'Button9'
-$Button9.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]101,[System.Int32]23))
-$Button9.TabIndex = [System.Int32]2
-$Button9.Text = [System.String]'Remove Malware'
+$Button9.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button9.TabIndex = [System.Int32]3
+$Button9.Text = [System.String]'Kapersky Virus Removal Tool'
 $Button9.UseCompatibleTextRendering = $true
 $Button9.UseVisualStyleBackColor = $true
 #
 #Button8
 #
-$Button8.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]15,[System.Int32]48))
+$Button8.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-1,[System.Int32]54))
 $Button8.Name = [System.String]'Button8'
-$Button8.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]101,[System.Int32]23))
-$Button8.TabIndex = [System.Int32]1
-$Button8.Text = [System.String]'Remove Rootkit'
+$Button8.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button8.TabIndex = [System.Int32]2
+$Button8.Text = [System.String]'Malwarebytes Anti-Malware'
 $Button8.UseCompatibleTextRendering = $true
 $Button8.UseVisualStyleBackColor = $true
 #
 #Button7
 #
-$Button7.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]15,[System.Int32]19))
+$Button7.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-1,[System.Int32]25))
 $Button7.Name = [System.String]'Button7'
-$Button7.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]101,[System.Int32]23))
-$Button7.TabIndex = [System.Int32]0
-$Button7.Text = [System.String]'Virus Scan'
+$Button7.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button7.TabIndex = [System.Int32]1
+$Button7.Text = [System.String]'Clear CryptNet SSL cache'
 $Button7.UseCompatibleTextRendering = $true
 $Button7.UseVisualStyleBackColor = $true
+#
+#Label14
+#
+$Label14.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]0))
+$Label14.Name = [System.String]'Label14'
+$Label14.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]100,[System.Int32]23))
+$Label14.TabIndex = [System.Int32]0
+$Label14.Text = [System.String]'Disinfect'
+$Label14.UseCompatibleTextRendering = $true
+#
+#Panel8
+#
+$Panel8.BorderStyle = [System.Windows.Forms.BorderStyle]::FixedSingle
+$Panel8.Controls.Add($Button26)
+$Panel8.Controls.Add($Button25)
+$Panel8.Controls.Add($Button24)
+$Panel8.Controls.Add($Button23)
+$Panel8.Controls.Add($Button22)
+$Panel8.Controls.Add($Button21)
+$Panel8.Controls.Add($Button20)
+$Panel8.Controls.Add($Button4)
+$Panel8.Controls.Add($Label13)
+$Panel8.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]3))
+$Panel8.Name = [System.String]'Panel8'
+$Panel8.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]175,[System.Int32]250))
+$Panel8.TabIndex = [System.Int32]7
+#
+#Button26
+#
+$Button26.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]0,[System.Int32]226))
+$Button26.Name = [System.String]'Button26'
+$Button26.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button26.TabIndex = [System.Int32]8
+$Button26.Text = [System.String]'Clear Windows Update Cache'
+$Button26.UseCompatibleTextRendering = $true
+$Button26.UseVisualStyleBackColor = $true
+#
+#Button25
+#
+$Button25.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]0,[System.Int32]197))
+$Button25.Name = [System.String]'Button25'
+$Button25.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button25.TabIndex = [System.Int32]7
+$Button25.Text = [System.String]'Clear windows event logs'
+$Button25.UseCompatibleTextRendering = $true
+$Button25.UseVisualStyleBackColor = $true
+#
+#Button24
+#
+$Button24.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]0,[System.Int32]168))
+$Button24.Name = [System.String]'Button24'
+$Button24.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button24.TabIndex = [System.Int32]6
+$Button24.Text = [System.String]'Cleanup duplicate Downloads'
+$Button24.UseCompatibleTextRendering = $true
+$Button24.UseVisualStyleBackColor = $true
+#
+#Button23
+#
+$Button23.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]0,[System.Int32]139))
+$Button23.Name = [System.String]'Button23'
+$Button23.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button23.TabIndex = [System.Int32]5
+$Button23.Text = [System.String]'USB Device Cleanup'
+$Button23.UseCompatibleTextRendering = $true
+$Button23.UseVisualStyleBackColor = $true
+#
+#Button22
+#
+$Button22.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]0,[System.Int32]110))
+$Button22.Name = [System.String]'Button22'
+$Button22.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button22.TabIndex = [System.Int32]4
+$Button22.Text = [System.String]'Temp File Cleanup'
+$Button22.UseCompatibleTextRendering = $true
+$Button22.UseVisualStyleBackColor = $true
+#
+#Button21
+#
+$Button21.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]0,[System.Int32]84))
+$Button21.Name = [System.String]'Button21'
+$Button21.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button21.TabIndex = [System.Int32]3
+$Button21.Text = [System.String]'BleachBit'
+$Button21.UseCompatibleTextRendering = $true
+$Button21.UseVisualStyleBackColor = $true
+#
+#Button20
+#
+$Button20.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]0,[System.Int32]54))
+$Button20.Name = [System.String]'Button20'
+$Button20.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button20.TabIndex = [System.Int32]2
+$Button20.Text = [System.String]'CCleaner'
+$Button20.UseCompatibleTextRendering = $true
+$Button20.UseVisualStyleBackColor = $true
+#
+#Button4
+#
+$Button4.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]0,[System.Int32]25))
+$Button4.Name = [System.String]'Button4'
+$Button4.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]171,[System.Int32]23))
+$Button4.TabIndex = [System.Int32]1
+$Button4.Text = [System.String]'Internet Explorer Cleanup'
+$Button4.UseCompatibleTextRendering = $true
+$Button4.UseVisualStyleBackColor = $true
+#
+#Label13
+#
+$Label13.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]0,[System.Int32]0))
+$Label13.Name = [System.String]'Label13'
+$Label13.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]100,[System.Int32]23))
+$Label13.TabIndex = [System.Int32]0
+$Label13.Text = [System.String]'Tempclean'
+$Label13.UseCompatibleTextRendering = $true
 #
 #Button5
 #
@@ -1553,16 +1987,6 @@ $Label10.TabIndex = [System.Int32]59
 $Label10.Text = [System.String]'Progress'
 $Label10.UseCompatibleTextRendering = $true
 #
-#Button3
-#
-$Button3.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]15,[System.Int32]193))
-$Button3.Name = [System.String]'Button3'
-$Button3.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]101,[System.Int32]23))
-$Button3.TabIndex = [System.Int32]6
-$Button3.Text = [System.String]'Kill Process'
-$Button3.UseCompatibleTextRendering = $true
-$Button3.UseVisualStyleBackColor = $true
-#
 #Form1
 #
 $Form1.BackColor = [System.Drawing.SystemColors]::Control
@@ -1589,6 +2013,11 @@ $TabPage2.ResumeLayout($false)
 $Panel6.ResumeLayout($false)
 $TabPage4.ResumeLayout($false)
 $Panel2.ResumeLayout($false)
+$Panel12.ResumeLayout($false)
+$Panel11.ResumeLayout($false)
+$Panel10.ResumeLayout($false)
+$Panel9.ResumeLayout($false)
+$Panel8.ResumeLayout($false)
 $Panel3.ResumeLayout($false)
 $Panel4.ResumeLayout($false)
 $Panel7.ResumeLayout($false)
@@ -1691,13 +2120,46 @@ Add-Member -InputObject $Form1 -Name CheckBox55 -Value $CheckBox55 -MemberType N
 Add-Member -InputObject $Form1 -Name TabPage4 -Value $TabPage4 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button6 -Value $Button6 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Panel2 -Value $Panel2 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button41 -Value $Button41 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Panel12 -Value $Panel12 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button40 -Value $Button40 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button39 -Value $Button39 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button38 -Value $Button38 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button37 -Value $Button37 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button36 -Value $Button36 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button3 -Value $Button3 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button12 -Value $Button12 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button35 -Value $Button35 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button34 -Value $Button34 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Label17 -Value $Label17 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Panel11 -Value $Panel11 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button33 -Value $Button33 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button32 -Value $Button32 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Label16 -Value $Label16 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Panel10 -Value $Panel10 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Label15 -Value $Label15 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button31 -Value $Button31 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button11 -Value $Button11 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button12 -Value $Button12 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button30 -Value $Button30 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button27 -Value $Button27 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button28 -Value $Button28 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button29 -Value $Button29 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Panel9 -Value $Panel9 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button10 -Value $Button10 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button9 -Value $Button9 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button8 -Value $Button8 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button7 -Value $Button7 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Label14 -Value $Label14 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Panel8 -Value $Panel8 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button26 -Value $Button26 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button25 -Value $Button25 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button24 -Value $Button24 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button23 -Value $Button23 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button22 -Value $Button22 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button21 -Value $Button21 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button20 -Value $Button20 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button4 -Value $Button4 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Label13 -Value $Label13 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button5 -Value $Button5 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Panel3 -Value $Panel3 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button14 -Value $Button14 -MemberType NoteProperty

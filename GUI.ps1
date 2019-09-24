@@ -290,7 +290,7 @@ function Make-English{
     $CheckBox71.Text = "Disable HomeGroup Listener"
     $CheckBox72.Text = "Disable Net.Tcp Port Sharing Service"
     $CheckBox73.Text = "Disable Routing and Remote Access"
-    $CheckBox74.Text = "Disavle Internet Connection Sharing (ICS)"
+    $CheckBox74.Text = "Disable Internet Connection Sharing (ICS)"
     $CheckBox75.Text = "Disable Superfetch (A must for SSD drives, but good in general)"
 
     #Side Menu
@@ -325,7 +325,7 @@ function Make-Tweaks{
     if ($CheckBox61.Checked){
         wmic /namespace:\\root\default path SystemRestore call Enable C:\
         Write-Host "Die erstellung von Wiederherstellungspunkten wurde aktiviert"
-        Checkpoint-Computer -Description ?TGF_Tuning_Pack_4? -RestorePointType MODIFY_SETTINGS
+        Checkpoint-Computer -Description 'TGF_Tuning_Pack_4' -RestorePointType MODIFY_SETTINGS
         Write-Host "Der Wiederherstellungspunkt wurde erstellt. Er trägt den Namen: (Get-Date) TGF Tuning Pack"
     }
 
