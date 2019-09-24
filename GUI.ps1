@@ -57,7 +57,7 @@ $Button16.Enabled = $false
 $TabPage1.visible = $false
 $TabPage2.visible = $false
 $TabPage4.Visible = $false
-
+6
 
 #Geek Freaks Logo
 $Picture = '.\Images\Unbenannt-1-250x90.png'
@@ -159,7 +159,7 @@ function Make-German{
     $CheckBox33.Text = "Deaktiviere den Error Dialog"
     $CheckBox34.Text = "Deaktiviere Administrative Freigaben"
     $CheckBox35.Text = "Füge 'Reboot to Recovery' zum Rechtsklickmenü von 'Dieser PC' hinzu"
-    $CheckBox36.Text = "änder das Uhrzeit und Datumsformat des Angemeldeten Nutzers zu 24H, metrisch"
+    $CheckBox36.Text = "Änder das Uhrzeit und Datumsformat des Angemeldeten Nutzers zu 24H, metrisch"
     $CheckBox37.Text = "Aktiviere den Developer (Programmierer) Modus"
     $Checkbox38.Text = "Entferne die Nutzungs und Datenerfassung von Microsoft"
     $CheckBox28.Text = "Setze den Windows Explorer Start zu 'Dieser PC' anstatt 'Zuletzt Verwendet'"
