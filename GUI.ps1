@@ -83,15 +83,16 @@ $IEIcon = ".\Images\tron_icon\Dakirby309-Simply-Styled-Internet-Explorer.ico"
 $Button4.Image = ([System.Drawing.Image]::FromFile($IEIcon))
 $ToolTip_IE = New-Object System.Windows.Forms.ToolTip
 $ToolTip_IE.SetToolTip($Button4,"Executes only on Internet Explorer V7 and up. Runs the built-in Windows tool to clean and reset Internet Explorer")
-
 #CCleaner Icon
 $CCIcon = ".\Images\tron_icon\Cornmanthe3rd-Plex-Other-CCleaner.ico"
 $Button20.Image = ([System.Drawing.Image]::FromFile($CCIcon))
-
+$ToolTip_CCleaner = New-Object System.Windows.Forms.ToolTip
+$ToolTip_CCleaner.SetToolTip($Button20,"CCleaner utility by Pitiform. Used to clean temp files before running AV scanners. Note that CCleaner wipes %AppData% Local Storage.")
 #BleachBit Icon
 $BBIcon = ".\Images\tron_icon\favicon (1).ico"
 $Button21.Image = ([System.Drawing.Image]::FromFile($BBIcon))
-
+$ToolTip_Bleachbit = New-Object System.Windows.Forms.ToolTip
+$ToolTip_Bleachbit.SetToolTip($Button21,"Bleachbit utility. Used to clean temp files before running AV scanners.")
 #Temp File Cleanup Icon
 $TFCIcon = ".\Images\tron_icon\Hopstarter-Soft-Scraps-File-Delete.ico"
 $Button22.Image = ([System.Drawing.Image]::FromFile($TFCIcon))
