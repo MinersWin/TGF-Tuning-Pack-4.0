@@ -9,7 +9,7 @@ Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzun
 
 Alles läuft auf Basis von PowerShell. An der Performance wird noch gearbeitet.
 
-Bugs, Verbesserungsvorschläge und Feedback wird gerne gesehen. Dafür bitte den Discord nutzen: https://discordapp.com/invite/k5kMSa
+Bugs, Verbesserungsvorschläge und Feedback wird gerne gesehen. Dafür bitte den Discord nutzen: https://discordapp.com/invite/tdxVMQK
 
 ### Funktionen
 
@@ -64,4 +64,4 @@ mitsamt der OS Version, PowerShell und .Net-Framework Version und Bildschirm For
 
 ### Support or Contact
 
-Du hast Probleme mit dem Tuning Pack? [Discord](https://discordapp.com/invite/k5kMSa) oder schreibe eine Mail an TuningPack@MinersWin.de
+Du hast Probleme mit dem Tuning Pack? [Discord](https://discordapp.com/invite/tdxVMQK) oder schreibe eine Mail an TuningPack@MinersWin.de
