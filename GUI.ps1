@@ -78,6 +78,141 @@ $img3 = [System.Drawing.Image]::Fromfile($Picture3)
 $Button13.BackgroundImage = $img3
 $Button13.Text = ""
 
+#Internet Explorer Icon
+$IEIcon = ".\Images\tron_icon\Dakirby309-Simply-Styled-Internet-Explorer.ico"
+$Button4.Image = ([System.Drawing.Image]::FromFile($IEIcon))
+$ToolTip_IE = New-Object System.Windows.Forms.ToolTip
+$ToolTip_IE.SetToolTip($Button4,"Executes only on Internet Explorer V7 and up. Runs the built-in Windows tool to clean and reset Internet Explorer")
+
+#CCleaner Icon
+$CCIcon = ".\Images\tron_icon\Cornmanthe3rd-Plex-Other-CCleaner.ico"
+$Button20.Image = ([System.Drawing.Image]::FromFile($CCIcon))
+
+#BleachBit Icon
+$BBIcon = ".\Images\tron_icon\favicon (1).ico"
+$Button21.Image = ([System.Drawing.Image]::FromFile($BBIcon))
+
+#Temp File Cleanup Icon
+$TFCIcon = ".\Images\tron_icon\Hopstarter-Soft-Scraps-File-Delete.ico"
+$Button22.Image = ([System.Drawing.Image]::FromFile($TFCIcon))
+
+#USB Device Cleanup Icon
+$USBIcon = ".\Images\tron_icon\Icons-Land-Vista-Hardware-Devices-USB-Flash-Card-With-Card-Reader.ico"
+$Button23.Image = ([System.Drawing.Image]::FromFile($USBIcon))
+
+#Cleanup Download
+$DownloadIcon = ".\Images\tron_icon\Dakirby309-Windows-8-Metro-Folders-OS-Downloads-Folder-Metro.ico"
+$Button24.Image = ([System.Drawing.Image]::FromFile($DownloadIcon))
+
+#Event Log Cleanup Icon
+$EventsIcon = ".\Images\tron_icon\Pelfusion-Flat-File-Type-Log.ico"
+$Button25.Image = ([System.Drawing.Image]::FromFile($EventsIcon))
+
+#Clear Windows Update Cache Icon
+$UpdateIcon = ".\Images\tron_icon\Oxygen-Icons.org-Oxygen-Actions-edit-clear-history.ico"
+$Button26.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#Clear CryptNet SSL Cache Icon
+$UpdateIcon = ".\Images\tron_icon\Roundicons-100-Free-Solid-Ssl-screen.ico"
+$Button7.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#Malwarebytes Icon
+$UpdateIcon = ".\Images\tron_icon\Dakirby309-Simply-Styled-MalwareBytes.ico"
+$Button8.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#Kaspersky Icon
+$UpdateIcon = ".\Images\tron_icon\Hopstarter-3d-Cartoon-Vol3-Kaspersky.ico"
+$Button9.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#Sophos Icon
+$UpdateIcon = ".\Images\tron_icon\Blackvariant-Button-Ui-Requests-2-Sophos.ico"
+$Button10.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#Page File Reset Icon
+$UpdateIcon = ".\Images\tron_icon\Treetog-Junior-Folder-documents.ico"
+$Button32.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#Defraggler Icon
+$UpdateIcon = ".\Images\tron_icon\Dakirby309-Simply-Styled-Defraggler.ico"
+$Button33.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#MSI installer cleanup Icon
+$UpdateIcon = ".\Images\tron_icon\Celldrifter-Muku-Style-Sys-Installer.ico"
+$Button11.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#System File Checker Icon
+$UpdateIcon = ".\Images\tron_icon\Tpdkdesign.net-Refresh-Cl-System-Files-Download.ico"
+$Button12.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#DISM image check and repair Icon
+$UpdateIcon = ".\Images\tron_icon\Vexels-Office-Disc.ico"
+$Button27.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#chkdsk Icon
+$UpdateIcon = ".\Images\tron_icon\Treetog-Junior-Document-console.ico"
+$Button28.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#Network Repair Icon
+$UpdateIcon = ".\Images\tron_icon\Iconshock-Vista-General-Network.ico"
+$Button30.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#File extension repair Icon
+$UpdateIcon = ".\Images\tron_icon\Royalflushxx-Systematrix-Document.ico"
+$Button31.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#ADSSpy Icon
+$UpdateIcon = ".\Images\tron_icon\Hopstarter-Malware-Delete.ico"
+$Button34.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#AdwCleaner Icon
+$UpdateIcon = ".\Images\tron_icon\Igh0zt-Ios7-Style-Metro-Ui-MetroUI-Apps-Avast-Antivirus.ico"
+$Button35.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#aswMBR Icon
+$UpdateIcon = ".\Images\tron_icon\Chrisbanks2-Cold-Fusion-Hd-Cpu-spy.ico"
+$Button36.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#autorun Icon
+$UpdateIcon = ".\Images\tron_icon\Franksouza183-Fs-Places-folder-windows.ico"
+$Button37.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#PChunter Icon
+$UpdateIcon = ".\Images\tron_icon\favicon.ico"
+$Button38.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#Junkware Removal Tool Icon
+$UpdateIcon = ".\Images\tron_icon\e3c3e87b78da.256x256.png"
+$Button39.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#Net Adapter Repair Icon
+$UpdateIcon = ".\Images\tron_icon\Oxygen-Icons.org-Oxygen-Actions-network-connect.ico"
+$Button40.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#Kill Process Icon
+$UpdateIcon = ".\Images\tron_icon\Icons8-Ios7-Logos-System-Task.ico"
+$Button3.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#All The Tools CHECK
+$Tools = Test-Path .\Tools
+if ($Tools){
+    $Label18.ForeColor = "GREEN"
+    $Label18.Text = "Tools found"
+    $Panel8.Enabled = $true
+    $Panel9.Enabled = $true
+    $Panel10.Enabled = $true
+    $Panel11.Enabled = $true
+    $Panel12.Enabled = $true
+} else {
+    $Label18.ForeColor = "RED"
+    $Label18.Text = "Could not find the tools, please download first."
+    $Panel8.Enabled = $false
+    $Panel9.Enabled = $false
+    $Panel10.Enabled = $false
+    $Panel11.Enabled = $false
+    $Panel12.Enabled = $false
+}
+
+
 #Download Tools
 $Button5.Add_Click({Start-Process PowerShell.exe "Write-Host 'Der Download Startet, dies kann je nach Internetgeschwindigkeit ca. 5-10 Minuten dauern. (500MB)'; Write-Host 'The download starts, this may take about 5-10 minutes, depending on the internet speed. (500MB)'; & '.\Download all Tools.ps1'"})
 
@@ -116,7 +251,7 @@ $CheckBox61.Text = "Create System Recovery Point"
 $button17.Add_Click{($Form1.Close())}
 
 #Open Tool Folder
-$Button6.Add_Click{(Start "$($MyDir)\Tools\")}
+$Button6.Add_Click{(Start "$($MyDir)\")}
 
 #Make Everything German
 $Button14.Add_Click{(Make-German)}

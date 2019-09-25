@@ -94,6 +94,7 @@ $Form1 = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.CheckBox]$CheckBox57 = $null
 [System.Windows.Forms.CheckBox]$CheckBox55 = $null
 [System.Windows.Forms.TabPage]$TabPage4 = $null
+[System.Windows.Forms.Label]$Label18 = $null
 [System.Windows.Forms.Button]$Button6 = $null
 [System.Windows.Forms.Panel]$Panel2 = $null
 [System.Windows.Forms.Button]$Button41 = $null
@@ -153,6 +154,7 @@ $Form1 = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.Label]$Label10 = $null
 function InitializeComponent
 {
+Import-LocalizedData -BaseDirectory $PSScriptRoot -FileName 'GUI.resources.psd1' -BindingVariable resources
 $Label1 = (New-Object -TypeName System.Windows.Forms.Label)
 $PictureBox1 = (New-Object -TypeName System.Windows.Forms.PictureBox)
 $Label2 = (New-Object -TypeName System.Windows.Forms.Label)
@@ -248,6 +250,7 @@ $CheckBox54 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox57 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox55 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $TabPage4 = (New-Object -TypeName System.Windows.Forms.TabPage)
+$Label18 = (New-Object -TypeName System.Windows.Forms.Label)
 $Button6 = (New-Object -TypeName System.Windows.Forms.Button)
 $Panel2 = (New-Object -TypeName System.Windows.Forms.Panel)
 $Button41 = (New-Object -TypeName System.Windows.Forms.Button)
@@ -1347,6 +1350,7 @@ $CheckBox55.UseVisualStyleBackColor = $true
 #
 #TabPage4
 #
+$TabPage4.Controls.Add($Label18)
 $TabPage4.Controls.Add($Button6)
 $TabPage4.Controls.Add($Panel2)
 $TabPage4.Controls.Add($Button5)
@@ -1358,6 +1362,16 @@ $TabPage4.Text = [System.String]'Other Tools'
 $TabPage4.UseVisualStyleBackColor = $true
 $TabPage4.Visible = $false
 $TabPage4.add_Click($TabPage4_Click)
+#
+#Label18
+#
+$Label18.Font = (New-Object -TypeName System.Drawing.Font -ArgumentList @([System.String]'Comic Sans MS',[System.Single]12,[System.Drawing.FontStyle]::Regular,[System.Drawing.GraphicsUnit]::Point,([System.Byte][System.Byte]0)))
+$Label18.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]277,[System.Int32]22))
+$Label18.Name = [System.String]'Label18'
+$Label18.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]634,[System.Int32]23))
+$Label18.TabIndex = [System.Int32]3
+$Label18.Text = [System.String]'Label18'
+$Label18.UseCompatibleTextRendering = $true
 #
 #Button6
 #
@@ -1413,6 +1427,8 @@ $Panel12.TabIndex = [System.Int32]11
 #
 #Button40
 #
+$Button40.Image = ([System.Drawing.Image]$resources.'Button40.Image')
+$Button40.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button40.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]172))
 $Button40.Name = [System.String]'Button40'
 $Button40.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
@@ -1423,6 +1439,8 @@ $Button40.UseVisualStyleBackColor = $true
 #
 #Button38
 #
+$Button38.Image = ([System.Drawing.Image]$resources.'Button38.Image')
+$Button38.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button38.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]143))
 $Button38.Name = [System.String]'Button38'
 $Button38.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
@@ -1433,6 +1451,8 @@ $Button38.UseVisualStyleBackColor = $true
 #
 #Button37
 #
+$Button37.Image = ([System.Drawing.Image]$resources.'Button37.Image')
+$Button37.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button37.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]114))
 $Button37.Name = [System.String]'Button37'
 $Button37.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
@@ -1443,6 +1463,8 @@ $Button37.UseVisualStyleBackColor = $true
 #
 #Button36
 #
+$Button36.Image = ([System.Drawing.Image]$resources.'Button36.Image')
+$Button36.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button36.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]85))
 $Button36.Name = [System.String]'Button36'
 $Button36.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
@@ -1453,6 +1475,8 @@ $Button36.UseVisualStyleBackColor = $true
 #
 #Button3
 #
+$Button3.Image = ([System.Drawing.Image]$resources.'Button3.Image')
+$Button3.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button3.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]201))
 $Button3.Name = [System.String]'Button3'
 $Button3.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
@@ -1463,6 +1487,8 @@ $Button3.UseVisualStyleBackColor = $true
 #
 #Button35
 #
+$Button35.Image = ([System.Drawing.Image]$resources.'Button35.Image')
+$Button35.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button35.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]56))
 $Button35.Name = [System.String]'Button35'
 $Button35.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
@@ -1473,6 +1499,8 @@ $Button35.UseVisualStyleBackColor = $true
 #
 #Button34
 #
+$Button34.Image = ([System.Drawing.Image]$resources.'Button34.Image')
+$Button34.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button34.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]27))
 $Button34.Name = [System.String]'Button34'
 $Button34.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
@@ -1503,6 +1531,7 @@ $Panel11.TabIndex = [System.Int32]10
 #
 #Button33
 #
+$Button33.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button33.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]57))
 $Button33.Name = [System.String]'Button33'
 $Button33.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
@@ -1513,6 +1542,7 @@ $Button33.UseVisualStyleBackColor = $true
 #
 #Button32
 #
+$Button32.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button32.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]28))
 $Button32.Name = [System.String]'Button32'
 $Button32.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
@@ -1557,6 +1587,7 @@ $Label15.UseCompatibleTextRendering = $true
 #
 #Button31
 #
+$Button31.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button31.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]169))
 $Button31.Name = [System.String]'Button31'
 $Button31.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
@@ -1567,6 +1598,7 @@ $Button31.UseVisualStyleBackColor = $true
 #
 #Button11
 #
+$Button11.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button11.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]24))
 $Button11.Name = [System.String]'Button11'
 $Button11.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
@@ -1577,6 +1609,7 @@ $Button11.UseVisualStyleBackColor = $true
 #
 #Button12
 #
+$Button12.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button12.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]53))
 $Button12.Name = [System.String]'Button12'
 $Button12.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
@@ -1587,6 +1620,7 @@ $Button12.UseVisualStyleBackColor = $true
 #
 #Button30
 #
+$Button30.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button30.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]140))
 $Button30.Name = [System.String]'Button30'
 $Button30.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
@@ -1597,6 +1631,7 @@ $Button30.UseVisualStyleBackColor = $true
 #
 #Button27
 #
+$Button27.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button27.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]82))
 $Button27.Name = [System.String]'Button27'
 $Button27.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
@@ -1607,6 +1642,7 @@ $Button27.UseVisualStyleBackColor = $true
 #
 #Button28
 #
+$Button28.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button28.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]111))
 $Button28.Name = [System.String]'Button28'
 $Button28.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
@@ -1631,6 +1667,7 @@ $Panel9.add_Paint($Panel9_Paint)
 #
 #Button10
 #
+$Button10.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button10.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]116))
 $Button10.Name = [System.String]'Button10'
 $Button10.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
@@ -1641,6 +1678,7 @@ $Button10.UseVisualStyleBackColor = $true
 #
 #Button9
 #
+$Button9.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button9.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]87))
 $Button9.Name = [System.String]'Button9'
 $Button9.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
@@ -1651,6 +1689,7 @@ $Button9.UseVisualStyleBackColor = $true
 #
 #Button8
 #
+$Button8.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button8.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]58))
 $Button8.Name = [System.String]'Button8'
 $Button8.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
@@ -1661,6 +1700,7 @@ $Button8.UseVisualStyleBackColor = $true
 #
 #Button7
 #
+$Button7.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button7.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]29))
 $Button7.Name = [System.String]'Button7'
 $Button7.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
@@ -1697,6 +1737,7 @@ $Panel8.TabIndex = [System.Int32]7
 #
 #Button26
 #
+$Button26.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button26.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]228))
 $Button26.Name = [System.String]'Button26'
 $Button26.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]193,[System.Int32]23))
@@ -1707,6 +1748,7 @@ $Button26.UseVisualStyleBackColor = $true
 #
 #Button25
 #
+$Button25.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button25.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]199))
 $Button25.Name = [System.String]'Button25'
 $Button25.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]193,[System.Int32]23))
@@ -1717,6 +1759,7 @@ $Button25.UseVisualStyleBackColor = $true
 #
 #Button24
 #
+$Button24.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button24.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]170))
 $Button24.Name = [System.String]'Button24'
 $Button24.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]193,[System.Int32]23))
@@ -1727,6 +1770,7 @@ $Button24.UseVisualStyleBackColor = $true
 #
 #Button23
 #
+$Button23.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button23.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]141))
 $Button23.Name = [System.String]'Button23'
 $Button23.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]193,[System.Int32]23))
@@ -1737,6 +1781,7 @@ $Button23.UseVisualStyleBackColor = $true
 #
 #Button22
 #
+$Button22.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button22.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]112))
 $Button22.Name = [System.String]'Button22'
 $Button22.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]193,[System.Int32]23))
@@ -1747,6 +1792,7 @@ $Button22.UseVisualStyleBackColor = $true
 #
 #Button21
 #
+$Button21.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button21.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]83))
 $Button21.Name = [System.String]'Button21'
 $Button21.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]193,[System.Int32]23))
@@ -1757,6 +1803,7 @@ $Button21.UseVisualStyleBackColor = $true
 #
 #Button20
 #
+$Button20.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button20.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]54))
 $Button20.Name = [System.String]'Button20'
 $Button20.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]193,[System.Int32]23))
@@ -1767,6 +1814,7 @@ $Button20.UseVisualStyleBackColor = $true
 #
 #Button4
 #
+$Button4.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button4.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]25))
 $Button4.Name = [System.String]'Button4'
 $Button4.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]193,[System.Int32]23))
@@ -2092,6 +2140,7 @@ Add-Member -InputObject $Form1 -Name CheckBox54 -Value $CheckBox54 -MemberType N
 Add-Member -InputObject $Form1 -Name CheckBox57 -Value $CheckBox57 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox55 -Value $CheckBox55 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name TabPage4 -Value $TabPage4 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Label18 -Value $Label18 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button6 -Value $Button6 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Panel2 -Value $Panel2 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button41 -Value $Button41 -MemberType NoteProperty
