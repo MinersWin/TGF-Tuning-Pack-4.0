@@ -29,6 +29,17 @@ ENDLICH MIT GUI?
 Virenscan
 Rootkit entfernung
 Höhere Batterielaufzeit (Nur bei Laptops, hierfür die Akkutweaks nutzen)
+Windows Reparieren
+Netzwerkprobleme beheben
+Windows Events aufräumen
+Downloads verwalten
+Speicher Freigeben
+Windows Absichern
+Festplatte Defragmentieren
+BIOS Updaten
+Leistungshungrige & Gefährliche Prozesse beenden
+NINITE!
+Mit nur einem Klick bis zu 60 Programme Installieren
 ```
 
 Für mehr Details [Die offizielle GeekFreaks Seite](https://thegeekfreaks.de).
