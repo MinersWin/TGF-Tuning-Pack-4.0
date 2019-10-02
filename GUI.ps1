@@ -181,10 +181,6 @@ $Button37.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
 $UpdateIcon = ".\Images\tron_icon\favicon.ico"
 $Button38.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
 
-#Junkware Removal Tool Icon
-$UpdateIcon = ".\Images\tron_icon\e3c3e87b78da.256x256.png"
-$Button39.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
-
 #Net Adapter Repair Icon
 $UpdateIcon = ".\Images\tron_icon\Oxygen-Icons.org-Oxygen-Actions-network-connect.ico"
 $Button40.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
@@ -192,6 +188,19 @@ $Button40.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
 #Kill Process Icon
 $UpdateIcon = ".\Images\tron_icon\Icons8-Ios7-Logos-System-Task.ico"
 $Button3.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#ParkControl Icon
+$UpdateIcon = ".\Images\tron_icon\parkcontrol.ico"
+$Button29.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#Systemwiederherstellung Icon
+$UpdateIcon = ".\Images\tron_icon\Icons8-Windows-8-Database-Recovery.ico"
+$Button39.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
+#Reboot to Recovery Icon
+$UpdateIcon = ".\Images\tron_icon\shutdown-icon (1).png"
+$Button42.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
+
 
 #All The Tools CHECK
 $Tools = Test-Path .\Tools
@@ -710,6 +719,7 @@ function USBCleanup{
 #Cleanup Duplicate Downloads
 ###FIXME###
 
+#$Button24.Add_Click{([System.Windows.Forms.MessageBox]::Show("WIP","TGF Tuning Pack 4.0"1))}
 
 #Clear Windows event logs
 $Button25.Add_Click{(Clear-EventLog Application,Security,System)}
@@ -798,9 +808,21 @@ $Button40.Add_Click{(Net-Adapter-Repair)}
 function Net-Adapter-Repair{
     .\tools\NetAdapterRepair\NetAdapterRepair1.2.exe
 }
-
-
-
+#ParkControl
+$Button29.Add_Click{(Park-Control)}
+function Park-Control{
+    .\Tools\ParkControl\ParkControl.exe
+}
+#System Recovery
+$Button39.Add_Click{(System-Recovery)}
+function System-Recovery{
+    rstrui.exe
+}
+#Reboot to Recovery
+$Button42.Add_Click{(Reboot-Recovery)}
+function Reboot-Recovery{
+    shutdown /r /o /f /t 00
+}
 
 
 
