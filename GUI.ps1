@@ -223,6 +223,7 @@ if ($Tools){
 }
 
 
+
 #Download Tools
 $Button5.Add_Click({Start-Process PowerShell.exe "Write-Host 'Der Download Startet, dies kann je nach Internetgeschwindigkeit ca. 5-10 Minuten dauern. (500MB)'; Write-Host 'The download starts, this may take about 5-10 minutes, depending on the internet speed. (500MB)'; & '.\Download all Tools.ps1'"})
 
@@ -471,7 +472,8 @@ function Make-Tweaks{
         wmic /namespace:\\root\default path SystemRestore call Enable C:\
         Write-Host "Die erstellung von Wiederherstellungspunkten wurde aktiviert"
         Checkpoint-Computer -Description 'TGF_Tuning_Pack_4' -RestorePointType MODIFY_SETTINGS
-        Write-Host "Der Wiederherstellungspunkt wurde erstellt. Er trägt den Namen: (Get-Date) TGF Tuning Pack"
+        $Date = Get-Date
+        Write-Host "Der Wiederherstellungspunkt wurde erstellt. Er trägt den Namen: $($Date) TGF Tuning Pack"
     }
 
 
@@ -684,28 +686,104 @@ $tooltip8.SetToolTip($CheckBox8,"Say something")
 ### All the Tools ###
 ######################################################################################################################################################################################
 #Process Killer
-$Button3.Add_Click{(Kill-Process)}
+function Test_Kill_Process{
+$Kill_Process = Test-Path .\Scripts\ProcessKiller-Tuning-Pack.bat
+if ($Kill_Process){
+    $Button3.Add_Click{(Kill-Process)}
+    $Button3.ForeColor = 'Green'
+} else {
+    $Button3.Add_Click{(Download_Kill-Process)}
+    $Button3.ForeColor = 'RED'
+}
+}
 function Kill-Process{
     [System.Windows.Forms.MessageBox]::Show("Prozesse werden beendet","TGF Tuning Pack 4.0",1)
     Write-Host "Prozesse werden beendet."
     & '.\Scripts\ProcessKiller-Tuning-Pack.bat'
     Write-Host "Die Prozesse wurden beendet"
+    Test_Kill_Process
 }
+function Download_Kill-Process{
+    Set-Location .\Scripts\
+    wget 'http://download.tuning-pack.de/TGF/Scripts/ProcessKiller-Tuning-Pack.bat' -OutFile 'ProcessKiller-Tuning-Pack.bat'
+    Set-Location .\..\
+    Test_Kill_Process
+}
+
+
+
 #Internet Explorer Cleanup
-$Button4.Add_Click({IE_Clean})
-function IE_Clean{
-    & '.\Tools\IE Cleanup\Clear-IECachedData.ps1'
-}
+function Test_IE_Clean{
+    $IE_Clean = Test-Path '.\Tools\IE Cleanup\Clear-IECachedData.ps1'
+    if ($IE_Clean){
+        $Button4.Add_Click{(IE_Clean)}
+        $Button4.ForeColor = 'Green'
+    } else {
+        $Button4.Add_Click{(Download_IE_Clean)}
+        $Button4.ForeColor = 'RED'
+    }
+    }
+    function IE_Clean{
+        & '.\Tools\IE Cleanup\Clear-IECachedData.ps1'
+    }
+    function Download_IE_Clean{
+        Set-Location .\Tools\
+        wget 'http://download.tuning-pack.de/TGF/Tools/IE%20Cleanup.zip' -OutFile 'IE_Cleanup.zip'
+        Expand-Archive .\IE_Cleanup.zip -DestinationPath .\
+        Set-Location .\..\
+        Test_IE_Clean
+    }
+
+
+
+
 #CCleaner
-$Button20.Add_Click{(CCleaner)}
-function CCleaner{
-    .\Tools\CCleaner\CCleaner.exe
-}
+function Test_CCleaner{
+    $IE_Clean = Test-Path '.\Tools\CCleaner\CCleaner.exe'
+    if ($IE_Clean){
+        $Button20.Add_Click{(CCleaner)}
+        $Button20.ForeColor = 'Green'
+    } else {
+        $Button20.Add_Click{(Download_CCleaner)}
+        $Button20.ForeColor = 'RED'
+    }
+    }
+    function CCleaner{
+        .\Tools\CCleaner\CCleaner.exe
+    }
+    function Download_CCleaner{
+        Set-Location .\Tools\
+        wget 'http://download.tuning-pack.de/TGF/Tools/CCleaner.zip' -OutFile 'CCleaner.zip'
+        Expand-Archive .\CCleaner.zip -DestinationPath .\
+        Set-Location .\..\
+        Test_CCleaner
+    }
+
+
+
 #BleachBit
-$Button21.Add_Click{(BleachBit)}
-function BleachBit{
-    .\Tools\BleachBit\bleachbit.exe
-}
+function Test_BleachBit{
+    $IE_Clean = Test-Path '.\Tools\BleachBit\bleachbit.exe'
+    if ($IE_Clean){
+        $Button21.Add_Click{(BleachBit)}
+        $Button21.ForeColor = 'Green'
+    } else {
+        $Button21.Add_Click{(Download_BleachBit)}
+        $Button21.ForeColor = 'RED'
+    }
+    }
+    function BleachBit{
+        .\Tools\BleachBit\bleachbit.exe
+    }
+    function Download_BleachBit{
+        Set-Location .\Tools\
+        wget 'http://download.tuning-pack.de/TGF/Tools/BleachBit.zip' -OutFile 'BleachBit.zip'
+        Expand-Archive .\BleachBit.zip -DestinationPath .\
+        Set-Location .\..\
+        Test_BleachBit
+    }
+
+7
 #Temp File Cleanup
 $Button22.Add_Click{(TempCleanup)}
 function TempCleanup{
@@ -824,7 +902,13 @@ function Reboot-Recovery{
     shutdown /r /o /f /t 00
 }
 
-
+function Refresh_Tools{
+Test_Kill_Process
+Test_IE_Clean
+Test_CCleaner
+Test_BleachBit
+}
+Refresh_Tools
 
 
 
