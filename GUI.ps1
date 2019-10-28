@@ -709,9 +709,6 @@ function Download_Kill-Process{
     Set-Location .\..\
     Test_Kill_Process
 }
-
-
-
 #Internet Explorer Cleanup
 function Test_IE_Clean{
     $IE_Clean = Test-Path '.\Tools\IE Cleanup\Clear-IECachedData.ps1'
@@ -733,10 +730,6 @@ function Test_IE_Clean{
         Set-Location .\..\
         Test_IE_Clean
     }
-
-
-
-
 #CCleaner
 function Test_CCleaner{
     $IE_Clean = Test-Path '.\Tools\CCleaner\CCleaner.exe'
@@ -758,9 +751,6 @@ function Test_CCleaner{
         Set-Location .\..\
         Test_CCleaner
     }
-
-
-
 #BleachBit
 function Test_BleachBit{
     $IE_Clean = Test-Path '.\Tools\BleachBit\bleachbit.exe'
@@ -782,29 +772,80 @@ function Test_BleachBit{
         Set-Location .\..\
         Test_BleachBit
     }
-
-7
 #Temp File Cleanup
-$Button22.Add_Click{(TempCleanup)}
-function TempCleanup{
-    & '.\Tools\Temp File Cleanup\Cleanup.ps1'
-}
+function Test_TFC{
+    $IE_Clean = Test-Path '.\Tools\Temp File Cleanup\Cleanup.ps1'
+    if ($IE_Clean){
+        $Button22.Add_Click{(TFC)}
+        $Button22.ForeColor = 'Green'
+    } else {
+        $Button22.Add_Click{(Download_TFC)}
+        $Button22.ForeColor = 'RED'
+    }
+    }
+    function TFC{
+        & '.\Tools\Temp File Cleanup\Cleanup.ps1'
+    }
+    function Download_TFC{
+        Set-Location .\Tools\
+        wget 'http://download.tuning-pack.de/TGF/Tools/Temp%20File%20Cleanup.zip' -OutFile 'TempFileCleanup.zip'
+        Expand-Archive .\TempFileCleanup.zip -DestinationPath .\
+        rm TempFileCleanup.zip
+        Set-Location .\..\
+        Test_TFC
+    }
 #USB Device Cleanup
-$Button23.Add_Click{(USBCleanup)}
-function USBCleanup{
-    & '.\Tools\Drive Cleanup\DriveCleanup.exe'
-}
+function Test_USBDeviceCleanup{
+    $IE_Clean = Test-Path '.\Tools\Drive Cleanup\DriveCleanup.exe'
+    if ($IE_Clean){
+        $Button23.Add_Click{(USBDeviceCleanup)}
+        $Button23.ForeColor = 'Green'
+    } else {
+        $Button23.Add_Click{(Download_USBDeviceCleanup)}
+        $Button23.ForeColor = 'RED'
+    }
+    }
+    function USBDeviceCleanup{
+        & '.\Tools\Drive Cleanup\DriveCleanup.exe'
+    }
+    function Download_USBDeviceCleanup{
+        Set-Location .\Tools\
+        wget 'http://download.tuning-pack.de/TGF/Tools/Drive%20Cleanup.zip' -OutFile 'DriveCleanup.zip'
+        Expand-Archive .\DriveCleanup.zip -DestinationPath .\
+        rm DriveCleanup.zip
+        Set-Location .\..\
+        Test_USBDeviceCleanup
+    }
 #Cleanup Duplicate Downloads
 ###FIXME###
 
 #$Button24.Add_Click{([System.Windows.Forms.MessageBox]::Show("WIP","TGF Tuning Pack 4.0"1))}
 
 #Clear Windows event logs
+$Button25.ForeColor = 'GREEN'
 $Button25.Add_Click{(Clear-EventLog Application,Security,System)}
-$Button26.Add_CLick{(Clear-UpdateCache)}
-function Clear-UpdateCache{
-    & '.\Tools\Clear Update Cache\Erase_Cache.bat'
-}
+#Clear Windows Update Cache
+function Test_Clear-UpdateCache{
+    $IE_Clean = Test-Path '.\Tools\Clear Update Cache\Erase_Cache.bat'
+    if ($IE_Clean){
+        $Button26.Add_Click{(Clear-UpdateCache)}
+        $Button26.ForeColor = 'Green'
+    } else {
+        $Button26.Add_Click{(Download_Clear-UpdateCache)}
+        $Button26.ForeColor = 'RED'
+    }
+    }
+    function Clear-UpdateCache{
+        & '.\Tools\Clear Update Cache\Erase_Cache.bat'
+    }
+    function Download_Clear-UpdateCache{
+        Set-Location .\Tools\
+        wget 'http://download.tuning-pack.de/TGF/Tools/Clear%20Update%20Cache.zip' -OutFile 'ClearUpdateCache.zip'
+        Expand-Archive .\ClearUpdateCache.zip -DestinationPath .\
+        rm ClearUpdateCache.zip
+        Set-Location .\..\
+        Test_Clear-UpdateCache
+    }
 #Clear CryptNet SSL Cache
 $Button7.Add_Click{(Clear-SSL)}
 function Clear-SSL{
@@ -907,6 +948,9 @@ Test_Kill_Process
 Test_IE_Clean
 Test_CCleaner
 Test_BleachBit
+Test_TFC
+Test_USBDeviceCleanup
+Test_Clear-UpdateCache
 }
 Refresh_Tools
 
