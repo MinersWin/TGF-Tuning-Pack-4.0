@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/60890a1330904eb98e6e9fb7c3c8b943)](https://www.codacy.com/manual/MinersWin/TGF-Tuning-Pack-4.0?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MinersWin/TGF-Tuning-Pack-4.0&amp;utm_campaign=Badge_Grade)
 ## The Geek Freaks Tuning Pack 4.0
 
 DIES IST EIN SEHR FRÜHER ALPHASTATUS, IN WELCHEM SICH DAS PROJEKT BEFINDET!
