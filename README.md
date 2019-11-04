@@ -10,6 +10,7 @@
     <a href="https://tuning-pack.de">
         <img src="https://img.shields.io/github/commits-since/badges/shields/gh-pages?label=commits%20to%20be%20deployed"
             alt="commits to be deployed"></a>
+[![codecov](https://codecov.io/gh/MinersWin/TGF-Tuning-Pack-4.0/branch/master/graph/badge.svg)](https://codecov.io/gh/MinersWin/TGF-Tuning-Pack-4.0)
 ## The Geek Freaks Tuning Pack 4.0
 
 DIES IST EIN SEHR FRÜHER ALPHASTATUS, IN WELCHEM SICH DAS PROJEKT BEFINDET!
