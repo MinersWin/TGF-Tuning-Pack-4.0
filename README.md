@@ -11,6 +11,7 @@
     <a href="https://tuning-pack.de">
         <img src="https://img.shields.io/github/commits-since/badges/shields/gh-pages?label=commits%20to%20be%20deployed"
             alt="commits to be deployed"></a>
+<img src="https://camo.githubusercontent.com/7387a4471ba58f8b404f5cc36f10cf4b5410fdbb/68747470733a2f2f6465762e617a7572652e636f6d2f69726f6e6d616e736f6674776172652f756e6976657273616c2d64617368626f6172642f5f617069732f6275696c642f7374617475732f69726f6e6d616e736f6674776172652e756e6976657273616c2d64617368626f6172643f6272616e63684e616d653d6d6173746572" alt="Build Status" data-canonical-src="" style="max-width:100%;">
 [![codecov](https://codecov.io/gh/MinersWin/TGF-Tuning-Pack-4.0/branch/master/graph/badge.svg)](https://codecov.io/gh/MinersWin/TGF-Tuning-Pack-4.0)
 ## The Geek Freaks Tuning Pack 4.0
 
@@ -85,6 +86,7 @@ You can download the old tuning pack  [here](https://thegeekfreaks.de/download/t
     <a href="https://tuning-pack.de">
         <img src="https://img.shields.io/github/commits-since/badges/shields/gh-pages?label=commits%20to%20be%20deployed"
             alt="commits to be deployed"></a>
+<img src="https://camo.githubusercontent.com/7387a4471ba58f8b404f5cc36f10cf4b5410fdbb/68747470733a2f2f6465762e617a7572652e636f6d2f69726f6e6d616e736f6674776172652f756e6976657273616c2d64617368626f6172642f5f617069732f6275696c642f7374617475732f69726f6e6d616e736f6674776172652e756e6976657273616c2d64617368626f6172643f6272616e63684e616d653d6d6173746572" alt="Build Status" data-canonical-src="" style="max-width:100%;">
 [![codecov](https://codecov.io/gh/MinersWin/TGF-Tuning-Pack-4.0/branch/master/graph/badge.svg)](https://codecov.io/gh/MinersWin/TGF-Tuning-Pack-4.0)
 ## The Geek Freaks Tuning Pack 4.0
 
