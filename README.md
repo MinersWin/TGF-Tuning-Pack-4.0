@@ -1,3 +1,78 @@
+# Englisch
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/60890a1330904eb98e6e9fb7c3c8b943)](https://www.codacy.com/manual/MinersWin/TGF-Tuning-Pack-4.0?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MinersWin/TGF-Tuning-Pack-4.0&amp;utm_campaign=Badge_Grade)
+    <a href="https://tuning-pack.de">
+        <img src="https://img.shields.io/circleci/project/github/badges/shields/master" alt="build status"></a>
+    <a href="https://tuning-pack.de">
+        <img src="https://img.shields.io/coveralls/github/badges/shields"
+            alt="coverage"></a>
+    <a href="https://tuning-pack.de">
+        <img src="https://img.shields.io/lgtm/alerts/g/badges/shields"
+            alt="Total alerts"/></a>
+    <a href="https://tuning-pack.de">
+        <img src="https://img.shields.io/github/commits-since/badges/shields/gh-pages?label=commits%20to%20be%20deployed"
+            alt="commits to be deployed"></a>
+[![codecov](https://codecov.io/gh/MinersWin/TGF-Tuning-Pack-4.0/branch/master/graph/badge.svg)](https://codecov.io/gh/MinersWin/TGF-Tuning-Pack-4.0)
+## The Geek Freaks Tuning Pack 4.0
+
+This is a very early alpha in which the project is located. We are not responsible for any problems associated with the execution of our program.
+So far, very few functions are implemented. This will change over the next few months.
+This is a hobby project! Everything can cause mistakes and create problems! Use at your own risk!
+Everything is based on PowerShell. The performance will improve even more.
+Bugs, suggestions for improvement and Feeback will be read gladly. For this you can simply use the discord: https://discord.gg/qrXmqSq
+
+### Funktions
+
+Here are all functions roughly listed:
+
+```
+Speed up Windows
+Remove bloatware
+Ultimate performance mode
+Turn off Windows Espionage
+More FPS in games
+Unlock secret menus
+New comfort features
+Remove Cortana completely
+Finally with GUI
+virus scan
+Rootkit removal
+Higher battery life (Only for laptops, use the battery tweaks for this)
+Repair Windows
+Fix network problems
+Clean up windows events
+Manage downloads
+Free up memory
+Secure windows
+Disk Defragment
+BIOS updates
+End hungry and dangerous processes
+Ninite!
+Install and update up to 60 selected programs with just one click
+```
+
+For more details [the official Website](https://tuning-pack.de).
+
+### Changelog
+
+[Changelog](https://github.com/MinersWin/TGF-Tuning-Pack-4.0/wiki/Changelog)
+
+### Known bugs
+
+```
+There are only a few functions, but this will be fixed until December. At Christmas, the Tuning Pack will be released in full functionality.
+There are parts of the program cut off or postponed, then I ask you to write me an email, including the OS version, PowerShell and .Net framework version and screen size and resolution.
+```
+
+### Support or Contact
+
+You have problems with the tuning pack? [Discord](https://discord.gg/qrXmqSq) or write at TuningPack@MinersWin.de
+
+### Das alte Tuning Pack 3.1
+
+You can download the old tuning pack  [here](https://thegeekfreaks.de/download/the-geek-freaks-tuning-pack-3-1/). The new builds mostly on the old, but includes some new features and finally a GUI. In order to avoid virus reproaches or the like, the entire project is published on GitHub and development is traceable right from the start. Tuning Pack 4.0 is mostly developed by [MinersWin](https://www.youtube.com/minerswin).
+
+
+# Deutsch
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/60890a1330904eb98e6e9fb7c3c8b943)](https://www.codacy.com/manual/MinersWin/TGF-Tuning-Pack-4.0?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MinersWin/TGF-Tuning-Pack-4.0&amp;utm_campaign=Badge_Grade)
     <a href="https://tuning-pack.de">
         <img src="https://img.shields.io/circleci/project/github/badges/shields/master" alt="build status"></a>
@@ -22,7 +97,7 @@ Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzun
 
 Alles läuft auf Basis von PowerShell. An der Performance wird noch gearbeitet.
 
-Bugs, Verbesserungsvorschläge und Feedback wird gerne gesehen. Dafür bitte den Discord nutzen: https://discordapp.com/invite/tdxVMQK
+Bugs, Verbesserungsvorschläge und Feedback wird gerne gesehen. Dafür bitte den Discord nutzen: https://discord.gg/qrXmqSq
 
 ### Funktionen
 
@@ -77,4 +152,4 @@ mitsamt der OS Version, PowerShell und .Net-Framework Version und Bildschirm For
 
 ### Support or Contact
 
-Du hast Probleme mit dem Tuning Pack? [Discord](https://discordapp.com/invite/tdxVMQK) oder schreibe eine Mail an TuningPack@MinersWin.de
+Du hast Probleme mit dem Tuning Pack? [Discord](https://discord.gg/qrXmqSq) oder schreibe eine Mail an TuningPack@MinersWin.de
