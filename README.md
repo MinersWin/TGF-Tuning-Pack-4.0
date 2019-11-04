@@ -21,7 +21,7 @@ This is a hobby project! Everything can cause mistakes and create problems! Use 
 Everything is based on PowerShell. The performance will improve even more.
 Bugs, suggestions for improvement and Feeback will be read gladly. For this you can simply use the discord: https://discord.gg/qrXmqSq
 
-### Funktions
+### Functions
 
 Here are all functions roughly listed:
 
