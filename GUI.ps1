@@ -9,7 +9,6 @@ ___________ __                                    __     ___________            
   |    |   |   Y  \  ___/   / /_/  >  ___/\  ___/|    <   |     \   |  | \/\  ___/ / __ \|    <  \___ \ 
   |____|   |___|  /\___  >  \___  / \___  >\___  >__|_ \  \___  /   |__|    \___  >____  /__|_ \/____  >
                 \/     \/  /_____/      \/     \/     \/      \/                \/     \/     \/     \/ 
-
                 ___________           .__                                      __        _____    _______   
                 \__    ___/_ __  ____ |__| ____    ____   ___________    ____ |  | __   /  |  |   \   _  \  
                   |    | |  |  \/    \|  |/    \  / ___\  \____ \__  \ _/ ___\|  |/ /  /   |  |_  /  /_\  \ 
@@ -28,7 +27,6 @@ The Geek Freaks Tuning Pack 4.0 Update 12.09.2019
 Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
-
 WIR ÜBERNEHMEN KEINE VERANTWORTUNG FÜR PROBLEME DIE MIT DER AUSFÜHRUNG UNSERES PROGRAMMS EINHERGEHEN!
 Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr!
 "
@@ -477,12 +475,6 @@ function Make-Tweaks{
     }
 
 
-
-
-
-
-
-
     #Show Desktop Icon on Desktop
     if ($CheckBox1.Checked){
         reg import .\Scripts\Registry\Add_This-PC_Desktop_Icon.reg
@@ -502,8 +494,8 @@ function Make-Tweaks{
     #Classic vertical Icon spacing
     if ($CheckBox3.Checked){
         reg import .\Scripts\Registry\Reset_Classic_Vertica_Icon_Spacing.reg
-        $ProgressBar1.Value = 2
-        $Label11.Text = "2%"
+        $ProgressBar1.Value = 1
+        $Label11.Text = "1%"
         $Label12.Text = "The default vertical icon spacing for the desktop is now set."
         Write-Host "The default vertical icon spacing for the desktop is now set."
     }
@@ -517,74 +509,82 @@ function Make-Tweaks{
     }
     if ($CheckBox5.Checked){
         reg import .\Scripts\Registry\Enable_Always_show_all_notification_area_icons_for_all_users.reg
-        $ProgressBar1.Value = 3
-        $Label11.Text = "3%"
+        $ProgressBar1.Value = 2
+        $Label11.Text = "2%"
         $Label12.Text = "Always show all Taskbar Icons and Notifications and restart explorer.exe"
         Write-Host "Always show all Taskbar Icons and Notifications and restart explorer.exe"
     }
     if ($CheckBox6.Checked){
         reg import .\Scripts\Registry\Change-Delay-Time-Show-Taskbar-Thumbnails-to-10-sec.reg
-        $ProgressBar1.Value = 3
-        $Label11.Text = "3%"
+        $ProgressBar1.Value = 2
+        $Label11.Text = "2%"
         $Label12.Text = "Change the Time to Show Taskbar Thumbnails to 10 sec."
         Write-Host "Change the Time to Show Taskbar Thumbnails to 10 sec."
     }
     if ($CheckBox7.Checked){
         reg import .\Scripts\Registry\Enable_Control_Panel_and_Settings.reg
-        $ProgressBar1.Value = 4
-        $Label11.Text = "4%"
+        $ProgressBar1.Value = 3
+        $Label11.Text = "3%"
         $Label12.Text = "Enable Classic Control Panel View."
         Write-Host "Enable Classic Control Panel View."
     }
     if ($CheckBox8.Checked){
         reg import .\Scripts\Registry\Permanently-disabling-sticky-keys.reg
-        $ProgressBar1.Value = 4
-        $Label11.Text = "4%"
+        $ProgressBar1.Value = 3
+        $Label11.Text = "3%"
         $Label12.Text = "Turn of Sticky Keys."
         Write-Host "Turn of Sticky Keys."
     }
     if ($CheckBox9.Checked){
         reg import .\Scripts\Registry\Permanently-disabling-sticky-keys.reg
-        $ProgressBar1.Value = 5
-        $Label11.Text = "5%"
+        $ProgressBar1.Value = 3
+        $Label11.Text = "3%"
         $Label12.Text = "Turn of Filter Keys."
         Write-Host "Turn of Filter Keys."
     }
     if ($CheckBox10.Checked){
         reg import .\Scripts\Registry\Disable_Hibernate.reg
-        $ProgressBar1.Value = 5
-        $Label11.Text = "5%"
+        $ProgressBar1.Value = 4
+        $Label11.Text = "4%"
         $Label12.Text = "Disable Hibernation."
         Write-Host "Disable Hibernation."
     }
     if ($CheckBox11.Checked){
         reg import .\Scripts\Registry\Turn_ON_underline_keyboard_shortcuts_in_menus.reg
-        $ProgressBar1.Value = 6
-        $Label11.Text = "6%"
+        $ProgressBar1.Value = 4
+        $Label11.Text = "4%"
         $Label12.Text = "Turned On the Underline of KeyBoard Shortcuts in Menus."
         Write-Host "Turned On the Underline of KeyBoard Shortcuts in Menus."
     }
     if ($CheckBox12.Checked){
         .\Scripts\Registry\Show_Known_Extensions_for_File_Types.vbs
-        $ProgressBar1.Value = 6
-        $Label11.Text = "6%"
+        $ProgressBar1.Value = 4
+        $Label11.Text = "4%"
         $Label12.Text = "Show Known File Extensions for File Types."
         Write-Host "Show Known File Extensions for File Types"
     }
     if ($CheckBox13.Checked){
         .\Scripts\Registry\hide-ntfs-compression-blue-double-arrow-icon-overlay.reg
-        $ProgressBar1.Value = 7
-        $Label11.Text = "7%"
+        $ProgressBar1.Value = 5
+        $Label11.Text = "5%"
         $Label12.Text = "Hide indication for compressed NTFS Files"
         Write-Host "Hide indication for compressed NTFS Files"
     }
     if ($CheckBox14.Checked){
         reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v Hidden /t REG_DWORD /d 1 /f
-        $ProgressBar1.Value = 7
-        $Label11.Text = "7%"
-        $Label12.Text = "Show every Hidden Fine in Windows Explorer"
+        $ProgressBar1.Value = 5
+        $Label11.Text = "5%"
+        $Label12.Text = "Show every Hidden File in Windows Explorer"
         Write-Host = "Show every Hidden File in Windows Explorer"
     }
+    if ($CheckBox15.Checked){
+        reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ShowSuperHidden" /t REG_DWORD /d 1 /f
+        $ProgressBar1.Value = 5
+        $Label11.Text = "5%"
+        $Label12.Text = "Show Super Hidden Files in Windows Explorer"
+        Write-Host = "Show Super Hidden Files in Windows Explorer"
+    }
+    
 }
 
 #Templates 
