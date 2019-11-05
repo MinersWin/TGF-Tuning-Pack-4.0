@@ -1,0 +1,1 @@
+Get-AppxPackage *camera* | Remove-AppxPackage

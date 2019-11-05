@@ -1,0 +1,1 @@
+Get-AppxPackage *phone* | Remove-AppxPackage

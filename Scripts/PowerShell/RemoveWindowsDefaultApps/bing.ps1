@@ -1,0 +1,1 @@
+Get-AppxPackage *bing* | Remove-AppxPackage

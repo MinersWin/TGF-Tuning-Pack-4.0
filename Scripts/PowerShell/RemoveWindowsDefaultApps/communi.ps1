@@ -1,0 +1,1 @@
+Get-AppxPackage *communi* | Remove-AppxPackage

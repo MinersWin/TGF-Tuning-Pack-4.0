@@ -1,0 +1,1 @@
+Get-AppxPackage *solit* | Remove-AppxPackage

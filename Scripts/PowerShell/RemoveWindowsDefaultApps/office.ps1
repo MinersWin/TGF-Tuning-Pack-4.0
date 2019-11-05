@@ -1,0 +1,1 @@
+Get-AppxPackage *office* | Remove-AppxPackage

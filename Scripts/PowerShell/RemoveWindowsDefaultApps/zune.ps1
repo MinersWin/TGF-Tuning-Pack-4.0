@@ -1,0 +1,1 @@
+Get-AppxPackage *zune* | Remove-AppxPackage
