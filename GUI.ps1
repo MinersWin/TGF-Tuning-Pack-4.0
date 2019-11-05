@@ -584,7 +584,201 @@ function Make-Tweaks{
         $Label12.Text = "Show Super Hidden Files in Windows Explorer"
         Write-Host = "Show Super Hidden Files in Windows Explorer"
     }
-    
+    if ($CheckBox17.Checked){
+        reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\utilman.exe" /v "Debugger" /t REG_SZ /d "cmd.exe" /f
+        $ProgressBar1.Value = 6
+        $Label11.Text = "6%"
+        $Label12.Text = "Replace Utilman with CMD"
+        Write-Host = "Replace Utilman with CMD"
+    }
+    if ($CheckBox18.Checked){
+        reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\0cc5b647-c1df-4637-891a-dec35c318583" /v "Attributes" /t REG_DWORD /d 0 /f
+        $ProgressBar1.Value = 6
+        $Label11.Text = "6%"
+        $Label12.Text = "Add the option Processor performance core parking min core."
+        Write-Host = "Add the option Processor performance core parking min core."
+    }
+    if ($CheckBox19.Checked){
+        reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\0cc5b647-c1df-4637-891a-dec35c318583" /v "ValueMax" /t REG_DWORD /d 0 /f
+        $ProgressBar1.Value = 6
+        $Label11.Text = "6%"
+        $Label12.Text = "Disable CPU Core Parking"
+        Write-Host = "Disable CPU Core Parking"
+    }
+    if ($CheckBox20.Checked){
+        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "DisableLogonBackgroundImage" /t REG_DWORD /d 1 /f
+        $ProgressBar1.Value = 7
+        $Label11.Text = "7%"
+        $Label12.Text = "Remove Logon screen wallpaper/background. Will use solid color instead (Accent color)"
+        Write-Host = "Remove Logon screen wallpaper/background. Will use solid color instead (Accent color)"
+    }
+    if ($CheckBox21.Checked){
+        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization" /v "NoLockScreen" /t REG_DWORD /d 1 /f
+        $ProgressBar1.Value = 7
+        $Label11.Text = "7%"
+        $Label12.Text = "Disable Lockscreen"
+        Write-Host = "Disable Lockscreen"
+    }
+    if ($CheckBox22.Checked){
+        reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v NoPreviousVersionsPage /t REG_DWORD /d 1 /f
+        $ProgressBar1.Value = 7
+        $Label11.Text = "7%"
+        $Label12.Text = "Remove versioning tab from properties"
+        Write-Host = "Remove versioning tab from properties"
+    }
+    if ($CheckBox23.Checked){
+        reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_TrackDocs" /t REG_DWORD /d 0 /f
+        $ProgressBar1.Value = 8
+        $Label11.Text = "8%"
+        $Label12.Text = "Disable jump lists"
+        Write-Host = "Disable jump lists"
+    }
+    if ($CheckBox24.Checked){
+        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting" /v "Disabled" /t REG_DWORD /d 1 /f
+        $ProgressBar1.Value = 8
+        $Label11.Text = "8%"
+        $Label12.Text = "Disable Windows Error Reporting"
+        Write-Host = "Disable Windows Error Reporting"
+    }
+    if ($CheckBox25.Checked){
+        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "AllowCortana" /t REG_DWORD /d 0 /f
+        $ProgressBar1.Value = 8
+        $Label11.Text = "8%"
+        $Label12.Text = "Disable Cortana (Speech Search Assistant, which also sends information to Microsoft"
+        Write-Host = "Disable Cortana (Speech Search Assistant, which also sends information to Microsoft"
+    }
+    if ($CheckBox26.Checked){
+        reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "SearchboxTaskbarMode" /t REG_DWORD /d 0 /f
+        $ProgressBar1.Value = 9
+        $Label11.Text = "9%"
+        $Label12.Text = "Hide the search box from taskbar. You can still search by pressing the win key and start typing what you are looking for."
+        Write-Host = "Hide the search box from taskbar. You can still search by pressing the win key and start typing what you are looking for"
+    }
+    if ($CheckBox27.Checked){
+        reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_TrackDocs" /t REG_DWORD /d 0 /f
+        $ProgressBar1.Value = 9
+        $Label11.Text = "9%"
+        $Label12.Text = "Disable MRU lists (jump lists) of XAML apps in Start Menu"
+        Write-Host = "Disable MRU lists (jump lists) of XAML apps in Start Menu"
+    }
+    if ($CheckBox29.Checked){
+        reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_TrackDocs" /t REG_DWORD /d 0 /f
+        $ProgressBar1.Value = 9
+        $Label11.Text = "9%"
+        $Label12.Text = "Disable MRU lists (jump lists) of XAML apps in Start Menu"
+        Write-Host = "Disable MRU lists (jump lists) of XAML apps in Start Menu"
+    }
+    if ($CheckBox30.Checked){
+        reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo" /v "Enabled" /t REG_DWORD /d 0 /f
+        $ProgressBar1.Value = 10
+        $Label11.Text = "10%"
+        $Label12.Text = "Disable creation of an Advertising ID"
+        Write-Host = "Disable creation of an Advertising ID"
+    }
+    if ($CheckBox31.Checked){
+        reg delete "HKEY_CLASSES_ROOT\exefile\shellex\ContextMenuHandlers\PintoStartScreen" /f
+        reg delete "HKEY_CLASSES_ROOT\Folder\shellex\ContextMenuHandlers\PintoStartScreen" /f
+        reg delete "HKEY_CLASSES_ROOT\mscfile\shellex\ContextMenuHandlers\PintoStartScreen" /f
+        $ProgressBar1.Value = 10
+        $Label11.Text = "10%"
+        $Label12.Text = "Remove Pin to start"
+        Write-Host = "Remove Pin to start"
+    }
+    if ($CheckBox32.Checked){
+        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "AllowCortana" /t REG_DWORD /d 0 /f
+        reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "CortanaEnabled" /t REG_DWORD /d 0 /f
+        reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "SearchboxTaskbarMode" /t REG_DWORD /d 0 /f
+        reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "BingSearchEnabled" /t REG_DWORD /d 0 /f
+        $ProgressBar1.Value = 10
+        $Label11.Text = "10%"
+        $Label12.Text = "Disable Cortana, Bing Search and Searchbar"
+        Write-Host = "Disable Cortana, Bing Search and Searchbar"
+    }
+    if ($CheckBox33.Checked){
+        reg add "HKCU\SOFTWARE\Microsoft\Windows\Windows Error Reporting" /v "DontShowUI" /t REG_DWORD /d 1 /f
+        reg add "HKLM\SOFTWARE\Microsoft\Windows\Windows Error Reporting" /v "DontShowUI" /t REG_DWORD /d 1 /f
+        $ProgressBar1.Value = 11
+        $Label11.Text = "11%"
+        $Label12.Text = "Turn off the Error Dialog"
+        Write-Host = "Turn off the Error Dialog"
+    }
+    if ($CheckBox34.Checked){
+        reg add "HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters" /v "AutoShareWks" /t REG_DWORD /d 0 /f
+        reg add "HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters" /v "AutoShareServer" /t REG_DWORD /d 0 /f
+        $ProgressBar1.Value = 11
+        $Label11.Text = "11%"
+        $Label12.Text = "Disable Administrative shares"
+        Write-Host = "Disable Administrative shares"
+    }
+    if ($CheckBox35.Checked){
+        %SystemRoot%\System32\setaclx64 -on "HKEY_CLASSES_ROOT\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell" -ot reg -actn setowner -ownr "n:Administrators" -rec yes
+        %SystemRoot%\System32\setaclx64 -on "HKEY_CLASSES_ROOT\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell" -ot reg -actn ace -ace "n:Administrators;p:full" -rec yes
+        reg add "HKEY_CLASSES_ROOT\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\Reboot to Recovery" /v "Icon" /t REG_SZ /d "%SystemRoot%\System32\imageres.dll,-110" /f
+        reg add "HKEY_CLASSES_ROOT\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\Reboot to Recovery\command" /ve /d "shutdown.exe -r -o -f -t 00" /f
+        $ProgressBar1.Value = 11
+        $Label11.Text = "11%"
+        $Label12.Text = "Add Reboot to Recovery to right-click menu of This PC"
+        Write-Host = "Add Reboot to Recovery to right-click menu of This PC"
+    }
+    if ($CheckBox36.Checked){
+        reg add "HKCU\Control Panel\International" /v "iMeasure" /t REG_SZ /d "0" /f
+        reg add "HKCU\Control Panel\International" /v "iNegCurr" /t REG_SZ /d "1" /f
+        reg add "HKCU\Control Panel\International" /v "iTime" /t REG_SZ /d "1" /f
+        reg add "HKCU\Control Panel\International" /v "sShortDate" /t REG_SZ /d "yyyy/MM/dd" /f
+        reg add "HKCU\Control Panel\International" /v "sShortTime" /t REG_SZ /d "HH:mm" /f
+        reg add "HKCU\Control Panel\International" /v "sTimeFormat" /t REG_SZ /d "H:mm:ss" /f
+        $ProgressBar1.Value = 12
+        $Label11.Text = "12%"
+        $Label12.Text = "Change Clock and Date formats of current user to 24H, metric (Sign out required to see changes)"
+        Write-Host = "Change Clock and Date formats of current user to 24H, metric (Sign out required to see changes)"
+    }
+    if ($CheckBox37.Checked){
+        reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /v "AllowAllTrustedApps" /t REG_DWORD /d 1 /f
+        reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /v "AllowDevelopmentWithoutDevLicense" /t REG_DWORD /d 1 /f
+        $ProgressBar1.Value = 12
+        $Label11.Text = "12%"
+        $Label12.Text = "Enable Developer Mode (enables you to run XAML apps you develop in visual Studio which havent been certified yet)"
+        Write-Host = "Enable Developer Mode (enables you to run XAML apps you develop in Visual Studio which havent been certified yet)"
+    }
+    if ($CheckBox38.Checked){
+        reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata" /v PreventDeviceMetadataFromNetwork /t REG_DWORD /d 1 /f
+        reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d 0 /f
+        reg add "HKLM\SOFTWARE\Policies\Microsoft\MRT" /v DontOfferThroughWUAU /t REG_DWORD /d 1 /f
+        reg add "HKLM\SOFTWARE\Policies\Microsoft\SQMClient\Windows" /v "CEIPEnable" /t REG_DWORD /d 0 /f
+        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat" /v "AITEnable" /t REG_DWORD /d 0 /f
+        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat" /v "DisableUAR" /t REG_DWORD /d 1 /f
+        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d 0 /f
+        reg add "HKLM\COMPONENTS\DerivedData\Components\amd64_microsoft-windows-c..lemetry.lib.cortana_31bf3856ad364e35_10.0.10240.16384_none_40ba2ec3d03bceb0" /v "f!dss-winrt-telemetry.js" /t REG_DWORD /d 0 /f
+        reg add "HKLM\COMPONENTS\DerivedData\Components\amd64_microsoft-windows-c..lemetry.lib.cortana_31bf3856ad364e35_10.0.10240.16384_none_40ba2ec3d03bceb0" /v "f!proactive-telemetry.js" /t REG_DWORD /d 0 /f
+        reg add "HKLM\COMPONENTS\DerivedData\Components\amd64_microsoft-windows-c..lemetry.lib.cortana_31bf3856ad364e35_10.0.10240.16384_none_40ba2ec3d03bceb0" /v "f!proactive-telemetry-event_8ac43a41e5030538" /t REG_DWORD /d 0 /f
+        reg add "HKLM\COMPONENTS\DerivedData\Components\amd64_microsoft-windows-c..lemetry.lib.cortana_31bf3856ad364e35_10.0.10240.16384_none_40ba2ec3d03bceb0" /v "f!proactive-telemetry-inter_58073761d33f144b" /t REG_DWORD /d 0 /f
+
+        reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger\AutoLogger-Diagtrack-Listener" /v "Start" /t REG_DWORD /d 0 /f
+        reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger\SQMLogger" /v "Start" /t REG_DWORD /d 0 /f
+        reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Microsoft-Windows-Application-Experience/Program-Telemetry" /v "Enabled" /t REG_DWORD /d 0 /f
+        $ProgressBar1.Value = 12
+        $Label11.Text = "12%"
+        $Label12.Text = "Remove telemetry and data collection"
+        Write-Host = "Remove telemetry and data collection"
+    }
+    if ($CheckBox28.Checked){
+        reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "LaunchTo" /t REG_DWORD /d 1 /f
+        $ProgressBar1.Value = 13
+        $Label11.Text = "13%"
+        $Label12.Text = "Set Windows Explorer to start on This PC instead of Quick Access"
+        Write-Host = "Set Windows Explorer to start on This PC instead of Quick Access"
+    }
+    if ($CheckBox16.Checked){
+        reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoRecentDocsHistory" /t REG_DWORD /d 1 /f
+        $ProgressBar1.Value = 13
+        $Label11.Text = "13%"
+        $Label12.Text = "Prevent both Windows and Office from creating LNK files in the Recents folder"
+        Write-Host = "Prevent both Windows and Office from creating LNK files in the Recent folder"
+    }
+    #Finish Progressbar
+    $ProgressBar1.Value = 100
+    $Label11.Text = "100%"
+
 }
 
 #Templates 
