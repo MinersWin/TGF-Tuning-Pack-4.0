@@ -564,7 +564,7 @@ function Make-Tweaks{
         Write-Host "Show Known File Extensions for File Types"
     }
     if ($CheckBox13.Checked){
-        .\Scripts\Registry\hide-ntfs-compression-blue-double-arrow-icon-overlay.reg
+        reg import .\Scripts\Registry\hide-ntfs-compression-blue-double-arrow-icon-overlay.reg
         $ProgressBar1.Value = 5
         $Label11.Text = "5%"
         $Label12.Text = "Hide indication for compressed NTFS Files"
@@ -778,22 +778,42 @@ function Make-Tweaks{
     #
     # Removing Services tab
     #
-
+    if ($CheckBox39.Checked){
+        & '.\Scripts\Removing Services\DisableConnectedUserExperiencesandTelemetry.bat'
+        $ProgressBar1.Value = 13
+        $Label11.Text = "13%"
+        $Label12.Text = "Disable Connected User Experiences and Telemetry (To turn off Telemetry and Data collection)"
+        Write-Host = "Disable Connected User Experiences and Telemetry (To turn off Telemetry and Data collection)"
+    }
+    if ($CheckBox40.Checked){
+        & '.\Scripts\Removing Services\DisableDiagnosticPolicyService.bat'
+        $ProgressBar1.Value = 14
+        $Label11.Text = "14%"
+        $Label12.Text = "Disable Diagnostic Policy Service"
+        Write-Host = "Disable Diagnostic Policy Service"
+    }
     #Finish Progressbar
     $ProgressBar1.Value = 50
     $Label11.Text = "50%"
+    Start-Sleep 1
     $ProgressBar1.Value = 51
     $Label11.Text = "51%"
+    Start-Sleep 1
     $ProgressBar1.Value = 52
     $Label11.Text = "52%"
+    Start-Sleep 1
     $ProgressBar1.Value = 53
     $Label11.Text = "53%"
+    Start-Sleep 1
     $ProgressBar1.Value = 54
     $Label11.Text = "54%"
+    Start-Sleep 1
     $ProgressBar1.Value = 56
     $Label11.Text = "56%"
+    Start-Sleep 1
     $ProgressBar1.Value = 57
     $Label11.Text = "57%"
+    Start-Sleep 1
     $ProgressBar1.Value = 100
     $Label11.Text = "100%"
 
