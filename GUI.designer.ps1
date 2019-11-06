@@ -324,11 +324,12 @@ $CheckBox104 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox103 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox80 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox79 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$CheckBox78 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$CheckBox56 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $TabPage8 = (New-Object -TypeName System.Windows.Forms.TabPage)
+$CheckBox114 = (New-Object -TypeName System.Windows.Forms.CheckBox)
+$CheckBox78 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox85 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox84 = (New-Object -TypeName System.Windows.Forms.CheckBox)
+$CheckBox56 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox83 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox82 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox81 = (New-Object -TypeName System.Windows.Forms.CheckBox)
@@ -394,7 +395,6 @@ $Panel7 = (New-Object -TypeName System.Windows.Forms.Panel)
 $Label12 = (New-Object -TypeName System.Windows.Forms.Label)
 $Label11 = (New-Object -TypeName System.Windows.Forms.Label)
 $Label10 = (New-Object -TypeName System.Windows.Forms.Label)
-$CheckBox114 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 ([System.ComponentModel.ISupportInitialize]$PictureBox1).BeginInit()
 $Panel1.SuspendLayout()
 $TabControl1.SuspendLayout()
@@ -1791,26 +1791,6 @@ $CheckBox79.Text = [System.String]'Disable / Remove OneDrive'
 $CheckBox79.UseCompatibleTextRendering = $true
 $CheckBox79.UseVisualStyleBackColor = $true
 #
-#CheckBox78
-#
-$CheckBox78.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]181))
-$CheckBox78.Name = [System.String]'CheckBox78'
-$CheckBox78.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]288,[System.Int32]24))
-$CheckBox78.TabIndex = [System.Int32]1
-$CheckBox78.Text = [System.String]'Blocking More Windows Servers'
-$CheckBox78.UseCompatibleTextRendering = $true
-$CheckBox78.UseVisualStyleBackColor = $true
-#
-#CheckBox56
-#
-$CheckBox56.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]151))
-$CheckBox56.Name = [System.String]'CheckBox56'
-$CheckBox56.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]241,[System.Int32]24))
-$CheckBox56.TabIndex = [System.Int32]0
-$CheckBox56.Text = [System.String]'Blocking Telemetry Servers'
-$CheckBox56.UseCompatibleTextRendering = $true
-$CheckBox56.UseVisualStyleBackColor = $true
-#
 #TabPage8
 #
 $TabPage8.Controls.Add($CheckBox114)
@@ -1828,6 +1808,26 @@ $TabPage8.TabIndex = [System.Int32]7
 $TabPage8.Text = [System.String]'Misc.'
 $TabPage8.UseVisualStyleBackColor = $true
 $TabPage8.Visible = $false
+#
+#CheckBox114
+#
+$CheckBox114.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]211))
+$CheckBox114.Name = [System.String]'CheckBox114'
+$CheckBox114.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]269,[System.Int32]24))
+$CheckBox114.TabIndex = [System.Int32]5
+$CheckBox114.Text = [System.String]'Mouse Acceleration Fix'
+$CheckBox114.UseCompatibleTextRendering = $true
+$CheckBox114.UseVisualStyleBackColor = $true
+#
+#CheckBox78
+#
+$CheckBox78.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]181))
+$CheckBox78.Name = [System.String]'CheckBox78'
+$CheckBox78.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]288,[System.Int32]24))
+$CheckBox78.TabIndex = [System.Int32]1
+$CheckBox78.Text = [System.String]'Blocking More Windows Servers'
+$CheckBox78.UseCompatibleTextRendering = $true
+$CheckBox78.UseVisualStyleBackColor = $true
 #
 #CheckBox85
 #
@@ -1848,6 +1848,16 @@ $CheckBox84.TabIndex = [System.Int32]3
 $CheckBox84.Text = [System.String]'Windows Update Tweaks'
 $CheckBox84.UseCompatibleTextRendering = $true
 $CheckBox84.UseVisualStyleBackColor = $true
+#
+#CheckBox56
+#
+$CheckBox56.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]151))
+$CheckBox56.Name = [System.String]'CheckBox56'
+$CheckBox56.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]241,[System.Int32]24))
+$CheckBox56.TabIndex = [System.Int32]0
+$CheckBox56.Text = [System.String]'Blocking Telemetry Servers'
+$CheckBox56.UseCompatibleTextRendering = $true
+$CheckBox56.UseVisualStyleBackColor = $true
 #
 #CheckBox83
 #
@@ -2568,16 +2578,6 @@ $Label10.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([Syste
 $Label10.TabIndex = [System.Int32]59
 $Label10.Text = [System.String]'Progress'
 $Label10.UseCompatibleTextRendering = $true
-#
-#CheckBox114
-#
-$CheckBox114.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]211))
-$CheckBox114.Name = [System.String]'CheckBox114'
-$CheckBox114.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]269,[System.Int32]24))
-$CheckBox114.TabIndex = [System.Int32]5
-$CheckBox114.Text = [System.String]'Mouse Acceleration Fix'
-$CheckBox114.UseCompatibleTextRendering = $true
-$CheckBox114.UseVisualStyleBackColor = $true
 #
 #Form1
 #

@@ -775,19 +775,43 @@ function Make-Tweaks{
         $Label12.Text = "Prevent both Windows and Office from creating LNK files in the Recents folder"
         Write-Host = "Prevent both Windows and Office from creating LNK files in the Recent folder"
     }
+    #
+    # Removing Services tab
+    #
+
     #Finish Progressbar
+    $ProgressBar1.Value = 50
+    $Label11.Text = "50%"
+    $ProgressBar1.Value = 51
+    $Label11.Text = "51%"
+    $ProgressBar1.Value = 52
+    $Label11.Text = "52%"
+    $ProgressBar1.Value = 53
+    $Label11.Text = "53%"
+    $ProgressBar1.Value = 54
+    $Label11.Text = "54%"
+    $ProgressBar1.Value = 56
+    $Label11.Text = "56%"
+    $ProgressBar1.Value = 57
+    $Label11.Text = "57%"
     $ProgressBar1.Value = 100
     $Label11.Text = "100%"
 
 }
-
+if ($CheckBox39.Checked){
+        sc config DiagTrack start= Disabled
+        $ProgressBar1.Value = 12
+        $Label11.Text = "12%"
+        $Label12.Text = "Remove telemetry and data collection"
+        Write-Host = "Remove telemetry and data collection"
+    }
 #Templates 
 $Button1.Add_Click{([System.Windows.Forms.MessageBox]::Show("Work in Progress!","TGF Tuning Pack 4.0",1))}
 $Button2.Add_Click{(Apply-Template)}
 
 function Apply-Template{##############FIXME##############
     if ($ComboBox1.SelectedItem -eq "Recommended"){
-        $CheckBox1.Checked = $true
+        $CheckBox1.Checked = $true 
         $CheckBox2.Checked = $true
         $CheckBox3.Checked = $true
         $CheckBox4.Checked = $true
