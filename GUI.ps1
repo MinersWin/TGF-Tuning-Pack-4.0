@@ -792,6 +792,111 @@ function Make-Tweaks{
         $Label12.Text = "Disable Diagnostic Policy Service"
         Write-Host = "Disable Diagnostic Policy Service"
     }
+    if ($CheckBox41.Checked){
+        & '.\Scripts\Removing Services\DisableDistributedLinkTrackingClient.bat'
+        $ProgressBar1.Value = 14
+        $Label11.Text = "14%"
+        $Label12.Text = "Disable Distributed Link Tracking Client (If your computer is not connected to any network)"
+        Write-Host = "Disable Distributed Link Tracking Client (If your computer is not connected to any network)"
+    }
+    if ($CheckBox42.Checked){
+        & '.\Scripts\Removing Services\DisableWAPPushMessageRoutingService.bat'
+        $ProgressBar1.Value = 14
+        $Label11.Text = "14%"
+        $Label12.Text = "Disable WAP Push Message Routing Service (To turn off Telemetry and Data Collection)"
+        Write-Host = "Disable WAP Push Message Routing Service (To Turn off Telemetry and Data Collection)"
+    }
+    if ($CheckBox43.Checked){
+        & '.\Scripts\Removing Services\DisableDownloadedMapsManager.bat'
+        $ProgressBar1.Value = 15
+        $Label11.Text = "15%"
+        $Label12.Text = "Disable Downloaded Maps Manager (If you dont user Maps app)"
+        Write-Host = "Disable Downloaded Maps Manager (If you dont use Maps app)"
+    }
+    if ($CheckBox44.Checked){
+        & '.\Scripts\Removing Services\DisableIPHelper.bat'
+        $ProgressBar1.Value = 15
+        $Label11.Text = "15%"
+        $Label12.Text = "Disable IP Helper (If you dont use IPv6 connection)"
+        Write-Host = "Disable IP Helper (If you dont use IPv6 connection)"
+    }
+    if ($CheckBox45.Checked){
+        & '.\Scripts\Removing Services\DisableProgramCompatibilityAssistantService.bat'
+        $ProgressBar1.Value = 15
+        $Label11.Text = "15%"
+        $Label12.Text = "Disable Program Compatibility Assistant Service"
+        Write-Host = "Disable Program Compatibility Assistant Service"
+    }
+    if ($CheckBox46.Checked){
+        & '.\Scripts\Removing Services\DisablePrintSpooler.bat'
+        $ProgressBar1.Value = 16
+        $Label11.Text = "16%"
+        $Label12.Text = "Disable Print Spooler (If you dont have a printer)"
+        Write-Host = "Disable Print Spooler (If you dont have a printer)"
+    }
+    if ($CheckBox47.Checked){
+        & '.\Scripts\Removing Services\DisableRemoteRegistry.bat'
+        $ProgressBar1.Value = 16
+        $Label11.Text = "16%"
+        $Label12.Text = "Disable Remote Registry"
+        Write-Host = "Disable Remote Registry"
+    }
+    if ($CheckBox48.Checked){
+        & '.\Scripts\Removing Services\DisableSecondaryLogon.bat'
+        $ProgressBar1.Value = 16
+        $Label11.Text = "16%"
+        $Label12.Text = "Disable Secondary Logon"
+        Write-Host = "Disable Secondary Logon"
+    }
+    if ($CheckBox49.Checked){
+        & '.\Scripts\Removing Services\DisableSecurityCenter.bat'
+        $ProgressBar1.Value = 17
+        $Label11.Text = "17%"
+        $Label12.Text = "Disable Security Center"
+        Write-Host = "Disable Security Center"
+    }
+    if ($CheckBox50.Checked){
+        & '.\Scripts\Removing Services\IPNetBIOSHelper.bat'
+        $ProgressBar1.Value = 17
+        $Label11.Text = "17%"
+        $Label12.Text = "Disable TCP/IP NetBIOS Helper (If you are not in a workgroup network)"
+        Write-Host = "Disable TCP/IP NetBIOS Helper (If you are not in a workgroup network)"
+    }
+    if ($CheckBox51.Checked){
+        & '.\Scripts\Removing Services\DisableTochKeyboardandHandwritingPanelService.bat'
+        $ProgressBar1.Value = 17
+        $Label11.Text = "17%"
+        $Label12.Text = "Disable Touch Keyboard and Handwriting Panel Service (If you want to use touch keyboard and handwriting features)"
+        Write-Host = "Disable Touch Keyboard and Handwriting Panel Service (If you want to use touch keyboard and handwriting features)"
+    }
+    if ($CheckBox52.Checked){
+        & '.\Scripts\Removing Services\DisableWindowsErrorReportingService.bat'
+        $ProgressBar1.Value = 18
+        $Label11.Text = "18%"
+        $Label12.Text = "Disable Windows Error Reporting Service"
+        Write-Host = "Disable Windows Error Reporting Service"
+    }
+    if ($CheckBox53.Checked){
+        & '.\Scripts\Removing Services\DisableWindowsImageAcquisition.bat'
+        $ProgressBar1.Value = 18
+        $Label11.Text = "18%"
+        $Label12.Text = "Disable Windows Image Acquisition (WIA) (If you dont have a scannner)"
+        Write-Host = "Disable Windows Image Acquisition (WIA) (If you dont have a scanner)"
+    }
+    if ($CheckBox54.Checked){
+        & '.\Scripts\Removing Services\DisableWindowsSearch.bat'
+        $ProgressBar1.Value = 18
+        $Label11.Text = "18%"
+        $Label12.Text = "Disable Windows Search"
+        Write-Host = "Disable Windows Search"
+    }
+    if ($CheckBox55.Checked){
+        & '.\Scripts\Removing Services\DisableTrackingServices.bat'
+        $ProgressBar1.Value = 19
+        $Label11.Text = "19%"
+        $Label12.Text = "Disable Tracking Services"
+        Write-Host = "Disable Tracking Services"
+    }
     #Finish Progressbar
     $ProgressBar1.Value = 50
     $Label11.Text = "50%"
