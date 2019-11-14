@@ -38,7 +38,7 @@ $TabPage7.Enabled = $false
 $Form1.Text = $Config.Application.Name
 
 #Icon
-$bitmap = [System.Drawing.Bitmap]::FromFile('.\Images\favicon.ico')
+$bitmap = [System.Drawing.Bitmap]::FromFile($Config.Application.Icon)
 $bitmap.MakeTransparent()
 $hicon = $bitmap.GetHicon()
 $Form1.Icon = [system.drawing.icon]::FromHandle($hicon)
@@ -59,7 +59,7 @@ $TabPage2.visible = $false
 $TabPage4.Visible = $false
 
 #Geek Freaks Logo
-$Picture = '.\Images\Unbenannt-1-250x90.png'
+$Picture = $Config.Application.Logo
 $img = [System.Drawing.Image]::Fromfile($Picture)
 $PictureBox1.Image = $img
 $PictureBox1.Add_Click({About})
@@ -547,10 +547,10 @@ function Make-Tweaks{
         Write-Output = "Disable Administrative shares"
     }
     if ($CheckBox35.Checked){
-        %SystemRoot%\System32\setaclx64 -on "HKEY_CLASSES_ROOT\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell" -ot reg -actn setowner -ownr "n:Administrators" -rec yes
-        %SystemRoot%\System32\setaclx64 -on "HKEY_CLASSES_ROOT\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell" -ot reg -actn ace -ace "n:Administrators;p:full" -rec yes
-        reg add "HKEY_CLASSES_ROOT\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\Reboot to Recovery" /v "Icon" /t REG_SZ /d "%SystemRoot%\System32\imageres.dll,-110" /f
-        reg add "HKEY_CLASSES_ROOT\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\Reboot to Recovery\command" /ve /d "shutdown.exe -r -o -f -t 00" /f
+    #    %SystemRoot%\System32\setaclx64 -on "HKEY_CLASSES_ROOT\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell" -ot reg -actn setowner -ownr "n:Administrators" -rec yes
+    #    %SystemRoot%\System32\setaclx64 -on "HKEY_CLASSES_ROOT\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell" -ot reg -actn ace -ace "n:Administrators;p:full" -rec yes
+    #    reg add "HKEY_CLASSES_ROOT\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\Reboot to Recovery" /v "Icon" /t REG_SZ /d "%SystemRoot%\System32\imageres.dll,-110" /f
+    #    reg add "HKEY_CLASSES_ROOT\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\Reboot to Recovery\command" /ve /d "shutdown.exe -r -o -f -t 00" /f
         $ProgressBar1.Value = 11
         $Label11.Text = "11%"
         $Label12.Text = "Add Reboot to Recovery to right-click menu of This PC"
