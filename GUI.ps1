@@ -8,7 +8,7 @@ ___________ __                                    __     ___________            
   |    |   |  |  \_/ __ \    / ___\_/ __ \_/ __ \|  |/ /  |    __) \_  __ \_/ __ \\__  \ |  |/ / /  ___/
   |    |   |   Y  \  ___/   / /_/  >  ___/\  ___/|    <   |     \   |  | \/\  ___/ / __ \|    <  \___ \ 
   |____|   |___|  /\___  >  \___  / \___  >\___  >__|_ \  \___  /   |__|    \___  >____  /__|_ \/____  >
-                \/     \/  /_____/      \/     \/     \/      \/                \/     \/     \/     \/ 
+                \/     \/  /_____/      \/     \/     \/      \/                \/     \/     \/     \/
                 ___________           .__                                      __        _____    _______   
                 \__    ___/_ __  ____ |__| ____    ____   ___________    ____ |  | __   /  |  |   \   _  \  
                   |    | |  |  \/    \|  |/    \  / ___\  \____ \__  \ _/ ___\|  |/ /  /   |  |_  /  /_\  \ 
@@ -23,7 +23,7 @@ ___________ __                                    __     ___________            
 |_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
         __/ |                                                  
        |___/     
-The Geek Freaks Tuning Pack 4.0 Update 12.09.2019
+The Geek Freaks Tuning Pack 4.0 Update 07.12.2019
 Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
@@ -36,6 +36,11 @@ $TabPage7.Enabled = $false
 .\Settings.ps1
 
 $Form1.Text = $Config.Application.Name
+$TextBox6.Text = $Config.Directory.Logs
+$TextBox7.Text = $Config.Directory.Tools
+$TextBox8.Text = $Config.Directory.Backup
+$TextBox9.Text = $Config.Directory.Updates
+$TextBox10.Text = $Config.Directory.Scripts
 
 #Icon
 $bitmap = [System.Drawing.Bitmap]::FromFile($Config.Application.Icon)
@@ -733,6 +738,162 @@ function Make-Tweaks{
         $Label12.Text = "Disable Tracking Services"
         Write-Output = "Disable Tracking Services"
     }
+
+    #Scheduled Tasks
+
+    #Disable SmartScreenSpecific
+    if ($CheckBox86.Checked){
+        .\Scripts\Batch\ScheduledTasks\SmartScreenSpecific.bat
+        $ProgressBar1.Value = 19
+        $Label11.Text = "19%"
+        $Label11.Text = "Disable Smart Screen Specific"
+        Write-Output = "Disable SmartScreenSpecific"
+    }
+    #Disable Microsoft Compatibility Appraiser
+    if ($CheckBox87.Checked){
+        .\Scripts\Batch\ScheduledTasks\Microsoft_Compatibility_Appraiser.bat
+        $ProgressBar1.Value = 19
+        $Label11.Text = "19%"
+        $Label11.Text = "Disable Microsoft Compatibility Appraiser"
+        Write-Output = "Disable Microsoft Compatibility Appraiser"
+    }
+    #Disable Programm Data Updater
+    if ($CheckBox88.Checked){
+        .\Scripts\Batch\ScheduledTasks\ProgramDataUpdater.bat
+        $ProgressBar1.Value = 20
+        $Label11.Text = "20%"
+        $Label11.Text = "Disable Program Data Updater"
+        Write-Output = "Disable Program Data Updater"
+    }
+    #Disable Startup App Task
+    if ($CheckBox89.Checked){
+        .\Scripts\Batch\ScheduledTasks\StartupAppTask.bat
+        $ProgressBar1.Value = 20
+        $Label11.Text = "20%"
+        $Label11.Text = "Disable Startup App Task"
+        Write-Output = "Disable Startup App Task"
+    }
+    #Disable Proxy
+    if ($CheckBox90.Checked){
+        .\Scripts\Batch\ScheduledTasks\Proxy.bat
+        $ProgressBar1.Value = 20
+        $Label11.Text = "20%"
+        $Label11.Text = "Disable Proxy"
+        Write-Output = "Disable Proxy"
+    }
+    #Disable Consolidator
+    if ($CheckBox91.Checked){
+        .\Scripts\Batch\ScheduledTasks\Consolidator.bat
+        $ProgressBar1.Value = 21
+        $Label11.Text = "21%"
+        $Label11.Text = "Disable Consolidator"
+        Write-Output = "Disable Consolidator"
+    }
+    #Disable Kernel Ceip Task
+    if ($CheckBox92.Checked){
+        .\Scripts\Batch\ScheduledTasks\KernelCeipTask.bat
+        $ProgressBar1.Value = 21
+        $Label11.Text = "21%"
+        $Label11.Text = "Disable Kernel Ceip Task"
+        Write-Output = "Disable Kernel Ceip Task"
+    }
+    #Disable USB Ceip
+    if ($CheckBox93.Checked){
+        .\Scripts\Batch\ScheduledTasks\UsbCeip.bat
+        $ProgressBar1.Value = 21
+        $Label11.Text = "21%"
+        $Label11.Text = "Disable USBCeip"
+        Write-Output = "Disable USBCeip"
+    }
+    #Disable Mirosoft Windows DiskDiagnosticDataCollector
+    if ($CheckBox94.Checked){
+        .\Scripts\Batch\ScheduledTasks\Microsoft-Windows-DiskDiagnosticDataCollector.bat
+        $ProgressBar1.Value = 22
+        $Label11.Text = "22%"
+        $Label11.Text = "Disable Microsoft-Windows-DiskDiagnosticDataCollector"
+        Write-Output = "Disable Microsoft-Windows-DiskDiagnostikDataCollector"
+    }
+    #Disable File History (mainanance mode)
+    if ($CheckBox95.Checked){
+        .\Scripts\Batch\ScheduledTasks\File_History.bat
+        $ProgressBar1.Value = 22
+        $Label11.Text = "22%"
+        $Label11.Text = "Disable File History (maintanace mode)"
+        Write-Output = "Disable File History (maintanace mode)"
+    }
+    #Disable WinSAT
+    if ($CheckBox96.Checked){
+        .\Scripts\Batch\ScheduledTasks\WinSAT.bat
+        $ProgressBar1.Value = 22
+        $Label11.Text = "22%"
+        $Label11.Text = "Disable WinSAT"
+        Write-Output = "Disable WinSAT"
+    }
+    #Disable Gather Network Info
+    if ($CheckBox97.Checked){
+        .\Scripts\Batch\ScheduledTasks\GatherNetworkInfo.bat
+        $ProgressBar1.Value = 23
+        $Label11.Text = "23%"
+        $Label11.Text = "Disable Gather Network Info"
+        Write-Output = "Disable Gather Network Info"
+    }
+    #Disable Sqm-Tasks
+    if ($CheckBox98.Checked){
+        .\Scripts\Batch\ScheduledTasks\Sqm-Tasks.bat
+        $ProgressBar1.Value = 23
+        $Label11.Text = "23%"
+        $Label11.Text = "Disable Sqm-Tasks"
+        Write-Output = "Disable Sqm-Tasks"
+    }
+    #Disable Force Syncronize Time
+    if ($CheckBox99.Checked){
+        .\Scripts\Batch\ScheduledTasks\ForceSynchronizeTime.bat
+        $ProgressBar1.Value = 23
+        $Label11.Text = "23%"
+        $Label11.Text = "Disable Force Syncronize Time"
+        Write-Output = "Disable Force Syncronize Time"
+    }
+    #Disable Syncronize Time
+    if ($CheckBox100.Checked){
+        .\Scripts\Batch\ScheduledTasks\SynchronizeTime.bat
+        $ProgressBar1.Value = 23
+        $Label11.Text = "23%"
+        $Label11.Text = "Disable Syncronize Time"
+        Write-Output = "Disable Syncronize Time"
+    }
+    #Disable Queue Reporting
+    if ($CheckBox101.Checked){
+        .\Scripts\Batch\ScheduledTasks\QueueReporting.bat
+        $ProgressBar1.Value = 24
+        $Label11.Text = "24%"
+        $Label11.Text = "Disable Queue Reporting"
+        Write-Output = "Disable Queue Reporting"
+    }
+    #Disable Automatic App Update
+    if ($CheckBox102.Checked){
+        .\Scripts\Batch\ScheduledTasks\Automatic_App_Update.bat
+        $ProgressBar1.Value = 24
+        $Label11.Text = "24%"
+        $Label11.Text = "Disable Automatic App Update"
+        Write-Output = "Disable Automatic App Update"
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
     #Finish Progressbar
     $ProgressBar1.Value = 50
     $Label11.Text = "50%"

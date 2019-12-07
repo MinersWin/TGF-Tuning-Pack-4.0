@@ -408,6 +408,7 @@ $Button4 = (New-Object -TypeName System.Windows.Forms.Button)
 $Label13 = (New-Object -TypeName System.Windows.Forms.Label)
 $Button5 = (New-Object -TypeName System.Windows.Forms.Button)
 $TabPage7 = (New-Object -TypeName System.Windows.Forms.TabPage)
+$Button43 = (New-Object -TypeName System.Windows.Forms.Button)
 $Panel14 = (New-Object -TypeName System.Windows.Forms.Panel)
 $TextBox10 = (New-Object -TypeName System.Windows.Forms.TextBox)
 $TextBox9 = (New-Object -TypeName System.Windows.Forms.TextBox)
@@ -421,6 +422,8 @@ $Label27 = (New-Object -TypeName System.Windows.Forms.Label)
 $Label26 = (New-Object -TypeName System.Windows.Forms.Label)
 $Label25 = (New-Object -TypeName System.Windows.Forms.Label)
 $Panel13 = (New-Object -TypeName System.Windows.Forms.Panel)
+$ComboBox2 = (New-Object -TypeName System.Windows.Forms.ComboBox)
+$Label31 = (New-Object -TypeName System.Windows.Forms.Label)
 $TextBox5 = (New-Object -TypeName System.Windows.Forms.TextBox)
 $Label24 = (New-Object -TypeName System.Windows.Forms.Label)
 $TextBox4 = (New-Object -TypeName System.Windows.Forms.TextBox)
@@ -448,9 +451,6 @@ $Panel7 = (New-Object -TypeName System.Windows.Forms.Panel)
 $Label12 = (New-Object -TypeName System.Windows.Forms.Label)
 $Label11 = (New-Object -TypeName System.Windows.Forms.Label)
 $Label10 = (New-Object -TypeName System.Windows.Forms.Label)
-$Label31 = (New-Object -TypeName System.Windows.Forms.Label)
-$ComboBox2 = (New-Object -TypeName System.Windows.Forms.ComboBox)
-$Button43 = (New-Object -TypeName System.Windows.Forms.Button)
 ([System.ComponentModel.ISupportInitialize]$PictureBox1).BeginInit()
 $Panel1.SuspendLayout()
 $TabControl1.SuspendLayout()
@@ -2485,6 +2485,16 @@ $TabPage7.Text = [System.String]'Settings'
 $TabPage7.UseVisualStyleBackColor = $true
 $TabPage7.Visible = $false
 #
+#Button43
+#
+$Button43.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]858,[System.Int32]511))
+$Button43.Name = [System.String]'Button43'
+$Button43.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]75,[System.Int32]23))
+$Button43.TabIndex = [System.Int32]2
+$Button43.Text = [System.String]'Button43'
+$Button43.UseCompatibleTextRendering = $true
+$Button43.UseVisualStyleBackColor = $true
+#
 #Panel14
 #
 $Panel14.BorderStyle = [System.Windows.Forms.BorderStyle]::FixedSingle
@@ -2624,6 +2634,24 @@ $Panel13.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([
 $Panel13.Name = [System.String]'Panel13'
 $Panel13.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]334,[System.Int32]340))
 $Panel13.TabIndex = [System.Int32]0
+#
+#ComboBox2
+#
+$ComboBox2.FormattingEnabled = $true
+$ComboBox2.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]311))
+$ComboBox2.Name = [System.String]'ComboBox2'
+$ComboBox2.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]326,[System.Int32]21))
+$ComboBox2.TabIndex = [System.Int32]12
+#
+#Label31
+#
+$Label31.Font = (New-Object -TypeName System.Drawing.Font -ArgumentList @([System.String]'Tahoma',[System.Single]11.25))
+$Label31.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]285))
+$Label31.Name = [System.String]'Label31'
+$Label31.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]326,[System.Int32]23))
+$Label31.TabIndex = [System.Int32]11
+$Label31.Text = [System.String]'Label31'
+$Label31.UseCompatibleTextRendering = $true
 #
 #TextBox5
 #
@@ -2891,34 +2919,6 @@ $Label10.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([Syste
 $Label10.TabIndex = [System.Int32]59
 $Label10.Text = [System.String]'Progress'
 $Label10.UseCompatibleTextRendering = $true
-#
-#Label31
-#
-$Label31.Font = (New-Object -TypeName System.Drawing.Font -ArgumentList @([System.String]'Tahoma',[System.Single]11.25))
-$Label31.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]285))
-$Label31.Name = [System.String]'Label31'
-$Label31.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]326,[System.Int32]23))
-$Label31.TabIndex = [System.Int32]11
-$Label31.Text = [System.String]'Label31'
-$Label31.UseCompatibleTextRendering = $true
-#
-#ComboBox2
-#
-$ComboBox2.FormattingEnabled = $true
-$ComboBox2.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]311))
-$ComboBox2.Name = [System.String]'ComboBox2'
-$ComboBox2.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]326,[System.Int32]21))
-$ComboBox2.TabIndex = [System.Int32]12
-#
-#Button43
-#
-$Button43.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]858,[System.Int32]511))
-$Button43.Name = [System.String]'Button43'
-$Button43.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]75,[System.Int32]23))
-$Button43.TabIndex = [System.Int32]2
-$Button43.Text = [System.String]'Button43'
-$Button43.UseCompatibleTextRendering = $true
-$Button43.UseVisualStyleBackColor = $true
 #
 #Form1
 #
