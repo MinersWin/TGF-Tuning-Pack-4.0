@@ -1,4 +1,3 @@
-#function Make-German{
     #Form
     $Label3.Text = "erstellt von MinersWin"
 
@@ -77,12 +76,77 @@
     $CheckBox72.Text = "Deaktiviere den Net.Tcp Port Sharing Service"
     $CheckBox73.Text = "Deaktiviere den Routing Remote Access"
     $CheckBox74.Text = "Deaktiviere den Internet Connection Sharing (ICS) Service"
-    $CheckBox75.Text = "Disable Superfetch (Sollte bei SSDs unbedingt deaktiviert werden, schadet auch bei HHDs nicht)"
+    $CheckBox75.Text = "Deaktiviere Superfetch (Sollte bei SSDs unbedingt deaktiviert werden, schadet auch bei HHDs nicht)"
+
+    #Scheduled Tasks
+    $ComboBox86.Text = "Deaktiviere Smart Screen"
+    $ComboBox87.Text = "Deaktiviere Microsoft Compatibility Appraiser"
+    $ComboBox88.Text = "Deaktiviere Programm Data Updater"
+    $ComboBox89.Text = "Deaktiviere Startup App Task"
+    $ComboBox90.Text = "Deaktiviere Proxy"
+    $ComboBox91.Text = "Deaktiviere Consolidator"
+    $ComboBox92.Text = "Deaktiviere Kernel Ceip Task"
+    $ComboBox93.Text = "Deaktiviere USB Ceip"
+    $ComboBox94.Text = "Deaktiviere Microsoft Windows Disk Diagnostic Data Collector"
+    $ComboBox95.Text = "Deaktiviere File History (maintenance mode)"
+    $ComboBox96.Text = "Deaktiviere WinSAT"
+    $ComboBox97.Text = "Deaktiviere Gather Network Info"
+    $ComboBox98.Text = "Deaktiviere Sqm-Tasks"
+    $ComboBox99.Text = "Deaktiviere Force Syncronize Time"
+    $ComboBox100.Text = "Deaktiviere Time Syncronization"
+    $ComboBox101.Text = "Disavle Queue Reporting"
+    $ComboBox102.Text = "Deaktiviere Automatic App Update"
+
+    #Windows Default Apps
+    $ComboBox80.Text = "Entferne 3D-Viewer"
+    $ComboBox103.Text = "Entferne Bing"
+    $ComboBox104.Text = "Entferne Zune (Groove Music)"
+    $ComboBox105.Text = "Entferne Photo Viewer"
+    $ComboBox106.Text = "Entferne Windows Community (Update 1903)"
+    $ComboBox107.Text = "Entferne Solitare"
+    $ComboBox108.Text = "Entferne Phone"
+    $ComboBox109.Text = "Entferne Soundrecorder"
+    $ComboBox110.Text = "Entferne Camera App"
+    $ComboBox111.Text = "Entferne Microsoft People"
+    $ComboBox112.Text = "Entferne Office Live"
+    $ComboBox113.Text = "Entferne XBox"
+    $ComboBox79.Text = "Deaktiviere/Entferne OneDrive"
+
+    #Misc
+    $ComboBox81.Text = "Deaktiviere Widnows Error Recovery beim Hochfahren"
+    $ComboBox82.Text = "Internet Explorer 11 Tweaks"
+    $ComboBox83.Text = "Libary Tweaks"
+    $ComboBox84.Text = "Windows Update Tweaks"
+    $ComboBox85.Text = "Windows Defender Tweaks"
+    $ComboBox56.Text = "Blockiere Telemetry Server"
+    $ComboBox78.Text = "Blockiere mehr Microsoft Server"
+    $ComboBox114.Text = "Mouse Beschleunigungs Fix"
+
+    #Tools
+    $Button5.Text = "Tools herunterladen"
+    $Button6.Text = "Ordner ÷ffnen"
 
     #Side Menu
-    $Label4.Text = "Beispiele"
+    $Label4.Text = "Vorlagen"
     $CheckBox62.Text = "Registry Sichern"
-    $CheckBox61.Text = "Erstelle einen Wiederherstellungspunkt"
-    $Button17.Text = "Beenden"
+    $CheckBox61.Text = "Wiederherstellungspunkt erstellen"
+    $Button17.Text = "Schlieﬂen"
     $Button16.Text = "Make FPS Rain!"
-#}
+
+    #Settings
+    $Label19.Text = "Application"
+    $Label20.Text = "Name"
+    $Label21.Text = "Startup Message"
+    $Label22.Text = "Icon"
+    $Label23.Text = "Logo"
+    $Label24.Text = "Language"
+    $Label31.Text = "Standart Template"
+
+    $Label25.Text = "Directory"
+    $Label26.Text = "Logs"
+    $Label27.Text = "Tools"
+    $Label28.Text = "Backup"
+    $Label29.Text = "Updates"
+    $Label30.Text = "Scripts"
+
+    $Button34.Text = "Confirm"

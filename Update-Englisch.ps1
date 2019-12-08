@@ -1,4 +1,3 @@
-#function Make-English{
     #Form
     $Label3.Text = "created by MinersWin"
 
@@ -78,6 +77,54 @@
     $CheckBox73.Text = "Disable Routing and Remote Access"
     $CheckBox74.Text = "Disable Internet Connection Sharing (ICS)"
     $CheckBox75.Text = "Disable Superfetch (A must for SSD drives, but good in general)"
+
+    #Scheduled Tasks
+    $ComboBox86.Text = "Disable Smart Screen Specific"
+    $ComboBox87.Text = "Disable Microsoft Compatibility Appraiser"
+    $ComboBox88.Text = "Disable Programm Data Updater"
+    $ComboBox89.Text = "Disable Startup App Task"
+    $ComboBox90.Text = "Disable Proxy"
+    $ComboBox91.Text = "Disable Consolidator"
+    $ComboBox92.Text = "Disable Kernel Ceip Task"
+    $ComboBox93.Text = "Disable USB Ceip"
+    $ComboBox94.Text = "Disable Microsoft Windows Disk Diagnostic Data Collector"
+    $ComboBox95.Text = "Disable File History (maintenance mode)"
+    $ComboBox96.Text = "Disable WinSAT"
+    $ComboBox97.Text = "Disable Gather Network Info"
+    $ComboBox98.Text = "Disable Sqm-Tasks"
+    $ComboBox99.Text = "Disable Force Syncronize Time"
+    $ComboBox100.Text = "Disable Time Syncronization"
+    $ComboBox101.Text = "Disavle Queue Reporting"
+    $ComboBox102.Text = "Disable Automatic App Update"
+
+    #Windows Default Apps
+    $ComboBox80.Text = "Remove 3D-Viewer"
+    $ComboBox103.Text = "Remove Bing"
+    $ComboBox104.Text = "Remove Zune (Groove Music)"
+    $ComboBox105.Text = "Remove Photo Viewer"
+    $ComboBox106.Text = "Remove Windows Community (Update 1903)"
+    $ComboBox107.Text = "Remove Solitare"
+    $ComboBox108.Text = "Remove Phone"
+    $ComboBox109.Text = "Remove Soundrecorder"
+    $ComboBox110.Text = "Remove Camera App"
+    $ComboBox111.Text = "Remoce Microsoft People"
+    $ComboBox112.Text = "Remove Office Live"
+    $ComboBox113.Text = "Remoce XBox"
+    $ComboBox79.Text = "Disable/Remove OneDrive"
+
+    #Misc
+    $ComboBox81.Text = "Disable Widnows Error Recovery on Startup"
+    $ComboBox82.Text = "Internet Explorer 11 Tweaks"
+    $ComboBox83.Text = "Libary Tweaks"
+    $ComboBox84.Text = "Windows Update Tweaks"
+    $ComboBox85.Text = "Windows Defender Tweaks"
+    $ComboBox56.Text = "Blocking Telemetry Servers"
+    $ComboBox78.Text = "Blocking more Microsoft Servers"
+    $ComboBox114.Text = "Mouse Acceleration Fix"
+
+    #Tools
+    $Button5.Text = "Download Tools"
+    $Button6.Text = "Open Folder"
 
     #Side Menu
     $Label4.Text = "Templates"
