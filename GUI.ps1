@@ -62,6 +62,14 @@ $Button16.Enabled = $false
 $TabPage1.visible = $false
 $TabPage2.visible = $false
 $TabPage4.Visible = $false
+$TabPage5.Enabled = $false
+$TabPage5.Visible = $false
+$TabPage6.Enabled = $false
+$TabPage6.Visible = $false
+$TabPage8.Enabled = $false
+$TabPage8.Visible = $false
+$TabPage7.Enabled = $false
+$TabPage7.Enabled = $false
 
 #Geek Freaks Logo
 $Picture = $Config.Application.Logo
@@ -248,7 +256,15 @@ function Accept-Everything{
         $TabPage1.visible = $true
         $TabPage2.visible = $true
         $TabPage4.Visible = $true
-        $TabPage3.Visible = $false
+        $TabPage3.Visible = $true
+        $TabPage5.Enabled = $true
+        $TabPage5.Visible = $true
+        $TabPage6.Enabled = $true
+        $TabPage6.Visible = $true
+        $TabPage8.Enabled = $true
+        $TabPage8.Visible = $true
+        $TabPage7.Enabled = $true
+        $TabPage7.Enabled = $true
         $TabControl1.SelectedTab = $TabPage1
     } else {
         [System.Windows.Forms.MessageBox]::Show("Please Accept | Bitte Akzeptieren","TGF Tuning Pack 4.0",1)
@@ -272,7 +288,7 @@ $Button6.Add_Click{(Start "$($MyDir)\")}
 $Button14.Add_Click{(Make-German)}
 .\Update-Englisch.ps1
 function Make-German{
-    .\Update-German.ps1    
+    .\Update-German.ps1
 }
 
 #Translate to English
@@ -1338,5 +1354,7 @@ function About {
     $aboutForm.Controls.Add($aboutFormExit)
     [void]$aboutForm.ShowDialog()
 } # End About
+
+
 Apply-Template
 $Form1.ShowDialog()
