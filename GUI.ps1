@@ -23,7 +23,7 @@ ___________ __                                    __     ___________            
 |_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
         __/ |                                                  
        |___/     
-The Geek Freaks Tuning Pack 4.0 Update 07.12.2019
+The Geek Freaks Tuning Pack 4.0 Update 13.12.2019
 Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
@@ -31,7 +31,7 @@ WIR ÜBERNEHMEN KEINE VERANTWORTUNG FÜR PROBLEME DIE MIT DER AUSFÜHRUNG UNSERES P
 Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr!
 "
 ##################################################################################################################################################################################
-[System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr frühe Alpha Version. Die Tweaks sind noch nicht funktionsfähig.","The Geek Freaks Tuning Pack 4.0 by MinersWin",1)
+[System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr frühe Alpha Version. Die Tweaks sind zum Teil noch nicht funktionsfähig.","The Geek Freaks Tuning Pack 4.0 by MinersWin",1)
 $TabPage7.Enabled = $false
 .\Settings.ps1
 
@@ -762,7 +762,7 @@ function Make-Tweaks{
         .\Scripts\Batch\ScheduledTasks\SmartScreenSpecific.bat
         $ProgressBar1.Value = 19
         $Label11.Text = "19%"
-        $Label11.Text = "Disable Smart Screen Specific"
+        $Label12.Text = "Disable Smart Screen Specific"
         Write-Output = "Disable SmartScreenSpecific"
     }
     #Disable Microsoft Compatibility Appraiser
@@ -770,7 +770,7 @@ function Make-Tweaks{
         .\Scripts\Batch\ScheduledTasks\Microsoft_Compatibility_Appraiser.bat
         $ProgressBar1.Value = 19
         $Label11.Text = "19%"
-        $Label11.Text = "Disable Microsoft Compatibility Appraiser"
+        $Label12.Text = "Disable Microsoft Compatibility Appraiser"
         Write-Output = "Disable Microsoft Compatibility Appraiser"
     }
     #Disable Programm Data Updater
@@ -778,7 +778,7 @@ function Make-Tweaks{
         .\Scripts\Batch\ScheduledTasks\ProgramDataUpdater.bat
         $ProgressBar1.Value = 20
         $Label11.Text = "20%"
-        $Label11.Text = "Disable Program Data Updater"
+        $Label12.Text = "Disable Program Data Updater"
         Write-Output = "Disable Program Data Updater"
     }
     #Disable Startup App Task
@@ -786,7 +786,7 @@ function Make-Tweaks{
         .\Scripts\Batch\ScheduledTasks\StartupAppTask.bat
         $ProgressBar1.Value = 20
         $Label11.Text = "20%"
-        $Label11.Text = "Disable Startup App Task"
+        $Label12.Text = "Disable Startup App Task"
         Write-Output = "Disable Startup App Task"
     }
     #Disable Proxy
@@ -794,7 +794,7 @@ function Make-Tweaks{
         .\Scripts\Batch\ScheduledTasks\Proxy.bat
         $ProgressBar1.Value = 20
         $Label11.Text = "20%"
-        $Label11.Text = "Disable Proxy"
+        $Label12.Text = "Disable Proxy"
         Write-Output = "Disable Proxy"
     }
     #Disable Consolidator
@@ -802,7 +802,7 @@ function Make-Tweaks{
         .\Scripts\Batch\ScheduledTasks\Consolidator.bat
         $ProgressBar1.Value = 21
         $Label11.Text = "21%"
-        $Label11.Text = "Disable Consolidator"
+        $Label12.Text = "Disable Consolidator"
         Write-Output = "Disable Consolidator"
     }
     #Disable Kernel Ceip Task
@@ -810,7 +810,7 @@ function Make-Tweaks{
         .\Scripts\Batch\ScheduledTasks\KernelCeipTask.bat
         $ProgressBar1.Value = 21
         $Label11.Text = "21%"
-        $Label11.Text = "Disable Kernel Ceip Task"
+        $Label12.Text = "Disable Kernel Ceip Task"
         Write-Output = "Disable Kernel Ceip Task"
     }
     #Disable USB Ceip
@@ -818,7 +818,7 @@ function Make-Tweaks{
         .\Scripts\Batch\ScheduledTasks\UsbCeip.bat
         $ProgressBar1.Value = 21
         $Label11.Text = "21%"
-        $Label11.Text = "Disable USBCeip"
+        $Label12.Text = "Disable USBCeip"
         Write-Output = "Disable USBCeip"
     }
     #Disable Mirosoft Windows DiskDiagnosticDataCollector
@@ -826,7 +826,7 @@ function Make-Tweaks{
         .\Scripts\Batch\ScheduledTasks\Microsoft-Windows-DiskDiagnosticDataCollector.bat
         $ProgressBar1.Value = 22
         $Label11.Text = "22%"
-        $Label11.Text = "Disable Microsoft-Windows-DiskDiagnosticDataCollector"
+        $Label12.Text = "Disable Microsoft-Windows-DiskDiagnosticDataCollector"
         Write-Output = "Disable Microsoft-Windows-DiskDiagnostikDataCollector"
     }
     #Disable File History (mainanance mode)
@@ -834,7 +834,7 @@ function Make-Tweaks{
         .\Scripts\Batch\ScheduledTasks\File_History.bat
         $ProgressBar1.Value = 22
         $Label11.Text = "22%"
-        $Label11.Text = "Disable File History (maintanace mode)"
+        $Label12.Text = "Disable File History (maintanace mode)"
         Write-Output = "Disable File History (maintanace mode)"
     }
     #Disable WinSAT
@@ -842,7 +842,7 @@ function Make-Tweaks{
         .\Scripts\Batch\ScheduledTasks\WinSAT.bat
         $ProgressBar1.Value = 22
         $Label11.Text = "22%"
-        $Label11.Text = "Disable WinSAT"
+        $Label12.Text = "Disable WinSAT"
         Write-Output = "Disable WinSAT"
     }
     #Disable Gather Network Info
@@ -850,7 +850,7 @@ function Make-Tweaks{
         .\Scripts\Batch\ScheduledTasks\GatherNetworkInfo.bat
         $ProgressBar1.Value = 23
         $Label11.Text = "23%"
-        $Label11.Text = "Disable Gather Network Info"
+        $Label12.Text = "Disable Gather Network Info"
         Write-Output = "Disable Gather Network Info"
     }
     #Disable Sqm-Tasks
@@ -858,7 +858,7 @@ function Make-Tweaks{
         .\Scripts\Batch\ScheduledTasks\Sqm-Tasks.bat
         $ProgressBar1.Value = 23
         $Label11.Text = "23%"
-        $Label11.Text = "Disable Sqm-Tasks"
+        $Label12.Text = "Disable Sqm-Tasks"
         Write-Output = "Disable Sqm-Tasks"
     }
     #Disable Force Syncronize Time
@@ -866,7 +866,7 @@ function Make-Tweaks{
         .\Scripts\Batch\ScheduledTasks\ForceSynchronizeTime.bat
         $ProgressBar1.Value = 23
         $Label11.Text = "23%"
-        $Label11.Text = "Disable Force Syncronize Time"
+        $Label12.Text = "Disable Force Syncronize Time"
         Write-Output = "Disable Force Syncronize Time"
     }
     #Disable Syncronize Time
@@ -874,7 +874,7 @@ function Make-Tweaks{
         .\Scripts\Batch\ScheduledTasks\SynchronizeTime.bat
         $ProgressBar1.Value = 23
         $Label11.Text = "23%"
-        $Label11.Text = "Disable Syncronize Time"
+        $Label12.Text = "Disable Syncronize Time"
         Write-Output = "Disable Syncronize Time"
     }
     #Disable Queue Reporting
@@ -882,7 +882,7 @@ function Make-Tweaks{
         .\Scripts\Batch\ScheduledTasks\QueueReporting.bat
         $ProgressBar1.Value = 24
         $Label11.Text = "24%"
-        $Label11.Text = "Disable Queue Reporting"
+        $Label12.Text = "Disable Queue Reporting"
         Write-Output = "Disable Queue Reporting"
     }
     #Disable Automatic App Update
@@ -890,10 +890,183 @@ function Make-Tweaks{
         .\Scripts\Batch\ScheduledTasks\Automatic_App_Update.bat
         $ProgressBar1.Value = 24
         $Label11.Text = "24%"
-        $Label11.Text = "Disable Automatic App Update"
+        $Label12.Text = "Disable Automatic App Update"
         Write-Output = "Disable Automatic App Update"
     }
-    
+
+    #Windows Default Apps
+
+    #Remove 3D-Viewer
+    if ($CheckBox80.Checked){
+        & '.\Scripts\PowerShell\RemoveWindowsDefaultApps\3d.ps1'
+        $ProgressBar1.Value = 24
+        $Label11.Text = "24%"
+        $Label12.Text = "Remove 3D-Viewer"
+        Write-Output = "Remove 3D-Viewer"
+    }
+    #Remove Bing
+    if ($CheckBox103.Checked){
+        & '.\Scripts\PowerShell\RemoveWindowsDefaultApps\bing.ps1'
+        $ProgressBar1.Value = 25
+        $Label11.Text = "25%"
+        $Label12.Text = "Remove Bing"
+        Write-Output = "Remove Bing"
+    }
+    #Remove Zune
+    if ($CheckBox104.Checked){
+        & '.\Scripts\PowerShell\RemoveWindowsDefaultApps\zune.ps1'
+        $ProgressBar1.Value = 25
+        $Label11.Text = "25%"
+        $Label12.Text = "Remove Zune (Groove Music)"
+        Write-Output = "Remove Zune (Groove Music)"
+    }
+    #Remove Photo Viewer
+    if ($CheckBox105.Checked){
+        & '.\Scripts\PowerShell\RemoveWindowsDefaultApps\photo.ps1'
+        $ProgressBar1.Value = 25
+        $Label11.Text = "25%"
+        $Label12.Text = "Remove Photo Viewer"
+        Write-Output = "Remove Photo Viewer"
+    }
+    #Remove Windows Insider
+    if ($CheckBox106.Checked){
+        & '.\Scripts\PowerShell\RemoveWindowsDefaultApps\communi.ps1'
+        $ProgressBar1.Value = 26
+        $Label11.Text = "26%"
+        $Label12.Text = "Remove Windows Community"
+        Write-Output = "Remove Windows Community"
+    }
+    #Remove Solitare
+    if ($CheckBox107.Checked){
+        & '.\Scripts\PowerShell\RemoveWindowsDefaultApps\solit.ps1'
+        $ProgressBar1.Value = 26
+        $Label11.Text = "26%"
+        $Label12.Text = "Remove Solitare"
+        Write-Output = "Remove Solitare"
+    }
+    #Remove Phone
+    if ($CheckBox108.Checked){
+        & '.\Scripts\PowerShell\RemoveWindowsDefaultApps\phone.ps1'
+        $ProgressBar1.Value = 26
+        $Label11.Text = "26%"
+        $Label12.Text = "Remove Phone"
+        Write-Output = "Remove Phone"
+    }
+    #Remove Soundrecorder
+    if ($CheckBox109.Checked){
+        & '.\Scripts\PowerShell\RemoveWindowsDefaultApps\soundrec.ps1'
+        $ProgressBar1.Value = 27
+        $Label11.Text = "27%"
+        $Label12.Text = "Remove Soundrecorder"
+        Write-Output = "Remove Soundrecorder"
+    }
+    #Remove Camera
+    if ($CheckBox110.Checked){
+        & '.\Scripts\PowerShell\RemoveWindowsDefaultApps\camera.ps1'
+        $ProgressBar1.Value = 27
+        $Label11.Text = "27%"
+        $Label12.Text = "Remove Camera"
+        Write-Output = "Remove Camera"
+    }
+    #Remove Microsoft People
+    if ($CheckBox111.Checked){
+        & '.\Scripts\PowerShell\RemoveWindowsDefaultApps\people.ps1'
+        $ProgressBar1.Value = 27
+        $Label11.Text = "27%"
+        $Label12.Text = "Remove Microsoft People"
+        Write-Output = "Remove Microsoft People"
+    }
+    #Remove Office Live
+    if ($CheckBox112.Checked){
+        & '.\Scripts\PowerShell\RemoveWindowsDefaultApps\office.ps1'
+        $ProgressBar1.Value = 28
+        $Label11.Text = "28%"
+        $Label12.Text = "Remove Office Live"
+        Write-Output = "Remove Ofiice Live"
+    }
+    #Remove XBox
+    if ($CheckBox113.Checked){
+        & '.\Scripts\PowerShell\RemoveWindowsDefaultApps\xbox.ps1'
+        $ProgressBar1.Value = 28
+        $Label11.Text = "28%"
+        $Label12.Text = "Remove XBox"
+        Write-Output = "Remove XBox"
+    }
+    #Remove Remove OneDrive
+    if ($CheckBox79.Checked){
+        & '.\Scripts\Batch\Remove OneDrive\RemoveOneDrive.bat'
+        $ProgressBar1.Value = 28
+        $Label11.Text = "28%"
+        $Label12.Text = "Remove OneDrive"
+        Write-Output = "Remove OneDrive"
+    }
+
+    #Misc
+
+    #Disable Windows Error Recovery in Startup
+    if ($CheckBox81.Checked){
+        & '.\Scripts\Batch\DisableWindowsErrorRecoveryonStartup.bat'
+        $ProgressBar1.Value = 29
+        $Label11.Text = "29%"
+        $Label12.Text = "Disable Windows Error Recovery on Startup"
+        Write-Output = "Disable Windows Error Recovery on Startup"
+    }
+    #Internet Explorer 11 Tweaks
+    if ($CheckBox82.Checked){
+        & '.\Scripts\Batch\InternetExplorerTweaks.bat'
+        $ProgressBar1.Value = 29
+        $Label11.Text = "29%"
+        $Label12.Text = "Internet Explorer 11 Tweaks"
+        Write-Output = "Internet Explorer 11 Tweaks"
+    }
+    #Libary Tweaks
+    if ($CheckBox83.Checked){
+        & '.\Scripts\Batch\LibaryTweaks.bat'
+        $ProgressBar1.Value = 29
+        $Label11.Text = "29%"
+        $Label12.Text = "Libary Tweaks"
+        Write-Output = "Libary Tweaks"
+    }
+    #Windows Update Tweaks
+    if ($CheckBox84.Checked){
+        & '.\Scripts\Batch\UpdateTweaks.bat'
+        $ProgressBar1.Value = 30
+        $Label11.Text = "30%"
+        $Label12.Text = "Windows Update Tweaks"
+        Write-Output = "Windows Update Tweaks"
+    }
+    #Windows Defender Tweaks
+    if ($CheckBox85.Checked){
+        & '.\Scripts\Batch\WindowsDefenderTweaks.bat'
+        $ProgressBar1.Value = 30
+        $Label11.Text = "30%"
+        $Label12.Text = "Windows Defender Tweaks"
+        Write-Output = "Windows Defender Tweaks"
+    }
+    #Blocking Telemetry Servers
+    if ($CheckBox56.Checked){
+        & '.\Scripts\Batch\Blocking\Telemetry.bat'
+        $ProgressBar1.Value = 30
+        $Label11.Text = "30%"
+        $Label12.Text = "Blocking Telemetry Servers"
+        Write-Output = "Blocking Telemetry Servers"
+    }
+    #Blocking More Windows Servers
+    if ($CheckBox78.Checked){
+        & '.\Scripts\Batch\Blocking\BlockingMoreWindowsServers.bat'
+        $ProgressBar1.Value = 31
+        $Label11.Text = "31%"
+        $Label12.Text = "Blocking more Windows Servers"
+        Write-Output = "Blocking more Windows Servers"
+    }
+    #Mouse Accelleration Fix
+    if ($CheckBox114.Checked){
+        & '.\Scripts\PowerShell\MouseTweaks.ps1'
+        $ProgressBar1.Value = 31
+        $Label11.Text = "31%"
+        $Label12.Text = "Mouse Accelleration Fix"
+        Write-Output = "Mouse Accelleration Fix"
+    }
     
     
     
@@ -913,25 +1086,18 @@ function Make-Tweaks{
     #Finish Progressbar
     $ProgressBar1.Value = 50
     $Label11.Text = "50%"
-    Start-Sleep 1
     $ProgressBar1.Value = 51
     $Label11.Text = "51%"
-    Start-Sleep 1
     $ProgressBar1.Value = 52
     $Label11.Text = "52%"
-    Start-Sleep 1
     $ProgressBar1.Value = 53
     $Label11.Text = "53%"
-    Start-Sleep 1
     $ProgressBar1.Value = 54
     $Label11.Text = "54%"
-    Start-Sleep 1
     $ProgressBar1.Value = 56
     $Label11.Text = "56%"
-    Start-Sleep 1
     $ProgressBar1.Value = 57
     $Label11.Text = "57%"
-    Start-Sleep 1
     $ProgressBar1.Value = 100
     $Label11.Text = "100%"
 
@@ -1298,6 +1464,36 @@ $Button42.Add_Click{(Reboot-Recovery)}
 function Reboot-Recovery{
     shutdown /r /o /f /t 00
 }
+
+
+#Calculate Scaling with Resolution and DPI
+Add-Type @'
+  using System; 
+  using System.Runtime.InteropServices;
+  using System.Drawing;
+
+  public class DPI {  
+    [DllImport("gdi32.dll")]
+    static extern int GetDeviceCaps(IntPtr hdc, int nIndex);
+
+    public enum DeviceCap {
+      VERTRES = 10,
+      DESKTOPVERTRES = 117
+    } 
+
+    public static float scaling() {
+      Graphics g = Graphics.FromHwnd(IntPtr.Zero);
+      IntPtr desktop = g.GetHdc();
+      int LogicalScreenHeight = GetDeviceCaps(desktop, (int)DeviceCap.VERTRES);
+      int PhysicalScreenHeight = GetDeviceCaps(desktop, (int)DeviceCap.DESKTOPVERTRES);
+
+      return (float)PhysicalScreenHeight / (float)LogicalScreenHeight;
+    }
+  }
+'@ -ReferencedAssemblies 'System.Drawing.dll'
+$Scaling = [Math]::round([DPI]::scaling(), 2) * 100
+
+
 
 function Refresh_Tools{
 Test_Kill_Process
