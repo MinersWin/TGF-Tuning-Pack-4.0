@@ -1,8 +1,8 @@
 $MyDir = Split-Path $script:MyInvocation.MyCommand.Path
 Set-Location $MyDir
-$tooltip = New-Object System.Windows.Forms.ToolTip
 Add-Type -AssemblyName System.Windows.Forms
 . (Join-Path $PSScriptRoot 'GUI.designer.ps1')
+$tooltip = New-Object System.Windows.Forms.ToolTip
 $Config = Import-LocalizedData -BaseDirectory .\Config\ -FileName Config.psd1
 Write-Output "
 ___________ __                                    __     ___________                      __            
