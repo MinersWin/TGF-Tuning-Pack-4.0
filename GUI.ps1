@@ -1064,7 +1064,7 @@ function Make-Tweaks{
     }
     #Mouse Accelleration Fix
     if ($CheckBox114.Checked){
-        & '.\Scripts\PowerShell\MouseTweaks.ps1'
+        .\Scripts\Registry\MouseFix\MouseAccelerationFix.ps1
         $ProgressBar1.Value = 31
         $Label11.Text = "31%"
         $Label12.Text = "Mouse Accelleration Fix"
