@@ -1,7 +1,4 @@
 Add-Type -AssemblyName System.Windows.Forms
-$Panel13_Paint = {
-}
-Add-Type -AssemblyName System.Windows.Forms
 . (Join-Path $PSScriptRoot 'Ninite.designer.ps1')
 
 #Close button
@@ -10,6 +7,10 @@ $Button2.Add_Click{($Form1.Close())}
 #Instll Button
 $Button1.Add_Click{(Install-Button)}
 
+#Icon
+$bitmap = [System.Drawing.Bitmap]::FromFile('.\Ninite\favicon.ico')
+$hicon = $bitmap.GetHicon()
+$Form1.Icon = [system.drawing.icon]::FromHandle($hicon)
 
 function Install-Button{
     $Link = "https://ninite.com/"
