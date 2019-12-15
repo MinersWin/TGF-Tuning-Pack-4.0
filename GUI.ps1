@@ -1,3 +1,5 @@
+$TabPage7_Click = {
+}
 $MyDir = Split-Path $script:MyInvocation.MyCommand.Path
 Set-Location $MyDir
 Add-Type -AssemblyName System.Windows.Forms
@@ -34,9 +36,10 @@ Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzun
 "
 ##################################################################################################################################################################################
 [System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr frühe Alpha Version. Die Tweaks sind zum Teil noch nicht funktionsfähig.","The Geek Freaks Tuning Pack 4.0 by MinersWin",1)
-$TabPage7.Enabled = $false
+$Panel13.Visible = $false
+$Panel14.Visible = $false
 .\Settings.ps1
-
+.\TestUpdate.ps1
 $Form1.Text = $Config.Application.Name
 $TextBox6.Text = $Config.Directory.Logs
 $TextBox7.Text = $Config.Directory.Tools
@@ -277,7 +280,7 @@ function Accept-Everything{
 $Label6.Text = "English:    "
 $Label7.Text = "We do not take responsibility for problems that accompany the execution of our program! This is a hobby project! Everything can create errors and problems! Use at your own risk! Problems and bugs are welcome in the Discord: https://discordapp.com/invite/k5kMSa    "
 $Label8.Text = "German: "
-$Label9.Text = "Wir übernehmen keine Verantwortung für Probleme, die mit der Ausführung unseres Programms einhergehen! Dies ist ein hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr! Probleme und Bugs können gerne im Discord gemeldet werden: https://discordapp.com/invite/k5kMSa "
+$Label9.Text = "Wir Übernehmen keine Verantwortung für Probleme, die mit der Ausführung unseres Programms einhergehen! Dies ist ein hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr! Probleme und Bugs können gerne im Discord gemeldet werden: https://discordapp.com/invite/k5kMSa "
 $CheckBox61.Text = "Create System Recovery Point"
 
 #Close when Click Close
@@ -288,7 +291,15 @@ $Button6.Add_Click{(Start "$($MyDir)\")}
 
 #Make Everything German
 $Button14.Add_Click{(Make-German)}
-.\Update-Englisch.ps1
+
+#Get Language 
+$Language = Get-Content .\Config\Language.txt
+if ($Language -eq "de-DE"){
+    Make-German
+} else {
+    Make-English
+}
+
 function Make-German{
     .\Update-German.ps1
 }
@@ -1291,15 +1302,13 @@ function Sophos{
     & '.\tools\Sophos Virus Removal Tool\Sophos Virus Removal Tool.exe'
 }
 #MSI installer Cleanup
-$Button11.Add_Click{(Installer-Cleanup)}
-function Installer-Cleanup{
+$Button11.Add_Click{(Installer-Cleanup)}B
     [System.Windows.Forms.MessageBox]::Show("Diese funktion ist momentan nicht verfügbar, Microsoft hat dieses Feature eingestellt. Ich arbeite momentan an einer Alternative","TGF Tuning Pack 4.0 by MinersWin",1)
 }
 #System File Checker
 $Button12.Add_Click{(System-File-Checker)}
 function System-File-Checker{
-    [System.Windows.Forms.MessageBox]::Show("Es wird sich gleich ein Konsolenfenster öffnen, in welchem ein Windows Image heruntergeladen wird, mit welchem das System auf Fehler geprüft wird. Das Image wird nach Abschluss des Vorgangs wieder gelöscht. Zum Bestätigen OK drücken","TGF Tuning Pack 4.0 by MinersWin",1)
-    & '.\Tools\System File Checker\Check.bat'
+    [System.Windows.Forms.MessageBox]::Show("Es wird sich gleich ein Konsolenfenster öffnen, in welchem ein Windows Image heruntergeladen wird, mit welchem das System auf Fehler geprüft wird. Das Image wird nach Abschluss des Vorgangs wieder gelöscht. Zum Bestätigen OK drücken","TGF Tuning Pack 4.0 by MinersWin",1)    & '.\Tools\System File Checker\Check.bat'
 }
 #DISM image check and repair
 $Button27.Add_Click{(System-File-Checker)}
