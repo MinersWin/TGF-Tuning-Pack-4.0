@@ -1,5 +1,3 @@
-$TabPage7_Click = {
-}
 $MyDir = Split-Path $script:MyInvocation.MyCommand.Path
 Set-Location $MyDir
 Add-Type -AssemblyName System.Windows.Forms
@@ -27,7 +25,7 @@ ___________ __                                    __     ___________            
 |_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
         __/ |                                                  
        |___/     
-The Geek Freaks Tuning Pack 4.0 Update 13.12.2019
+The Geek Freaks Tuning Pack 4.0 Update 16.12.2019
 Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
@@ -35,17 +33,14 @@ WIR ÜBERNEHMEN KEINE VERANTWORTUNG FÜR PROBLEME DIE MIT DER AUSFÜHRUNG UNSERES P
 Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr!
 "
 ##################################################################################################################################################################################
-[System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr frühe Alpha Version. Die Tweaks sind zum Teil noch nicht funktionsfähig.","The Geek Freaks Tuning Pack 4.0 by MinersWin",1)
-$Panel13.Visible = $false
-$Panel14.Visible = $false
-.\Settings.ps1
+$Language = Get-Content .\Config\Language.txt
+if ($Language -eq "de-DE"){
+[System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr frühe Alpha Version. Die Tweaks sind zum Teil noch nicht funktionsfähig.","The Geek Freaks Tuning Pack 4.0 by MinersWin",'OK','Error')
+} else {
+[System.Windows.Forms.MessageBox]::Show("This is a very early alpha version. Some of the tweaks are not yet functional.","The Geek Freaks Tuning Pack 4.0 by MinersWin",'OK','Error')
+}
 .\TestUpdate.ps1
 $Form1.Text = $Config.Application.Name
-$TextBox6.Text = $Config.Directory.Logs
-$TextBox7.Text = $Config.Directory.Tools
-$TextBox8.Text = $Config.Directory.Backup
-$TextBox9.Text = $Config.Directory.Updates
-$TextBox10.Text = $Config.Directory.Scripts
 
 #Icon
 $bitmap = [System.Drawing.Bitmap]::FromFile($Config.Application.Icon)
@@ -73,8 +68,6 @@ $TabPage6.Enabled = $false
 $TabPage6.Visible = $false
 $TabPage8.Enabled = $false
 $TabPage8.Visible = $false
-$TabPage7.Enabled = $false
-$TabPage7.Enabled = $false
 
 #Geek Freaks Logo
 $Picture = $Config.Application.Logo
@@ -98,18 +91,15 @@ $Button13.Text = ""
 #Internet Explorer Icon
 $IEIcon = ".\Images\tron_icon\Dakirby309-Simply-Styled-Internet-Explorer.ico"
 $Button4.Image = ([System.Drawing.Image]::FromFile($IEIcon))
-$ToolTip_IE = New-Object System.Windows.Forms.ToolTip
-$ToolTip_IE.SetToolTip($Button4,"Executes only on Internet Explorer V7 and up. Runs the built-in Windows tool to clean and reset Internet Explorer")
+$ToolTip.SetToolTip($Button4,"Executes only on Internet Explorer V7 and up. Runs the built-in Windows tool to clean and reset Internet Explorer")
 #CCleaner Icon
 $CCIcon = ".\Images\tron_icon\Cornmanthe3rd-Plex-Other-CCleaner.ico"
 $Button20.Image = ([System.Drawing.Image]::FromFile($CCIcon))
-$ToolTip_CCleaner = New-Object System.Windows.Forms.ToolTip
-$ToolTip_CCleaner.SetToolTip($Button20,"CCleaner utility by Pitiform. Used to clean temp files before running AV scanners. Note that CCleaner wipes %AppData% Local Storage.")
+$ToolTip.SetToolTip($Button20,"CCleaner utility by Pitiform. Used to clean temp files before running AV scanners. Note that CCleaner wipes %AppData% Local Storage.")
 #BleachBit Icon
 $BBIcon = ".\Images\tron_icon\favicon (1).ico"
 $Button21.Image = ([System.Drawing.Image]::FromFile($BBIcon))
-$ToolTip_Bleachbit = New-Object System.Windows.Forms.ToolTip
-$ToolTip_Bleachbit.SetToolTip($Button21,"Bleachbit utility. Used to clean temp files before running AV scanners.")
+$ToolTip.SetToolTip($Button21,"Bleachbit utility. Used to clean temp files before running AV scanners.")
 #Temp File Cleanup Icon
 $TFCIcon = ".\Images\tron_icon\Hopstarter-Soft-Scraps-File-Delete.ico"
 $Button22.Image = ([System.Drawing.Image]::FromFile($TFCIcon))
@@ -268,8 +258,6 @@ function Accept-Everything{
         $TabPage6.Visible = $true
         $TabPage8.Enabled = $true
         $TabPage8.Visible = $true
-        $TabPage7.Enabled = $true
-        $TabPage7.Enabled = $true
         $TabControl1.SelectedTab = $TabPage1
     } else {
         [System.Windows.Forms.MessageBox]::Show("Please Accept | Bitte Akzeptieren","TGF Tuning Pack 4.0",1)
@@ -277,12 +265,11 @@ function Accept-Everything{
 }
 
 #Write Risk Labels
-$Label6.Text = "English:    "
-$Label7.Text = "We do not take responsibility for problems that accompany the execution of our program! This is a hobby project! Everything can create errors and problems! Use at your own risk! Problems and bugs are welcome in the Discord: https://discordapp.com/invite/k5kMSa    "
-$Label8.Text = "German: "
-$Label9.Text = "Wir Übernehmen keine Verantwortung für Probleme, die mit der Ausführung unseres Programms einhergehen! Dies ist ein hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr! Probleme und Bugs können gerne im Discord gemeldet werden: https://discordapp.com/invite/k5kMSa "
-$CheckBox61.Text = "Create System Recovery Point"
-
+if ($Language -eq "de-DE"){
+    $Label6.Text = "Wir Übernehmen keine Verantwortung für Probleme, die mit der Ausführung unseres Programms einhergehen! Dies ist ein hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr! Probleme und Bugs können gerne im Discord gemeldet werden: https://discordapp.com/invite/k5kMSa "
+} else {
+    $Label6.Text = "We do not take responsibility for problems that accompany the execution of our program! This is a hobby project! Everything can create errors and problems! Use at your own risk! Problems and bugs are welcome in the Discord: https://discordapp.com/invite/k5kMSa    "
+}
 #Close when Click Close
 $button17.Add_Click{($Form1.Close())}
 
@@ -293,7 +280,6 @@ $Button6.Add_Click{(Start "$($MyDir)\")}
 $Button14.Add_Click{(Make-German)}
 
 #Get Language 
-$Language = Get-Content .\Config\Language.txt
 if ($Language -eq "de-DE"){
     Make-German
 } else {
@@ -301,12 +287,16 @@ if ($Language -eq "de-DE"){
 }
 
 function Make-German{
+    del .\Config\Language.txt
+    Write-Output "de-DE" >> .\Config\Language.txt
     .\Update-German.ps1
 }
 
 #Translate to English
 $Button13.Add_Click{(Make-English)}
 function Make-English{
+    del .\Config\Language.txt
+    Write-Output "en-EN" >> .\Config\Language.txt
     .\Update-Englisch.ps1
 }
 
@@ -321,12 +311,6 @@ $ComboBox1.Items.Add("Recommended")
 $ComboBox1.Items.Add("Clear")
 $ComboBox1.Items.Add("ULTIMATE PERFORMANCE")
 $ComboBox1.SelectedItem = "Recommended"
-$ComboBox2.Items.Add("Best Performance")
-$ComboBox2.Items.Add("Maximum Battery Life")
-$ComboBox2.Items.Add("Maximum Privacy")
-$ComboBox2.Items.Add("Recommended")
-$ComboBox2.Items.Add("ULTIMATE PERFORMANCE")
-$ComboBox2.SelectedItem = $Config.Application.Standart_Template
 
 #Progressbar Reset
 $ProgressBar1.Value = 0
@@ -346,6 +330,20 @@ function Make-Tweaks{
         $Date = Get-Date
         Write-Output "Der Wiederherstellungspunkt wurde erstellt. Er trägt den Namen: $($Date) TGF Tuning Pack"
     }
+    if ($CheckBox62.Checked){
+        if ($Language -eq "de-DE"){
+            $Backup = [System.Windows.Forms.MessageBox]::Show("Ein Backup der Registry wird ausgeführt. Eine Normale Windows Registry ist im Normalfall ca. 500mb Groß. Das Backup wird unter C:\RegBack\ Gespeichert.","TGF Tuning Pack 4.0 by MinersWin",'OK','Error')
+        } else {
+            $Backup = [System.Windows.Forms.MessageBox]::Show("The registry is backed up. A normal Windows registry is usually about 500mb in size. The backup is saved under C:\RegBack\.","TGF Tuning Pack 4.0 by MinersWin",'OK','Error')
+        }
+        del C:\RegBack\ -Recurse
+        mkdir C:\RegBack\
+        reg export HKCR C:\RegBack\HKLM.Reg /y
+        reg export HKCU C:\RegBack\HKCU.Reg /y
+        reg export HKLM C:\RegBack\HKCR.Reg /y
+        reg export HKU C:\RegBack\HKU.Reg /y
+        reg export HKCC C:\RegBackHKCC.Reg /y
+}
 
 
     #Show Desktop Icon on Desktop
@@ -1302,13 +1300,15 @@ function Sophos{
     & '.\tools\Sophos Virus Removal Tool\Sophos Virus Removal Tool.exe'
 }
 #MSI installer Cleanup
-$Button11.Add_Click{(Installer-Cleanup)}B
+$Button11.Add_Click{(Installer-Cleanup)}
+function Installer-Cleanup{
     [System.Windows.Forms.MessageBox]::Show("Diese funktion ist momentan nicht verfügbar, Microsoft hat dieses Feature eingestellt. Ich arbeite momentan an einer Alternative","TGF Tuning Pack 4.0 by MinersWin",1)
 }
 #System File Checker
 $Button12.Add_Click{(System-File-Checker)}
 function System-File-Checker{
-    [System.Windows.Forms.MessageBox]::Show("Es wird sich gleich ein Konsolenfenster öffnen, in welchem ein Windows Image heruntergeladen wird, mit welchem das System auf Fehler geprüft wird. Das Image wird nach Abschluss des Vorgangs wieder gelöscht. Zum Bestätigen OK drücken","TGF Tuning Pack 4.0 by MinersWin",1)    & '.\Tools\System File Checker\Check.bat'
+    [System.Windows.Forms.MessageBox]::Show("Es wird sich gleich ein Konsolenfenster öffnen, in welchem ein Windows Image heruntergeladen wird, mit welchem das System auf Fehler geprüft wird. Das Image wird nach Abschluss des Vorgangs wieder gelöscht. Zum Bestätigen OK drücken","TGF Tuning Pack 4.0 by MinersWin",1)    
+    & '.\Tools\System File Checker\Check.bat'
 }
 #DISM image check and repair
 $Button27.Add_Click{(System-File-Checker)}
