@@ -133,24 +133,6 @@ $CheckBox61.Text = "Create System Recovery Point"
 $Button17.Text = "Close"
 $Button16.Text = "Make FPS Rain!"
 
-#Settings
-$Label19.Text = "Application"
-$Label20.Text = "Name"
-$Label21.Text = "Startup Message"
-$Label22.Text = "Icon"
-$Label23.Text = "Logo"
-$Label24.Text = "Language"
-$Label31.Text = "Standart Template"
-
-$Label25.Text = "Directory"
-$Label26.Text = "Logs"
-$Label27.Text = "Tools"
-$Label28.Text = "Backup"
-$Label29.Text = "Updates"
-$Label30.Text = "Scripts"
-
-$Button34.Text = "Confirm"
-
 #Tabs
 $TabPage3.Text = "Home"
 $TabPage1.Text = "Registry Tweaks"
