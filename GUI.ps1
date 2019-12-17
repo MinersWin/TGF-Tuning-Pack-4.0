@@ -55,10 +55,8 @@ $Panel3.Enabled = $false
 $TabPage1.Enabled = $false
 $TabPage2.Enabled = $false
 $TabPage4.Enabled = $false
-$Button15.Enabled = $false
 $CheckBox62.Enabled = $false
 $CheckBox61.Enabled = $false
-$Button16.Enabled = $false
 $TabPage1.visible = $false
 $TabPage2.visible = $false
 $TabPage4.Visible = $false
@@ -244,7 +242,6 @@ function Accept-Everything{
         $TabPage1.Enabled = $true  
         $TabPage2.Enabled = $true
         $TabPage4.Enabled = $true
-        $Button15.Enabled = $true
         $CheckBox62.Enabled = $true
         $CheckBox61.Enabled = $true
         $Button16.Enabled = $true  
@@ -279,6 +276,12 @@ $Button6.Add_Click{(Start "$($MyDir)\")}
 #Make Everything German
 $Button14.Add_Click{(Make-German)}
 
+function Make-German{
+    del .\Config\Language.txt
+    Write-Output "de-DE" >> .\Config\Language.txt
+    .\Update-German.ps1
+}
+
 #Get Language 
 if ($Language -eq "de-DE"){
     Make-German
@@ -286,11 +289,6 @@ if ($Language -eq "de-DE"){
     Make-English
 }
 
-function Make-German{
-    del .\Config\Language.txt
-    Write-Output "de-DE" >> .\Config\Language.txt
-    .\Update-German.ps1
-}
 
 #Translate to English
 $Button13.Add_Click{(Make-English)}
@@ -336,7 +334,6 @@ function Make-Tweaks{
         } else {
             $Backup = [System.Windows.Forms.MessageBox]::Show("The registry is backed up. A normal Windows registry is usually about 500mb in size. The backup is saved under C:\RegBack\.","TGF Tuning Pack 4.0 by MinersWin",'OK','Error')
         }
-        del C:\RegBack\ -Recurse
         mkdir C:\RegBack\
         reg export HKCR C:\RegBack\HKLM.Reg /y
         reg export HKCU C:\RegBack\HKCU.Reg /y
