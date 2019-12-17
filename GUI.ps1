@@ -242,7 +242,6 @@ function Accept-Everything{
         $TabPage1.Enabled = $true  
         $TabPage2.Enabled = $true
         $TabPage4.Enabled = $true
-        $Button15.Enabled = $true
         $CheckBox62.Enabled = $true
         $CheckBox61.Enabled = $true
         $Button16.Enabled = $true  
@@ -335,7 +334,6 @@ function Make-Tweaks{
         } else {
             $Backup = [System.Windows.Forms.MessageBox]::Show("The registry is backed up. A normal Windows registry is usually about 500mb in size. The backup is saved under C:\RegBack\.","TGF Tuning Pack 4.0 by MinersWin",'OK','Error')
         }
-        del C:\RegBack\ -Recurse
         mkdir C:\RegBack\
         reg export HKCR C:\RegBack\HKLM.Reg /y
         reg export HKCU C:\RegBack\HKCU.Reg /y
