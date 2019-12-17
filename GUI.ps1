@@ -55,10 +55,8 @@ $Panel3.Enabled = $false
 $TabPage1.Enabled = $false
 $TabPage2.Enabled = $false
 $TabPage4.Enabled = $false
-$Button15.Enabled = $false
 $CheckBox62.Enabled = $false
 $CheckBox61.Enabled = $false
-$Button16.Enabled = $false
 $TabPage1.visible = $false
 $TabPage2.visible = $false
 $TabPage4.Visible = $false
@@ -279,6 +277,12 @@ $Button6.Add_Click{(Start "$($MyDir)\")}
 #Make Everything German
 $Button14.Add_Click{(Make-German)}
 
+function Make-German{
+    del .\Config\Language.txt
+    Write-Output "de-DE" >> .\Config\Language.txt
+    .\Update-German.ps1
+}
+
 #Get Language 
 if ($Language -eq "de-DE"){
     Make-German
@@ -286,11 +290,6 @@ if ($Language -eq "de-DE"){
     Make-English
 }
 
-function Make-German{
-    del .\Config\Language.txt
-    Write-Output "de-DE" >> .\Config\Language.txt
-    .\Update-German.ps1
-}
 
 #Translate to English
 $Button13.Add_Click{(Make-English)}
