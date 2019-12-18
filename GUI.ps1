@@ -228,7 +228,10 @@ if ($Tools){
 }
 
 
-
+#Clipboard History
+$Button44.Add_Click{(start cmd.exe 'cmd /c "echo off | clip"')}
+#System Propertys Performance
+$Button15.Add_Click{(start SystemPropertiesPerformance.exe)}
 #Download Tools
 $Button5.Add_Click({Start-Process PowerShell.exe "Write-Output 'Der Download Startet, dies kann je nach Internetgeschwindigkeit ca. 5-10 Minuten dauern. (500MB)'; Write-Output 'The download starts, this may take about 5-10 minutes, depending on the internet speed. (500MB)'; & '.\Download all Tools.ps1'"})
 
@@ -1082,6 +1085,15 @@ function Make-Tweaks{
         $Label12.Text = "Mouse Accelleration Fix"
         Write-Output = "Mouse Accelleration Fix"
     }
+    #Mouse Accelleration Fix
+    if ($CheckBox114.Checked){
+        .\Scripts\Registry\Enable_Clipboard_History_for_all_users.reg
+        $ProgressBar1.Value = 49
+        $Label11.Text = "49%"
+        $Label12.Text = "Enable Clipboard History for all Users"
+        Write-Output = "Enable Clipboard History for all Users"
+    }
+
     
     $ProgressBar1.Value = 100
     $Label11.Text = "YAY"
