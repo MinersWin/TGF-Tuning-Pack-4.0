@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; Created by: MinersWin
+; Created on: December 18th 2019
+; Download:   https://thegeekfreaks.de
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell]
+"Path"="C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe"
+"ExecutionPolicy"="Unrestricted"
