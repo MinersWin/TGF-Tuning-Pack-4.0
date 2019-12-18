@@ -122,6 +122,14 @@ $CheckBox56.Text = "Blockiere Telemetry Server"
 $CheckBox78.Text = "Blockiere mehr Microsoft Server"
 $CheckBox114.Text = "Mouse Beschleunigungs Fix"
 
+$Label33.Text = "Windows Geschwindigkeitseinstellungen"
+$CheckBox117.Text = "Optimale Darstellung"
+$CheckBox118.Text = "Optimale Geschwindigkeit"
+
+$Label32.Text = "Zwischenspeicher History"
+$CheckBox115.Text = "Aktiviere Zwischenspeicher History"
+$Button44.Text = "Lösche Zwischenspeicher"
+
 #Tools
 $Button5.Text = "Tools herunterladen"
 $Button6.Text = "Ordner Öffnen"

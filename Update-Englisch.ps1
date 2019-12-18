@@ -122,6 +122,14 @@ $CheckBox56.Text = "Blocking Telemetry Servers"
 $CheckBox78.Text = "Blocking more Microsoft Servers"
 $CheckBox114.Text = "Mouse Acceleration Fix"
 
+$Label33.Text = "Windows Performance Properties"
+$CheckBox117.Text = "Optimal presentation"
+$CheckBox118.Text = "Optimal performance"
+
+$Label32.Text = "Clipboard History"
+$CheckBox115.Text = "Enable Clipboard History"
+$Button44.Text = "Clear Clipboard"
+
 #Tools
 $Button5.Text = "Download Tools"
 $Button6.Text = "Open Folder"
