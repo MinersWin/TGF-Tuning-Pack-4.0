@@ -109,3 +109,17 @@ $CheckBox111.Checked = $true            #Remove Microsoft People"
 $CheckBox112.Checked = $true            #Remove Office Live"
 $CheckBox113.Checked = $false           #Remove XBox"
 $CheckBox79.Checked =  $false           #Disable/Remove OneDrive"
+
+#Misc
+$CheckBox81.Checked = $true             #Disable Windows Error Recovery on Startup
+$CheckBox82.Checked = $true             #Internet Explorer 11 Tweaks
+$CheckBox83.Checked = $true             #Libary Tweaks
+$CheckBox84.Checked = $true             #Windows Update Tweaks
+$CheckBox85.Checked = $true             #Windows Defender Tweaks
+$CheckBox56.Checked = $true             #Blocking Telemetry Servers
+$CheckBox78.Checked = $true             #Blocking more Microsoft Servers
+$CheckBox114.Checked = $true            #Mouse Acceleration Fix
+
+
+
+Write-Output "Recommended Settings"
