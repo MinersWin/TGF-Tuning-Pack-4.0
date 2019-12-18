@@ -257,7 +257,11 @@ function Accept-Everything{
         $TabPage8.Visible = $true
         $TabControl1.SelectedTab = $TabPage1
     } else {
-        [System.Windows.Forms.MessageBox]::Show("Please Accept | Bitte Akzeptieren","TGF Tuning Pack 4.0",1)
+        if ($Language -eq "de-DE"){
+            [System.Windows.Forms.MessageBox]::Show("Bitte Akzeptieren","TGF Tuning Pack 4.0","OK","Error")
+        } else {
+            [System.Windows.Forms.MessageBox]::Show("Please Accept","TGF Tuning Pack 4.0","OK","Error")
+        }
     }
 }
 
