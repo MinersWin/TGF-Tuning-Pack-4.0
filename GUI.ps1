@@ -68,10 +68,25 @@ $TabPage8.Enabled = $false
 $TabPage8.Visible = $false
 
 #Geek Freaks Logo
-$Picture = $Config.Application.Logo
+$Picture = ".\Images\Logo_v1.png"
 $img = [System.Drawing.Image]::Fromfile($Picture)
-$PictureBox1.Image = $img
+$PictureBox1.BackgroundImage = $img
+$PictureBox1.BackgroundImageLayout = "Stretch"
 $PictureBox1.Add_Click({About})
+
+#Tuning Pack Banner
+$Picture48 = ".\Images\Logo_4.0.png"
+$img48 = [System.Drawing.Image]::FromFile($Picture48)
+$PictureBox2.BackgroundImage = $img48
+$PictureBox2.BackgroundImageLayout = "Stretch"
+
+#Button 43 PayPal Button
+$ButtonPicture43 = ".\Images\48935-4-paypal-donate-button-image-free-transparent-image-hq.png"
+$img43 = [System.Drawing.Image]::FromFile($ButtonPicture43)
+$Button43.BackgroundImage = $img43
+$Button43.BackgroundImageLayout = "Stretch"
+$Button43.Add_Click{(explorer https://paypal.me/minerswin)}
+$Button43.Text = ""
 
 #German Language Image
 $Picture2 = ".\Images\German.jpg"
