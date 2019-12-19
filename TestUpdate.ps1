@@ -16,7 +16,7 @@ if ($Update.Content -gt $RunningVersion){
 
         'Yes' {
             Write-Output "YES" 
-            explorer "https://github.com/MinersWin/TGF-Tuning-Pack-4.0/archive/master.zip"
+            .\Update.ps1
         }
         'No' {
             Write-Output "NO"
