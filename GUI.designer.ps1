@@ -48,6 +48,8 @@ $Form1 = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.ComboBox]$ComboBox1 = $null
 [System.Windows.Forms.TabControl]$TabControl1 = $null
 [System.Windows.Forms.TabPage]$TabPage3 = $null
+[System.Windows.Forms.Button]$Button43 = $null
+[System.Windows.Forms.PictureBox]$PictureBox2 = $null
 [System.Windows.Forms.Label]$Label6 = $null
 [System.Windows.Forms.Button]$Button18 = $null
 [System.Windows.Forms.CheckBox]$CheckBox63 = $null
@@ -327,14 +329,13 @@ $CheckBox103 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox80 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox79 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $TabPage8 = (New-Object -TypeName System.Windows.Forms.TabPage)
-$Button45 = (New-Object -TypeName System.Windows.Forms.Button)
-$CheckBox119 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$CheckBox118 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$CheckBox117 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$Label33 = (New-Object -TypeName System.Windows.Forms.Label)
+$Button15 = (New-Object -TypeName System.Windows.Forms.Button)
 $Button44 = (New-Object -TypeName System.Windows.Forms.Button)
+$CheckBox118 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox115 = (New-Object -TypeName System.Windows.Forms.CheckBox)
+$CheckBox117 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $Label32 = (New-Object -TypeName System.Windows.Forms.Label)
+$Label33 = (New-Object -TypeName System.Windows.Forms.Label)
 $CheckBox114 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox78 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox85 = (New-Object -TypeName System.Windows.Forms.CheckBox)
@@ -389,6 +390,8 @@ $Button20 = (New-Object -TypeName System.Windows.Forms.Button)
 $Button4 = (New-Object -TypeName System.Windows.Forms.Button)
 $Label13 = (New-Object -TypeName System.Windows.Forms.Label)
 $Button5 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button45 = (New-Object -TypeName System.Windows.Forms.Button)
+$CheckBox119 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $Panel3 = (New-Object -TypeName System.Windows.Forms.Panel)
 $Button14 = (New-Object -TypeName System.Windows.Forms.Button)
 $Button13 = (New-Object -TypeName System.Windows.Forms.Button)
@@ -404,7 +407,8 @@ $Panel7 = (New-Object -TypeName System.Windows.Forms.Panel)
 $Label12 = (New-Object -TypeName System.Windows.Forms.Label)
 $Label11 = (New-Object -TypeName System.Windows.Forms.Label)
 $Label10 = (New-Object -TypeName System.Windows.Forms.Label)
-$Button15 = (New-Object -TypeName System.Windows.Forms.Button)
+$PictureBox2 = (New-Object -TypeName System.Windows.Forms.PictureBox)
+$Button43 = (New-Object -TypeName System.Windows.Forms.Button)
 ([System.ComponentModel.ISupportInitialize]$PictureBox1).BeginInit()
 $Panel1.SuspendLayout()
 $TabControl1.SuspendLayout()
@@ -426,23 +430,24 @@ $Panel8.SuspendLayout()
 $Panel3.SuspendLayout()
 $Panel4.SuspendLayout()
 $Panel7.SuspendLayout()
+([System.ComponentModel.ISupportInitialize]$PictureBox2).BeginInit()
 $Form1.SuspendLayout()
 #
 #Label1
 #
-$Label1.Font = (New-Object -TypeName System.Drawing.Font -ArgumentList @([System.String]'Comic Sans MS',[System.Single]15.75,[System.Drawing.FontStyle]::Regular,[System.Drawing.GraphicsUnit]::Point,([System.Byte][System.Byte]0)))
+$Label1.Font = (New-Object -TypeName System.Drawing.Font -ArgumentList @([System.String]'Consolas',[System.Single]15.75,[System.Drawing.FontStyle]::Regular,[System.Drawing.GraphicsUnit]::Point,([System.Byte][System.Byte]0)))
 $Label1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]12,[System.Int32]9))
 $Label1.Name = [System.String]'Label1'
-$Label1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]345,[System.Int32]35))
+$Label1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]484,[System.Int32]35))
 $Label1.TabIndex = [System.Int32]0
 $Label1.Text = [System.String]'The Geek Freaks Tuning Pack 4.0'
 $Label1.UseCompatibleTextRendering = $true
 #
 #PictureBox1
 #
-$PictureBox1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]978,[System.Int32]12))
+$PictureBox1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]958,[System.Int32]12))
 $PictureBox1.Name = [System.String]'PictureBox1'
-$PictureBox1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]252,[System.Int32]89))
+$PictureBox1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]278,[System.Int32]72))
 $PictureBox1.TabIndex = [System.Int32]1
 $PictureBox1.TabStop = $false
 $PictureBox1.add_Click($PictureBox1_Click)
@@ -621,9 +626,10 @@ $CheckBox16.UseVisualStyleBackColor = $true
 #
 #Label3
 #
-$Label3.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]16,[System.Int32]44))
+$Label3.Font = (New-Object -TypeName System.Drawing.Font -ArgumentList @([System.String]'Consolas',[System.Single]8.25,[System.Drawing.FontStyle]::Regular,[System.Drawing.GraphicsUnit]::Point,([System.Byte][System.Byte]0)))
+$Label3.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]16,[System.Int32]39))
 $Label3.Name = [System.String]'Label3'
-$Label3.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]123,[System.Int32]23))
+$Label3.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]243,[System.Int32]23))
 $Label3.TabIndex = [System.Int32]19
 $Label3.Text = [System.String]'created by MinersWin'
 $Label3.UseCompatibleTextRendering = $true
@@ -916,6 +922,8 @@ $TabControl1.TabIndex = [System.Int32]48
 #TabPage3
 #
 $TabPage3.BackColor = [System.Drawing.SystemColors]::Control
+$TabPage3.Controls.Add($Button43)
+$TabPage3.Controls.Add($PictureBox2)
 $TabPage3.Controls.Add($Label6)
 $TabPage3.Controls.Add($Button18)
 $TabPage3.Controls.Add($CheckBox63)
@@ -1801,27 +1809,25 @@ $TabPage8.UseVisualStyleBackColor = $true
 $TabPage8.Visible = $false
 $TabPage8.add_Click($TabPage8_Click)
 #
-#Button45
+#Button15
 #
-$Button45.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]568,[System.Int32]281))
-$Button45.Name = [System.String]'Button45'
-$Button45.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]108,[System.Int32]23))
-$Button45.TabIndex = [System.Int32]4
-$Button45.Text = [System.String]'Button45'
-$Button45.UseCompatibleTextRendering = $true
-$Button45.UseVisualStyleBackColor = $true
-$Button45.add_Click($Button45_Click)
+$Button15.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]433,[System.Int32]91))
+$Button15.Name = [System.String]'Button15'
+$Button15.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]159,[System.Int32]23))
+$Button15.TabIndex = [System.Int32]6
+$Button15.Text = [System.String]'Button15'
+$Button15.UseCompatibleTextRendering = $true
+$Button15.UseVisualStyleBackColor = $true
 #
-#CheckBox119
+#Button44
 #
-$CheckBox119.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]568,[System.Int32]251))
-$CheckBox119.Name = [System.String]'CheckBox119'
-$CheckBox119.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]243,[System.Int32]24))
-$CheckBox119.TabIndex = [System.Int32]3
-$CheckBox119.Text = [System.String]'CheckBox119'
-$CheckBox119.UseCompatibleTextRendering = $true
-$CheckBox119.UseVisualStyleBackColor = $true
-$CheckBox119.add_CheckedChanged($CheckBox119_CheckedChanged)
+$Button44.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]429,[System.Int32]190))
+$Button44.Name = [System.String]'Button44'
+$Button44.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]163,[System.Int32]23))
+$Button44.TabIndex = [System.Int32]3
+$Button44.Text = [System.String]'Button44'
+$Button44.UseCompatibleTextRendering = $true
+$Button44.UseVisualStyleBackColor = $true
 #
 #CheckBox118
 #
@@ -1834,6 +1840,16 @@ $CheckBox118.UseCompatibleTextRendering = $true
 $CheckBox118.UseVisualStyleBackColor = $true
 $CheckBox118.add_CheckedChanged($CheckBox118_CheckedChanged)
 #
+#CheckBox115
+#
+$CheckBox115.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]433,[System.Int32]159))
+$CheckBox115.Name = [System.String]'CheckBox115'
+$CheckBox115.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]492,[System.Int32]24))
+$CheckBox115.TabIndex = [System.Int32]1
+$CheckBox115.Text = [System.String]'CheckBox115'
+$CheckBox115.UseCompatibleTextRendering = $true
+$CheckBox115.UseVisualStyleBackColor = $true
+#
 #CheckBox117
 #
 $CheckBox117.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]434,[System.Int32]30))
@@ -1845,6 +1861,16 @@ $CheckBox117.UseCompatibleTextRendering = $true
 $CheckBox117.UseVisualStyleBackColor = $true
 $CheckBox117.add_CheckedChanged($CheckBox117_CheckedChanged)
 #
+#Label32
+#
+$Label32.Font = (New-Object -TypeName System.Drawing.Font -ArgumentList @([System.String]'Comic Sans MS',[System.Single]11.25,[System.Drawing.FontStyle]::Regular,[System.Drawing.GraphicsUnit]::Point,([System.Byte][System.Byte]0)))
+$Label32.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]433,[System.Int32]132))
+$Label32.Name = [System.String]'Label32'
+$Label32.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]492,[System.Int32]23))
+$Label32.TabIndex = [System.Int32]0
+$Label32.Text = [System.String]'Label32'
+$Label32.UseCompatibleTextRendering = $true
+#
 #Label33
 #
 $Label33.Font = (New-Object -TypeName System.Drawing.Font -ArgumentList @([System.String]'Comic Sans MS',[System.Single]11.25,[System.Drawing.FontStyle]::Regular,[System.Drawing.GraphicsUnit]::Point,([System.Byte][System.Byte]0)))
@@ -1855,36 +1881,6 @@ $Label33.TabIndex = [System.Int32]0
 $Label33.Text = [System.String]'Label33'
 $Label33.UseCompatibleTextRendering = $true
 $Label33.add_Click($Label33_Click)
-#
-#Button44
-#
-$Button44.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]429,[System.Int32]190))
-$Button44.Name = [System.String]'Button44'
-$Button44.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]163,[System.Int32]23))
-$Button44.TabIndex = [System.Int32]3
-$Button44.Text = [System.String]'Button44'
-$Button44.UseCompatibleTextRendering = $true
-$Button44.UseVisualStyleBackColor = $true
-#
-#CheckBox115
-#
-$CheckBox115.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]433,[System.Int32]159))
-$CheckBox115.Name = [System.String]'CheckBox115'
-$CheckBox115.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]492,[System.Int32]24))
-$CheckBox115.TabIndex = [System.Int32]1
-$CheckBox115.Text = [System.String]'CheckBox115'
-$CheckBox115.UseCompatibleTextRendering = $true
-$CheckBox115.UseVisualStyleBackColor = $true
-#
-#Label32
-#
-$Label32.Font = (New-Object -TypeName System.Drawing.Font -ArgumentList @([System.String]'Comic Sans MS',[System.Single]11.25,[System.Drawing.FontStyle]::Regular,[System.Drawing.GraphicsUnit]::Point,([System.Byte][System.Byte]0)))
-$Label32.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]433,[System.Int32]132))
-$Label32.Name = [System.String]'Label32'
-$Label32.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]492,[System.Int32]23))
-$Label32.TabIndex = [System.Int32]0
-$Label32.Text = [System.String]'Label32'
-$Label32.UseCompatibleTextRendering = $true
 #
 #CheckBox114
 #
@@ -2489,6 +2485,28 @@ $Button5.Text = [System.String]'Download Tools'
 $Button5.UseCompatibleTextRendering = $true
 $Button5.UseVisualStyleBackColor = $true
 #
+#Button45
+#
+$Button45.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]568,[System.Int32]281))
+$Button45.Name = [System.String]'Button45'
+$Button45.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]108,[System.Int32]23))
+$Button45.TabIndex = [System.Int32]4
+$Button45.Text = [System.String]'Button45'
+$Button45.UseCompatibleTextRendering = $true
+$Button45.UseVisualStyleBackColor = $true
+$Button45.add_Click($Button45_Click)
+#
+#CheckBox119
+#
+$CheckBox119.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]568,[System.Int32]251))
+$CheckBox119.Name = [System.String]'CheckBox119'
+$CheckBox119.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]243,[System.Int32]24))
+$CheckBox119.TabIndex = [System.Int32]3
+$CheckBox119.Text = [System.String]'CheckBox119'
+$CheckBox119.UseCompatibleTextRendering = $true
+$CheckBox119.UseVisualStyleBackColor = $true
+$CheckBox119.add_CheckedChanged($CheckBox119_CheckedChanged)
+#
 #Panel3
 #
 $Panel3.BorderStyle = [System.Windows.Forms.BorderStyle]::FixedSingle
@@ -2646,15 +2664,23 @@ $Label10.TabIndex = [System.Int32]59
 $Label10.Text = [System.String]'Progress'
 $Label10.UseCompatibleTextRendering = $true
 #
-#Button15
+#PictureBox2
 #
-$Button15.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]433,[System.Int32]91))
-$Button15.Name = [System.String]'Button15'
-$Button15.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]159,[System.Int32]23))
-$Button15.TabIndex = [System.Int32]6
-$Button15.Text = [System.String]'Button15'
-$Button15.UseCompatibleTextRendering = $true
-$Button15.UseVisualStyleBackColor = $true
+$PictureBox2.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]347))
+$PictureBox2.Name = [System.String]'PictureBox2'
+$PictureBox2.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]930,[System.Int32]187))
+$PictureBox2.TabIndex = [System.Int32]4
+$PictureBox2.TabStop = $false
+#
+#Button43
+#
+$Button43.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]335,[System.Int32]250))
+$Button43.Name = [System.String]'Button43'
+$Button43.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]251,[System.Int32]91))
+$Button43.TabIndex = [System.Int32]5
+$Button43.Text = [System.String]'Button43'
+$Button43.UseCompatibleTextRendering = $true
+$Button43.UseVisualStyleBackColor = $true
 #
 #Form1
 #
@@ -2692,6 +2718,7 @@ $Panel8.ResumeLayout($false)
 $Panel3.ResumeLayout($false)
 $Panel4.ResumeLayout($false)
 $Panel7.ResumeLayout($false)
+([System.ComponentModel.ISupportInitialize]$PictureBox2).EndInit()
 $Form1.ResumeLayout($false)
 Add-Member -InputObject $Form1 -Name base -Value $base -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Label1 -Value $Label1 -MemberType NoteProperty
@@ -2743,6 +2770,8 @@ Add-Member -InputObject $Form1 -Name Button1 -Value $Button1 -MemberType NotePro
 Add-Member -InputObject $Form1 -Name ComboBox1 -Value $ComboBox1 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name TabControl1 -Value $TabControl1 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name TabPage3 -Value $TabPage3 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button43 -Value $Button43 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name PictureBox2 -Value $PictureBox2 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Label6 -Value $Label6 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button18 -Value $Button18 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox63 -Value $CheckBox63 -MemberType NoteProperty
