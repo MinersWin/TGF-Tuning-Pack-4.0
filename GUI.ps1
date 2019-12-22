@@ -304,14 +304,6 @@ function Make-German{
     .\Update-German.ps1
 }
 
-#Get Language 
-if ($Language -eq "de-DE"){
-    Make-German
-} else {
-    Make-English
-}
-
-
 #Translate to English
 $Button13.Add_Click{(Make-English)}
 function Make-English{
@@ -319,6 +311,14 @@ function Make-English{
     Write-Output "en-EN" >> .\Config\Language.txt
     .\Update-Englisch.ps1
 }
+
+#Get Language 
+if ($Language -eq "de-DE"){
+    Make-German
+} else {
+    Make-English
+}
+
 
 #Add Ninite
 $Button19.Add_Click{(.\Ninite\Ninite.ps1)}
