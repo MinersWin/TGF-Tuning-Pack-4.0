@@ -3,5 +3,5 @@
 ::https://tuning-pack.de
 
 @ECHO OFF
-PowerShell.exe -Command "& './GUI.ps1'"
+PowerShell.exe -Command "& '.\GUI.ps1'"
 PAUSE
