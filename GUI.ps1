@@ -342,6 +342,27 @@ $Label12.Text = "The Tweaks havent started yet. Click on 'Make FPS Rain!' to Sta
 ###################################################################################################################################################################################
 $Button16.Add_Click{(Make-Tweaks)}
 function Make-Tweaks{
+    if ($Language -eq "de-DE"){
+        Write-Host "Tuning Pack 4.0 by MinersWin: https://tuning-pack.de/"
+        $msgBoxInput = [System.Windows.Forms.MessageBox]::Show("Tweaks werden ausgeführt. Bitte vor dem Bestätigen nochmal alle Tweaks Überprüfen. Hierbei kann einiges Kaputt gehen.","Tuning Pack Sicherheitswarnung",'YesNoCancel','Error')
+        } else {
+        Write-Host "Tuning Pack 4.0 by MinersWin: https://tuning-pack.de/"
+        $msgBoxInput = [System.Windows.Forms.MessageBox]::Show("Tweaks are in progress. Please check all tweaks again before confirming. This can break some things.","Tuning Pack Security Warning",'YesNoCancel','Error')
+        }
+        switch  ($msgBoxInput) {
+    
+            'Yes' {
+                Write-Output "YES" 
+                Write-Output "Tweaks werden ausgeführt"
+                TWEAK_THE_SHIT
+            }
+            'No' {
+            }
+            'Cancel' {
+            }
+        }
+    }
+function TWEAK_THE_SHIT{
     #Create RecoveryPoint
     if ($CheckBox61.Checked){
         wmic /namespace:\\root\default path SystemRestore call Enable C:\
