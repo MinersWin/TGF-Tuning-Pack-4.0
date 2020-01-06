@@ -11,12 +11,12 @@ ___________ __                                    __     ___________            
   |    |   |   Y  \  ___/   / /_/  >  ___/\  ___/|    <   |     \   |  | \/\  ___/ / __ \|    <  \___ \ 
   |____|   |___|  /\___  >  \___  / \___  >\___  >__|_ \  \___  /   |__|    \___  >____  /__|_ \/____  >
                 \/     \/  /_____/      \/     \/     \/      \/                \/     \/     \/     \/
-                ___________           .__                                      __        _____    _______   
-                \__    ___/_ __  ____ |__| ____    ____   ___________    ____ |  | __   /  |  |   \   _  \  
-                  |    | |  |  \/    \|  |/    \  / ___\  \____ \__  \ _/ ___\|  |/ /  /   |  |_  /  /_\  \ 
-                  |    | |  |  /   |  \  |   |  \/ /_/  > |  |_> > __ \\  \___|    <  /    ^   /  \  \_/   \
-                  |____| |____/|___|  /__|___|  /\___  /  |   __(____  /\___  >__|_ \ \____   | /\ \_____  /
-                                    \/        \//_____/   |__|       \/     \/     \/      |__| \/       \/                                                                                
+	  ___________           .__                                      __        _____     ____ 
+	  \__    ___/_ __  ____ |__| ____    ____   ___________    ____ |  | __   /  |  |   /_   |
+		|    | |  |  \/    \|  |/    \  / ___\  \____ \__  \ _/ ___\|  |/ /  /   |  |_   |   |
+		|    | |  |  /   |  \  |   |  \/ /_/  > |  |_> > __ \\  \___|    <  /    ^   /   |   |
+		|____| |____/|___|  /__|___|  /\___  /  |   __(____  /\___  >__|_ \ \____   | /\ |   |
+						  \/        \//_____/   |__|       \/     \/     \/      |__| \/ |___|                                                                                    
  _             __  __ _                  __          ___       
 | |           |  \/  (_)                 \ \        / (_)      
 | |__  _   _  | \  / |_ _ __   ___ _ __ __\ \  /\  / / _ _ __  
@@ -25,7 +25,7 @@ ___________ __                                    __     ___________            
 |_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
         __/ |                                                  
        |___/     
-The Geek Freaks Tuning Pack 4.0 Update 16.12.2019
+The Geek Freaks Tuning Pack 4.1 Update 06.01.2020
 Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
@@ -35,9 +35,9 @@ Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzun
 ##################################################################################################################################################################################
 $Language = Get-Content .\Config\Language.txt
 if ($Language -eq "de-DE"){
-[System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr frühe Alpha Version. Die Tweaks sind zum Teil noch nicht funktionsfähig.","The Geek Freaks Tuning Pack 4.0 by MinersWin",'OK','Error')
+[System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr frühe Alpha Version. Die Tweaks sind zum Teil noch nicht funktionsfähig.","The Geek Freaks Tuning Pack 4.1 by MinersWin",'OK','Error')
 } else {
-[System.Windows.Forms.MessageBox]::Show("This is a very early alpha version. Some of the tweaks are not yet functional.","The Geek Freaks Tuning Pack 4.0 by MinersWin",'OK','Error')
+[System.Windows.Forms.MessageBox]::Show("This is a very early alpha version. Some of the tweaks are not yet functional.","The Geek Freaks Tuning Pack 4.1 by MinersWin",'OK','Error')
 }
 .\TestUpdate.ps1
 $Form1.Text = $Config.Application.Name
@@ -276,9 +276,9 @@ function Accept-Everything{
         $TabControl1.SelectedTab = $TabPage1
     } else {
         if ($Language -eq "de-DE"){
-            [System.Windows.Forms.MessageBox]::Show("Bitte Akzeptieren","TGF Tuning Pack 4.0","OK","Error")
+            [System.Windows.Forms.MessageBox]::Show("Bitte Akzeptieren","TGF Tuning Pack 4.1","OK","Error")
         } else {
-            [System.Windows.Forms.MessageBox]::Show("Please Accept","TGF Tuning Pack 4.0","OK","Error")
+            [System.Windows.Forms.MessageBox]::Show("Please Accept","TGF Tuning Pack 4.1","OK","Error")
         }
     }
 }
@@ -343,10 +343,10 @@ $Label12.Text = "The Tweaks havent started yet. Click on 'Make FPS Rain!' to Sta
 $Button16.Add_Click{(Make-Tweaks)}
 function Make-Tweaks{
     if ($Language -eq "de-DE"){
-        Write-Host "Tuning Pack 4.0 by MinersWin: https://tuning-pack.de/"
+        Write-Host "Tuning Pack 4.1 by MinersWin: https://tuning-pack.de/"
         $msgBoxInput = [System.Windows.Forms.MessageBox]::Show("Tweaks werden ausgeführt. Bitte vor dem Bestätigen nochmal alle Tweaks Überprüfen. Hierbei kann einiges Kaputt gehen.","Tuning Pack Sicherheitswarnung",'YesNoCancel','Error')
         } else {
-        Write-Host "Tuning Pack 4.0 by MinersWin: https://tuning-pack.de/"
+        Write-Host "Tuning Pack 4.1 by MinersWin: https://tuning-pack.de/"
         $msgBoxInput = [System.Windows.Forms.MessageBox]::Show("Tweaks are in progress. Please check all tweaks again before confirming. This can break some things.","Tuning Pack Security Warning",'YesNoCancel','Error')
         }
         switch  ($msgBoxInput) {
@@ -373,9 +373,9 @@ function TWEAK_THE_SHIT{
     }
     if ($CheckBox62.Checked){
         if ($Language -eq "de-DE"){
-            $Backup = [System.Windows.Forms.MessageBox]::Show("Ein Backup der Registry wird ausgeführt. Eine Normale Windows Registry ist im Normalfall ca. 500mb Groß. Das Backup wird unter C:\RegBack\ Gespeichert.","TGF Tuning Pack 4.0 by MinersWin",'OK','Error')
+            $Backup = [System.Windows.Forms.MessageBox]::Show("Ein Backup der Registry wird ausgeführt. Eine Normale Windows Registry ist im Normalfall ca. 500mb Groß. Das Backup wird unter C:\RegBack\ Gespeichert.","TGF Tuning Pack 4.1 by MinersWin",'OK','Error')
         } else {
-            $Backup = [System.Windows.Forms.MessageBox]::Show("The registry is backed up. A normal Windows registry is usually about 500mb in size. The backup is saved under C:\RegBack\.","TGF Tuning Pack 4.0 by MinersWin",'OK','Error')
+            $Backup = [System.Windows.Forms.MessageBox]::Show("The registry is backed up. A normal Windows registry is usually about 500mb in size. The backup is saved under C:\RegBack\.","TGF Tuning Pack 4.1 by MinersWin",'OK','Error')
         }
         mkdir C:\RegBack\
         reg export HKCR C:\RegBack\HKLM.Reg /y
@@ -1138,7 +1138,7 @@ function TWEAK_THE_SHIT{
 }
 
 #Templates 
-$Button1.Add_Click{([System.Windows.Forms.MessageBox]::Show("Work in Progress!","TGF Tuning Pack 4.0",1))}
+$Button1.Add_Click{([System.Windows.Forms.MessageBox]::Show("Work in Progress!","TGF Tuning Pack 4.1",1))}
 $Button2.Add_Click{(Apply-Template)}
 
 function Apply-Template{
@@ -1179,7 +1179,7 @@ if ($Kill_Process){
 }
 }
 function Kill-Process{
-    [System.Windows.Forms.MessageBox]::Show("Prozesse werden beendet","TGF Tuning Pack 4.0",1)
+    [System.Windows.Forms.MessageBox]::Show("Prozesse werden beendet","TGF Tuning Pack 4.1",1)
     Write-Output "Prozesse werden beendet."
     & '.\Scripts\ProcessKiller-Tuning-Pack.bat'
     Write-Output "Die Prozesse wurden beendet"
@@ -1301,7 +1301,7 @@ function Test_USBDeviceCleanup{
 #Cleanup Duplicate Downloads
 ###FIXME###
 
-#$Button24.Add_Click{([System.Windows.Forms.MessageBox]::Show("WIP","TGF Tuning Pack 4.0"1))}
+#$Button24.Add_Click{([System.Windows.Forms.MessageBox]::Show("WIP","TGF Tuning Pack 4.1"1))}
 
 #Clear Windows event logs
 $Button25.ForeColor = 'GREEN'
@@ -1351,12 +1351,12 @@ function Sophos{
 #MSI installer Cleanup
 $Button11.Add_Click{(Installer-Cleanup)}
 function Installer-Cleanup{
-    [System.Windows.Forms.MessageBox]::Show("Diese funktion ist momentan nicht verfügbar, Microsoft hat dieses Feature eingestellt. Ich arbeite momentan an einer Alternative","TGF Tuning Pack 4.0 by MinersWin",1)
+    [System.Windows.Forms.MessageBox]::Show("Diese funktion ist momentan nicht verfügbar, Microsoft hat dieses Feature eingestellt. Ich arbeite momentan an einer Alternative","TGF Tuning Pack 4.1 by MinersWin",1)
 }
 #System File Checker
 $Button12.Add_Click{(System-File-Checker)}
 function System-File-Checker{
-    [System.Windows.Forms.MessageBox]::Show("Es wird sich gleich ein Konsolenfenster öffnen, in welchem ein Windows Image heruntergeladen wird, mit welchem das System auf Fehler geprüft wird. Das Image wird nach Abschluss des Vorgangs wieder gelöscht. Zum Bestätigen OK drücken","TGF Tuning Pack 4.0 by MinersWin",1)    
+    [System.Windows.Forms.MessageBox]::Show("Es wird sich gleich ein Konsolenfenster öffnen, in welchem ein Windows Image heruntergeladen wird, mit welchem das System auf Fehler geprüft wird. Das Image wird nach Abschluss des Vorgangs wieder gelöscht. Zum Bestätigen OK drücken","TGF Tuning Pack 4.1 by MinersWin",1)    
     & '.\Tools\System File Checker\Check.bat'
 }
 #DISM image check and repair
@@ -1455,7 +1455,7 @@ function About {
     $aboutForm.ControlBox    = $false
     $aboutForm.ShowInTaskBar = $false
     $aboutForm.StartPosition = "CenterParent"
-    $aboutForm.Text          = "The Geek Freaks Tuning Pack 4.0"
+    $aboutForm.Text          = "The Geek Freaks Tuning Pack 4.1"
     $aboutForm.Add_Load($aboutForm_Load)
     # About PictureBox
     $icon = [System.Drawing.Bitmap]::FromFile('.\Images\favicon.ico')
@@ -1468,7 +1468,7 @@ function About {
     $aboutFormNameLabel.Font     = New-Object Drawing.Font("Microsoft Sans Serif", 9, [System.Drawing.FontStyle]::Bold)
     $aboutFormNameLabel.Location = "110, 20"
     $aboutFormNameLabel.Size     = "200, 18"
-    $aboutFormNameLabel.Text     = "The Geek Freaks Tuning Pack 4.0"
+    $aboutFormNameLabel.Text     = "The Geek Freaks Tuning Pack 4.1"
     $aboutForm.Controls.Add($aboutFormNameLabel)
     # About Text Label
     $aboutFormText.Location = "100, 40"
