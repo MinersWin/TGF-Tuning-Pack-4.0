@@ -4,7 +4,7 @@ Add-Type -AssemblyName System.Windows.Forms
 . (Join-Path $PSScriptRoot 'GUI.designer.ps1')
 $tooltip = New-Object System.Windows.Forms.ToolTip
 $Config = Import-LocalizedData -BaseDirectory .\Config\ -FileName Config.psd1
-Write-Output "
+Write-Host "
 ___________ __                                    __     ___________                      __            
 \__    ___/|  |__   ____      ____   ____   ____ |  | __ \_   _____/______   ____ _____  |  | __  ______
   |    |   |  |  \_/ __ \    / ___\_/ __ \_/ __ \|  |/ /  |    __) \_  __ \_/ __ \\__  \ |  |/ / /  ___/
@@ -25,7 +25,7 @@ ___________ __                                    __     ___________            
 |_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
         __/ |                                                  
        |___/     
-The Geek Freaks Tuning Pack 4.1 Update 06.01.2020
+The Geek Freaks Tuning Pack 4.1 Update 10.01.2020
 Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
@@ -248,7 +248,7 @@ $Button44.Add_Click{(start cmd.exe 'cmd /c "echo off | clip"')}
 #System Propertys Performance
 $Button15.Add_Click{(start SystemPropertiesPerformance.exe)}
 #Download Tools
-$Button5.Add_Click({Start-Process PowerShell.exe "Write-Output 'Der Download Startet, dies kann je nach Internetgeschwindigkeit ca. 5-10 Minuten dauern. (500MB)'; Write-Output 'The download starts, this may take about 5-10 minutes, depending on the internet speed. (500MB)'; & '.\Download all Tools.ps1'"})
+$Button5.Add_Click({Start-Process PowerShell.exe "Write-Host 'Der Download Startet, dies kann je nach Internetgeschwindigkeit ca. 5-10 Minuten dauern. (500MB)'; Write-Host 'The download starts, this may take about 5-10 minutes, depending on the internet speed. (500MB)'; & '.\Download all Tools.ps1'"})
 
 #Accept the Risk
 $Button18.Add_Click{(Accept-Everything)}
@@ -300,7 +300,7 @@ $Button14.Add_Click{(Make-German)}
 
 function Make-German{
     del .\Config\Language.txt
-    Write-Output "de-DE" >> .\Config\Language.txt
+    Write-Host "de-DE" >> .\Config\Language.txt
     .\Update-German.ps1
 }
 
@@ -308,7 +308,7 @@ function Make-German{
 $Button13.Add_Click{(Make-English)}
 function Make-English{
     del .\Config\Language.txt
-    Write-Output "en-EN" >> .\Config\Language.txt
+    Write-Host "en-EN" >> .\Config\Language.txt
     .\Update-Englisch.ps1
 }
 
@@ -352,8 +352,8 @@ function Make-Tweaks{
         switch  ($msgBoxInput) {
     
             'Yes' {
-                Write-Output "YES" 
-                Write-Output "Tweaks werden ausgeführt"
+                Write-Host "YES" 
+                Write-Host "Tweaks werden ausgeführt"
                 TWEAK_THE_SHIT
             }
             'No' {
@@ -366,10 +366,10 @@ function TWEAK_THE_SHIT{
     #Create RecoveryPoint
     if ($CheckBox61.Checked){
         wmic /namespace:\\root\default path SystemRestore call Enable C:\
-        Write-Output "Die erstellung von Wiederherstellungspunkten wurde aktiviert"
+        Write-Host "Die erstellung von Wiederherstellungspunkten wurde aktiviert"
         Checkpoint-Computer -Description 'TGF_Tuning_Pack_4' -RestorePointType MODIFY_SETTINGS
         $Date = Get-Date
-        Write-Output "Der Wiederherstellungspunkt wurde erstellt. Er trägt den Namen: $($Date) TGF Tuning Pack"
+        Write-Host "Der Wiederherstellungspunkt wurde erstellt. Er trägt den Namen: $($Date) TGF Tuning Pack"
     }
     if ($CheckBox62.Checked){
         if ($Language -eq "de-DE"){
@@ -392,7 +392,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 1
         $Label11.Text = "1%"
         $Label12.Text = "The registry entry is added. The icon of 'This Computer' is now visible on the desktop."
-        Write-Output "The registry entry is added. The icon of 'This Computer' is now visible on the desktop."
+        Write-Host "The registry entry is added. The icon of 'This Computer' is now visible on the desktop."
     }
     #Show Network Icon on Desktop
     if ($CheckBox2.Checked){
@@ -400,7 +400,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 1
         $Label11.Text = "1%"
         $Label12.Text = "The registry entry is added. The icon of 'Network' is now visible on the desktop."
-        Write-Output "The registry entry is added. The icon of 'Network' is now visible on the desktop."
+        Write-Host "The registry entry is added. The icon of 'Network' is now visible on the desktop."
     }
     #Classic vertical Icon spacing
     if ($CheckBox3.Checked){
@@ -408,7 +408,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 2
         $Label11.Text = "2%"
         $Label12.Text = "The default vertical icon spacing for the desktop is now set."
-        Write-Output "The default vertical icon spacing for the desktop is now set."
+        Write-Host "The default vertical icon spacing for the desktop is now set."
     }
     #Enable the ability to lock and unlock the taskbar
     if ($CheckBox4.Checked){
@@ -416,275 +416,245 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 2
         $Label11.Text = "2%"
         $Label12.Text = "Enable the Ability to lock and unlock the Taskbar."
-        Write-Output "Enable the Ability to lock and unlock the Taskbar."
+        Write-Host "Enable the Ability to lock and unlock the Taskbar."
     }
     if ($CheckBox5.Checked){
         reg import .\Scripts\Registry\Enable_Always_show_all_notification_area_icons_for_all_users.reg
         $ProgressBar1.Value = 3
         $Label11.Text = "3%"
         $Label12.Text = "Always show all Taskbar Icons and Notifications and restart explorer.exe"
-        Write-Output "Always show all Taskbar Icons and Notifications and restart explorer.exe"
+        Write-Host "Always show all Taskbar Icons and Notifications and restart explorer.exe"
     }
     if ($CheckBox6.Checked){
         reg import .\Scripts\Registry\Change-Delay-Time-Show-Taskbar-Thumbnails-to-10-sec.reg
         $ProgressBar1.Value = 3
         $Label11.Text = "3%"
         $Label12.Text = "Change the Time to Show Taskbar Thumbnails to 10 sec."
-        Write-Output "Change the Time to Show Taskbar Thumbnails to 10 sec."
+        Write-Host "Change the Time to Show Taskbar Thumbnails to 10 sec."
     }
     if ($CheckBox7.Checked){
         reg import .\Scripts\Registry\Enable_Control_Panel_and_Settings.reg
         $ProgressBar1.Value = 4
         $Label11.Text = "4%"
         $Label12.Text = "Enable Classic Control Panel View."
-        Write-Output "Enable Classic Control Panel View."
+        Write-Host "Enable Classic Control Panel View."
     }
     if ($CheckBox8.Checked){
         reg import .\Scripts\Registry\Permanently-disabling-sticky-keys.reg
         $ProgressBar1.Value = 4
         $Label11.Text = "4%"
         $Label12.Text = "Turn of Sticky Keys."
-        Write-Output "Turn of Sticky Keys."
+        Write-Host "Turn of Sticky Keys."
     }
     if ($CheckBox9.Checked){
         reg import .\Scripts\Registry\Permanently-disabling-sticky-keys.reg
         $ProgressBar1.Value = 5
         $Label11.Text = "5%"
         $Label12.Text = "Turn of Filter Keys."
-        Write-Output "Turn of Filter Keys."
+        Write-Host "Turn of Filter Keys."
     }
     if ($CheckBox10.Checked){
         reg import .\Scripts\Registry\Disable_Hibernate.reg
         $ProgressBar1.Value = 5
         $Label11.Text = "5%"
         $Label12.Text = "Disable Hibernation."
-        Write-Output "Disable Hibernation."
+        Write-Host "Disable Hibernation."
     }
     if ($CheckBox11.Checked){
         reg import .\Scripts\Registry\Turn_ON_underline_keyboard_shortcuts_in_menus.reg
         $ProgressBar1.Value = 6
         $Label11.Text = "6%"
         $Label12.Text = "Turned On the Underline of KeyBoard Shortcuts in Menus."
-        Write-Output "Turned On the Underline of KeyBoard Shortcuts in Menus."
+        Write-Host "Turned On the Underline of KeyBoard Shortcuts in Menus."
     }
     if ($CheckBox12.Checked){
         .\Scripts\Registry\Show_Known_Extensions_for_File_Types.vbs
         $ProgressBar1.Value = 6
         $Label11.Text = "6%"
         $Label12.Text = "Show Known File Extensions for File Types."
-        Write-Output "Show Known File Extensions for File Types"
+        Write-Host "Show Known File Extensions for File Types"
     }
     if ($CheckBox13.Checked){
         reg import .\Scripts\Registry\hide-ntfs-compression-blue-double-arrow-icon-overlay.reg
         $ProgressBar1.Value = 7
         $Label11.Text = "7%"
         $Label12.Text = "Hide indication for compressed NTFS Files"
-        Write-Output "Hide indication for compressed NTFS Files"
+        Write-Host "Hide indication for compressed NTFS Files"
     }
     if ($CheckBox14.Checked){
-        reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v Hidden /t REG_DWORD /d 1 /f
+        .\Scripts\Registry\Show_every_Hidden_File_in_Windows_Explorer.bat
         $ProgressBar1.Value = 7
         $Label11.Text = "7%"
         $Label12.Text = "Show every Hidden File in Windows Explorer"
-        Write-Output = "Show every Hidden File in Windows Explorer"
+        Write-Host "Show every Hidden File in Windows Explorer"
     }
     if ($CheckBox15.Checked){
-        reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ShowSuperHidden" /t REG_DWORD /d 1 /f
+        .\Scripts\Registry\Show_Super_Hidden_Files_in_Windows_Explorer.bat
         $ProgressBar1.Value = 8
         $Label11.Text = "8%"
         $Label12.Text = "Show Super Hidden Files in Windows Explorer"
-        Write-Output = "Show Super Hidden Files in Windows Explorer"
+        Write-Host "Show Super Hidden Files in Windows Explorer"
     }
     if ($CheckBox17.Checked){
-        reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\utilman.exe" /v "Debugger" /t REG_SZ /d "cmd.exe" /f
+        & '.\Scripts\Registry\Replace Utilman_with_CMD.bat'
         $ProgressBar1.Value = 8
         $Label11.Text = "8%"
         $Label12.Text = "Replace Utilman with CMD"
-        Write-Output = "Replace Utilman with CMD"
+        Write-Host "Replace Utilman with CMD"
     }
     if ($CheckBox18.Checked){
-        reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\0cc5b647-c1df-4637-891a-dec35c318583" /v "Attributes" /t REG_DWORD /d 0 /f
+        .\Scripts\Registry\Add_the_option_Processor_performance_core_parking_min_core.bat
         $ProgressBar1.Value = 9
         $Label11.Text = "9%"
         $Label12.Text = "Add the option Processor performance core parking min core."
-        Write-Output = "Add the option Processor performance core parking min core."
+        Write-Host "Add the option Processor performance core parking min core."
     }
     if ($CheckBox19.Checked){
-        reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\0cc5b647-c1df-4637-891a-dec35c318583" /v "ValueMax" /t REG_DWORD /d 0 /f
+        .\Scripts\Registry\Disable_CPU_Core_Parking.bat
         $ProgressBar1.Value = 9
         $Label11.Text = "9%"
         $Label12.Text = "Disable CPU Core Parking"
-        Write-Output = "Disable CPU Core Parking"
+        Write-Host "Disable CPU Core Parking"
     }
     if ($CheckBox20.Checked){
-        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "DisableLogonBackgroundImage" /t REG_DWORD /d 1 /f
+        .\Scripts\Registry\Remove_Logon_Scree_wallpaper-background.bat
         $ProgressBar1.Value = 10
         $Label11.Text = "10%"
         $Label12.Text = "Remove Logon screen wallpaper/background. Will use solid color instead (Accent color)"
-        Write-Output = "Remove Logon screen wallpaper/background. Will use solid color instead (Accent color)"
+        Write-Host "Remove Logon screen wallpaper/background. Will use solid color instead (Accent color)"
     }
     if ($CheckBox21.Checked){
-        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization" /v "NoLockScreen" /t REG_DWORD /d 1 /f
+        .\Scripts\Registry\Disable_Lockscreen.bat
         $ProgressBar1.Value = 10
         $Label11.Text = "10%"
         $Label12.Text = "Disable Lockscreen"
-        Write-Output = "Disable Lockscreen"
+        Write-Host "Disable Lockscreen"
     }
     if ($CheckBox22.Checked){
-        reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v NoPreviousVersionsPage /t REG_DWORD /d 1 /f
+        .\Scripts\Registry\Remove_versioning_tab_from_properties.bat
         $ProgressBar1.Value = 11
         $Label11.Text = "11%"
         $Label12.Text = "Remove versioning tab from properties"
-        Write-Output = "Remove versioning tab from properties"
+        Write-Host "Remove versioning tab from properties"
     }
     if ($CheckBox23.Checked){
-        reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_TrackDocs" /t REG_DWORD /d 0 /f
+        .\Scripts\Registry\Disable_jump_lists.bat
         $ProgressBar1.Value = 11
         $Label11.Text = "11%"
         $Label12.Text = "Disable jump lists"
-        Write-Output = "Disable jump lists"
+        Write-Host "Disable jump lists"
     }
     if ($CheckBox24.Checked){
-        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting" /v "Disabled" /t REG_DWORD /d 1 /f
+        .\Scripts\Registry\Disable_Windows_Error_Reporting.bat
         $ProgressBar1.Value = 12
         $Label11.Text = "12%"
         $Label12.Text = "Disable Windows Error Reporting"
-        Write-Output = "Disable Windows Error Reporting"
+        Write-Host "Disable Windows Error Reporting"
     }
     if ($CheckBox25.Checked){
-        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "AllowCortana" /t REG_DWORD /d 0 /f
+        .\Scripts\Registry\Disable_Cortana.bat
         $ProgressBar1.Value = 12
         $Label11.Text = "12%"
         $Label12.Text = "Disable Cortana (Speech Search Assistant, which also sends information to Microsoft"
-        Write-Output = "Disable Cortana (Speech Search Assistant, which also sends information to Microsoft"
+        Write-Host "Disable Cortana (Speech Search Assistant, which also sends information to Microsoft"
     }
     if ($CheckBox26.Checked){
-        reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "SearchboxTaskbarMode" /t REG_DWORD /d 0 /f
+        .\Scripts\Registry\Hide_Search_Box_from_taskbar.bat
         $ProgressBar1.Value = 13
         $Label11.Text = "13%"
         $Label12.Text = "Hide the search box from taskbar. You can still search by pressing the win key and start typing what you are looking for."
-        Write-Output = "Hide the search box from taskbar. You can still search by pressing the win key and start typing what you are looking for"
+        Write-Host "Hide the search box from taskbar. You can still search by pressing the win key and start typing what you are looking for"
     }
     if ($CheckBox27.Checked){
-        reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_TrackDocs" /t REG_DWORD /d 0 /f
+        .\Scripts\Registry\Disable_MRU_lists.bat
         $ProgressBar1.Value = 13
         $Label11.Text = "13%"
         $Label12.Text = "Disable MRU lists (jump lists) of XAML apps in Start Menu"
-        Write-Output = "Disable MRU lists (jump lists) of XAML apps in Start Menu"
+        Write-Host "Disable MRU lists (jump lists) of XAML apps in Start Menu"
     }
     if ($CheckBox29.Checked){
-        reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Start_TrackDocs" /t REG_DWORD /d 0 /f
+        .\Scripts\Registry\Disable_MRU_Lists_Startmenu.bat
         $ProgressBar1.Value = 14
         $Label11.Text = "14%"
         $Label12.Text = "Disable MRU lists (jump lists) of XAML apps in Start Menu"
-        Write-Output = "Disable MRU lists (jump lists) of XAML apps in Start Menu"
+        Write-Host "Disable MRU lists (jump lists) of XAML apps in Start Menu"
     }
     if ($CheckBox30.Checked){
-        reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo" /v "Enabled" /t REG_DWORD /d 0 /f
+        .\Scripts\Registry\Disable_Creation_of_an_Advertising_ID.bat
         $ProgressBar1.Value = 14
         $Label11.Text = "14%"
         $Label12.Text = "Disable creation of an Advertising ID"
-        Write-Output = "Disable creation of an Advertising ID"
+        Write-Host "Disable creation of an Advertising ID"
     }
     if ($CheckBox31.Checked){
-        reg delete "HKEY_CLASSES_ROOT\exefile\shellex\ContextMenuHandlers\PintoStartScreen" /f
-        reg delete "HKEY_CLASSES_ROOT\Folder\shellex\ContextMenuHandlers\PintoStartScreen" /f
-        reg delete "HKEY_CLASSES_ROOT\mscfile\shellex\ContextMenuHandlers\PintoStartScreen" /f
+        .\Scripts\Registry\Remove_Pin_to_Start.bat
         $ProgressBar1.Value = 15
         $Label11.Text = "15%"
         $Label12.Text = "Remove Pin to start"
-        Write-Output = "Remove Pin to start"
+        Write-Host "Remove Pin to start"
     }
     if ($CheckBox32.Checked){
-        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "AllowCortana" /t REG_DWORD /d 0 /f
-        reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "CortanaEnabled" /t REG_DWORD /d 0 /f
-        reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "SearchboxTaskbarMode" /t REG_DWORD /d 0 /f
-        reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "BingSearchEnabled" /t REG_DWORD /d 0 /f
+        .\Scripts\Registry\Disable_Cortana_Bing_Search_and_Searchbar.bat
         $ProgressBar1.Value = 15
         $Label11.Text = "15%"
         $Label12.Text = "Disable Cortana, Bing Search and Searchbar"
-        Write-Output = "Disable Cortana, Bing Search and Searchbar"
+        Write-Host "Disable Cortana, Bing Search and Searchbar"
     }
     if ($CheckBox33.Checked){
-        reg add "HKCU\SOFTWARE\Microsoft\Windows\Windows Error Reporting" /v "DontShowUI" /t REG_DWORD /d 1 /f
-        reg add "HKLM\SOFTWARE\Microsoft\Windows\Windows Error Reporting" /v "DontShowUI" /t REG_DWORD /d 1 /f
+        .\Scripts\Registry\Turn_off_the_Error_Dialog.bat
         $ProgressBar1.Value = 16
         $Label11.Text = "16%"
         $Label12.Text = "Turn off the Error Dialog"
-        Write-Output = "Turn off the Error Dialog"
+        Write-Host "Turn off the Error Dialog"
     }
     if ($CheckBox34.Checked){
-        reg add "HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters" /v "AutoShareWks" /t REG_DWORD /d 0 /f
-        reg add "HKLM\System\CurrentControlSet\Services\LanmanServer\Parameters" /v "AutoShareServer" /t REG_DWORD /d 0 /f
+        .\Scripts\Registry\Disable_Administrative_Shares.bat
         $ProgressBar1.Value = 16
         $Label11.Text = "16%"
         $Label12.Text = "Disable Administrative shares"
-        Write-Output = "Disable Administrative shares"
+        Write-Host "Disable Administrative shares"
     }
     if ($CheckBox35.Checked){
-    #    %SystemRoot%\System32\setaclx64 -on "HKEY_CLASSES_ROOT\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell" -ot reg -actn setowner -ownr "n:Administrators" -rec yes
-    #    %SystemRoot%\System32\setaclx64 -on "HKEY_CLASSES_ROOT\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell" -ot reg -actn ace -ace "n:Administrators;p:full" -rec yes
-    #    reg add "HKEY_CLASSES_ROOT\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\Reboot to Recovery" /v "Icon" /t REG_SZ /d "%SystemRoot%\System32\imageres.dll,-110" /f
-    #    reg add "HKEY_CLASSES_ROOT\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\shell\Reboot to Recovery\command" /ve /d "shutdown.exe -r -o -f -t 00" /f
+        .\Scripts\Registry\Reboot_to_Recovery.bat
         $ProgressBar1.Value = 17
         $Label11.Text = "17%"
         $Label12.Text = "Add Reboot to Recovery to right-click menu of This PC"
-        Write-Output = "Add Reboot to Recovery to right-click menu of This PC"
+        Write-Host "Add Reboot to Recovery to right-click menu of This PC"
     }
     if ($CheckBox36.Checked){
-        reg add "HKCU\Control Panel\International" /v "iMeasure" /t REG_SZ /d "0" /f
-        reg add "HKCU\Control Panel\International" /v "iNegCurr" /t REG_SZ /d "1" /f
-        reg add "HKCU\Control Panel\International" /v "iTime" /t REG_SZ /d "1" /f
-        reg add "HKCU\Control Panel\International" /v "sShortDate" /t REG_SZ /d "yyyy/MM/dd" /f
-        reg add "HKCU\Control Panel\International" /v "sShortTime" /t REG_SZ /d "HH:mm" /f
-        reg add "HKCU\Control Panel\International" /v "sTimeFormat" /t REG_SZ /d "H:mm:ss" /f
+        .\Scripts\Registry\Change_Clock_and_Date_format_to_24H_metric.bat
         $ProgressBar1.Value = 17
         $Label11.Text = "17%"
         $Label12.Text = "Change Clock and Date formats of current user to 24H, metric (Sign out required to see changes)"
-        Write-Output = "Change Clock and Date formats of current user to 24H, metric (Sign out required to see changes)"
+        Write-Host "Change Clock and Date formats of current user to 24H, metric (Sign out required to see changes)"
     }
     if ($CheckBox37.Checked){
-        reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /v "AllowAllTrustedApps" /t REG_DWORD /d 1 /f
-        reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /v "AllowDevelopmentWithoutDevLicense" /t REG_DWORD /d 1 /f
+        .\Scripts\Registry\Enable_Developer_Mode.bat
         $ProgressBar1.Value = 18
         $Label11.Text = "18%"
         $Label12.Text = "Enable Developer Mode (enables you to run XAML apps you develop in visual Studio which havent been certified yet)"
-        Write-Output = "Enable Developer Mode (enables you to run XAML apps you develop in Visual Studio which havent been certified yet)"
+        Write-Host "Enable Developer Mode (enables you to run XAML apps you develop in Visual Studio which havent been certified yet)"
     }
     if ($CheckBox38.Checked){
-        reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata" /v PreventDeviceMetadataFromNetwork /t REG_DWORD /d 1 /f
-        reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d 0 /f
-        reg add "HKLM\SOFTWARE\Policies\Microsoft\MRT" /v DontOfferThroughWUAU /t REG_DWORD /d 1 /f
-        reg add "HKLM\SOFTWARE\Policies\Microsoft\SQMClient\Windows" /v "CEIPEnable" /t REG_DWORD /d 0 /f
-        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat" /v "AITEnable" /t REG_DWORD /d 0 /f
-        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat" /v "DisableUAR" /t REG_DWORD /d 1 /f
-        reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d 0 /f
-        reg add "HKLM\COMPONENTS\DerivedData\Components\amd64_microsoft-windows-c..lemetry.lib.cortana_31bf3856ad364e35_10.0.10240.16384_none_40ba2ec3d03bceb0" /v "f!dss-winrt-telemetry.js" /t REG_DWORD /d 0 /f
-        reg add "HKLM\COMPONENTS\DerivedData\Components\amd64_microsoft-windows-c..lemetry.lib.cortana_31bf3856ad364e35_10.0.10240.16384_none_40ba2ec3d03bceb0" /v "f!proactive-telemetry.js" /t REG_DWORD /d 0 /f
-        reg add "HKLM\COMPONENTS\DerivedData\Components\amd64_microsoft-windows-c..lemetry.lib.cortana_31bf3856ad364e35_10.0.10240.16384_none_40ba2ec3d03bceb0" /v "f!proactive-telemetry-event_8ac43a41e5030538" /t REG_DWORD /d 0 /f
-        reg add "HKLM\COMPONENTS\DerivedData\Components\amd64_microsoft-windows-c..lemetry.lib.cortana_31bf3856ad364e35_10.0.10240.16384_none_40ba2ec3d03bceb0" /v "f!proactive-telemetry-inter_58073761d33f144b" /t REG_DWORD /d 0 /f
-
-        reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger\AutoLogger-Diagtrack-Listener" /v "Start" /t REG_DWORD /d 0 /f
-        reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger\SQMLogger" /v "Start" /t REG_DWORD /d 0 /f
-        reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Microsoft-Windows-Application-Experience/Program-Telemetry" /v "Enabled" /t REG_DWORD /d 0 /f
+        .\Scripts\Registry\Remove_Telemetry_and_Data_Collection.bat
         $ProgressBar1.Value = 18
         $Label11.Text = "18%"
         $Label12.Text = "Remove telemetry and data collection"
-        Write-Output = "Remove telemetry and data collection"
+        Write-Host "Remove telemetry and data collection"
     }
     if ($CheckBox28.Checked){
-        reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "LaunchTo" /t REG_DWORD /d 1 /f
+        .\Scripts\Registry\Set_Windows_Explorer_to_Start_on_This_PC.bat
         $ProgressBar1.Value = 19
         $Label11.Text = "19%"
         $Label12.Text = "Set Windows Explorer to start on This PC instead of Quick Access"
-        Write-Output = "Set Windows Explorer to start on This PC instead of Quick Access"
+        Write-Host "Set Windows Explorer to start on This PC instead of Quick Access"
     }
     if ($CheckBox16.Checked){
-        reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoRecentDocsHistory" /t REG_DWORD /d 1 /f
+        .\Scripts\Registry\Prevent_Both_Windows_and_Office_from_creating_LNK_files.bat
         $ProgressBar1.Value = 19
         $Label11.Text = "19%"
         $Label12.Text = "Prevent both Windows and Office from creating LNK files in the Recents folder"
-        Write-Output = "Prevent both Windows and Office from creating LNK files in the Recent folder"
+        Write-Host "Prevent both Windows and Office from creating LNK files in the Recent folder"
     }
     #
     # Removing Services tab
@@ -694,119 +664,119 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 20
         $Label11.Text = "20%"
         $Label12.Text = "Disable Connected User Experiences and Telemetry (To turn off Telemetry and Data collection)"
-        Write-Output = "Disable Connected User Experiences and Telemetry (To turn off Telemetry and Data collection)"
+        Write-Host "Disable Connected User Experiences and Telemetry (To turn off Telemetry and Data collection)"
     }
     if ($CheckBox40.Checked){
         & '.\Scripts\Removing Services\DisableDiagnosticPolicyService.bat'
         $ProgressBar1.Value = 20
         $Label11.Text = "20%"
         $Label12.Text = "Disable Diagnostic Policy Service"
-        Write-Output = "Disable Diagnostic Policy Service"
+        Write-Host "Disable Diagnostic Policy Service"
     }
     if ($CheckBox41.Checked){
         & '.\Scripts\Removing Services\DisableDistributedLinkTrackingClient.bat'
         $ProgressBar1.Value = 21
         $Label11.Text = "21%"
         $Label12.Text = "Disable Distributed Link Tracking Client (If your computer is not connected to any network)"
-        Write-Output = "Disable Distributed Link Tracking Client (If your computer is not connected to any network)"
+        Write-Host "Disable Distributed Link Tracking Client (If your computer is not connected to any network)"
     }
     if ($CheckBox42.Checked){
         & '.\Scripts\Removing Services\DisableWAPPushMessageRoutingService.bat'
         $ProgressBar1.Value = 21
         $Label11.Text = "21%"
         $Label12.Text = "Disable WAP Push Message Routing Service (To turn off Telemetry and Data Collection)"
-        Write-Output = "Disable WAP Push Message Routing Service (To Turn off Telemetry and Data Collection)"
+        Write-Host "Disable WAP Push Message Routing Service (To Turn off Telemetry and Data Collection)"
     }
     if ($CheckBox43.Checked){
         & '.\Scripts\Removing Services\DisableDownloadedMapsManager.bat'
         $ProgressBar1.Value = 22
         $Label11.Text = "22%"
         $Label12.Text = "Disable Downloaded Maps Manager (If you dont user Maps app)"
-        Write-Output = "Disable Downloaded Maps Manager (If you dont use Maps app)"
+        Write-Host "Disable Downloaded Maps Manager (If you dont use Maps app)"
     }
     if ($CheckBox44.Checked){
         & '.\Scripts\Removing Services\DisableIPHelper.bat'
         $ProgressBar1.Value = 22
         $Label11.Text = "22%"
         $Label12.Text = "Disable IP Helper (If you dont use IPv6 connection)"
-        Write-Output = "Disable IP Helper (If you dont use IPv6 connection)"
+        Write-Host "Disable IP Helper (If you dont use IPv6 connection)"
     }
     if ($CheckBox45.Checked){
         & '.\Scripts\Removing Services\DisableProgramCompatibilityAssistantService.bat'
         $ProgressBar1.Value = 23
         $Label11.Text = "23%"
         $Label12.Text = "Disable Program Compatibility Assistant Service"
-        Write-Output = "Disable Program Compatibility Assistant Service"
+        Write-Host "Disable Program Compatibility Assistant Service"
     }
     if ($CheckBox46.Checked){
         & '.\Scripts\Removing Services\DisablePrintSpooler.bat'
         $ProgressBar1.Value = 23
         $Label11.Text = "23%"
         $Label12.Text = "Disable Print Spooler (If you dont have a printer)"
-        Write-Output = "Disable Print Spooler (If you dont have a printer)"
+        Write-Host "Disable Print Spooler (If you dont have a printer)"
     }
     if ($CheckBox47.Checked){
         & '.\Scripts\Removing Services\DisableRemoteRegistry.bat'
         $ProgressBar1.Value = 24
         $Label11.Text = "24%"
         $Label12.Text = "Disable Remote Registry"
-        Write-Output = "Disable Remote Registry"
+        Write-Host "Disable Remote Registry"
     }
     if ($CheckBox48.Checked){
         & '.\Scripts\Removing Services\DisableSecondaryLogon.bat'
         $ProgressBar1.Value = 24
         $Label11.Text = "24%"
         $Label12.Text = "Disable Secondary Logon"
-        Write-Output = "Disable Secondary Logon"
+        Write-Host "Disable Secondary Logon"
     }
     if ($CheckBox49.Checked){
         & '.\Scripts\Removing Services\DisableSecurityCenter.bat'
         $ProgressBar1.Value = 25
         $Label11.Text = "25%"
         $Label12.Text = "Disable Security Center"
-        Write-Output = "Disable Security Center"
+        Write-Host "Disable Security Center"
     }
     if ($CheckBox50.Checked){
         & '.\Scripts\Removing Services\IPNetBIOSHelper.bat'
         $ProgressBar1.Value = 25
         $Label11.Text = "25%"
         $Label12.Text = "Disable TCP/IP NetBIOS Helper (If you are not in a workgroup network)"
-        Write-Output = "Disable TCP/IP NetBIOS Helper (If you are not in a workgroup network)"
+        Write-Host "Disable TCP/IP NetBIOS Helper (If you are not in a workgroup network)"
     }
     if ($CheckBox51.Checked){
         & '.\Scripts\Removing Services\DisableTochKeyboardandHandwritingPanelService.bat'
         $ProgressBar1.Value = 26
         $Label11.Text = "26%"
         $Label12.Text = "Disable Touch Keyboard and Handwriting Panel Service (If you want to use touch keyboard and handwriting features)"
-        Write-Output = "Disable Touch Keyboard and Handwriting Panel Service (If you want to use touch keyboard and handwriting features)"
+        Write-Host "Disable Touch Keyboard and Handwriting Panel Service (If you want to use touch keyboard and handwriting features)"
     }
     if ($CheckBox52.Checked){
         & '.\Scripts\Removing Services\DisableWindowsErrorReportingService.bat'
         $ProgressBar1.Value = 26
         $Label11.Text = "26%"
         $Label12.Text = "Disable Windows Error Reporting Service"
-        Write-Output = "Disable Windows Error Reporting Service"
+        Write-Host "Disable Windows Error Reporting Service"
     }
     if ($CheckBox53.Checked){
         & '.\Scripts\Removing Services\DisableWindowsImageAcquisition.bat'
         $ProgressBar1.Value = 27
         $Label11.Text = "27%"
         $Label12.Text = "Disable Windows Image Acquisition (WIA) (If you dont have a scannner)"
-        Write-Output = "Disable Windows Image Acquisition (WIA) (If you dont have a scanner)"
+        Write-Host "Disable Windows Image Acquisition (WIA) (If you dont have a scanner)"
     }
     if ($CheckBox54.Checked){
         & '.\Scripts\Removing Services\DisableWindowsSearch.bat'
         $ProgressBar1.Value = 27
         $Label11.Text = "27%"
         $Label12.Text = "Disable Windows Search"
-        Write-Output = "Disable Windows Search"
+        Write-Host "Disable Windows Search"
     }
     if ($CheckBox55.Checked){
         & '.\Scripts\Removing Services\DisableTrackingServices.bat'
         $ProgressBar1.Value = 28
         $Label11.Text = "28%"
         $Label12.Text = "Disable Tracking Services"
-        Write-Output = "Disable Tracking Services"
+        Write-Host "Disable Tracking Services"
     }
 
     #Scheduled Tasks
@@ -817,7 +787,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 28
         $Label11.Text = "28%"
         $Label12.Text = "Disable Smart Screen Specific"
-        Write-Output = "Disable SmartScreenSpecific"
+        Write-Host "Disable SmartScreenSpecific"
     }
     #Disable Microsoft Compatibility Appraiser
     if ($CheckBox87.Checked){
@@ -825,7 +795,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 29
         $Label11.Text = "29%"
         $Label12.Text = "Disable Microsoft Compatibility Appraiser"
-        Write-Output = "Disable Microsoft Compatibility Appraiser"
+        Write-Host "Disable Microsoft Compatibility Appraiser"
     }
     #Disable Programm Data Updater
     if ($CheckBox88.Checked){
@@ -833,7 +803,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 29
         $Label11.Text = "29%"
         $Label12.Text = "Disable Program Data Updater"
-        Write-Output = "Disable Program Data Updater"
+        Write-Host "Disable Program Data Updater"
     }
     #Disable Startup App Task
     if ($CheckBox89.Checked){
@@ -841,7 +811,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 30
         $Label11.Text = "30%"
         $Label12.Text = "Disable Startup App Task"
-        Write-Output = "Disable Startup App Task"
+        Write-Host "Disable Startup App Task"
     }
     #Disable Proxy
     if ($CheckBox90.Checked){
@@ -849,7 +819,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 30
         $Label11.Text = "30%"
         $Label12.Text = "Disable Proxy"
-        Write-Output = "Disable Proxy"
+        Write-Host "Disable Proxy"
     }
     #Disable Consolidator
     if ($CheckBox91.Checked){
@@ -857,7 +827,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 31
         $Label11.Text = "31%"
         $Label12.Text = "Disable Consolidator"
-        Write-Output = "Disable Consolidator"
+        Write-Host "Disable Consolidator"
     }
     #Disable Kernel Ceip Task
     if ($CheckBox92.Checked){
@@ -865,7 +835,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 31
         $Label11.Text = "31%"
         $Label12.Text = "Disable Kernel Ceip Task"
-        Write-Output = "Disable Kernel Ceip Task"
+        Write-Host "Disable Kernel Ceip Task"
     }
     #Disable USB Ceip
     if ($CheckBox93.Checked){
@@ -873,7 +843,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 32
         $Label11.Text = "32%"
         $Label12.Text = "Disable USBCeip"
-        Write-Output = "Disable USBCeip"
+        Write-Host "Disable USBCeip"
     }
     #Disable Mirosoft Windows DiskDiagnosticDataCollector
     if ($CheckBox94.Checked){
@@ -881,7 +851,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 33
         $Label11.Text = "33%"
         $Label12.Text = "Disable Microsoft-Windows-DiskDiagnosticDataCollector"
-        Write-Output = "Disable Microsoft-Windows-DiskDiagnostikDataCollector"
+        Write-Host "Disable Microsoft-Windows-DiskDiagnostikDataCollector"
     }
     #Disable File History (mainanance mode)
     if ($CheckBox95.Checked){
@@ -889,7 +859,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 34
         $Label11.Text = "34%"
         $Label12.Text = "Disable File History (maintanace mode)"
-        Write-Output = "Disable File History (maintanace mode)"
+        Write-Host "Disable File History (maintanace mode)"
     }
     #Disable WinSAT
     if ($CheckBox96.Checked){
@@ -897,7 +867,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 34
         $Label11.Text = "34%"
         $Label12.Text = "Disable WinSAT"
-        Write-Output = "Disable WinSAT"
+        Write-Host "Disable WinSAT"
     }
     #Disable Gather Network Info
     if ($CheckBox97.Checked){
@@ -905,7 +875,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 35
         $Label11.Text = "35%"
         $Label12.Text = "Disable Gather Network Info"
-        Write-Output = "Disable Gather Network Info"
+        Write-Host "Disable Gather Network Info"
     }
     #Disable Sqm-Tasks
     if ($CheckBox98.Checked){
@@ -913,7 +883,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 35
         $Label11.Text = "35%"
         $Label12.Text = "Disable Sqm-Tasks"
-        Write-Output = "Disable Sqm-Tasks"
+        Write-Host "Disable Sqm-Tasks"
     }
     #Disable Force Syncronize Time
     if ($CheckBox99.Checked){
@@ -921,7 +891,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 36
         $Label11.Text = "36%"
         $Label12.Text = "Disable Force Syncronize Time"
-        Write-Output = "Disable Force Syncronize Time"
+        Write-Host "Disable Force Syncronize Time"
     }
     #Disable Syncronize Time
     if ($CheckBox100.Checked){
@@ -929,7 +899,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 36
         $Label11.Text = "36%"
         $Label12.Text = "Disable Syncronize Time"
-        Write-Output = "Disable Syncronize Time"
+        Write-Host "Disable Syncronize Time"
     }
     #Disable Queue Reporting
     if ($CheckBox101.Checked){
@@ -937,7 +907,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 37
         $Label11.Text = "37%"
         $Label12.Text = "Disable Queue Reporting"
-        Write-Output = "Disable Queue Reporting"
+        Write-Host "Disable Queue Reporting"
     }
     #Disable Automatic App Update
     if ($CheckBox102.Checked){
@@ -945,7 +915,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 37
         $Label11.Text = "37%"
         $Label12.Text = "Disable Automatic App Update"
-        Write-Output = "Disable Automatic App Update"
+        Write-Host "Disable Automatic App Update"
     }
 
     #Windows Default Apps
@@ -956,7 +926,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 38
         $Label11.Text = "38%"
         $Label12.Text = "Remove 3D-Viewer"
-        Write-Output = "Remove 3D-Viewer"
+        Write-Host "Remove 3D-Viewer"
     }
     #Remove Bing
     if ($CheckBox103.Checked){
@@ -964,7 +934,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 38
         $Label11.Text = "38%"
         $Label12.Text = "Remove Bing"
-        Write-Output = "Remove Bing"
+        Write-Host "Remove Bing"
     }
     #Remove Zune
     if ($CheckBox104.Checked){
@@ -972,7 +942,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 39
         $Label11.Text = "39%"
         $Label12.Text = "Remove Zune (Groove Music)"
-        Write-Output = "Remove Zune (Groove Music)"
+        Write-Host "Remove Zune (Groove Music)"
     }
     #Remove Photo Viewer
     if ($CheckBox105.Checked){
@@ -980,7 +950,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 39
         $Label11.Text = "39%"
         $Label12.Text = "Remove Photo Viewer"
-        Write-Output = "Remove Photo Viewer"
+        Write-Host "Remove Photo Viewer"
     }
     #Remove Windows Insider
     if ($CheckBox106.Checked){
@@ -988,7 +958,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 40
         $Label11.Text = "40%"
         $Label12.Text = "Remove Windows Community"
-        Write-Output = "Remove Windows Community"
+        Write-Host "Remove Windows Community"
     }
     #Remove Solitare
     if ($CheckBox107.Checked){
@@ -996,7 +966,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 40
         $Label11.Text = "40%"
         $Label12.Text = "Remove Solitare"
-        Write-Output = "Remove Solitare"
+        Write-Host "Remove Solitare"
     }
     #Remove Phone
     if ($CheckBox108.Checked){
@@ -1004,7 +974,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 41
         $Label11.Text = "41%"
         $Label12.Text = "Remove Phone"
-        Write-Output = "Remove Phone"
+        Write-Host "Remove Phone"
     }
     #Remove Soundrecorder
     if ($CheckBox109.Checked){
@@ -1012,7 +982,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 41
         $Label11.Text = "41%"
         $Label12.Text = "Remove Soundrecorder"
-        Write-Output = "Remove Soundrecorder"
+        Write-Host "Remove Soundrecorder"
     }
     #Remove Camera
     if ($CheckBox110.Checked){
@@ -1020,7 +990,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 42
         $Label11.Text = "42%"
         $Label12.Text = "Remove Camera"
-        Write-Output = "Remove Camera"
+        Write-Host "Remove Camera"
     }
     #Remove Microsoft People
     if ($CheckBox111.Checked){
@@ -1028,7 +998,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 42
         $Label11.Text = "42%"
         $Label12.Text = "Remove Microsoft People"
-        Write-Output = "Remove Microsoft People"
+        Write-Host "Remove Microsoft People"
     }
     #Remove Office Live
     if ($CheckBox112.Checked){
@@ -1036,7 +1006,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 43
         $Label11.Text = "43%"
         $Label12.Text = "Remove Office Live"
-        Write-Output = "Remove Ofiice Live"
+        Write-Host "Remove Ofiice Live"
     }
     #Remove XBox
     if ($CheckBox113.Checked){
@@ -1044,7 +1014,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 43
         $Label11.Text = "43%"
         $Label12.Text = "Remove XBox"
-        Write-Output = "Remove XBox"
+        Write-Host "Remove XBox"
     }
     #Remove Remove OneDrive
     if ($CheckBox79.Checked){
@@ -1052,7 +1022,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 44
         $Label11.Text = "44%"
         $Label12.Text = "Remove OneDrive"
-        Write-Output = "Remove OneDrive"
+        Write-Host "Remove OneDrive"
     }
 
     #Misc
@@ -1063,7 +1033,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 45
         $Label11.Text = "45%"
         $Label12.Text = "Disable Windows Error Recovery on Startup"
-        Write-Output = "Disable Windows Error Recovery on Startup"
+        Write-Host "Disable Windows Error Recovery on Startup"
     }
     #Internet Explorer 11 Tweaks
     if ($CheckBox82.Checked){
@@ -1071,7 +1041,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 45
         $Label11.Text = "45%"
         $Label12.Text = "Internet Explorer 11 Tweaks"
-        Write-Output = "Internet Explorer 11 Tweaks"
+        Write-Host "Internet Explorer 11 Tweaks"
     }
     #Libary Tweaks
     if ($CheckBox83.Checked){
@@ -1079,7 +1049,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 46
         $Label11.Text = "46%"
         $Label12.Text = "Libary Tweaks"
-        Write-Output = "Libary Tweaks"
+        Write-Host "Libary Tweaks"
     }
     #Windows Update Tweaks
     if ($CheckBox84.Checked){
@@ -1087,7 +1057,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 46
         $Label11.Text = "46%"
         $Label12.Text = "Windows Update Tweaks"
-        Write-Output = "Windows Update Tweaks"
+        Write-Host "Windows Update Tweaks"
     }
     #Windows Defender Tweaks
     if ($CheckBox85.Checked){
@@ -1095,7 +1065,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 47
         $Label11.Text = "47%"
         $Label12.Text = "Windows Defender Tweaks"
-        Write-Output = "Windows Defender Tweaks"
+        Write-Host "Windows Defender Tweaks"
     }
     #Blocking Telemetry Servers
     if ($CheckBox56.Checked){
@@ -1103,7 +1073,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 47
         $Label11.Text = "47%"
         $Label12.Text = "Blocking Telemetry Servers"
-        Write-Output = "Blocking Telemetry Servers"
+        Write-Host "Blocking Telemetry Servers"
     }
     #Blocking More Windows Servers
     if ($CheckBox78.Checked){
@@ -1111,7 +1081,7 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 48
         $Label11.Text = "48%"
         $Label12.Text = "Blocking more Windows Servers"
-        Write-Output = "Blocking more Windows Servers"
+        Write-Host "Blocking more Windows Servers"
     }
     #Mouse Accelleration Fix
     if ($CheckBox114.Checked){
@@ -1119,15 +1089,15 @@ function TWEAK_THE_SHIT{
         $ProgressBar1.Value = 48
         $Label11.Text = "48%"
         $Label12.Text = "Mouse Accelleration Fix"
-        Write-Output = "Mouse Accelleration Fix"
+        Write-Host "Mouse Accelleration Fix"
     }
     #Mouse Accelleration Fix
     if ($CheckBox114.Checked){
-        .\Scripts\Registry\Enable_Clipboard_History_for_all_users.reg
+        reg import .\Scripts\Registry\Enable_Clipboard_History_for_all_users.reg
         $ProgressBar1.Value = 49
         $Label11.Text = "49%"
         $Label12.Text = "Enable Clipboard History for all Users"
-        Write-Output = "Enable Clipboard History for all Users"
+        Write-Host "Enable Clipboard History for all Users"
     }
 
     
@@ -1180,9 +1150,9 @@ if ($Kill_Process){
 }
 function Kill-Process{
     [System.Windows.Forms.MessageBox]::Show("Prozesse werden beendet","TGF Tuning Pack 4.1",1)
-    Write-Output "Prozesse werden beendet."
+    Write-Host "Prozesse werden beendet."
     & '.\Scripts\ProcessKiller-Tuning-Pack.bat'
-    Write-Output "Die Prozesse wurden beendet"
+    Write-Host "Die Prozesse wurden beendet"
     Test_Kill_Process
 }
 function Download_Kill-Process{
