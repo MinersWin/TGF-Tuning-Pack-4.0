@@ -32,6 +32,11 @@ This is a hobby project! Everything can create errors and problems! Use at your 
 WIR ÜBERNEHMEN KEINE VERANTWORTUNG FÜR PROBLEME DIE MIT DER AUSFÜHRUNG UNSERES PROGRAMMS EINHERGEHEN!
 Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr!
 "
+
+Start-Process iexplore
+Start-Sleep 0.7
+Stop-Process -Name "iexplore"
+
 ##################################################################################################################################################################################
 $Language = Get-Content .\Config\Language.txt
 if ($Language -eq "de-DE"){
