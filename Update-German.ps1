@@ -133,6 +133,7 @@ $Button44.Text = "Lösche Zwischenspeicher"
 #Tools
 $Button5.Text = "Tools herunterladen"
 $Button6.Text = "Ordner Öffnen"
+$Button46.Text = "Neu laden"
 
 #Side Menu
 $Label4.Text = "Vorlagen"
