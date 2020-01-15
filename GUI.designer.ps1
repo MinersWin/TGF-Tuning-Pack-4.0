@@ -141,6 +141,7 @@ $Form1 = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.CheckBox]$CheckBox82 = $null
 [System.Windows.Forms.CheckBox]$CheckBox81 = $null
 [System.Windows.Forms.TabPage]$TabPage4 = $null
+[System.Windows.Forms.Button]$Button46 = $null
 [System.Windows.Forms.Label]$Label18 = $null
 [System.Windows.Forms.Button]$Button6 = $null
 [System.Windows.Forms.Panel]$Panel2 = $null
@@ -254,6 +255,8 @@ $Button1 = (New-Object -TypeName System.Windows.Forms.Button)
 $ComboBox1 = (New-Object -TypeName System.Windows.Forms.ComboBox)
 $TabControl1 = (New-Object -TypeName System.Windows.Forms.TabControl)
 $TabPage3 = (New-Object -TypeName System.Windows.Forms.TabPage)
+$Button43 = (New-Object -TypeName System.Windows.Forms.Button)
+$PictureBox2 = (New-Object -TypeName System.Windows.Forms.PictureBox)
 $Label6 = (New-Object -TypeName System.Windows.Forms.Label)
 $Button18 = (New-Object -TypeName System.Windows.Forms.Button)
 $CheckBox63 = (New-Object -TypeName System.Windows.Forms.CheckBox)
@@ -407,12 +410,12 @@ $Panel7 = (New-Object -TypeName System.Windows.Forms.Panel)
 $Label12 = (New-Object -TypeName System.Windows.Forms.Label)
 $Label11 = (New-Object -TypeName System.Windows.Forms.Label)
 $Label10 = (New-Object -TypeName System.Windows.Forms.Label)
-$PictureBox2 = (New-Object -TypeName System.Windows.Forms.PictureBox)
-$Button43 = (New-Object -TypeName System.Windows.Forms.Button)
+$Button46 = (New-Object -TypeName System.Windows.Forms.Button)
 ([System.ComponentModel.ISupportInitialize]$PictureBox1).BeginInit()
 $Panel1.SuspendLayout()
 $TabControl1.SuspendLayout()
 $TabPage3.SuspendLayout()
+([System.ComponentModel.ISupportInitialize]$PictureBox2).BeginInit()
 $TabPage1.SuspendLayout()
 $Panel5.SuspendLayout()
 $TabPage2.SuspendLayout()
@@ -430,7 +433,6 @@ $Panel8.SuspendLayout()
 $Panel3.SuspendLayout()
 $Panel4.SuspendLayout()
 $Panel7.SuspendLayout()
-([System.ComponentModel.ISupportInitialize]$PictureBox2).BeginInit()
 $Form1.SuspendLayout()
 #
 #Label1
@@ -935,6 +937,24 @@ $TabPage3.Text = [System.String]'Home'
 $TabPage3.ToolTipText = [System.String]'Test'
 $TabPage3.Visible = $false
 $TabPage3.add_Click($TabPage3_Click)
+#
+#Button43
+#
+$Button43.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]335,[System.Int32]250))
+$Button43.Name = [System.String]'Button43'
+$Button43.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]251,[System.Int32]91))
+$Button43.TabIndex = [System.Int32]5
+$Button43.Text = [System.String]'Button43'
+$Button43.UseCompatibleTextRendering = $true
+$Button43.UseVisualStyleBackColor = $true
+#
+#PictureBox2
+#
+$PictureBox2.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]347))
+$PictureBox2.Name = [System.String]'PictureBox2'
+$PictureBox2.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]930,[System.Int32]187))
+$PictureBox2.TabIndex = [System.Int32]4
+$PictureBox2.TabStop = $false
 #
 #Label6
 #
@@ -1964,6 +1984,7 @@ $CheckBox81.UseVisualStyleBackColor = $true
 #
 #TabPage4
 #
+$TabPage4.Controls.Add($Button46)
 $TabPage4.Controls.Add($Label18)
 $TabPage4.Controls.Add($Button6)
 $TabPage4.Controls.Add($Panel2)
@@ -1980,9 +2001,9 @@ $TabPage4.add_Click($TabPage4_Click)
 #Label18
 #
 $Label18.Font = (New-Object -TypeName System.Drawing.Font -ArgumentList @([System.String]'Comic Sans MS',[System.Single]12,[System.Drawing.FontStyle]::Regular,[System.Drawing.GraphicsUnit]::Point,([System.Byte][System.Byte]0)))
-$Label18.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]277,[System.Int32]22))
+$Label18.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]358,[System.Int32]22))
 $Label18.Name = [System.String]'Label18'
-$Label18.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]634,[System.Int32]23))
+$Label18.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]568,[System.Int32]23))
 $Label18.TabIndex = [System.Int32]3
 $Label18.Text = [System.String]'Label18'
 $Label18.UseCompatibleTextRendering = $true
@@ -2664,23 +2685,15 @@ $Label10.TabIndex = [System.Int32]59
 $Label10.Text = [System.String]'Progress'
 $Label10.UseCompatibleTextRendering = $true
 #
-#PictureBox2
+#Button46
 #
-$PictureBox2.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]347))
-$PictureBox2.Name = [System.String]'PictureBox2'
-$PictureBox2.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]930,[System.Int32]187))
-$PictureBox2.TabIndex = [System.Int32]4
-$PictureBox2.TabStop = $false
-#
-#Button43
-#
-$Button43.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]335,[System.Int32]250))
-$Button43.Name = [System.String]'Button43'
-$Button43.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]251,[System.Int32]91))
-$Button43.TabIndex = [System.Int32]5
-$Button43.Text = [System.String]'Button43'
-$Button43.UseCompatibleTextRendering = $true
-$Button43.UseVisualStyleBackColor = $true
+$Button46.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]277,[System.Int32]22))
+$Button46.Name = [System.String]'Button46'
+$Button46.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]75,[System.Int32]23))
+$Button46.TabIndex = [System.Int32]4
+$Button46.Text = [System.String]'Button46'
+$Button46.UseCompatibleTextRendering = $true
+$Button46.UseVisualStyleBackColor = $true
 #
 #Form1
 #
@@ -2701,6 +2714,7 @@ $Form1.add_Load($Form1_Load)
 $Panel1.ResumeLayout($false)
 $TabControl1.ResumeLayout($false)
 $TabPage3.ResumeLayout($false)
+([System.ComponentModel.ISupportInitialize]$PictureBox2).EndInit()
 $TabPage1.ResumeLayout($false)
 $Panel5.ResumeLayout($false)
 $TabPage2.ResumeLayout($false)
@@ -2718,7 +2732,6 @@ $Panel8.ResumeLayout($false)
 $Panel3.ResumeLayout($false)
 $Panel4.ResumeLayout($false)
 $Panel7.ResumeLayout($false)
-([System.ComponentModel.ISupportInitialize]$PictureBox2).EndInit()
 $Form1.ResumeLayout($false)
 Add-Member -InputObject $Form1 -Name base -Value $base -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Label1 -Value $Label1 -MemberType NoteProperty
@@ -2863,6 +2876,7 @@ Add-Member -InputObject $Form1 -Name CheckBox83 -Value $CheckBox83 -MemberType N
 Add-Member -InputObject $Form1 -Name CheckBox82 -Value $CheckBox82 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox81 -Value $CheckBox81 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name TabPage4 -Value $TabPage4 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name Button46 -Value $Button46 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Label18 -Value $Label18 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button6 -Value $Button6 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Panel2 -Value $Panel2 -MemberType NoteProperty
