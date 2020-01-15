@@ -4,6 +4,7 @@ Add-Type -AssemblyName System.Windows.Forms
 . (Join-Path $PSScriptRoot 'GUI.designer.ps1')
 $tooltip = New-Object System.Windows.Forms.ToolTip
 $Config = Import-LocalizedData -BaseDirectory .\Config\ -FileName Config.psd1
+$WinVersion = [System.Environment]::OSVersion.Version.Major
 Write-Host "
 ___________ __                                    __     ___________                      __            
 \__    ___/|  |__   ____      ____   ____   ____ |  | __ \_   _____/______   ____ _____  |  | __  ______
@@ -25,18 +26,14 @@ ___________ __                                    __     ___________            
 |_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
         __/ |                                                  
        |___/     
-The Geek Freaks Tuning Pack 4.1 Update 10.01.2020
+The Geek Freaks Tuning Pack 4.1 Update 15.01.2020
 Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
 WIR ÜBERNEHMEN KEINE VERANTWORTUNG FÜR PROBLEME DIE MIT DER AUSFÜHRUNG UNSERES PROGRAMMS EINHERGEHEN!
 Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr!
 "
-
-Start-Process iexplore
-Start-Sleep 0.7
-Stop-Process -Name "iexplore"
-
+Write-Host "Windoof $($WinVersion)"
 ##################################################################################################################################################################################
 $Language = Get-Content .\Config\Language.txt
 if ($Language -eq "de-DE"){
@@ -228,25 +225,28 @@ $Button42.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
 
 
 #All The Tools CHECK
-$Tools = Test-Path .\Tools
-if ($Tools){
-    $Label18.ForeColor = "GREEN"
-    $Label18.Text = "Tools found"
-    $Panel8.Enabled = $true
-    $Panel9.Enabled = $true
-    $Panel10.Enabled = $true
-    $Panel11.Enabled = $true
-    $Panel12.Enabled = $true
-} else {
-    $Label18.ForeColor = "RED"
-    $Label18.Text = "Could not find the tools, please download first."
-    $Panel8.Enabled = $false
-    $Panel9.Enabled = $false
-    $Panel10.Enabled = $false
-    $Panel11.Enabled = $false
-    $Panel12.Enabled = $false
+function CheckTools{
+    $Tools = Test-Path .\Tools
+    if ($Tools){
+        $Label18.ForeColor = "GREEN"
+        $Label18.Text = "Tools found"
+        $Panel8.Enabled = $true
+        $Panel9.Enabled = $true
+        $Panel10.Enabled = $true
+        $Panel11.Enabled = $true
+        $Panel12.Enabled = $true
+    } else {
+        $Label18.ForeColor = "RED"
+        $Label18.Text = "Could not find the tools, please download first."
+        $Panel8.Enabled = $false
+        $Panel9.Enabled = $false
+        $Panel10.Enabled = $false
+        $Panel11.Enabled = $false
+        $Panel12.Enabled = $false
+    }
 }
-
+CheckTools
+$Button46.Add_Click{(CheckTools)}
 
 #Clipboard History
 $Button44.Add_Click{(start cmd.exe 'cmd /c "echo off | clip"')}
@@ -1050,7 +1050,11 @@ function TWEAK_THE_SHIT{
     }
     #Libary Tweaks
     if ($CheckBox83.Checked){
-        & '.\Scripts\Batch\LibaryTweaks.bat'
+        if ($WinVersion -eq "10"){
+
+        } else {
+            & '.\Scripts\Batch\LibaryTweaks.bat'
+        }
         $ProgressBar1.Value = 46
         $Label11.Text = "46%"
         $Label12.Text = "Libary Tweaks"
@@ -1107,6 +1111,8 @@ function TWEAK_THE_SHIT{
 
     
     $ProgressBar1.Value = 100
+    Write-Host "100%"
+    Write-Host "Done"
     $Label11.Text = "YAY"
     $Label12.Text = "DONE"
 
@@ -1403,13 +1409,13 @@ function Reboot-Recovery{
 
 
 function Refresh_Tools{
-Test_Kill_Process
-Test_IE_Clean
-Test_CCleaner
-Test_BleachBit
-Test_TFC
-Test_USBDeviceCleanup
-Test_Clear-UpdateCache
+#Test_Kill_Process
+#Test_IE_Clean
+#Test_CCleaner
+#Test_BleachBit
+#Test_TFC
+#Test_USBDeviceCleanup
+#Test_Clear-UpdateCache
 }
 Refresh_Tools
 
