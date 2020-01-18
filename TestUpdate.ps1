@@ -1,9 +1,11 @@
 $RunningVersion = Get-Content Version.txt
 #Lädt den Inhalt der Pastebin Seite mit der neusten Version
 if ($WinVersion -eq "10"){
-    $Update = curl https://raw.githubusercontent.com/MinersWin/TGF-Tuning-Pack-4.0/master/Version.txt
+    $Update = curl https://raw.githubusercontent.com/MinersWin/TGF-Tuning-Pack-4.0/master/Version.txt -UseBasicParsing
 } else {
-    $Update = Invoke-WebRequest https://raw.githubusercontent.com/MinersWin/TGF-Tuning-Pack-4.0/master/Version.txt
+    Write-Output "Problem?"
+    $Update = Invoke-WebRequest https://raw.githubusercontent.com/MinersWin/TGF-Tuning-Pack-4.0/master/Version.txt -UseBasicParsing
+    Write-Output "Nix Problem?"
 }
 $RunningVersion
 $Update.Content

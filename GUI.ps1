@@ -1168,7 +1168,7 @@ function Kill-Process{
 }
 function Download_Kill-Process{
     Set-Location .\Scripts\
-    wget 'http://download.tuning-pack.de/TGF/Scripts/ProcessKiller-Tuning-Pack.bat' -OutFile 'ProcessKiller-Tuning-Pack.bat'
+    wget 'http://download.tuning-pack.de/TGF/Scripts/ProcessKiller-Tuning-Pack.bat' -OutFile 'ProcessKiller-Tuning-Pack.bat' -UseBasicParsing
     Set-Location .\..\
     Test_Kill_Process
 }
@@ -1188,7 +1188,7 @@ function Test_IE_Clean{
     }
     function Download_IE_Clean{
         Set-Location .\Tools\
-        wget 'http://download.tuning-pack.de/TGF/Tools/IE%20Cleanup.zip' -OutFile 'IE_Cleanup.zip'
+        wget 'http://download.tuning-pack.de/TGF/Tools/IE%20Cleanup.zip' -OutFile 'IE_Cleanup.zip' -UseBasicParsing
         Expand-Archive .\IE_Cleanup.zip -DestinationPath .\
         Set-Location .\..\
         Test_IE_Clean
@@ -1209,7 +1209,7 @@ function Test_CCleaner{
     }
     function Download_CCleaner{
         Set-Location .\Tools\
-        wget 'http://download.tuning-pack.de/TGF/Tools/CCleaner.zip' -OutFile 'CCleaner.zip'
+        wget 'http://download.tuning-pack.de/TGF/Tools/CCleaner.zip' -OutFile 'CCleaner.zip' -UseBasicParsing
         Expand-Archive .\CCleaner.zip -DestinationPath .\
         Set-Location .\..\
         Test_CCleaner
@@ -1230,7 +1230,7 @@ function Test_BleachBit{
     }
     function Download_BleachBit{
         Set-Location .\Tools\
-        wget 'http://download.tuning-pack.de/TGF/Tools/BleachBit.zip' -OutFile 'BleachBit.zip'
+        wget 'http://download.tuning-pack.de/TGF/Tools/BleachBit.zip' -OutFile 'BleachBit.zip' -UseBasicParsing
         Expand-Archive .\BleachBit.zip -DestinationPath .\
         Set-Location .\..\
         Test_BleachBit
@@ -1251,7 +1251,7 @@ function Test_TFC{
     }
     function Download_TFC{
         Set-Location .\Tools\
-        wget 'http://download.tuning-pack.de/TGF/Tools/Temp%20File%20Cleanup.zip' -OutFile 'TempFileCleanup.zip'
+        wget 'http://download.tuning-pack.de/TGF/Tools/Temp%20File%20Cleanup.zip' -OutFile 'TempFileCleanup.zip' -UseBasicParsing
         Expand-Archive .\TempFileCleanup.zip -DestinationPath .\
         rm TempFileCleanup.zip
         Set-Location .\..\
@@ -1273,7 +1273,7 @@ function Test_USBDeviceCleanup{
     }
     function Download_USBDeviceCleanup{
         Set-Location .\Tools\
-        wget 'http://download.tuning-pack.de/TGF/Tools/Drive%20Cleanup.zip' -OutFile 'DriveCleanup.zip'
+        wget 'http://download.tuning-pack.de/TGF/Tools/Drive%20Cleanup.zip' -OutFile 'DriveCleanup.zip' -UseBasicParsing
         Expand-Archive .\DriveCleanup.zip -DestinationPath .\
         rm DriveCleanup.zip
         Set-Location .\..\
@@ -1303,7 +1303,7 @@ function Test_Clear-UpdateCache{
     }
     function Download_Clear-UpdateCache{
         Set-Location .\Tools\
-        wget 'http://download.tuning-pack.de/TGF/Tools/Clear%20Update%20Cache.zip' -OutFile 'ClearUpdateCache.zip'
+        wget 'http://download.tuning-pack.de/TGF/Tools/Clear%20Update%20Cache.zip' -OutFile 'ClearUpdateCache.zip' -UseBasicParsing
         Expand-Archive .\ClearUpdateCache.zip -DestinationPath .\
         rm ClearUpdateCache.zip
         Set-Location .\..\
