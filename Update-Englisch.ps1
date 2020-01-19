@@ -125,6 +125,7 @@ $CheckBox114.Text = "Mouse Acceleration Fix"
 $Label33.Text = "Windows Performance Properties"
 $CheckBox117.Text = "Optimal presentation"
 $CheckBox118.Text = "Optimal performance"
+$Button15.Text = "Performance Properties"
 
 $Label32.Text = "Clipboard History"
 $CheckBox115.Text = "Enable Clipboard History"

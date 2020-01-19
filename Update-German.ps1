@@ -125,6 +125,7 @@ $CheckBox114.Text = "Mouse Beschleunigungs Fix"
 $Label33.Text = "Windows Geschwindigkeitseinstellungen"
 $CheckBox117.Text = "Optimale Darstellung"
 $CheckBox118.Text = "Optimale Geschwindigkeit"
+$Button15.Text = "Leistungsoptionen"
 
 $Label32.Text = "Zwischenspeicher History"
 $CheckBox115.Text = "Aktiviere Zwischenspeicher History"
