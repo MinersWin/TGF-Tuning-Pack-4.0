@@ -26,7 +26,7 @@ ___________ __                                    __     ___________            
 |_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
         __/ |                                                  
        |___/     
-The Geek Freaks Tuning Pack 4.1 Update 15.01.2020
+The Geek Freaks Tuning Pack 4.1 Update 19.01.2020
 Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
@@ -335,6 +335,13 @@ $ComboBox1.Items.Add("Maximum Privacy")
 $ComboBox1.Items.Add("Recommended")
 $ComboBox1.Items.Add("Clear")
 $ComboBox1.Items.Add("ULTIMATE PERFORMANCE")
+$ComboBox1.Items.Add("Beste Sicherheit")
+$ComboBox1.Items.Add("Laptop und Tablet")
+$ComboBox1.Items.Add("Gaming und Streaming")
+$ComboBox1.Items.Add("Beste Optik")
+$ComboBox1.Items.Add("Minimal")
+$ComboBox1.Items.Add("Kein Einfluss auf Optik und Funktionen")
+$ComboBox1.Items.Add("Alter Computer")
 $ComboBox1.SelectedItem = "Recommended"
 
 #Progressbar Reset
@@ -368,6 +375,7 @@ function Make-Tweaks{
         }
     }
 function TWEAK_THE_SHIT{
+    Checkpoint-Computer -Description 'TGF_Tuning_Pack_4' -RestorePointType MODIFY_SETTINGS
     #Create RecoveryPoint
     if ($CheckBox61.Checked){
         wmic /namespace:\\root\default path SystemRestore call Enable C:\
