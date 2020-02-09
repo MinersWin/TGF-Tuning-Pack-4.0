@@ -1,14 +1,14 @@
 @{
-        Root = '.\GUI.ps1'
+        Root = '.\'
         OutputPath = '.\out'
         Package = @{
             Enabled = $true
-            Obfuscate = $false
+            Obfuscate = $true
             HideConsoleWindow = $false
             DotNetVersion = 'v4.6.2'
             FileVersion = '1.3.4.7'
             FileDescription = 'TGF Tuning Pack 4.1 by MinersWin'
-            ProductName = 'TGF Tuning PAck 4.0'
+            ProductName = 'TGF Tuning Pack 4.0'
             ProductVersion = '4.1-beta.4'
             Copyright = '™ by MinersWin'
             RequireElevation = $false
