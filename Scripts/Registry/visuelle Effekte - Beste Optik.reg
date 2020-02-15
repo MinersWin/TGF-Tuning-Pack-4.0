@@ -1,0 +1,6 @@
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects]
+;0 = Let Windows choose what’s best for my computer
+;1 = Adjust for best appearance
+;2 = Adjust for best performance
+;3 = Custom
+"VisualFXSetting"=dword:00000001
