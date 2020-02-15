@@ -1,0 +1,10 @@
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\ImmersiveShell]
+"UseActionCenterExperience"=dword: 00000000
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\ImmersiveShell]
+"UseActionCenterExperience"=dword: 0
+[HKEY_LOCAL_MACHINE\Software\Classes\AllFilesystemObjects\shellex\ContextMenuHandlers\Copy To]
+@="{C2FBB630-2971-11D1-A18C-00C04FD75D13}"
+ 
+[HKEY_LOCAL_MACHINE\Software\Classes\AllFilesystemObjects\shellex\ContextMenuHandlers\Move To]
+@="{C2FBB631-2971-11D1-A18C-00C04FD75D13}"
