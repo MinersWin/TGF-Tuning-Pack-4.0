@@ -1,0 +1,18 @@
+[HKEY_USERS\.DEFAULT\Control Panel\Accessibility\StickyKeys]
+"Flags"="506"
+;Disable Filter Keys
+[HKEY_USERS\.DEFAULT\Control Panel\Accessibility\Keyboard Response]
+"Flags"="122"
+;Disable Toggle Keys
+[\HKEY_USERS\.DEFAULT\Control Panel\Control Panel\Accessibility\ToggleKeys]
+"Flags"="58"
+;For the default uesr
+;Disable Sticky Keys
+[\.DEFAULT\Control Panel\Accessibility\StickyKeys]
+"Flags"="506"
+;Disable Filter Keys
+[\.DEFAULT\Control Panel\Accessibility\Keyboard Response]
+"Flags"="122"
+;Disable Toggle Keys
+[\.DEFAULT\Control Panel\Accessibility\ToggleKeys]
+"Flags"="58"
