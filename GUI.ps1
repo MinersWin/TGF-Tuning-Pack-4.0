@@ -26,8 +26,8 @@ ___________ __                                    __     ___________            
 |_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
         __/ |                                                  
        |___/     
-The Geek Freaks Tuning Pack 4.1 Update 19.01.2020
-Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0
+The Geek Freaks Tuning Pack 4.1 Update 16.02.2020
+Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0/releases/
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
 WIR ÜBERNEHMEN KEINE VERANTWORTUNG FÜR PROBLEME DIE MIT DER AUSFÜHRUNG UNSERES PROGRAMMS EINHERGEHEN!
@@ -41,8 +41,15 @@ if ($Language -eq "de-DE"){
 } else {
 [System.Windows.Forms.MessageBox]::Show("This is a very early alpha version. Some of the tweaks are not yet functional.","The Geek Freaks Tuning Pack 4.1 by MinersWin",'OK','Error')
 }
-.\TestUpdate.ps1
 $Form1.Text = $Config.Application.Name
+
+#New Update
+if (Test-Path .\Config\Accept.dat){
+
+} else {
+    .\Changelog\Changelog.ps1
+   Out-File -FilePath .\Config\Accept.dat
+}
 
 #Icon
 $bitmap = [System.Drawing.Bitmap]::FromFile($Config.Application.Icon)
