@@ -23,55 +23,29 @@ Here are all functions roughly listed:
 
 
 
-\```
-
-Speed up Windows
-
-Remove bloatware
-
-Ultimate performance mode
-
-Turn off Windows Espionage
-
-More FPS in games
-
-Unlock secret menus
-
-New comfort features
-
-Remove Cortana completely
-
-Finally with GUI
-
-virus scan
-
-Rootkit removal
-
-Higher battery life (Only for laptops, use the battery tweaks for this)
-
-Repair Windows
-
-Fix network problems
-
-Clean up windows events
-
-Manage downloads
-
-Free up memory
-
-Secure windows
-
-Disk Defragment
-
-BIOS updates
-
-End hungry and dangerous processes
-
-Ninite!
-
-Install and update up to 60 selected programs with just one click
-
-\```
+* Speed up Windows
+* Remove bloatware
+* Ultimate performance mode
+* Turn off Windows Spionage
+* More FPS in games
+* Unlock secret menus
+* New comfort features
+* Remove Cortana completely
+* Finally with GUI
+* virus scan
+* Rootkit removal
+* Higher battery life (Only for laptops, use the battery tweaks for this)
+* Repair Windows
+* Fix network problems
+* Clean up windows events
+* Manage downloads
+* Free up memory
+* Secure windows
+* Disk Defragment
+* BIOS updates
+* End hungry and dangerous processes
+* Ninite!
+* Install and update up to 60 selected programs with just one click
 
 
 
