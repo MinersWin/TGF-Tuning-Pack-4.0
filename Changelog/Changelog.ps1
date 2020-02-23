@@ -7,21 +7,16 @@ $hicon = $bitmap.GetHicon()
 $FormChangelog.Icon = [system.drawing.icon]::FromHandle($hicon)
 $FormChangelog.Text = "TGF Tuning Pack 4.1-beta.5 16.02.2020"
 $Label1.Text="
-16.02.2020
+23.02.2020
 v.4.1-beta.5
 - Added Changelogs
 - Added Changelog Form at first Startup
 - Added VersionCheck on every Start
 - Added Download Windows
 - Fixed Downloadserver
-- Added Storage Cleanup
-- Added Idle Fix
-- Added Huge Performance Boost
-- Added SSD Tweaks
-- Added Windows Timing Tweaks
-- Added YouTube Tweaks
-- Added Service Tweaks
-- Added TCP Tweaks
-- Reworked Registry Tweaks (69 new Tweaks!)
+- Added Special Tweaks Tab
+- Added Hidden Debug Mode
+- Compiled new Executables
+- Fixed Virus Detection Problem
 "
 $FormChangelog.ShowDialog()
