@@ -1,1 +1,1 @@
-﻿.\GUI.ps1 -Verb runAs
+﻿.\GUI.ps1
