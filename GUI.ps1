@@ -19,20 +19,21 @@ ___________ __                                    __     ___________            
 		  |____| |____/|___|  /__|___|  /\___  /  |   __(____  /\___  >__|_ \ \____   | /\ |   |
 						    \/        \//_____/   |__|       \/     \/     \/      |__| \/ |___|                                                                                    
  _             __  __ _                  __          ___       
-| |           |  \/  (_)                 \ \        / (_)      
+| |           |  \/  (_)                 \ \        / (_)      6
 | |__  _   _  | \  / |_ _ __   ___ _ __ __\ \  /\  / / _ _ __  
 | '_ \| | | | | |\/| | | '_ \ / _ \ '__/ __\ \/  \/ / | | '_ \ 
 | |_) | |_| | | |  | | | | | |  __/ |  \__ \\  /\  /  | | | | |
 |_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
         __/ |                                                  
        |___/     
-The Geek Freaks Tuning Pack 4.1 Update 16.02.2020
+The Geek Freaks Tuning Pack 4.1 Update 23.02.2020
 Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0/releases/
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
 WIR ÜBERNEHMEN KEINE VERANTWORTUNG FÜR PROBLEME DIE MIT DER AUSFÜHRUNG UNSERES PROGRAMMS EINHERGEHEN!
 Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr!
 "
+$Label1.Text = "TGF Tuning Pack 4.1 by MinersWin"
 Write-Host "Windoof $($WinVersion)"
 ##################################################################################################################################################################################
 $Language = Get-Content .\Config\Language.txt
@@ -76,6 +77,8 @@ $TabPage6.Visible = $false
 $TabPage8.Enabled = $false
 $TabPage8.Visible = $false
 
+$SpecialTweaks.Enabled = $false
+$SpecialTweaks.Visible = $false
 #Geek Freaks Logo
 $Picture = ".\Images\Logo_v1.png"
 $img = [System.Drawing.Image]::Fromfile($Picture)
