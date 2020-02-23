@@ -140,7 +140,7 @@ $Form1 = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.CheckBox]$CheckBox83 = $null
 [System.Windows.Forms.CheckBox]$CheckBox82 = $null
 [System.Windows.Forms.CheckBox]$CheckBox81 = $null
-[System.Windows.Forms.TabPage]$Special Tweaks = $null
+[System.Windows.Forms.TabPage]$SpecialTweaks = $null
 [System.Windows.Forms.Panel]$Panel13 = $null
 [System.Windows.Forms.CheckBox]$CheckBox137 = $null
 [System.Windows.Forms.CheckBox]$CheckBox136 = $null
@@ -368,7 +368,7 @@ $CheckBox56 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox83 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox82 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox81 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$Special Tweaks = (New-Object -TypeName System.Windows.Forms.TabPage)
+$SpecialTweaks = (New-Object -TypeName System.Windows.Forms.TabPage)
 $Panel13 = (New-Object -TypeName System.Windows.Forms.Panel)
 $CheckBox134 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox133 = (New-Object -TypeName System.Windows.Forms.CheckBox)
@@ -465,7 +465,7 @@ $Panel6.SuspendLayout()
 $TabPage5.SuspendLayout()
 $TabPage6.SuspendLayout()
 $TabPage8.SuspendLayout()
-$Special Tweaks.SuspendLayout()
+$SpecialTweaks.SuspendLayout()
 $Panel13.SuspendLayout()
 $TabPage4.SuspendLayout()
 $Panel2.SuspendLayout()
@@ -958,7 +958,7 @@ $TabControl1.Controls.Add($TabPage2)
 $TabControl1.Controls.Add($TabPage5)
 $TabControl1.Controls.Add($TabPage6)
 $TabControl1.Controls.Add($TabPage8)
-$TabControl1.Controls.Add($Special Tweaks)
+$TabControl1.Controls.Add($SpecialTweaks)
 $TabControl1.Controls.Add($TabPage4)
 $TabControl1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]12,[System.Int32]68))
 $TabControl1.Name = [System.String]'TabControl1'
@@ -2030,15 +2030,15 @@ $CheckBox81.UseVisualStyleBackColor = $true
 #
 #Special Tweaks
 #
-$Special Tweaks.AutoScroll = $true
-$Special Tweaks.Controls.Add($Panel13)
-$Special Tweaks.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]26))
-$Special Tweaks.Name = [System.String]'Special Tweaks'
-$Special Tweaks.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]528))
-$Special Tweaks.TabIndex = [System.Int32]8
-$Special Tweaks.Text = [System.String]'Special Tweaks'
-$Special Tweaks.UseVisualStyleBackColor = $true
-$Special Tweaks.Visible = $false
+$SpecialTweaks.AutoScroll = $true
+$SpecialTweaks.Controls.Add($Panel13)
+$SpecialTweaks.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]26))
+$SpecialTweaks.Name = [System.String]'Special Tweaks'
+$SpecialTweaks.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]528))
+$SpecialTweaks.TabIndex = [System.Int32]8
+$SpecialTweaks.Text = [System.String]'Special Tweaks'
+$SpecialTweaks.UseVisualStyleBackColor = $true
+$SpecialTweaks.Visible = $false
 #
 #Panel13
 #
@@ -2997,7 +2997,7 @@ $Panel6.ResumeLayout($false)
 $TabPage5.ResumeLayout($false)
 $TabPage6.ResumeLayout($false)
 $TabPage8.ResumeLayout($false)
-$Special Tweaks.ResumeLayout($false)
+$SpecialTweaks.ResumeLayout($false)
 $Panel13.ResumeLayout($false)
 $TabPage4.ResumeLayout($false)
 $Panel2.ResumeLayout($false)
@@ -3152,7 +3152,7 @@ Add-Member -InputObject $Form1 -Name CheckBox56 -Value $CheckBox56 -MemberType N
 Add-Member -InputObject $Form1 -Name CheckBox83 -Value $CheckBox83 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox82 -Value $CheckBox82 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox81 -Value $CheckBox81 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Special Tweaks -Value $Special Tweaks -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name SpecialTweaks -Value $SpecialTweaks -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Panel13 -Value $Panel13 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox137 -Value $CheckBox137 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox136 -Value $CheckBox136 -MemberType NoteProperty
