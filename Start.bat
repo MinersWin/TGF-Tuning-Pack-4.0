@@ -3,5 +3,5 @@
 ::https://tuning-pack.de
 
 @ECHO OFF
-PowerShell.exe -Command "& '.\GUI.ps1'"
+.\TGF_Tuning_Pack_4.1_Signed.exe
 PAUSE
