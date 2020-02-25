@@ -26,7 +26,7 @@ ___________ __                                    __     ___________            
 |_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
         __/ |                                                  
        |___/     
-The Geek Freaks Tuning Pack 4.1 Update 23.02.2020
+The Geek Freaks Tuning Pack 4.1 Update 25.02.2020
 Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0/releases/
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
@@ -79,6 +79,7 @@ $TabPage8.Visible = $false
 
 $SpecialTweaks.Enabled = $false
 $SpecialTweaks.Visible = $false
+$TabControl1.Controls.Remove($SpecialTweaks)
 #Geek Freaks Logo
 $Picture = ".\Images\Logo_v1.png"
 $img = [System.Drawing.Image]::Fromfile($Picture)
@@ -400,7 +401,11 @@ function TWEAK_THE_SHIT{
         } else {
             $Backup = [System.Windows.Forms.MessageBox]::Show("The registry is backed up. A normal Windows registry is usually about 500mb in size. The backup is saved under C:\RegBack\.","TGF Tuning Pack 4.1 by MinersWin",'OK','Error')
         }
-        mkdir C:\RegBack\
+        $RegBack_exists = Test-Path C:\RegBack\
+        if ($RegBack_exists){
+        } else {
+            mkdir C:\RegBack\
+        }
         reg export HKCR C:\RegBack\HKLM.Reg /y
         reg export HKCU C:\RegBack\HKCU.Reg /y
         reg export HKLM C:\RegBack\HKCR.Reg /y
@@ -1143,21 +1148,18 @@ $Button2.Add_Click{(Apply-Template)}
 function Apply-Template{
     if ($ComboBox1.SelectedItem -eq "Recommended"){
         .\Templates\Recommended.ps1
-    }
-    if ($ComboBox1.SelectedItem -eq "Best Performance"){
+    } elseif ($ComboBox1.SelectedItem -eq "Best Performance"){
         .\Templates\BestPerformance.ps1
-    }
-    if ($ComboBox1.SelectedItem -eq "Maximum Battery Life"){
+    } elseif ($ComboBox1.SelectedItem -eq "Maximum Battery Life"){
         .\Templates\SaveEnergy.ps1
-    }
-    if ($ComboBox1.SelectedItem -eq "Maximum Privacy"){
+    } elseif ($ComboBox1.SelectedItem -eq "Maximum Privacy"){
         .\Templates\Privacy.ps1
-    }
-    if ($ComboBox1.SelectedItem -eq "ULTIMATE PERFORMACE"){
+    } elseif ($ComboBox1.SelectedItem -eq "ULTIMATE PERFORMACE"){
         .\Templates\UltimatePerformance.ps1
-    }
-    if ($ComboBox1.SelectedItem -eq "Clear"){
+    } elseif ($ComboBox1.SelectedItem -eq "Clear"){
         .\Templates\Clear.ps1
+    } else {
+        .\Templates\Recommended.ps1
     }
 }
 
