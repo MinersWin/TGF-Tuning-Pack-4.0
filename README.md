@@ -15,7 +15,7 @@ Bugs, suggestions for improvement and Feeback will be read gladly. For this you 
 
 
 
-**### Functions**
+### Functions
 
 
 
@@ -53,7 +53,7 @@ For more details [the official Website](https://tuning-pack.de).
 
 
 
-**### Changelog**
+### Changelog
 
 
 
@@ -61,7 +61,7 @@ For more details [the official Website](https://tuning-pack.de).
 
 
 
-**### Known bugs**
+### Known bugs
 
 
 
@@ -75,7 +75,7 @@ There are parts of the program cut off or postponed, then I ask you to write me 
 
 
 
-**### Support or Contact**
+### Support or Contact
 
 
 
@@ -83,7 +83,7 @@ You have problems with the tuning pack? [Discord](https://discord.gg/qrXmqSq) or
 
 
 
-**### The old Tuning Pack 3.1**
+### The old Tuning Pack 3.1
 
 
 
