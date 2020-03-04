@@ -35,6 +35,25 @@ Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzun
 "
 $Label1.Text = "TGF Tuning Pack 4.1 by MinersWin"
 Write-Host "Windoof $($WinVersion)"
+
+function Test-InternetConnection {
+    while (!(test-connection 37.120.179.48 -Count 1 -Quiet)) {
+    $Verbindungbesteht = $true
+    break
+    }
+    if ($Verbindungbesteht){
+        $Internet = $false
+    } else {
+        $Internet = $true
+    }
+    if ($Internet){
+        "$(Get-Date) Internetverbindung: Online"
+    } else {
+        "$(Get-Date) Internetverbindung: Offline"
+    }
+}
+Test-InternetConnection
+
 ##################################################################################################################################################################################
 $Language = Get-Content .\Config\Language.txt
 if ($Language -eq "de-DE"){
