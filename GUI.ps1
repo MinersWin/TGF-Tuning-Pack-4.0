@@ -405,12 +405,12 @@ function Make-Tweaks{
         }
     }
 function TWEAK_THE_SHIT{
-    Checkpoint-Computer -Description 'TGF_Tuning_Pack_4' -RestorePointType MODIFY_SETTINGS
+    Checkpoint-Computer -Description "TGF_Tuning_Pack_4.1-$(Get-Date)"
     #Create RecoveryPoint
     if ($CheckBox61.Checked){
         wmic /namespace:\\root\default path SystemRestore call Enable C:\
         Write-Host "Die erstellung von Wiederherstellungspunkten wurde aktiviert"
-        Checkpoint-Computer -Description 'TGF_Tuning_Pack_4' -RestorePointType MODIFY_SETTINGS
+        Checkpoint-Computer -Description "TGF_Tuning_Pack_4.1-$(Get-Date)"
         $Date = Get-Date
         Write-Host "Der Wiederherstellungspunkt wurde erstellt. Er trägt den Namen: $($Date) TGF Tuning Pack"
     }
