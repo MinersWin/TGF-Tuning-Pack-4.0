@@ -8,7 +8,7 @@ $CheckBox1.Checked = $true              #Show Computer Shortcut on Desktop
 $CheckBox2.Checked = $true              #Show Network Shortcut on Desktop
 $CheckBox3.Checked = $true              #Classic Vertical Icon Spacing
 $CheckBox4.Checked = $true              #Lock the Taskbar
-$CheckBox5.Checked = $true              #Always show all icons on the Taskbar
+$CheckBox5.Checked = $false             #Always show all icons on the Taskbar
 $CheckBox6.Checked = $false             #Delay taskbar thumbnail pop-ups to 10 seconds
 $CheckBox7.Checked = $true              #Enable Classic Control Panel View
 $CheckBox8.Checked = $true              #Turn Off Sticky Keys when SHIFT is pressed 5 Times
@@ -43,7 +43,7 @@ $CheckBox37.Checked = $true             #Enable Developer Mode
 $CheckBox38.Checked = $true             #Remove telemetry and data collection
 $CheckBox28.Checked = $true             #Set Windows Explorer to start on 'This PC' instad of 'Quick Access'
 #Remove Services
-$CheckBox39.Checked = $true             #Disable Connected USer Experience and Telemetry (To turn off Telemetry and Data Collection)
+$CheckBox39.Checked = $true             #Disable Connected User Experience and Telemetry (To turn off Telemetry and Data Collection)
 $CheckBox40.Checked = $true             #Disable Diagnostic Policy Service
 $CheckBox41.Checked = $false            #Disable Distributed Link Tracking Client (If your Computer ios not connected to any network)
 $CheckBox42.Checked = $true             #Disable WAP Push Message Routing Service (To turn off Telemetry and Data Collection)
@@ -74,7 +74,7 @@ $CheckBox70.Checked = $true             #Disable Hyper-V Services
 $CheckBox71.Checked = $true             #Disable Home Group Listener
 $CheckBox72.Checked = $true             #Disable Net.Tcp Port Sharing Service
 $CheckBox73.Checked = $true             #Disable Routing and Remote Access
-$CheckBox74.Checked = $true             #Disable Internet Connection Sharing (ICS)
+$CheckBox74.Checked = $false            #Disable Internet Connection Sharing (ICS)
 $CheckBox75.Checked = $true             #Disable Superfetch (A must for SSD drives, but good to do in general)
 #Scheduled Tasks
 $CheckBox86.Checked = $true             #Disable Smart Screen Specific
