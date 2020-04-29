@@ -6,32 +6,36 @@ $tooltip = New-Object System.Windows.Forms.ToolTip
 $Config = Import-LocalizedData -BaseDirectory .\Config\ -FileName Config.psd1
 $WinVersion = [System.Environment]::OSVersion.Version.Major
 Write-Host "
-___________ __                                    __     ___________                      __            
-\__    ___/|  |__   ____      ____   ____   ____ |  | __ \_   _____/______   ____ _____  |  | __  ______
-  |    |   |  |  \_/ __ \    / ___\_/ __ \_/ __ \|  |/ /  |    __) \_  __ \_/ __ \\__  \ |  |/ / /  ___/
-  |    |   |   Y  \  ___/   / /_/  >  ___/\  ___/|    <   |     \   |  | \/\  ___/ / __ \|    <  \___ \ 
-  |____|   |___|  /\___  >  \___  / \___  >\___  >__|_ \  \___  /   |__|    \___  >____  /__|_ \/____  >
-                \/     \/  /_____/      \/     \/     \/      \/                \/     \/     \/     \/
-	    ___________           .__                                      __        _____     ____     
-	    \__    ___/_ __  ____ |__| ____    ____   ___________    ____ |  | __   /  |  |   /_   |    
-		  |    | |  |  \/    \|  |/    \  / ___\  \____ \__  \ _/ ___\|  |/ /  /   |  |_   |   |    
-		  |    | |  |  /   |  \  |   |  \/ /_/  > |  |_> > __ \\  \___|    <  /    ^   /   |   |    
-		  |____| |____/|___|  /__|___|  /\___  /  |   __(____  /\___  >__|_ \ \____   | /\ |   |    
-						    \/        \//_____/   |__|       \/     \/     \/      |__| \/ |___|                                                                                        
- _             __  __ _                  __          ___            
-| |           |  \/  (_)                 \ \        / (_)           
-| |__  _   _  | \  / |_ _ __   ___ _ __ __\ \  /\  / / _ _ __       
-| '_ \| | | | | |\/| | | '_ \ / _ \ '__/ __\ \/  \/ / | | '_ \      
-| |_) | |_| | | |  | | | | | |  __/ |  \__ \\  /\  /  | | | | |     
-|_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|     
+
+______________________________ ___________           .__                
+\__    ___/  _____/\_   _____/ \__    ___/_ __  ____ |__| ____    ____  
+  |    | /   \  ___ |    __)     |    | |  |  \/    \|  |/    \  / ___\ 
+  |    | \    \_\  \|     \      |    | |  |  /   |  \  |   |  \/ /_/  >
+  |____|  \______  /\___  /      |____| |____/|___|  /__|___|  /\___  / 
+                 \/     \/                         \/        \//_____/  
+__________                __        _____    ________  
+\______   \_____    ____ |  | __   /  |  |   \_____  \ 
+ |     ___/\__  \ _/ ___\|  |/ /  /   |  |_   /  ____/ 
+ |    |     / __ \\  \___|    <  /    ^   /  /       \ 
+ |____|    (____  /\___  >__|_ \ \____   |  /\_______ \
+                \/     \/     \/      |__|  \/       \/                                                                                 
+ _             __  __ _                  __          ___       
+| |           |  \/  (_)                 \ \        / (_)      
+| |__  _   _  | \  / |_ _ __   ___ _ __ __\ \  /\  / / _ _ __  
+| '_ \| | | | | |\/| | | '_ \ / _ \ '__/ __\ \/  \/ / | | '_ \ 
+| |_) | |_| | | |  | | | | | |  __/ |  \__ \\  /\  /  | | | | |
+|_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
         __/ |                                                  
        |___/     
-The Geek Freaks Tuning Pack 4.1 Update 25.02.2020
-Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0/releases/
+The Geek Freaks Tuning Pack 4.2 Update 29.04.2020
+Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
 WIR ÜBERNEHMEN KEINE VERANTWORTUNG FÜR PROBLEME DIE MIT DER AUSFÜHRUNG UNSERES PROGRAMMS EINHERGEHEN!
 Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr!
+TeamSpeak: ts.thegeekfreaks.de
+Forum: forum.thegeekfreaks.de
+Tutorials: youtube.com/thegeekfreaks
 "
 $Label1.Text = "TGF Tuning Pack 4.1 by MinersWin"
 Write-Host "Windoof $($WinVersion)"
@@ -53,13 +57,12 @@ function Test-InternetConnection {
     }
 }
 Test-InternetConnection
-
 ##################################################################################################################################################################################
 $Language = Get-Content .\Config\Language.txt
 if ($Language -eq "de-DE"){
-[System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr frühe Alpha Version. Die Tweaks sind zum Teil noch nicht funktionsfähig.","The Geek Freaks Tuning Pack 4.1 by MinersWin",'OK','Error')
+[System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr frühe Alpha Version. Die Tweaks sind zum Teil noch nicht funktionsfähig.","The Geek Freaks Tuning Pack 4.2 by MinersWin",'OK','Error')
 } else {
-[System.Windows.Forms.MessageBox]::Show("This is a very early alpha version. Some of the tweaks are not yet functional.","The Geek Freaks Tuning Pack 4.1 by MinersWin",'OK','Error')
+[System.Windows.Forms.MessageBox]::Show("This is a very early alpha version. Some of the tweaks are not yet functional.","The Geek Freaks Tuning Pack 4.2 by MinersWin",'OK','Error')
 }
 $Form1.Text = $Config.Application.Name
 
@@ -95,10 +98,10 @@ $TabPage6.Enabled = $false
 $TabPage6.Visible = $false
 $TabPage8.Enabled = $false
 $TabPage8.Visible = $false
-
 $SpecialTweaks.Enabled = $false
 $SpecialTweaks.Visible = $false
 $TabControl1.Controls.Remove($SpecialTweaks)
+
 #Geek Freaks Logo
 $Picture = ".\Images\Logo_v1.png"
 $img = [System.Drawing.Image]::Fromfile($Picture)
@@ -311,18 +314,18 @@ function Accept-Everything{
         $TabControl1.SelectedTab = $TabPage1
     } else {
         if ($Language -eq "de-DE"){
-            [System.Windows.Forms.MessageBox]::Show("Bitte Akzeptieren","TGF Tuning Pack 4.1","OK","Error")
+            [System.Windows.Forms.MessageBox]::Show("Bitte Akzeptieren","TGF Tuning Pack 4.2","OK","Error")
         } else {
-            [System.Windows.Forms.MessageBox]::Show("Please Accept","TGF Tuning Pack 4.1","OK","Error")
+            [System.Windows.Forms.MessageBox]::Show("Please Accept","TGF Tuning Pack 4.2","OK","Error")
         }
     }
 }
 
 #Write Risk Labels
 if ($Language -eq "de-DE"){
-    $Label6.Text = "Wir Übernehmen keine Verantwortung für Probleme, die mit der Ausführung unseres Programms einhergehen! Dies ist ein hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr! Probleme und Bugs können gerne im Discord gemeldet werden: https://discordapp.com/invite/k5kMSa "
+    $Label6.Text = "Wir Übernehmen keine Verantwortung für Probleme, die mit der Ausführung unseres Programms einhergehen! Dies ist ein hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr! Probleme und Bugs können gerne im Discord gemeldet werden: https://discordapp.com/invite/qrXmqSq "
 } else {
-    $Label6.Text = "We do not take responsibility for problems that accompany the execution of our program! This is a hobby project! Everything can create errors and problems! Use at your own risk! Problems and bugs are welcome in the Discord: https://discordapp.com/invite/k5kMSa    "
+    $Label6.Text = "We do not take responsibility for problems that accompany the execution of our program! This is a hobby project! Everything can create errors and problems! Use at your own risk! Problems and bugs are welcome in the Discord: https://discordapp.com/invite/qrXmqSq    "
 }
 #Close when Click Close
 $button17.Add_Click{($Form1.Close())}
@@ -385,10 +388,10 @@ $Label12.Text = "The Tweaks havent started yet. Click on 'Make FPS Rain!' to Sta
 $Button16.Add_Click{(Make-Tweaks)}
 function Make-Tweaks{
     if ($Language -eq "de-DE"){
-        Write-Host "Tuning Pack 4.1 by MinersWin: https://tuning-pack.de/"
+        Write-Host "Tuning Pack 4.2 by MinersWin: https://tuning-pack.de/"
         $msgBoxInput = [System.Windows.Forms.MessageBox]::Show("Tweaks werden ausgeführt. Bitte vor dem Bestätigen nochmal alle Tweaks Überprüfen. Hierbei kann einiges Kaputt gehen.","Tuning Pack Sicherheitswarnung",'YesNoCancel','Error')
         } else {
-        Write-Host "Tuning Pack 4.1 by MinersWin: https://tuning-pack.de/"
+        Write-Host "Tuning Pack 4.2 by MinersWin: https://tuning-pack.de/"
         $msgBoxInput = [System.Windows.Forms.MessageBox]::Show("Tweaks are in progress. Please check all tweaks again before confirming. This can break some things.","Tuning Pack Security Warning",'YesNoCancel','Error')
         }
         switch  ($msgBoxInput) {
@@ -405,26 +408,22 @@ function Make-Tweaks{
         }
     }
 function TWEAK_THE_SHIT{
-    Checkpoint-Computer -Description "TGF_Tuning_Pack_4.1-$(Get-Date)"
+    Checkpoint-Computer -Description "TGF_Tuning_Pack_4.2-$(Get-Date)"
     #Create RecoveryPoint
     if ($CheckBox61.Checked){
         wmic /namespace:\\root\default path SystemRestore call Enable C:\
         Write-Host "Die erstellung von Wiederherstellungspunkten wurde aktiviert"
-        Checkpoint-Computer -Description "TGF_Tuning_Pack_4.1-$(Get-Date)"
+        Checkpoint-Computer -Description "TGF_Tuning_Pack_4.2-$(Get-Date)"
         $Date = Get-Date
         Write-Host "Der Wiederherstellungspunkt wurde erstellt. Er trägt den Namen: $($Date) TGF Tuning Pack"
     }
     if ($CheckBox62.Checked){
         if ($Language -eq "de-DE"){
-            $Backup = [System.Windows.Forms.MessageBox]::Show("Ein Backup der Registry wird ausgeführt. Eine Normale Windows Registry ist im Normalfall ca. 500mb Groß. Das Backup wird unter C:\RegBack\ Gespeichert.","TGF Tuning Pack 4.1 by MinersWin",'OK','Error')
+            $Backup = [System.Windows.Forms.MessageBox]::Show("Ein Backup der Registry wird ausgeführt. Eine Normale Windows Registry ist im Normalfall ca. 500mb Groß. Das Backup wird unter C:\RegBack\ Gespeichert.","TGF Tuning Pack 4.2 by MinersWin",'OK','Error')
         } else {
-            $Backup = [System.Windows.Forms.MessageBox]::Show("The registry is backed up. A normal Windows registry is usually about 500mb in size. The backup is saved under C:\RegBack\.","TGF Tuning Pack 4.1 by MinersWin",'OK','Error')
+            $Backup = [System.Windows.Forms.MessageBox]::Show("The registry is backed up. A normal Windows registry is usually about 500mb in size. The backup is saved under C:\RegBack\.","TGF Tuning Pack 4.2 by MinersWin",'OK','Error')
         }
-        $RegBack_exists = Test-Path C:\RegBack\
-        if ($RegBack_exists){
-        } else {
-            mkdir C:\RegBack\
-        }
+        mkdir C:\RegBack\
         reg export HKCR C:\RegBack\HKLM.Reg /y
         reg export HKCU C:\RegBack\HKCU.Reg /y
         reg export HKLM C:\RegBack\HKCR.Reg /y
@@ -1153,31 +1152,39 @@ function TWEAK_THE_SHIT{
 
     
     $ProgressBar1.Value = 100
+    [System.Windows.Forms.MessageBox]::Show("Die Tweaks wurden erfolgreich abgeschlossen.","TGF Tuning Pack 4.2 by MinersWin",1)
     Write-Host "100%"
     Write-Host "Done"
+    Write-Host "Die Tweaks wurden erfolgreich abgeschlossen. Sollten Fehlermeldungen aufgetreten sein Liegt das wahrscheinlich am Auswählen nicht geeigneter Tweaks wie zum Beispiel Das entfernen von Windows 10 Apps in Windows 7." -ForeColor Green 
+    Write-Host "Wir übernehmen keine Verantwortung für die Folgen und eventuelle Schäden an euren Systemen. Alle Tweaks wurden von euch Ausgewählt und mehrfach Bestätigt."
+    Write-Host "Bei Fragen oder Problemen gerne im Discord nach Lösung Fragen oder auf den TeamSpeak joinen."
+    Write-Host "Wir würden uns Freuen eure Erfahrungen und Ergenisse zu sehen. Postet gerne Feedback im Discord."
+    Write-Host "Unterstüzung dieses und weiteren Tools: https://paypal.me/minerswin"
+    Write-Host "Discord: https://discordapp.com/invite/qrXmqSq"
+    Write-Host "TeamSpeak: ts.thegeekfreaks.de"
     $Label11.Text = "YAY"
     $Label12.Text = "DONE"
 
 }
 
 #Templates 
-$Button1.Add_Click{([System.Windows.Forms.MessageBox]::Show("Work in Progress!","TGF Tuning Pack 4.1",1))}
+$Button1.Add_Click{([System.Windows.Forms.MessageBox]::Show("In Version 5!","TGF Tuning Pack 4.2",1))}
 $Button2.Add_Click{(Apply-Template)}
 
 function Apply-Template{
     if ($ComboBox1.SelectedItem -eq "Recommended"){
         .\Templates\Recommended.ps1
-    } elseif ($ComboBox1.SelectedItem -eq "Best Performance"){
+    }elseif ($ComboBox1.SelectedItem -eq "Best Performance"){
         .\Templates\BestPerformance.ps1
-    } elseif ($ComboBox1.SelectedItem -eq "Maximum Battery Life"){
+    }elseif ($ComboBox1.SelectedItem -eq "Maximum Battery Life"){
         .\Templates\SaveEnergy.ps1
-    } elseif ($ComboBox1.SelectedItem -eq "Maximum Privacy"){
+    }elseif ($ComboBox1.SelectedItem -eq "Maximum Privacy"){
         .\Templates\Privacy.ps1
-    } elseif ($ComboBox1.SelectedItem -eq "ULTIMATE PERFORMACE"){
+    }elseif ($ComboBox1.SelectedItem -eq "ULTIMATE PERFORMACE"){
         .\Templates\UltimatePerformance.ps1
-    } elseif ($ComboBox1.SelectedItem -eq "Clear"){
+    }elseif ($ComboBox1.SelectedItem -eq "Clear"){
         .\Templates\Clear.ps1
-    } else {
+    }else{
         .\Templates\Recommended.ps1
     }
 }
@@ -1187,6 +1194,7 @@ function Apply-Template{
 ######################################################################################################################################################################################
 ### All the Tools ###
 ######################################################################################################################################################################################
+<# REMOVED BECAUSE OF REWRITE
 #Process Killer
 function Test_Kill_Process{
 $Kill_Process = Test-Path .\Scripts\ProcessKiller-Tuning-Pack.bat
@@ -1318,6 +1326,7 @@ function Test_USBDeviceCleanup{
         Set-Location .\..\
         Test_USBDeviceCleanup
     }
+
 #Cleanup Duplicate Downloads
 ###FIXME###
 
@@ -1446,7 +1455,7 @@ function Reboot-Recovery{
 }
 
 
-
+#>
 function Refresh_Tools{
 #Test_Kill_Process
 #Test_IE_Clean
@@ -1475,7 +1484,7 @@ function About {
     $aboutForm.ControlBox    = $false
     $aboutForm.ShowInTaskBar = $false
     $aboutForm.StartPosition = "CenterParent"
-    $aboutForm.Text          = "The Geek Freaks Tuning Pack 4.1"
+    $aboutForm.Text          = "The Geek Freaks Tuning Pack 4.2"
     $aboutForm.Add_Load($aboutForm_Load)
     # About PictureBox
     $icon = [System.Drawing.Bitmap]::FromFile('.\Images\favicon.ico')
@@ -1488,7 +1497,7 @@ function About {
     $aboutFormNameLabel.Font     = New-Object Drawing.Font("Microsoft Sans Serif", 9, [System.Drawing.FontStyle]::Bold)
     $aboutFormNameLabel.Location = "110, 20"
     $aboutFormNameLabel.Size     = "200, 18"
-    $aboutFormNameLabel.Text     = "The Geek Freaks Tuning Pack 4.1"
+    $aboutFormNameLabel.Text     = "The Geek Freaks Tuning Pack 4.2"
     $aboutForm.Controls.Add($aboutFormNameLabel)
     # About Text Label
     $aboutFormText.Location = "100, 40"
