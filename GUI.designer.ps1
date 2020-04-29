@@ -486,7 +486,7 @@ $Label1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([S
 $Label1.Name = [System.String]'Label1'
 $Label1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]737,[System.Int32]35))
 $Label1.TabIndex = [System.Int32]0
-$Label1.Text = [System.String]'The Geek Freaks Tuning Pack 4.0'
+$Label1.Text = [System.String]'The Geek Freaks Tuning Pack 4.2'
 $Label1.UseCompatibleTextRendering = $true
 #
 #PictureBox1
