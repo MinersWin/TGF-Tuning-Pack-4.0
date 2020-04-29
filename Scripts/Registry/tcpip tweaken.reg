@@ -1,0 +1,10 @@
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\Tcpip\Parameters]
+
+"DefaultTTL"=dword:00000040
+"KeepAliveTime"=dword:006ddd00
+"MaxUserPort"=dword:0000fffe
+"QualifyingDestinationThreshold"=dword:00000003
+"SynAttackProtect"=dword:00000001
+"Tcp1323Opts"=dword:00000001
+"TcpCreateAndConnectTcbRateLimitDepth"=dword:00000000
+"TcpMaxDataRetransmissions"=dword:00000005

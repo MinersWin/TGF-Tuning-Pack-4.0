@@ -1,0 +1,7 @@
+[HKEY_LOCAL_MACHINE\System\ControlSet001\services\LanmanServer\Parameters]
+"autodisconnect"=dword:ffffffff
+"Size"=dword:00000003
+"EnableOplocks"=dword:00000000
+"IRPStackSize"=dword:00000020
+"SharingViolationDelay"=dword:00000000
+"SharingViolationRetries"=dword:00000000

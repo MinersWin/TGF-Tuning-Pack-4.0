@@ -1,0 +1,12 @@
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SessionManager\MemoryManagement]
+"DisablePagingExecutive"=dword:1
+"ClearPageFileAtShutdown"=dword:1
+"LargeSystemCache"=dword:0
+"NonPagedPoolSize"=dword:192=hex
+"PagedPoolSize"=dword:192=hex
+"NonPagedPoolQuota"=dword:0
+"PagedPoolQuota"=dword:0
+"PhysicalAddressExtension"=dword:1
+"SessionPoolSize"=dword:48
+"SystemPages"=dword:0
+"PoolUsageMaximum"=dword:60

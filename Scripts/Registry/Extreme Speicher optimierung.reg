@@ -1,0 +1,11 @@
+[HKEY_LOCAL_MACHINE/SYSTEM/CurrentControlSet/Control/Session Manager/Memory Management]
+“DisablePagingExecutive”=dword:00000001
+“NonPagedPoolSize”="192"
+“PagedPoolSize”="192"
+“NonPagedPoolQuota”=dword:00000000
+“PagedPoolQuota”=dword:00000000
+“PhysicalAddressExtension”=dword:00000001
+“SessionPoolSize”="48"
+“SessionViewSize”="96"
+“SystemPages”=dword:00000000
+“PoolUsageMaximum”="60"

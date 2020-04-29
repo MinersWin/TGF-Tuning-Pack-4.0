@@ -1,0 +1,4 @@
+[HKEY_LOCAL_MACHINE\System\ControlSet001\Control\Session Manager\Memory Management\PrefetchParameters]
+“EnableSuperfetch”=dword:00000003
+“EnablePrefetcher”=dword:00000003
+“SfTracingState”=dword:00000001

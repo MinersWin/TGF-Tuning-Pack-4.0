@@ -1,0 +1,7 @@
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\i8042prt
+"Start"=dword:5
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger\AutoLogger-Diagtrack-Listener /d
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger\SQMLogger /d
+
+Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\DataCollection" -Name "AllowTelemetry" -Type DWord -Value 0

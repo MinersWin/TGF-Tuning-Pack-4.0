@@ -1,0 +1,2 @@
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl]
+“Win32PrioritySeparation”=dword:00000026

@@ -1,0 +1,2 @@
+[HKEY_LOCAL_MACHINE\System\ControlSet001\Control\FileSystem]
+“NtfsMftZoneReservation”=dword: 00000002

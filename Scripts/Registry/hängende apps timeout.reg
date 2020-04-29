@@ -1,0 +1,6 @@
+[HKEY_USERS\.DEFAULT\Control Panel\Control Panel\Desktop]
+"AutoEndTasks"="1"
+"HungAppTimeout"="1000"
+"MenuShowDelay"="0"
+"WaitToKillAppTimeout"="2000"
+"LowLevelHooksTimeout"="1000"

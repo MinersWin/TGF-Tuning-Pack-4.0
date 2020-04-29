@@ -12,28 +12,48 @@ ___________ __                                    __     ___________            
   |    |   |   Y  \  ___/   / /_/  >  ___/\  ___/|    <   |     \   |  | \/\  ___/ / __ \|    <  \___ \ 
   |____|   |___|  /\___  >  \___  / \___  >\___  >__|_ \  \___  /   |__|    \___  >____  /__|_ \/____  >
                 \/     \/  /_____/      \/     \/     \/      \/                \/     \/     \/     \/
-	    ___________           .__                                      __        _____     ____ 
-	    \__    ___/_ __  ____ |__| ____    ____   ___________    ____ |  | __   /  |  |   /_   |
-		  |    | |  |  \/    \|  |/    \  / ___\  \____ \__  \ _/ ___\|  |/ /  /   |  |_   |   |
-		  |    | |  |  /   |  \  |   |  \/ /_/  > |  |_> > __ \\  \___|    <  /    ^   /   |   |
-		  |____| |____/|___|  /__|___|  /\___  /  |   __(____  /\___  >__|_ \ \____   | /\ |   |
-						    \/        \//_____/   |__|       \/     \/     \/      |__| \/ |___|                                                                                    
- _             __  __ _                  __          ___       
-| |           |  \/  (_)                 \ \        / (_)      
-| |__  _   _  | \  / |_ _ __   ___ _ __ __\ \  /\  / / _ _ __  
-| '_ \| | | | | |\/| | | '_ \ / _ \ '__/ __\ \/  \/ / | | '_ \ 
-| |_) | |_| | | |  | | | | | |  __/ |  \__ \\  /\  /  | | | | |
-|_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
+	    ___________           .__                                      __        _____     ____     
+	    \__    ___/_ __  ____ |__| ____    ____   ___________    ____ |  | __   /  |  |   /_   |    
+		  |    | |  |  \/    \|  |/    \  / ___\  \____ \__  \ _/ ___\|  |/ /  /   |  |_   |   |    
+		  |    | |  |  /   |  \  |   |  \/ /_/  > |  |_> > __ \\  \___|    <  /    ^   /   |   |    
+		  |____| |____/|___|  /__|___|  /\___  /  |   __(____  /\___  >__|_ \ \____   | /\ |   |    
+						    \/        \//_____/   |__|       \/     \/     \/      |__| \/ |___|                                                                                        
+ _             __  __ _                  __          ___            
+| |           |  \/  (_)                 \ \        / (_)           
+| |__  _   _  | \  / |_ _ __   ___ _ __ __\ \  /\  / / _ _ __       
+| '_ \| | | | | |\/| | | '_ \ / _ \ '__/ __\ \/  \/ / | | '_ \      
+| |_) | |_| | | |  | | | | | |  __/ |  \__ \\  /\  /  | | | | |     
+|_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|     
         __/ |                                                  
        |___/     
-The Geek Freaks Tuning Pack 4.1 Update 19.01.2020
-Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0
+The Geek Freaks Tuning Pack 4.1 Update 25.02.2020
+Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0/releases/
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
 WIR ÜBERNEHMEN KEINE VERANTWORTUNG FÜR PROBLEME DIE MIT DER AUSFÜHRUNG UNSERES PROGRAMMS EINHERGEHEN!
 Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr!
 "
+$Label1.Text = "TGF Tuning Pack 4.1 by MinersWin"
 Write-Host "Windoof $($WinVersion)"
+
+function Test-InternetConnection {
+    while (!(test-connection 37.120.179.48 -Count 1 -Quiet)) {
+    $Verbindungbesteht = $true
+    break
+    }
+    if ($Verbindungbesteht){
+        $Internet = $false
+    } else {
+        $Internet = $true
+    }
+    if ($Internet){
+        "$(Get-Date) Internetverbindung: Online"
+    } else {
+        "$(Get-Date) Internetverbindung: Offline"
+    }
+}
+Test-InternetConnection
+
 ##################################################################################################################################################################################
 $Language = Get-Content .\Config\Language.txt
 if ($Language -eq "de-DE"){
@@ -41,8 +61,15 @@ if ($Language -eq "de-DE"){
 } else {
 [System.Windows.Forms.MessageBox]::Show("This is a very early alpha version. Some of the tweaks are not yet functional.","The Geek Freaks Tuning Pack 4.1 by MinersWin",'OK','Error')
 }
-.\TestUpdate.ps1
 $Form1.Text = $Config.Application.Name
+
+#New Update
+if (Test-Path .\Config\Accept.dat){
+
+} else {
+    .\Changelog\Changelog.ps1
+   Out-File -FilePath .\Config\Accept.dat
+}
 
 #Icon
 $bitmap = [System.Drawing.Bitmap]::FromFile($Config.Application.Icon)
@@ -69,6 +96,9 @@ $TabPage6.Visible = $false
 $TabPage8.Enabled = $false
 $TabPage8.Visible = $false
 
+$SpecialTweaks.Enabled = $false
+$SpecialTweaks.Visible = $false
+$TabControl1.Controls.Remove($SpecialTweaks)
 #Geek Freaks Logo
 $Picture = ".\Images\Logo_v1.png"
 $img = [System.Drawing.Image]::Fromfile($Picture)
@@ -375,12 +405,12 @@ function Make-Tweaks{
         }
     }
 function TWEAK_THE_SHIT{
-    Checkpoint-Computer -Description 'TGF_Tuning_Pack_4' -RestorePointType MODIFY_SETTINGS
+    Checkpoint-Computer -Description "TGF_Tuning_Pack_4.1-$(Get-Date)"
     #Create RecoveryPoint
     if ($CheckBox61.Checked){
         wmic /namespace:\\root\default path SystemRestore call Enable C:\
         Write-Host "Die erstellung von Wiederherstellungspunkten wurde aktiviert"
-        Checkpoint-Computer -Description 'TGF_Tuning_Pack_4' -RestorePointType MODIFY_SETTINGS
+        Checkpoint-Computer -Description "TGF_Tuning_Pack_4.1-$(Get-Date)"
         $Date = Get-Date
         Write-Host "Der Wiederherstellungspunkt wurde erstellt. Er trägt den Namen: $($Date) TGF Tuning Pack"
     }
@@ -390,7 +420,11 @@ function TWEAK_THE_SHIT{
         } else {
             $Backup = [System.Windows.Forms.MessageBox]::Show("The registry is backed up. A normal Windows registry is usually about 500mb in size. The backup is saved under C:\RegBack\.","TGF Tuning Pack 4.1 by MinersWin",'OK','Error')
         }
-        mkdir C:\RegBack\
+        $RegBack_exists = Test-Path C:\RegBack\
+        if ($RegBack_exists){
+        } else {
+            mkdir C:\RegBack\
+        }
         reg export HKCR C:\RegBack\HKLM.Reg /y
         reg export HKCU C:\RegBack\HKCU.Reg /y
         reg export HKLM C:\RegBack\HKCR.Reg /y
@@ -1133,21 +1167,18 @@ $Button2.Add_Click{(Apply-Template)}
 function Apply-Template{
     if ($ComboBox1.SelectedItem -eq "Recommended"){
         .\Templates\Recommended.ps1
-    }
-    if ($ComboBox1.SelectedItem -eq "Best Performance"){
+    } elseif ($ComboBox1.SelectedItem -eq "Best Performance"){
         .\Templates\BestPerformance.ps1
-    }
-    if ($ComboBox1.SelectedItem -eq "Maximum Battery Life"){
+    } elseif ($ComboBox1.SelectedItem -eq "Maximum Battery Life"){
         .\Templates\SaveEnergy.ps1
-    }
-    if ($ComboBox1.SelectedItem -eq "Maximum Privacy"){
+    } elseif ($ComboBox1.SelectedItem -eq "Maximum Privacy"){
         .\Templates\Privacy.ps1
-    }
-    if ($ComboBox1.SelectedItem -eq "ULTIMATE PERFORMACE"){
+    } elseif ($ComboBox1.SelectedItem -eq "ULTIMATE PERFORMACE"){
         .\Templates\UltimatePerformance.ps1
-    }
-    if ($ComboBox1.SelectedItem -eq "Clear"){
+    } elseif ($ComboBox1.SelectedItem -eq "Clear"){
         .\Templates\Clear.ps1
+    } else {
+        .\Templates\Recommended.ps1
     }
 }
 

@@ -1,0 +1,2 @@
+[HKEY_LOCAL_MACHINE\System\ControlSet001\Services\cisvc]
+“Start”=dword: 00000004

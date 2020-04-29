@@ -1,0 +1,8 @@
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games]
+"GPU Priority"=dword:00000008
+"Priority"=dword:00000006
+"Scheduling Category"="high"
+"SFIO Priority"= "High”
+"Background Only"="False”
+"Clock Rate"=dword:00002710
+"Affinity"=dword:00000000

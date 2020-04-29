@@ -1,0 +1,2 @@
+[HKEY_USERS\.DEFAULT\Control Panel\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"ShowTaskViewButton"=dword:00000000
