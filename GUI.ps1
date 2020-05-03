@@ -36,7 +36,7 @@ Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzun
 TeamSpeak: ts.thegeekfreaks.de
 Forum: forum.thegeekfreaks.de
 Tutorials: youtube.com/thegeekfreaks
-"
+" -ForegroundColor Green
 $Label1.Text = "TGF Tuning Pack 4.1 by MinersWin"
 Write-Host "Windoof $($WinVersion)"
 
@@ -415,7 +415,7 @@ function TWEAK_THE_SHIT{
         Write-Host "Die erstellung von Wiederherstellungspunkten wurde aktiviert"
         Checkpoint-Computer -Description "TGF_Tuning_Pack_4.2-$(Get-Date)"
         $Date = Get-Date
-        Write-Host "Der Wiederherstellungspunkt wurde erstellt. Er trägt den Namen: $($Date) TGF Tuning Pack"
+        Write-Host "Der Wiederherstellungspunkt wurde erstellt. Er trägt den Namen: $($Date) TGF Tuning Pack" -ForegroundColor Green
     }
     if ($CheckBox62.Checked){
         if ($Language -eq "de-DE"){
@@ -423,7 +423,8 @@ function TWEAK_THE_SHIT{
         } else {
             $Backup = [System.Windows.Forms.MessageBox]::Show("The registry is backed up. A normal Windows registry is usually about 500mb in size. The backup is saved under C:\RegBack\.","TGF Tuning Pack 4.2 by MinersWin",'OK','Error')
         }
-        mkdir C:\RegBack\
+        mkdir C:\RegBack\        
+        Write-Host "Ein Backup der Registry wird ausgeführt.... Eine Normale Windows Registry ist im Normalfall ca. 500mb Groß. Das Backup wird unter C:\RegBack\ Gespeichert." -ForegroundColor Green
         reg export HKCR C:\RegBack\HKLM.Reg /y
         reg export HKCU C:\RegBack\HKCU.Reg /y
         reg export HKLM C:\RegBack\HKCR.Reg /y
@@ -1153,15 +1154,16 @@ function TWEAK_THE_SHIT{
     
     $ProgressBar1.Value = 100
     [System.Windows.Forms.MessageBox]::Show("Die Tweaks wurden erfolgreich abgeschlossen.","TGF Tuning Pack 4.2 by MinersWin",1)
-    Write-Host "100%"
-    Write-Host "Done"
-    Write-Host "Die Tweaks wurden erfolgreich abgeschlossen. Sollten Fehlermeldungen aufgetreten sein Liegt das wahrscheinlich am Auswählen nicht geeigneter Tweaks wie zum Beispiel Das entfernen von Windows 10 Apps in Windows 7." -ForeColor Green 
-    Write-Host "Wir übernehmen keine Verantwortung für die Folgen und eventuelle Schäden an euren Systemen. Alle Tweaks wurden von euch Ausgewählt und mehrfach Bestätigt."
-    Write-Host "Bei Fragen oder Problemen gerne im Discord nach Lösung Fragen oder auf den TeamSpeak joinen."
-    Write-Host "Wir würden uns Freuen eure Erfahrungen und Ergenisse zu sehen. Postet gerne Feedback im Discord."
-    Write-Host "Unterstüzung dieses und weiteren Tools: https://paypal.me/minerswin"
-    Write-Host "Discord: https://discordapp.com/invite/qrXmqSq"
-    Write-Host "TeamSpeak: ts.thegeekfreaks.de"
+    Write-Host "100%" -ForegroundColor Blue
+    Write-Host "Done" -ForegroundColor Blue
+    Write-Host "--------------------------------------------------------------------------------------------------" -ForegroundColor Red
+    Write-Host "Die Tweaks wurden erfolgreich abgeschlossen. Sollten Fehlermeldungen aufgetreten sein Liegt das wahrscheinlich am Auswählen nicht geeigneter Tweaks wie zum Beispiel Das entfernen von Windows 10 Apps unter Windows 7."  -ForegroundColor Green
+    Write-Host "Wir übernehmen keine Verantwortung für die Folgen und eventuelle Schäden an euren Systemen. Alle Tweaks wurden von euch Ausgewählt und mehrfach Bestätigt." -ForegroundColor Green
+    Write-Host "Bei Fragen oder Problemen gerne im Discord nach Lösung Fragen oder auf den TeamSpeak joinen." -ForegroundColor Green
+    Write-Host "Wir würden uns Freuen eure Erfahrungen und Ergenisse zu sehen. Postet gerne Feedback im Discord." -ForegroundColor Green
+    Write-Host "Unterstüzung dieses und weiteren Tools: https://paypal.me/minerswin" -ForegroundColor Green
+    Write-Host "Discord: https://discordapp.com/invite/qrXmqSq" -ForegroundColor Green
+    Write-Host "TeamSpeak: ts.thegeekfreaks.de" -ForegroundColor Green
     $Label11.Text = "YAY"
     $Label12.Text = "DONE"
 
