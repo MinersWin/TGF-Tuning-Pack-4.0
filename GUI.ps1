@@ -28,7 +28,7 @@ __________                __        _____    ________
         __/ |                                                  
        |___/     
 The Geek Freaks Tuning Pack 4.2 Update 29.04.2020
-Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0
+Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0/releases/
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
 WIR ÜBERNEHMEN KEINE VERANTWORTUNG FÜR PROBLEME DIE MIT DER AUSFÜHRUNG UNSERES PROGRAMMS EINHERGEHEN!
@@ -389,10 +389,10 @@ $Button16.Add_Click{(Make-Tweaks)}
 function Make-Tweaks{
     if ($Language -eq "de-DE"){
         Write-Host "Tuning Pack 4.2 by MinersWin: https://tuning-pack.de/"
-        $msgBoxInput = [System.Windows.Forms.MessageBox]::Show("Tweaks werden ausgeführt. Bitte vor dem Bestätigen nochmal alle Tweaks Überprüfen. Hierbei kann einiges Kaputt gehen.","Tuning Pack Sicherheitswarnung",'YesNoCancel','Error')
+        $msgBoxInput = [System.Windows.Forms.MessageBox]::Show("Tweaks werden ausgeführt. Bitte vor dem Bestätigen nochmal alle Tweaks Überprüfen. Hierbei kann einiges Kaputt gehen.","Tuning Pack Sicherheitswarnung",'YesNoCancel','Question')
         } else {
         Write-Host "Tuning Pack 4.2 by MinersWin: https://tuning-pack.de/"
-        $msgBoxInput = [System.Windows.Forms.MessageBox]::Show("Tweaks are in progress. Please check all tweaks again before confirming. This can break some things.","Tuning Pack Security Warning",'YesNoCancel','Error')
+        $msgBoxInput = [System.Windows.Forms.MessageBox]::Show("Tweaks are in progress. Please check all tweaks again before confirming. This can break some things.","Tuning Pack Security Warning",'YesNoCancel','Question')
         }
         switch  ($msgBoxInput) {
     
@@ -1154,18 +1154,33 @@ function TWEAK_THE_SHIT{
     
     $ProgressBar1.Value = 100
     [System.Windows.Forms.MessageBox]::Show("Die Tweaks wurden erfolgreich abgeschlossen.","TGF Tuning Pack 4.2 by MinersWin",1)
-    Write-Host "100%" -ForegroundColor Blue
-    Write-Host "Done" -ForegroundColor Blue
-    Write-Host "--------------------------------------------------------------------------------------------------" -ForegroundColor Red
-    Write-Host "Die Tweaks wurden erfolgreich abgeschlossen. Sollten Fehlermeldungen aufgetreten sein Liegt das wahrscheinlich am Auswählen nicht geeigneter Tweaks wie zum Beispiel Das entfernen von Windows 10 Apps unter Windows 7."  -ForegroundColor Green
-    Write-Host "Wir übernehmen keine Verantwortung für die Folgen und eventuelle Schäden an euren Systemen. Alle Tweaks wurden von euch Ausgewählt und mehrfach Bestätigt." -ForegroundColor Green
-    Write-Host "Bei Fragen oder Problemen gerne im Discord nach Lösung Fragen oder auf den TeamSpeak joinen." -ForegroundColor Green
-    Write-Host "Wir würden uns Freuen eure Erfahrungen und Ergenisse zu sehen. Postet gerne Feedback im Discord." -ForegroundColor Green
-    Write-Host "Unterstüzung dieses und weiteren Tools: https://paypal.me/minerswin" -ForegroundColor Green
-    Write-Host "Discord: https://discordapp.com/invite/qrXmqSq" -ForegroundColor Green
-    Write-Host "TeamSpeak: ts.thegeekfreaks.de" -ForegroundColor Green
-    $Label11.Text = "YAY"
-    $Label12.Text = "DONE"
+    if ($Language -eq "de-DE"){
+        Write-Host "100%" -ForegroundColor Blue
+        Write-Host "Fertig" -ForegroundColor Blue
+        Write-Host "--------------------------------------------------------------------------------------------------" -ForegroundColor Red
+        Write-Host "Die Tweaks wurden erfolgreich abgeschlossen. Sollten Fehlermeldungen aufgetreten sein Liegt das wahrscheinlich am Auswählen nicht geeigneter Tweaks wie zum Beispiel Das entfernen von Windows 10 Apps unter Windows 7."  -ForegroundColor Green
+        Write-Host "Wir übernehmen keine Verantwortung für die Folgen und eventuelle Schäden an euren Systemen. Alle Tweaks wurden von euch Ausgewählt und mehrfach Bestätigt." -ForegroundColor Green
+        Write-Host "Bei Fragen oder Problemen gerne im Discord nach Lösung Fragen, im Forum einen Thread erstellen oder auf den TeamSpeak joinen." -ForegroundColor Green
+        Write-Host "Wir würden uns Freuen eure Erfahrungen und Ergenisse zu sehen. Postet gerne Feedback im Discord." -ForegroundColor Green
+        Write-Host "Unterstüzung dieses und weiteren Tools: https://paypal.me/minerswin" -ForegroundColor Green
+        Write-Host "Discord: https://discordapp.com/invite/qrXmqSq" -ForegroundColor Green
+        Write-Host "TeamSpeak: ts.thegeekfreaks.de" -ForegroundColor Green
+        $Label11.Text = ":=)"
+        $Label12.Text = "Fertig"
+    } else {
+        Write-Host "100%" -ForegroundColor Blue
+        Write-Host "Done" -ForegroundColor Blue
+        Write-Host "--------------------------------------------------------------------------------------------------" -ForegroundColor Red
+        Write-Host "The tweaks have been successfully completed. If error messages have occurred, this is probably due to the selection of unsuitable tweaks such as removing Windows 10 apps under Windows 7."  -ForegroundColor Green
+        Write-Host "We are not responsible for the consequences and possible damage to your systems. All tweaks were selected by you and confirmed several times." -ForegroundColor Green
+        Write-Host "If you have any questions or problems, please feel free to ask for a solution in the Discord, create a Thread in the Forums or join the TeamSpeak." -ForegroundColor Green
+        Write-Host "We would be happy to see your experiences and results. Feel free to post feedback in the Discord or the Forums." -ForegroundColor Green
+        Write-Host "Support for this and other tools: https://paypal.me/minerswin" -ForegroundColor Green
+        Write-Host "Discord: https://discordapp.com/invite/qrXmqSq" -ForegroundColor Green
+        Write-Host "TeamSpeak: ts.thegeekfreaks.de" -ForegroundColor Green
+        $Label11.Text = ":=)"
+        $Label12.Text = "DONE"
+    }
 
 }
 
