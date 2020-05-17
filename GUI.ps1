@@ -5,6 +5,44 @@ Add-Type -AssemblyName System.Windows.Forms
 $tooltip = New-Object System.Windows.Forms.ToolTip
 $Config = Import-LocalizedData -BaseDirectory .\Config\ -FileName Config.psd1
 $WinVersion = [System.Environment]::OSVersion.Version.Major
+
+####################################################################################################################################################
+#Ballon Tool Tips
+Function Invoke-BalloonTip {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Mandatory=$True,HelpMessage="The message text to display. Keep it short and simple.")]
+        [string]$Message,
+        [Parameter(HelpMessage="The message title")]
+         [string]$Title="Attention $env:username",
+        [Parameter(HelpMessage="The message type: Info,Error,Warning,None")]
+        [System.Windows.Forms.ToolTipIcon]$MessageType="Info",
+        [Parameter(HelpMessage="The path to a file to use its icon in the system tray")]
+        [string]$SysTrayIconPath='C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe',     
+        [Parameter(HelpMessage="The number of milliseconds to display the message.")]
+        [int]$Duration=1000
+    )
+    If (-NOT $script:balloon) {
+        $script:balloon = New-Object System.Windows.Forms.NotifyIcon
+        [void](Register-ObjectEvent -InputObject $balloon -EventName MouseDoubleClick -SourceIdentifier IconClicked -Action {
+            Write-Verbose 'Disposing of balloon'
+            $script:balloon.dispose()
+            Unregister-Event -SourceIdentifier IconClicked
+            Remove-Job -Name IconClicked
+            Remove-Variable -Name balloon -Scope Global
+        })
+    }
+    $path = Get-Process -id $pid | Select-Object -ExpandProperty Path
+    $balloon.Icon = [System.Drawing.Icon]::ExtractAssociatedIcon($SysTrayIconPath)
+    $balloon.BalloonTipIcon  = [System.Windows.Forms.ToolTipIcon]$MessageType
+    $balloon.BalloonTipText  = $Message
+    $balloon.BalloonTipTitle = $Title
+    $balloon.Visible = $true
+    $balloon.ShowBalloonTip($Duration)
+    Write-Verbose "Ending function"
+############################################################################################################################################
+
+
 Write-Host "
 
 ______________________________ ___________           .__                
