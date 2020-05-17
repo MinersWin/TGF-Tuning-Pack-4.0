@@ -11,14 +11,14 @@ $WinVersion = [System.Environment]::OSVersion.Version.Major
 Function Invoke-BalloonTip {
     [CmdletBinding()]
     Param (
-        [Parameter(Mandatory=$True,HelpMessage="The message text to display. Keep it short and simple.")]
+        [Parameter(Mandatory=$True,HelpMessage="Die Nachricht zum Anzeigen.")]
         [string]$Message,
-        [Parameter(HelpMessage="The message title")]
-         [string]$Title="Attention $env:username",
-        [Parameter(HelpMessage="The message type: Info,Error,Warning,None")]
+        [Parameter(HelpMessage="Nachrichtentitel")]
+         [string]$Title="Achtung $env:username",
+        [Parameter(HelpMessage="Die Benachrichtigungsart: Info,Error,Warning,None")]
         [System.Windows.Forms.ToolTipIcon]$MessageType="Info",
         [Parameter(HelpMessage="The path to a file to use its icon in the system tray")]
-        [string]$SysTrayIconPath='C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe',     
+        [string]$SysTrayIconPath='.\TGF_Tuning_Pack.exe',     
         [Parameter(HelpMessage="The number of milliseconds to display the message.")]
         [int]$Duration=1000
     )
@@ -40,8 +40,28 @@ Function Invoke-BalloonTip {
     $balloon.Visible = $true
     $balloon.ShowBalloonTip($Duration)
     Write-Verbose "Ending function"
+}
 ############################################################################################################################################
+#Funktion für BaloonTips
+Add-Type -AssemblyName  System.Windows.Forms 
+$script:balloon = New-Object System.Windows.Forms.NotifyIcon 
+Get-Member -InputObject  $script:balloon 
+[void](Register-ObjectEvent  -InputObject $balloon  -EventName MouseDoubleClick  -SourceIdentifier IconClicked  -Action {
+    $script:balloon.dispose()
+    Unregister-Event  -SourceIdentifier IconClicked
+    Remove-Job -Name IconClicked
+    Remove-Variable  -Name balloon  -Scope Global
+  }) 
+  $path = (Get-Process -id $pid).Path
+  $balloon.Icon  = [System.Drawing.Icon]::ExtractAssociatedIcon($path) 
+  $balloon.BalloonTipIcon  = [System.Windows.Forms.ToolTipIcon]::Warning
+#___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________#
 
+
+$balloon.BalloonTipText  = 'Starte TGF Tuning PAck 4.2'
+$balloon.BalloonTipTitle  = "Achtung  $Env:USERNAME" 
+$balloon.Visible  = $true 
+$balloon.ShowBalloonTip(20) 
 
 Write-Host "
 
