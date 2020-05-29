@@ -58,7 +58,7 @@ Get-Member -InputObject  $script:balloon
 #___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________#
 
 
-$balloon.BalloonTipText  = 'Starte TGF Tuning PAck 4.2'
+$balloon.BalloonTipText  = 'Starte TGF Tuning Pack 4.2'
 $balloon.BalloonTipTitle  = "Achtung  $Env:USERNAME" 
 $balloon.Visible  = $true 
 $balloon.ShowBalloonTip(20) 
@@ -85,7 +85,7 @@ __________                __        _____    ________
 |_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
         __/ |                                                  
        |___/     
-The Geek Freaks Tuning Pack 4.2 Update 29.04.2020
+The Geek Freaks Tuning Pack 4.2 Update 29.05.2020
 Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0/releases/
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
