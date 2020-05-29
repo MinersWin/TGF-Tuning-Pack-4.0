@@ -41,6 +41,18 @@ Function Invoke-BalloonTip {
     $balloon.ShowBalloonTip($Duration)
     Write-Verbose "Ending function"
 }
+
+############################################################################################################################################
+$MessageEnglish="
+The tweaks have been successfully completed. If error messages have occurred, this is probably due to the selection of unsuitable tweaks such as removing Windows 10 apps under Windows 7.
+We are not responsible for the consequences and possible damage to your systems. All tweaks were selected by you and confirmed several times.
+If you have any questions or problems, please feel free to ask for a solution in the Discord, create a Thread in the Forums or join the TeamSpeak.
+We would be happy to see your experiences and results. Feel free to post feedback in the Discord or the Forums.
+Support for this and other tools: https://paypal.me/minerswin
+Discord: https://discordapp.com/invite/qrXmqSq
+TeamSpeak: ts.thegeekfreaks.de
+Forum: forum.thegeekfreaks.de
+"
 ############################################################################################################################################
 #Funktion für BaloonTips
 Add-Type -AssemblyName  System.Windows.Forms 
@@ -95,6 +107,7 @@ TeamSpeak: ts.thegeekfreaks.de
 Forum: forum.thegeekfreaks.de
 Tutorials: youtube.com/thegeekfreaks
 " -ForegroundColor Green
+Write-Host "Forum: forum.thegeekfreaks.de" -ForegroundColor Green
 $Label1.Text = "TGF Tuning Pack 4.1 by MinersWin"
 Write-Host "Windoof $($WinVersion)"
 
@@ -1212,6 +1225,7 @@ function TWEAK_THE_SHIT{
     
     $ProgressBar1.Value = 100
     [System.Windows.Forms.MessageBox]::Show("Die Tweaks wurden erfolgreich abgeschlossen.","TGF Tuning Pack 4.2 by MinersWin",1)
+    [System.Windows.Forms.MessageBox]::Show("$($MessageEnglish)","Tuning Pack",1)
     if ($Language -eq "de-DE"){
         Write-Host "100%" -ForegroundColor Blue
         Write-Host "Fertig" -ForegroundColor Blue
@@ -1223,6 +1237,7 @@ function TWEAK_THE_SHIT{
         Write-Host "Unterstüzung dieses und weiteren Tools: https://paypal.me/minerswin" -ForegroundColor Green
         Write-Host "Discord: https://discordapp.com/invite/qrXmqSq" -ForegroundColor Green
         Write-Host "TeamSpeak: ts.thegeekfreaks.de" -ForegroundColor Green
+        Write-Host "Forum: forum.thegeekfreaks.de" -ForegroundColor Green
         $Label11.Text = ":=)"
         $Label12.Text = "Fertig"
     } else {
@@ -1236,6 +1251,7 @@ function TWEAK_THE_SHIT{
         Write-Host "Support for this and other tools: https://paypal.me/minerswin" -ForegroundColor Green
         Write-Host "Discord: https://discordapp.com/invite/qrXmqSq" -ForegroundColor Green
         Write-Host "TeamSpeak: ts.thegeekfreaks.de" -ForegroundColor Green
+        Write-Host "Forum: forum.thegeekfreaks.de" -ForegroundColor Green
         $Label11.Text = ":=)"
         $Label12.Text = "DONE"
     }
