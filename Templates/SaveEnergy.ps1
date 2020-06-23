@@ -123,3 +123,4 @@ $CheckBox114.Checked = $true            #Mouse Acceleration Fix
 
 
 Write-Output "Save Energy"
+[System.Windows.Forms.MessageBox]::Show("SaveEnergy Template was applied.")

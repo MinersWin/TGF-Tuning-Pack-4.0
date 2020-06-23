@@ -123,3 +123,4 @@ $CheckBox114.Checked = $true            #Mouse Acceleration Fix
 
 
 Write-Output "Recommended Settings"
+[System.Windows.Forms.MessageBox]::Show("Recommended Template was applied.")

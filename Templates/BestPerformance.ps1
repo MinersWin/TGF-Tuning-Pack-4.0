@@ -123,3 +123,4 @@ $CheckBox114.Checked = $true            #Mouse Acceleration Fix
 
 
 Write-Output "Best Performance"
+[System.Windows.Forms.MessageBox]::Show("Best Performance Template was applied.")

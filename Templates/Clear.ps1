@@ -121,3 +121,4 @@ $CheckBox78.Checked = $false            #Blocking more Microsoft Servers
 $CheckBox114.Checked = $false           #Mouse Acceleration Fix
 
 Write-Output "Clear Settings"
+[System.Windows.Forms.MessageBox]::Show("Cleared all CheckBoxes.")
