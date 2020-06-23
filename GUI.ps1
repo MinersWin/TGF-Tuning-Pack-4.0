@@ -131,9 +131,9 @@ Test-InternetConnection
 ##################################################################################################################################################################################
 $Language = Get-Content .\Config\Language.txt
 if ($Language -eq "de-DE"){
-[System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr frühe Alpha Version. Die Tweaks sind zum Teil noch nicht funktionsfähig.","The Geek Freaks Tuning Pack 4.2 by MinersWin",'OK','Error')
+[System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr frühe Alpha Version. Die Tweaks sind zum Teil noch nicht funktionsfähig.","The Geek Freaks Tuning Pack 4.2 by MinersWin",'OK','Info')
 } else {
-[System.Windows.Forms.MessageBox]::Show("This is a very early alpha version. Some of the tweaks are not yet functional.","The Geek Freaks Tuning Pack 4.2 by MinersWin",'OK','Error')
+[System.Windows.Forms.MessageBox]::Show("This is a very early alpha version. Some of the tweaks are not yet functional.","The Geek Freaks Tuning Pack 4.2 by MinersWin",'OK','Info')
 }
 $Form1.Text = $Config.Application.Name
 
