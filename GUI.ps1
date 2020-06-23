@@ -439,13 +439,6 @@ $ComboBox1.Items.Add("Maximum Privacy")
 $ComboBox1.Items.Add("Recommended")
 $ComboBox1.Items.Add("Clear")
 $ComboBox1.Items.Add("ULTIMATE PERFORMANCE")
-$ComboBox1.Items.Add("Beste Sicherheit")
-$ComboBox1.Items.Add("Laptop und Tablet")
-$ComboBox1.Items.Add("Gaming und Streaming")
-$ComboBox1.Items.Add("Beste Optik")
-$ComboBox1.Items.Add("Minimal")
-$ComboBox1.Items.Add("Kein Einfluss auf Optik und Funktionen")
-$ComboBox1.Items.Add("Alter Computer")
 $ComboBox1.SelectedItem = "Recommended"
 
 #Progressbar Reset
