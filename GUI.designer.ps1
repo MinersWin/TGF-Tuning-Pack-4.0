@@ -2983,7 +2983,7 @@ $Form1.Controls.Add($TabControl1)
 $Form1.Controls.Add($Panel1)
 $Form1.Controls.Add($Label3)
 $Form1.Controls.Add($Label1)
-$Form1.Text = [System.String]'The Geek Freaks Tuning Pack 4.0'
+$Form1.Text = [System.String]'The Geek Freaks Tuning Pack 4.2'
 $Form1.add_Load($Form1_Load)
 ([System.ComponentModel.ISupportInitialize]$PictureBox1).EndInit()
 $Panel1.ResumeLayout($false)

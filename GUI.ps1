@@ -108,7 +108,7 @@ Forum: forum.thegeekfreaks.de
 Tutorials: youtube.com/thegeekfreaks
 " -ForegroundColor Green
 Write-Host "Forum: forum.thegeekfreaks.de" -ForegroundColor Green
-$Label1.Text = "TGF Tuning Pack 4.1 by MinersWin"
+$Label1.Text = "TGF Tuning Pack 4.2"
 Write-Host "Windoof $($WinVersion)"
 
 function Test-InternetConnection {
