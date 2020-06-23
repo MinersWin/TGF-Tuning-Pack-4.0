@@ -409,7 +409,7 @@ $Button14.Add_Click{(Make-German)}
 
 function Make-German{
     del .\Config\Language.txt
-    Write-Host "de-DE" >> .\Config\Language.txt
+    Write-Output "de-DE" >> .\Config\Language.txt
     .\Update-German.ps1
 }
 
@@ -417,7 +417,7 @@ function Make-German{
 $Button13.Add_Click{(Make-English)}
 function Make-English{
     del .\Config\Language.txt
-    Write-Host "en-EN" >> .\Config\Language.txt
+    Write-Output "en-EN" >> .\Config\Language.txt
     .\Update-Englisch.ps1
 }
 
