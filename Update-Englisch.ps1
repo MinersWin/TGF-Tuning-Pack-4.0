@@ -150,7 +150,7 @@ $TabPage2.Text = "Removing Services"
 $TabPage5.Text = "Scheduled Tasks"
 $TabPage6.Text = "Windows Default Apps"
 $TabPage8.Text = "Misc."
-$TabPage4.Text = "Tools"
+$TabPage4.Text = "Tools (Legacy)"
 
 #######################################################################################################################################################################################################
 #ToolTips
@@ -183,7 +183,7 @@ $tooltip.SetToolTip($CheckBox25,"Cortana is a voice-enabled virtual assistant de
 $tooltip.SetToolTip($CheckBox26,"Hide search box from taskbar. You can still search by pressing the win key and start typing what youre looking for")
 $tooltip.SetToolTip($CheckBox27,"The MRU in MRU lists stands for 'Most Recently Used'. The MRU list is a Windows-based application that includes registry of recently opened webpages, documents, files, images and other applications.")
 $tooltip.SetToolTip($CheckBox29,"A disk quota is a limit set by a system administrator that restricts certain aspects of file system usage on modern operating systems. The function of using disk quotas is to allocate limited disk space in a reasonable way.")
-$tooltip.SetToolTip($CheckBox30,"An advertising ID is a user-specific, resettable identifier which is most commonly looked at as the a window into customers' most preferred device � their smartphone. Through an anonymous identifier provided by the mobile device's' operating system, MAIDs help developers identify who is using their app.")
+$tooltip.SetToolTip($CheckBox30,"An advertising ID is a user-specific, resettable identifier which is most commonly looked at as the a window into customers' most preferred device & their smartphone. Through an anonymous identifier provided by the mobile device's' operating system, MAIDs help developers identify who is using their app.")
 $tooltip.SetToolTip($CheckBox31,"With Microsoft Windows, Pin is a term first introduced in Windows 7 that describes permanently placing a shortcut on the Taskbar or Start menu.")
 $tooltip.SetToolTip($CheckBox31,"")
 $tooltip.SetToolTip($CheckBox31,"")
