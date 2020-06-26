@@ -1,4 +1,5 @@
-﻿$GUIFileExists = Test-Path ./GUI.ps1
+﻿Add-Type -AssemblyName System.Windows.Forms
+$GUIFileExists = Test-Path ./GUI.ps1
 Write-Host "Wurde das TuningPack ordnungsgemäß entpackt? '$($GUIFileExists)"
 if ($GUIFileExists){
     .\GUI.ps1
