@@ -1013,9 +1013,9 @@ $LinkLabel6.Text = [System.String]'LinkLabel6'
 $LinkLabel6.UseCompatibleTextRendering = $true
 $LinkLabel6.Links.Clear();
 if ($Language -eq "de-DE"){
-    $LinkLabel6.Links.Add(267, 37).Enabled = false;
+    $LinkLabel6.Links.Add(267, 37);
 } else {
-    $LinkLabel6.Links.Add(224, 37).Enabled = false;
+    $LinkLabel6.Links.Add(224, 37);
 }
 $LinkLabel6.add_Click({[system.Diagnostics.Process]::start("https://discordapp.com/invite/qrXmqSq")})
 #
