@@ -50,7 +50,7 @@ $Form1 = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.TabPage]$TabPage3 = $null
 [System.Windows.Forms.Button]$Button43 = $null
 [System.Windows.Forms.PictureBox]$PictureBox2 = $null
-[System.Windows.Forms.Label]$Label6 = $null
+[System.Windows.Forms.LinkLabel]$LinkLabel6 = $null
 [System.Windows.Forms.Button]$Button18 = $null
 [System.Windows.Forms.CheckBox]$CheckBox63 = $null
 [System.Windows.Forms.TabPage]$TabPage1 = $null
@@ -278,7 +278,7 @@ $TabControl1 = (New-Object -TypeName System.Windows.Forms.TabControl)
 $TabPage3 = (New-Object -TypeName System.Windows.Forms.TabPage)
 $Button43 = (New-Object -TypeName System.Windows.Forms.Button)
 $PictureBox2 = (New-Object -TypeName System.Windows.Forms.PictureBox)
-$Label6 = (New-Object -TypeName System.Windows.Forms.Label)
+$LinkLabel6 = (New-Object -TypeName System.Windows.Forms.LinkLabel)
 $Button18 = (New-Object -TypeName System.Windows.Forms.Button)
 $CheckBox63 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $TabPage1 = (New-Object -TypeName System.Windows.Forms.TabPage)
@@ -478,6 +478,7 @@ $Panel3.SuspendLayout()
 $Panel4.SuspendLayout()
 $Panel7.SuspendLayout()
 $Form1.SuspendLayout()
+$Language = Get-Content .\Config\Language.txt
 #
 #Label1
 #
@@ -972,7 +973,7 @@ $TabControl1.add_SelectedIndexChanged($TabControl1_SelectedIndexChanged)
 $TabPage3.BackColor = [System.Drawing.SystemColors]::Control
 $TabPage3.Controls.Add($Button43)
 $TabPage3.Controls.Add($PictureBox2)
-$TabPage3.Controls.Add($Label6)
+$TabPage3.Controls.Add($LinkLabel6)
 $TabPage3.Controls.Add($Button18)
 $TabPage3.Controls.Add($CheckBox63)
 $TabPage3.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]26))
@@ -1004,12 +1005,19 @@ $PictureBox2.TabStop = $false
 #
 #Label6
 #
-$Label6.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]22))
-$Label6.Name = [System.String]'Label6'
-$Label6.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]930,[System.Int32]79))
-$Label6.TabIndex = [System.Int32]3
-$Label6.Text = [System.String]'Label6'
-$Label6.UseCompatibleTextRendering = $true
+$LinkLabel6.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]22))
+$LinkLabel6.Name = [System.String]'LinkLabel6'
+$LinkLabel6.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]930,[System.Int32]79))
+$LinkLabel6.TabIndex = [System.Int32]3
+$LinkLabel6.Text = [System.String]'LinkLabel6'
+$LinkLabel6.UseCompatibleTextRendering = $true
+$LinkLabel6.Links.Clear();
+if ($Language -eq "de-DE"){
+    $LinkLabel6.Links.Add(267, 37);
+} else {
+    $LinkLabel6.Links.Add(224, 37);
+}
+$LinkLabel6.add_Click({[system.Diagnostics.Process]::start("https://discordapp.com/invite/qrXmqSq")})
 #
 #Button18
 #
@@ -3062,7 +3070,7 @@ Add-Member -InputObject $Form1 -Name TabControl1 -Value $TabControl1 -MemberType
 Add-Member -InputObject $Form1 -Name TabPage3 -Value $TabPage3 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button43 -Value $Button43 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name PictureBox2 -Value $PictureBox2 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Label6 -Value $Label6 -MemberType NoteProperty
+Add-Member -InputObject $Form1 -Name LinkLabel6 -Value $LinkLabel6 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name Button18 -Value $Button18 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name CheckBox63 -Value $CheckBox63 -MemberType NoteProperty
 Add-Member -InputObject $Form1 -Name TabPage1 -Value $TabPage1 -MemberType NoteProperty
