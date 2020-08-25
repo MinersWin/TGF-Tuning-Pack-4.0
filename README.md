@@ -1,5 +1,7 @@
 # The Geek Freaks Tuning Pack 4.2
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/bfc3a648c2a349f4b888c33c61f6e24a)](https://app.codacy.com/manual/MinersWin/TGF-Tuning-Pack-4.0?utm_source=github.com&utm_medium=referral&utm_content=MinersWin/TGF-Tuning-Pack-4.0&utm_campaign=Badge_Grade_Dashboard)
+
 ![GitLab](https://git.minerswin.de/thegeekfreaks1/tuningpack/TGF-Tuning-Pack-4.x)
 ![GitHub](https://github.com/MinersWin/TGF-Tuning-Pack-4.0)
 
