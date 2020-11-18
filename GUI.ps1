@@ -480,7 +480,7 @@ if ($Language -eq "de-DE"){
 
 
 #Add Ninite
-$Button19.Add_Click{(.\Ninite\Ninite.ps1)}
+$Button19.Add_Click{(.\Ninite\Ninite.ps1);WriteLog "Starte Ninite Client"}
 
 #ComboBox Templates
 $ComboBox1.Items.Add("Best Performance")
@@ -522,7 +522,6 @@ function Make-Tweaks{
         }
     }
 function TWEAK_THE_SHIT{
-    Checkpoint-Computer -Description "TGF_Tuning_Pack_4.2-$(Get-Date)"
     #Create RecoveryPoint
     if ($CheckBox61.Checked){
         wmic /namespace:\\root\default path SystemRestore call Enable C:\
