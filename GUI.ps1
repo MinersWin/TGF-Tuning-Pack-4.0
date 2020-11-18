@@ -77,7 +77,7 @@ TeamSpeak: ts.thegeekfreaks.de
 Forum: forum.thegeekfreaks.de
 "
 ############################################################################################################################################
-#Funktion f√ºr BaloonTips
+#Funktion f¸r BaloonTips
 Add-Type -AssemblyName  System.Windows.Forms 
 $script:balloon = New-Object System.Windows.Forms.NotifyIcon 
 Get-Member -InputObject  $script:balloon 
@@ -125,7 +125,7 @@ The Geek Freaks Tuning Pack 4.3 Update 18.11.2020
 Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0/releases/
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
-WIR √úBERNEHMEN KEINE VERANTWORTUNG F√úR PROBLEME DIE MIT DER AUSF√úHRUNG UNSERES PROGRAMMS EINHERGEHEN!
+WIR ‹BERNEHMEN KEINE VERANTWORTUNG F‹R PROBLEME DIE MIT DER AUSF‹HRUNG UNSERES PROGRAMMS EINHERGEHEN!
 Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr!
 TeamSpeak: ts.thegeekfreaks.de
 Forum: forum.thegeekfreaks.de
@@ -160,7 +160,7 @@ Test-InternetConnection
 ##################################################################################################################################################################################
 $Language = Get-Content .\Config\Language.txt
 if ($Language -eq "de-DE"){
-[System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr fr√ºhe Alpha Version. Die Tweaks sind zum Teil noch nicht funktionsf√§hig.","The Geek Freaks Tuning Pack 4.2 by MinersWin",'OK','Info')
+[System.Windows.Forms.MessageBox]::Show("Dies ist noch eine sehr fr¸he Alpha Version. Die Tweaks sind zum Teil noch nicht funktionsf‰hig.","The Geek Freaks Tuning Pack 4.2 by MinersWin",'OK','Info')
 } else {
 [System.Windows.Forms.MessageBox]::Show("This is a very early alpha version. Some of the tweaks are not yet functional.","The Geek Freaks Tuning Pack 4.2 by MinersWin",'OK','Info')
 }
@@ -403,7 +403,7 @@ $Button5.Add_Click{
         WriteLog "Download wurde abgeschlossen"
     } else {
         WriteLog "Verbindung zum Server kann nicht hergestellt werden"
-        Write-Host "Keine Internetverbindung m√∂glich. Bitte zu einem sp√§teren Zeitpunkt erneut versuchen."
+        Write-Host "Keine Internetverbindung m√∂glich. Bitte zu einem sp‰teren Zeitpunkt erneut versuchen."
     }    
 }
 
@@ -444,7 +444,7 @@ $Test = "https://discordapp.com/invite/qrXmqSq"
 
 #Write Risk Labels
 if ($Language -eq "de-DE"){
-    $LinkLabel6.Text = "Wir √úbernehmen keine Verantwortung f√ºr Probleme, die mit der Ausf√ºhrung unseres Programms einhergehen! Dies ist ein hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr! Probleme und Bugs k√∂nnen gerne im Discord gemeldet werden: https://discordapp.com/invite/qrXmqSq Das Pack ist kein Wundermittel, es kann nicht mehr Leistung aus deinem System holen als du hast. Je nach PC, zusammenstellung, Nutzungsverhalten, Anwendungsgebiet ... k√∂nnen die Performanceverbesserungen extrem Variieren"
+    $LinkLabel6.Text = "Wir ‹bernehmen keine Verantwortung f¸r Probleme, die mit der Ausf¸hrung unseres Programms einhergehen! Dies ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr! Probleme und Bugs k√∂nnen gerne im Discord gemeldet werden: https://discordapp.com/invite/qrXmqSq Das Pack ist kein Wundermittel, es kann nicht mehr Leistung aus deinem System holen als du hast. Je nach PC, zusammenstellung, Nutzungsverhalten, Anwendungsgebiet ... kˆnnen die Performanceverbesserungen extrem Variieren"
 } else {
     $LinkLabel6.Text = "We do not take responsibility for problems that accompany the execution of our program! This is a hobby project! Everything can create errors and problems! Use at your own risk! Problems and bugs are welcome in the Discord: https://discordapp.com/invite/qrXmqSq . The pack is not a miracle cure, it cannot get more power out of your system than you have. Depending on the PC, composition, usage behavior, area of application ... the performance improvements can vary extremely"
 }
@@ -503,7 +503,7 @@ $Button16.Add_Click{(Make-Tweaks)}
 function Make-Tweaks{
     if ($Language -eq "de-DE"){
         Write-Host "Tuning Pack 4.2 by MinersWin: https://tuning-pack.de/"
-        $msgBoxInput = [System.Windows.Forms.MessageBox]::Show("Tweaks werden ausgef√ºhrt. Bitte vor dem Best√§tigen nochmal alle Tweaks √úberpr√ºfen. Hierbei kann einiges Kaputt gehen.","Tuning Pack Sicherheitswarnung",'YesNoCancel','Question')
+        $msgBoxInput = [System.Windows.Forms.MessageBox]::Show("Tweaks werden ausgef¸hrt. Bitte vor dem Best‰tigen nochmal alle Tweaks ‹berpr¸fen. Hierbei kann einiges Kaputt gehen.","Tuning Pack Sicherheitswarnung",'YesNoCancel','Question')
         } else {
         Write-Host "Tuning Pack 4.2 by MinersWin: https://tuning-pack.de/"
         $msgBoxInput = [System.Windows.Forms.MessageBox]::Show("Tweaks are in progress. Please check all tweaks again before confirming. This can break some things.","Tuning Pack Security Warning",'YesNoCancel','Question')
@@ -512,7 +512,7 @@ function Make-Tweaks{
     
             'Yes' {
                 Write-Host "YES" 
-                Write-Host "Tweaks werden ausgef√ºhrt"
+                Write-Host "Tweaks werden ausgef¸hrt"
                 TWEAK_THE_SHIT
             }
             'No' {
@@ -528,16 +528,16 @@ function TWEAK_THE_SHIT{
         Write-Host "Die erstellung von Wiederherstellungspunkten wurde aktiviert"
         Checkpoint-Computer -Description "TGF_Tuning_Pack_4.2-$(Get-Date)"
         $Date = Get-Date
-        Write-Host "Der Wiederherstellungspunkt wurde erstellt. Er tr√§gt den Namen: $($Date) TGF Tuning Pack" -ForegroundColor Green
+        Write-Host "Der Wiederherstellungspunkt wurde erstellt. Er tr‰gt den Namen: $($Date) TGF Tuning Pack" -ForegroundColor Green
     }
     if ($CheckBox62.Checked){
         if ($Language -eq "de-DE"){
-            $Backup = [System.Windows.Forms.MessageBox]::Show("Ein Backup der Registry wird ausgef√ºhrt. Eine Normale Windows Registry ist im Normalfall ca. 500mb Gro√ü. Das Backup wird unter C:\RegBack\ Gespeichert.","TGF Tuning Pack 4.2 by MinersWin",'OK','Info')
+            $Backup = [System.Windows.Forms.MessageBox]::Show("Ein Backup der Registry wird ausgef¸hrt. Eine Normale Windows Registry ist im Normalfall ca. 500mb Groﬂ. Das Backup wird unter C:\RegBack\ Gespeichert.","TGF Tuning Pack 4.2 by MinersWin",'OK','Info')
         } else {
             $Backup = [System.Windows.Forms.MessageBox]::Show("The registry is backed up. A normal Windows registry is usually about 500mb in size. The backup is saved under C:\RegBack\.","TGF Tuning Pack 4.2 by MinersWin",'OK','Info')
         }
         mkdir C:\RegBack\        
-        Write-Host "Ein Backup der Registry wird ausgef√ºhrt.... Eine Normale Windows Registry ist im Normalfall ca. 500mb Gro√ü. Das Backup wird unter C:\RegBack\ Gespeichert." -ForegroundColor Green
+        Write-Host "Ein Backup der Registry wird ausgef¸hrt.... Eine Normale Windows Registry ist im Normalfall ca. 500mb Groﬂ. Das Backup wird unter C:\RegBack\ Gespeichert." -ForegroundColor Green
         reg export HKCR C:\RegBack\HKLM.Reg /y
         reg export HKCU C:\RegBack\HKCU.Reg /y
         reg export HKLM C:\RegBack\HKCR.Reg /y
@@ -1272,11 +1272,11 @@ function TWEAK_THE_SHIT{
         Write-Host "100%" -ForegroundColor Blue
         Write-Host "Fertig" -ForegroundColor Blue
         Write-Host "--------------------------------------------------------------------------------------------------" -ForegroundColor Red
-        Write-Host "Die Tweaks wurden erfolgreich abgeschlossen. Sollten Fehlermeldungen aufgetreten sein Liegt das wahrscheinlich am Ausw√§hlen nicht geeigneter Tweaks wie zum Beispiel Das entfernen von Windows 10 Apps unter Windows 7."  -ForegroundColor Green
-        Write-Host "Wir √ºbernehmen keine Verantwortung f√ºr die Folgen und eventuelle Sch√§den an euren Systemen. Alle Tweaks wurden von euch Ausgew√§hlt und mehrfach Best√§tigt." -ForegroundColor Green
-        Write-Host "Bei Fragen oder Problemen gerne im Discord nach L√∂sung Fragen, im Forum einen Thread erstellen oder auf den TeamSpeak joinen." -ForegroundColor Green
-        Write-Host "Wir w√ºrden uns Freuen eure Erfahrungen und Ergenisse zu sehen. Postet gerne Feedback im Discord." -ForegroundColor Green
-        Write-Host "Unterst√ºtzung dieses und weiteren Tools: https://paypal.me/minerswin" -ForegroundColor Green
+        Write-Host "Die Tweaks wurden erfolgreich abgeschlossen. Sollten Fehlermeldungen aufgetreten sein Liegt das wahrscheinlich am Ausw‰hlen nicht geeigneter Tweaks wie zum Beispiel Das entfernen von Windows 10 Apps unter Windows 7."  -ForegroundColor Green
+        Write-Host "Wir ‹bernehmen keine Verantwortung f¸r die Folgen und eventuelle Sch√§den an euren Systemen. Alle Tweaks wurden von euch Ausgew‰hlt und mehrfach Best‰tigt." -ForegroundColor Green
+        Write-Host "Bei Fragen oder Problemen gerne im Discord nach Lˆsung Fragen, im Forum einen Thread erstellen oder auf den TeamSpeak joinen." -ForegroundColor Green
+        Write-Host "Wir w‰rden uns Freuen eure Erfahrungen und Ergenisse zu sehen. Postet gerne Feedback im Discord." -ForegroundColor Green
+        Write-Host "Unterst¸tzung dieses und weiteren Tools: https://paypal.me/minerswin" -ForegroundColor Green
         Write-Host "Discord: https://discordapp.com/invite/qrXmqSq" -ForegroundColor Green
         Write-Host "TeamSpeak: ts.thegeekfreaks.de" -ForegroundColor Green
         Write-Host "Forum: forum.thegeekfreaks.de" -ForegroundColor Green
