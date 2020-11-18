@@ -7,6 +7,29 @@ $Config = Import-LocalizedData -BaseDirectory .\Config\ -FileName Config.psd1
 $WinVersion = [System.Environment]::OSVersion.Version.Major
 
 ####################################################################################################################################################
+#Write Log Function
+function WriteLog {
+    Param ([string]$t)
+    Write-Output "$(Get-Date) $t" >> "$($MyDir)\Log\Latest.log"
+}
+
+#Einlesen der Einstellungen aus der Config Datei
+if (Test-Path $MyDir\Log\Latest.log){
+    $OldLog = Get-Content "$($MyDir)\Log\Latest.log"
+    $OldLog[0]
+    $NewName = $OldLog[0]
+    $NewName = "$($NewName)-LOG"
+    $NewName
+    "$($MyDir)\Log\$($NewName).txt"
+    Write-Output $OldLog >> "$($MyDir)\Log\$($NewName).txt"
+    rm $MyDir\Log\Latest.log
+} else {
+    Write-Output ChickenHung
+}
+
+Write-Output (("{0:yyyy-MM-dd-HH-mm-ss}" -f (get-date)).ToString()) >> $MyDir\Log\Latest.log
+
+####################################################################################################################################################
 #Ballon Tool Tips
 Function Invoke-BalloonTip {
     [CmdletBinding()]
@@ -70,10 +93,11 @@ Get-Member -InputObject  $script:balloon
 #___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________#
 
 
-$balloon.BalloonTipText  = 'Starte TGF Tuning Pack 4.2'
+$balloon.BalloonTipText  = 'Starte TGF Tuning Pack 4.3'
 $balloon.BalloonTipTitle  = "Achtung  $Env:USERNAME" 
 $balloon.Visible  = $true 
 $balloon.ShowBalloonTip(20) 
+WriteLog "Starte TGF Tuning Pack 4.3"
 
 Write-Host "
 
@@ -97,7 +121,7 @@ __________                __        _____    ________
 |_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
         __/ |                                                  
        |___/     
-The Geek Freaks Tuning Pack 4.2 Update 26.06.2020
+The Geek Freaks Tuning Pack 4.3 Update 18.11.2020
 Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0/releases/
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
@@ -110,6 +134,9 @@ Tutorials: youtube.com/thegeekfreaks
 Write-Host "Forum: forum.thegeekfreaks.de" -ForegroundColor Green
 $Label1.Text = "TGF Tuning Pack 4.2"
 Write-Host "Windoof $($WinVersion)"
+WriteLog "Windows Version: $($WinVersion)"
+WriteLog "User: $($env:username)"
+WriteLog "Hostname: $($env:COMPUTERNAME)"
 
 function Test-InternetConnection {
     while (!(test-connection 37.120.179.48 -Count 1 -Quiet)) {
@@ -123,8 +150,10 @@ function Test-InternetConnection {
     }
     if ($Internet){
         "$(Get-Date) Internetverbindung: Online"
+        WriteLog "Internet: Online"
     } else {
         "$(Get-Date) Internetverbindung: Offline"
+        WriteLog "Internet: Offline"
     }
 }
 Test-InternetConnection
@@ -135,13 +164,16 @@ if ($Language -eq "de-DE"){
 } else {
 [System.Windows.Forms.MessageBox]::Show("This is a very early alpha version. Some of the tweaks are not yet functional.","The Geek Freaks Tuning Pack 4.2 by MinersWin",'OK','Info')
 }
+WriteLog "Sprache $($Language)"
 $Form1.Text = $Config.Application.Name
 
 #New Update
 if (Test-Path .\Config\Accept.dat){
 
 } else {
+    WriteLog "First Startup, Show Changelog"
     .\Changelog\Changelog.ps1
+    WriteLog "Changelog Accepted"
    Out-File -FilePath .\Config\Accept.dat
 }
 
@@ -330,6 +362,7 @@ $Button42.Image = ([System.Drawing.Image]::FromFile($UpdateIcon))
 
 #All The Tools CHECK
 function CheckTools{
+    WriteLog "Checking for Tools"
     $Tools = Test-Path .\Tools
     if ($Tools){
         $Label18.ForeColor = "GREEN"
@@ -339,6 +372,7 @@ function CheckTools{
         $Panel10.Enabled = $true
         $Panel11.Enabled = $true
         $Panel12.Enabled = $true
+        WriteLog "Tools Found"
     } else {
         $Label18.ForeColor = "RED"
         $Label18.Text = "Could not find the tools, please download first."
@@ -347,20 +381,34 @@ function CheckTools{
         $Panel10.Enabled = $false
         $Panel11.Enabled = $false
         $Panel12.Enabled = $false
+        WriteLog "Tools not found, you have to Download them first"
     }
 }
 CheckTools
 $Button46.Add_Click{(CheckTools)}
 
 #Clipboard History
-$Button44.Add_Click{(start cmd.exe 'cmd /c "echo off | clip"')}
+$Button44.Add_Click{(start cmd.exe 'cmd /c "echo off | clip"');WriteLog "Cleared Clipboard History"}
 #System Propertys Performance
-$Button15.Add_Click{(start SystemPropertiesPerformance.exe)}
+$Button15.Add_Click{(start SystemPropertiesPerformance.exe);WriteLog "Started SystemPropertiesPerformance Menu"}
 #Download Tools
-$Button5.Add_Click({Start-Process PowerShell.exe "Write-Host 'Der Download Startet, dies kann je nach Internetgeschwindigkeit ca. 5-10 Minuten dauern. (500MB)'; Write-Host 'The download starts, this may take about 5-10 minutes, depending on the internet speed. (500MB)'; & '.\Download all Tools.ps1'"})
+$Button5.Add_Click{
+    Write-Host "Der Download Startet, dies kann je nach Internetgeschwindigkeit ca. 5-10 Minuten dauern. (500MB) `n The download starts, this may take about 5-10 minutes, depending on the internet speed. (500MB)"
+    WriteLog "ToolDownload gestartet"
+    if ($Internet){
+        WriteLog "Internetverbindung besteht, Download wird gestartet"
+        curl -o Tools.zip root3.minerswin.de/TGF/Tools.zip -UseBasicParsing
+        WriteLog "Download wurde abgeschlossen, Archiv wird entpackt"
+        Expand-Archive .\Tools.zip -DestinationPath .\
+        WriteLog "Download wurde abgeschlossen"
+    } else {
+        WriteLog "Verbindung zum Server kann nicht hergestellt werden"
+        Write-Host "Keine Internetverbindung möglich. Bitte zu einem späteren Zeitpunkt erneut versuchen."
+    }    
+}
 
 #Accept the Risk
-$Button18.Add_Click{(Accept-Everything)}
+$Button18.Add_Click{(Accept-Everything);WriteLog "Accepted Disclaimer"}
 function Accept-Everything{
     if ($CheckBox63.Checked){
         $TabPage3.Enabled = $false
