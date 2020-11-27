@@ -1375,6 +1375,8 @@ function TWEAK_THE_SHIT{
     
     $ProgressBar1.Value = 100
     WriteLog "DONE"
+    $Label11.Text = ":=)"
+    $Label12.Text = "DONE"
     WriteLog "Die Tweaks wurden erfolgreich abgeschlossen."
     [System.Windows.Forms.MessageBox]::Show("Die Tweaks wurden erfolgreich abgeschlossen.","TGF Tuning Pack 4.2 by MinersWin",1)
     [System.Windows.Forms.MessageBox]::Show("$($MessageEnglish)","Tuning Pack",1)
@@ -1390,8 +1392,6 @@ function TWEAK_THE_SHIT{
         Write-Host "Discord: https://discordapp.com/invite/qrXmqSq" -ForegroundColor Green
         Write-Host "TeamSpeak: ts.thegeekfreaks.de" -ForegroundColor Green
         Write-Host "Forum: forum.thegeekfreaks.de" -ForegroundColor Green
-        $Label11.Text = ":=)"
-        $Label12.Text = "Fertig"
     } else {
         Write-Host "100%" -ForegroundColor Blue
         Write-Host "Done" -ForegroundColor Blue
@@ -1404,8 +1404,6 @@ function TWEAK_THE_SHIT{
         Write-Host "Discord: https://discordapp.com/invite/qrXmqSq" -ForegroundColor Green
         Write-Host "TeamSpeak: ts.thegeekfreaks.de" -ForegroundColor Green
         Write-Host "Forum: forum.thegeekfreaks.de" -ForegroundColor Green
-        $Label11.Text = ":=)"
-        $Label12.Text = "DONE"
     }
 
 }
@@ -1436,7 +1434,6 @@ function Apply-Template{
 ######################################################################################################################################################################################
 ### All the Tools ###
 ######################################################################################################################################################################################
-<# REMOVED BECAUSE OF REWRITE
 #Process Killer
 function Test_Kill_Process{
 $Kill_Process = Test-Path .\Scripts\ProcessKiller-Tuning-Pack.bat
@@ -1696,8 +1693,6 @@ function Reboot-Recovery{
     shutdown /r /o /f /t 00
 }
 
-
-#>
 function Refresh_Tools{
 #Test_Kill_Process
 #Test_IE_Clean
