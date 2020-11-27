@@ -144,9 +144,9 @@ function Test-InternetConnection {
     break
     }
     if ($Verbindungbesteht){
-        $Internet = $false
+        $script:Internet = $false
     } else {
-        $Internet = $true
+        $script:Internet = $true
     }
     if ($Internet){
         "$(Get-Date) Internetverbindung: Online"
@@ -397,9 +397,14 @@ $Button5.Add_Click{
     WriteLog "ToolDownload gestartet"
     if ($Internet){
         WriteLog "Internetverbindung besteht, Download wird gestartet"
-        curl -o Tools.zip root3.minerswin.de/TGF/Tools.zip -UseBasicParsing
-        WriteLog "Download wurde abgeschlossen, Archiv wird entpackt"
-        Expand-Archive .\Tools.zip -DestinationPath .\
+        $url = "https://root3.minerswin.de/TGF/Tools.zip"
+        $output = Join-Path -Path "$PWD" -ChildPath "Tools.zip"
+        $start_time = Get-Date
+        (New-Object System.Net.WebClient).DownloadFile($url, $output)
+        Write-Host "Download fertiggestellt`nDownloadzeit: $((Get-Date).Subtract($start_time).Seconds) Sekunde(n)`nEntpacke Archiv ..."
+        Expand-Archive -Path $output -DestinationPath .\
+        Write-Host "Archiv erfolgreich entpackt, Lösche Temporäre Download Files ...."
+        rm $output
         WriteLog "Download wurde abgeschlossen"
     } else {
         WriteLog "Verbindung zum Server kann nicht hergestellt werden"
