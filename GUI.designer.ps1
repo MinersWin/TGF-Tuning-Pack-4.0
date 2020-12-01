@@ -227,6 +227,7 @@ $Form1 = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.Label]$Label10 = $null
 function InitializeComponent
 {
+$resources = . (Join-Path $PSScriptRoot 'GUI.resources.ps1')
 $Label1 = (New-Object -TypeName System.Windows.Forms.Label)
 $PictureBox1 = (New-Object -TypeName System.Windows.Forms.PictureBox)
 $Label2 = (New-Object -TypeName System.Windows.Forms.Label)
@@ -370,6 +371,9 @@ $CheckBox82 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox81 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $SpecialTweaks = (New-Object -TypeName System.Windows.Forms.TabPage)
 $Panel13 = (New-Object -TypeName System.Windows.Forms.Panel)
+$CheckBox137 = (New-Object -TypeName System.Windows.Forms.CheckBox)
+$CheckBox136 = (New-Object -TypeName System.Windows.Forms.CheckBox)
+$CheckBox135 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox134 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox133 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox132 = (New-Object -TypeName System.Windows.Forms.CheckBox)
@@ -450,9 +454,6 @@ $Panel7 = (New-Object -TypeName System.Windows.Forms.Panel)
 $Label12 = (New-Object -TypeName System.Windows.Forms.Label)
 $Label11 = (New-Object -TypeName System.Windows.Forms.Label)
 $Label10 = (New-Object -TypeName System.Windows.Forms.Label)
-$CheckBox135 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$CheckBox136 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$CheckBox137 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 ([System.ComponentModel.ISupportInitialize]$PictureBox1).BeginInit()
 $Panel1.SuspendLayout()
 $TabControl1.SuspendLayout()
@@ -478,7 +479,6 @@ $Panel3.SuspendLayout()
 $Panel4.SuspendLayout()
 $Panel7.SuspendLayout()
 $Form1.SuspendLayout()
-$Language = Get-Content .\Config\Language.txt
 #
 #Label1
 #
@@ -492,6 +492,8 @@ $Label1.UseCompatibleTextRendering = $true
 #
 #PictureBox1
 #
+$PictureBox1.BackgroundImage = ([System.Drawing.Image]$resources.'PictureBox1.BackgroundImage')
+$PictureBox1.BackgroundImageLayout = [System.Windows.Forms.ImageLayout]::Stretch
 $PictureBox1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]958,[System.Int32]12))
 $PictureBox1.Name = [System.String]'PictureBox1'
 $PictureBox1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]278,[System.Int32]72))
@@ -987,37 +989,34 @@ $TabPage3.add_Click($TabPage3_Click)
 #
 #Button43
 #
+$Button43.BackgroundImage = ([System.Drawing.Image]$resources.'Button43.BackgroundImage')
+$Button43.BackgroundImageLayout = [System.Windows.Forms.ImageLayout]::Stretch
 $Button43.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]335,[System.Int32]250))
 $Button43.Name = [System.String]'Button43'
 $Button43.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]251,[System.Int32]91))
 $Button43.TabIndex = [System.Int32]5
-$Button43.Text = [System.String]'Button43'
 $Button43.UseCompatibleTextRendering = $true
 $Button43.UseVisualStyleBackColor = $true
 #
 #PictureBox2
 #
+$PictureBox2.BackgroundImage = ([System.Drawing.Image]$resources.'PictureBox2.BackgroundImage')
+$PictureBox2.BackgroundImageLayout = [System.Windows.Forms.ImageLayout]::Stretch
 $PictureBox2.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]347))
 $PictureBox2.Name = [System.String]'PictureBox2'
 $PictureBox2.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]930,[System.Int32]187))
 $PictureBox2.TabIndex = [System.Int32]4
 $PictureBox2.TabStop = $false
 #
-#Label6
+#LinkLabel6
 #
+$LinkLabel6.LinkArea = (New-Object -TypeName System.Windows.Forms.LinkArea -ArgumentList @([System.Int32]0,[System.Int32]0))
 $LinkLabel6.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]22))
 $LinkLabel6.Name = [System.String]'LinkLabel6'
 $LinkLabel6.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]930,[System.Int32]79))
 $LinkLabel6.TabIndex = [System.Int32]3
 $LinkLabel6.Text = [System.String]'LinkLabel6'
 $LinkLabel6.UseCompatibleTextRendering = $true
-$LinkLabel6.Links.Clear();
-if ($Language -eq "de-DE"){
-    $LinkLabel6.Links.Add(267, 37);
-} else {
-    $LinkLabel6.Links.Add(224, 37);
-}
-$LinkLabel6.add_Click({[system.Diagnostics.Process]::start("https://discordapp.com/invite/qrXmqSq")})
 #
 #Button18
 #
@@ -1043,10 +1042,10 @@ $CheckBox63.add_CheckedChanged($CheckBox63_CheckedChanged)
 #TabPage1
 #
 $TabPage1.Controls.Add($Panel5)
-$TabPage1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]25))
+$TabPage1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]26))
 $TabPage1.Name = [System.String]'TabPage1'
 $TabPage1.Padding = (New-Object -TypeName System.Windows.Forms.Padding -ArgumentList @([System.Int32]3))
-$TabPage1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]529))
+$TabPage1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]528))
 $TabPage1.TabIndex = [System.Int32]0
 $TabPage1.Text = [System.String]'Registry Tweaks'
 $TabPage1.UseVisualStyleBackColor = $true
@@ -1125,10 +1124,10 @@ $CheckBox76.UseVisualStyleBackColor = $true
 #TabPage2
 #
 $TabPage2.Controls.Add($Panel6)
-$TabPage2.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]25))
+$TabPage2.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]26))
 $TabPage2.Name = [System.String]'TabPage2'
 $TabPage2.Padding = (New-Object -TypeName System.Windows.Forms.Padding -ArgumentList @([System.Int32]3))
-$TabPage2.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]529))
+$TabPage2.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]528))
 $TabPage2.TabIndex = [System.Int32]1
 $TabPage2.Text = [System.String]'Removing Services'
 $TabPage2.UseVisualStyleBackColor = $true
@@ -1847,16 +1846,6 @@ $CheckBox80.Text = [System.String]'Remove 3D-Viewer'
 $CheckBox80.UseCompatibleTextRendering = $true
 $CheckBox80.UseVisualStyleBackColor = $true
 #
-#CheckBox79
-#
-$CheckBox79.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]363))
-$CheckBox79.Name = [System.String]'CheckBox79'
-$CheckBox79.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]353,[System.Int32]24))
-$CheckBox79.TabIndex = [System.Int32]0
-$CheckBox79.Text = [System.String]'Disable / Remove OneDrive'
-$CheckBox79.UseCompatibleTextRendering = $true
-$CheckBox79.UseVisualStyleBackColor = $true
-#
 #TabPage8
 #
 $TabPage8.Controls.Add($Button15)
@@ -2036,15 +2025,15 @@ $CheckBox81.Text = [System.String]'Disable Windows Error Recovery on Startup'
 $CheckBox81.UseCompatibleTextRendering = $true
 $CheckBox81.UseVisualStyleBackColor = $true
 #
-#Special Tweaks
+#SpecialTweaks
 #
 $SpecialTweaks.AutoScroll = $true
 $SpecialTweaks.Controls.Add($Panel13)
 $SpecialTweaks.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]26))
-$SpecialTweaks.Name = [System.String]'Special Tweaks'
+$SpecialTweaks.Name = [System.String]'SpecialTweaks'
 $SpecialTweaks.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]528))
 $SpecialTweaks.TabIndex = [System.Int32]8
-$SpecialTweaks.Text = [System.String]'Special Tweaks'
+$SpecialTweaks.Text = [System.String]'SpecialTweaks'
 $SpecialTweaks.UseVisualStyleBackColor = $true
 $SpecialTweaks.Visible = $false
 #
@@ -2074,6 +2063,36 @@ $Panel13.Name = [System.String]'Panel13'
 $Panel13.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]930,[System.Int32]951))
 $Panel13.TabIndex = [System.Int32]0
 $Panel13.add_Paint($Panel13_Paint)
+#
+#CheckBox137
+#
+$CheckBox137.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]0,[System.Int32]492))
+$CheckBox137.Name = [System.String]'CheckBox137'
+$CheckBox137.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]904,[System.Int32]24))
+$CheckBox137.TabIndex = [System.Int32]18
+$CheckBox137.Text = [System.String]'CheckBox137'
+$CheckBox137.UseCompatibleTextRendering = $true
+$CheckBox137.UseVisualStyleBackColor = $true
+#
+#CheckBox136
+#
+$CheckBox136.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]1,[System.Int32]462))
+$CheckBox136.Name = [System.String]'CheckBox136'
+$CheckBox136.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]903,[System.Int32]24))
+$CheckBox136.TabIndex = [System.Int32]17
+$CheckBox136.Text = [System.String]'CheckBox136'
+$CheckBox136.UseCompatibleTextRendering = $true
+$CheckBox136.UseVisualStyleBackColor = $true
+#
+#CheckBox135
+#
+$CheckBox135.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]1,[System.Int32]432))
+$CheckBox135.Name = [System.String]'CheckBox135'
+$CheckBox135.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]903,[System.Int32]24))
+$CheckBox135.TabIndex = [System.Int32]16
+$CheckBox135.Text = [System.String]'CheckBox135'
+$CheckBox135.UseCompatibleTextRendering = $true
+$CheckBox135.UseVisualStyleBackColor = $true
 #
 #CheckBox134
 #
@@ -2299,9 +2318,9 @@ $Panel2.add_Paint($Panel2_Paint)
 #
 $Button41.BackColor = [System.Drawing.Color]::Red
 $Button41.ForeColor = [System.Drawing.Color]::White
-$Button41.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]806,[System.Int32]452))
+$Button41.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]781,[System.Int32]443))
 $Button41.Name = [System.String]'Button41'
-$Button41.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]117,[System.Int32]23))
+$Button41.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]142,[System.Int32]23))
 $Button41.TabIndex = [System.Int32]12
 $Button41.Text = [System.String]'Tuning Pack RESET!'
 $Button41.UseCompatibleTextRendering = $true
@@ -2326,6 +2345,7 @@ $Panel12.TabIndex = [System.Int32]11
 #
 #Button29
 #
+$Button29.Image = ([System.Drawing.Image]$resources.'Button29.Image')
 $Button29.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button29.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]230))
 $Button29.Name = [System.String]'Button29'
@@ -2337,6 +2357,7 @@ $Button29.UseVisualStyleBackColor = $true
 #
 #Button40
 #
+$Button40.Image = ([System.Drawing.Image]$resources.'Button40.Image')
 $Button40.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button40.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]172))
 $Button40.Name = [System.String]'Button40'
@@ -2348,6 +2369,7 @@ $Button40.UseVisualStyleBackColor = $true
 #
 #Button38
 #
+$Button38.Image = ([System.Drawing.Image]$resources.'Button38.Image')
 $Button38.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button38.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]143))
 $Button38.Name = [System.String]'Button38'
@@ -2359,6 +2381,7 @@ $Button38.UseVisualStyleBackColor = $true
 #
 #Button37
 #
+$Button37.Image = ([System.Drawing.Image]$resources.'Button37.Image')
 $Button37.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button37.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]114))
 $Button37.Name = [System.String]'Button37'
@@ -2370,6 +2393,7 @@ $Button37.UseVisualStyleBackColor = $true
 #
 #Button36
 #
+$Button36.Image = ([System.Drawing.Image]$resources.'Button36.Image')
 $Button36.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button36.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]85))
 $Button36.Name = [System.String]'Button36'
@@ -2381,6 +2405,7 @@ $Button36.UseVisualStyleBackColor = $true
 #
 #Button3
 #
+$Button3.Image = ([System.Drawing.Image]$resources.'Button3.Image')
 $Button3.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button3.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]201))
 $Button3.Name = [System.String]'Button3'
@@ -2392,6 +2417,7 @@ $Button3.UseVisualStyleBackColor = $true
 #
 #Button35
 #
+$Button35.Image = ([System.Drawing.Image]$resources.'Button35.Image')
 $Button35.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button35.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]56))
 $Button35.Name = [System.String]'Button35'
@@ -2403,6 +2429,7 @@ $Button35.UseVisualStyleBackColor = $true
 #
 #Button34
 #
+$Button34.Image = ([System.Drawing.Image]$resources.'Button34.Image')
 $Button34.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button34.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]27))
 $Button34.Name = [System.String]'Button34'
@@ -2434,6 +2461,7 @@ $Panel11.TabIndex = [System.Int32]10
 #
 #Button33
 #
+$Button33.Image = ([System.Drawing.Image]$resources.'Button33.Image')
 $Button33.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button33.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]57))
 $Button33.Name = [System.String]'Button33'
@@ -2445,6 +2473,7 @@ $Button33.UseVisualStyleBackColor = $true
 #
 #Button32
 #
+$Button32.Image = ([System.Drawing.Image]$resources.'Button32.Image')
 $Button32.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button32.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]28))
 $Button32.Name = [System.String]'Button32'
@@ -2482,6 +2511,7 @@ $Panel10.TabIndex = [System.Int32]9
 #
 #Button42
 #
+$Button42.Image = ([System.Drawing.Image]$resources.'Button42.Image')
 $Button42.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button42.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]230))
 $Button42.Name = [System.String]'Button42'
@@ -2493,19 +2523,21 @@ $Button42.UseVisualStyleBackColor = $true
 #
 #Button39
 #
+$Button39.Image = ([System.Drawing.Image]$resources.'Button39.Image')
 $Button39.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button39.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]198))
 $Button39.Name = [System.String]'Button39'
 $Button39.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
 $Button39.TabIndex = [System.Int32]13
 $Button39.Text = [System.String]'Systemwiederherstellung'
+$Button39.TextAlign = [System.Drawing.ContentAlignment]::MiddleRight
 $Button39.UseCompatibleTextRendering = $true
 $Button39.UseVisualStyleBackColor = $true
 #
 #Label15
 #
 $Label15.BackColor = [System.Drawing.SystemColors]::Control
-$Label15.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]-1,[System.Int32]1))
+$Label15.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]1))
 $Label15.Name = [System.String]'Label15'
 $Label15.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]100,[System.Int32]21))
 $Label15.TabIndex = [System.Int32]12
@@ -2514,6 +2546,7 @@ $Label15.UseCompatibleTextRendering = $true
 #
 #Button31
 #
+$Button31.Image = ([System.Drawing.Image]$resources.'Button31.Image')
 $Button31.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button31.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]169))
 $Button31.Name = [System.String]'Button31'
@@ -2525,6 +2558,7 @@ $Button31.UseVisualStyleBackColor = $true
 #
 #Button11
 #
+$Button11.Image = ([System.Drawing.Image]$resources.'Button11.Image')
 $Button11.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button11.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]24))
 $Button11.Name = [System.String]'Button11'
@@ -2536,6 +2570,7 @@ $Button11.UseVisualStyleBackColor = $true
 #
 #Button12
 #
+$Button12.Image = ([System.Drawing.Image]$resources.'Button12.Image')
 $Button12.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button12.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]53))
 $Button12.Name = [System.String]'Button12'
@@ -2547,6 +2582,7 @@ $Button12.UseVisualStyleBackColor = $true
 #
 #Button30
 #
+$Button30.Image = ([System.Drawing.Image]$resources.'Button30.Image')
 $Button30.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button30.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]140))
 $Button30.Name = [System.String]'Button30'
@@ -2558,17 +2594,20 @@ $Button30.UseVisualStyleBackColor = $true
 #
 #Button27
 #
+$Button27.Image = ([System.Drawing.Image]$resources.'Button27.Image')
 $Button27.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button27.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]82))
 $Button27.Name = [System.String]'Button27'
 $Button27.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
 $Button27.TabIndex = [System.Int32]7
 $Button27.Text = [System.String]'DISM image check and repair'
+$Button27.TextAlign = [System.Drawing.ContentAlignment]::MiddleRight
 $Button27.UseCompatibleTextRendering = $true
 $Button27.UseVisualStyleBackColor = $true
 #
 #Button28
 #
+$Button28.Image = ([System.Drawing.Image]$resources.'Button28.Image')
 $Button28.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button28.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]111))
 $Button28.Name = [System.String]'Button28'
@@ -2594,45 +2633,53 @@ $Panel9.add_Paint($Panel9_Paint)
 #
 #Button10
 #
+$Button10.Image = ([System.Drawing.Image]$resources.'Button10.Image')
 $Button10.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button10.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]116))
 $Button10.Name = [System.String]'Button10'
 $Button10.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
 $Button10.TabIndex = [System.Int32]4
 $Button10.Text = [System.String]'Sophos Virus Removal Tool'
+$Button10.TextAlign = [System.Drawing.ContentAlignment]::MiddleRight
 $Button10.UseCompatibleTextRendering = $true
 $Button10.UseVisualStyleBackColor = $true
 #
 #Button9
 #
+$Button9.Image = ([System.Drawing.Image]$resources.'Button9.Image')
 $Button9.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button9.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]87))
 $Button9.Name = [System.String]'Button9'
 $Button9.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
 $Button9.TabIndex = [System.Int32]3
 $Button9.Text = [System.String]'Kapersky Virus Removal Tool'
+$Button9.TextAlign = [System.Drawing.ContentAlignment]::MiddleRight
 $Button9.UseCompatibleTextRendering = $true
 $Button9.UseVisualStyleBackColor = $true
 #
 #Button8
 #
+$Button8.Image = ([System.Drawing.Image]$resources.'Button8.Image')
 $Button8.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button8.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]58))
 $Button8.Name = [System.String]'Button8'
 $Button8.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
 $Button8.TabIndex = [System.Int32]2
 $Button8.Text = [System.String]'Malwarebytes Anti-Malware'
+$Button8.TextAlign = [System.Drawing.ContentAlignment]::MiddleRight
 $Button8.UseCompatibleTextRendering = $true
 $Button8.UseVisualStyleBackColor = $true
 #
 #Button7
 #
+$Button7.Image = ([System.Drawing.Image]$resources.'Button7.Image')
 $Button7.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button7.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]29))
 $Button7.Name = [System.String]'Button7'
 $Button7.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]192,[System.Int32]23))
 $Button7.TabIndex = [System.Int32]1
 $Button7.Text = [System.String]'Clear CryptNet SSL cache'
+$Button7.TextAlign = [System.Drawing.ContentAlignment]::MiddleRight
 $Button7.UseCompatibleTextRendering = $true
 $Button7.UseVisualStyleBackColor = $true
 #
@@ -2664,39 +2711,46 @@ $Panel8.TabIndex = [System.Int32]7
 #
 #Button26
 #
+$Button26.Image = ([System.Drawing.Image]$resources.'Button26.Image')
 $Button26.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button26.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]228))
 $Button26.Name = [System.String]'Button26'
 $Button26.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]193,[System.Int32]23))
 $Button26.TabIndex = [System.Int32]8
 $Button26.Text = [System.String]'Clear Windows Update Cache'
+$Button26.TextAlign = [System.Drawing.ContentAlignment]::MiddleRight
 $Button26.UseCompatibleTextRendering = $true
 $Button26.UseVisualStyleBackColor = $true
 #
 #Button25
 #
+$Button25.Image = ([System.Drawing.Image]$resources.'Button25.Image')
 $Button25.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button25.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]199))
 $Button25.Name = [System.String]'Button25'
 $Button25.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]193,[System.Int32]23))
 $Button25.TabIndex = [System.Int32]7
 $Button25.Text = [System.String]'Clear windows event logs'
+$Button25.TextAlign = [System.Drawing.ContentAlignment]::MiddleRight
 $Button25.UseCompatibleTextRendering = $true
 $Button25.UseVisualStyleBackColor = $true
 #
 #Button24
 #
+$Button24.Image = ([System.Drawing.Image]$resources.'Button24.Image')
 $Button24.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button24.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]170))
 $Button24.Name = [System.String]'Button24'
 $Button24.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]193,[System.Int32]23))
 $Button24.TabIndex = [System.Int32]6
 $Button24.Text = [System.String]'Cleanup duplicate Downloads'
+$Button24.TextAlign = [System.Drawing.ContentAlignment]::MiddleRight
 $Button24.UseCompatibleTextRendering = $true
 $Button24.UseVisualStyleBackColor = $true
 #
 #Button23
 #
+$Button23.Image = ([System.Drawing.Image]$resources.'Button23.Image')
 $Button23.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button23.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]141))
 $Button23.Name = [System.String]'Button23'
@@ -2708,6 +2762,7 @@ $Button23.UseVisualStyleBackColor = $true
 #
 #Button22
 #
+$Button22.Image = ([System.Drawing.Image]$resources.'Button22.Image')
 $Button22.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button22.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]112))
 $Button22.Name = [System.String]'Button22'
@@ -2719,6 +2774,7 @@ $Button22.UseVisualStyleBackColor = $true
 #
 #Button21
 #
+$Button21.Image = ([System.Drawing.Image]$resources.'Button21.Image')
 $Button21.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button21.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]83))
 $Button21.Name = [System.String]'Button21'
@@ -2730,6 +2786,7 @@ $Button21.UseVisualStyleBackColor = $true
 #
 #Button20
 #
+$Button20.Image = ([System.Drawing.Image]$resources.'Button20.Image')
 $Button20.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button20.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]54))
 $Button20.Name = [System.String]'Button20'
@@ -2741,12 +2798,14 @@ $Button20.UseVisualStyleBackColor = $true
 #
 #Button4
 #
+$Button4.Image = ([System.Drawing.Image]$resources.'Button4.Image')
 $Button4.ImageAlign = [System.Drawing.ContentAlignment]::MiddleLeft
 $Button4.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]3,[System.Int32]25))
 $Button4.Name = [System.String]'Button4'
 $Button4.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]193,[System.Int32]23))
 $Button4.TabIndex = [System.Int32]1
 $Button4.Text = [System.String]'Internet Explorer Cleanup'
+$Button4.TextAlign = [System.Drawing.ContentAlignment]::MiddleRight
 $Button4.UseCompatibleTextRendering = $true
 $Button4.UseVisualStyleBackColor = $true
 #
@@ -2948,36 +3007,6 @@ $Label10.TabIndex = [System.Int32]59
 $Label10.Text = [System.String]'Progress'
 $Label10.UseCompatibleTextRendering = $true
 #
-#CheckBox135
-#
-$CheckBox135.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]1,[System.Int32]432))
-$CheckBox135.Name = [System.String]'CheckBox135'
-$CheckBox135.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]903,[System.Int32]24))
-$CheckBox135.TabIndex = [System.Int32]16
-$CheckBox135.Text = [System.String]'CheckBox135'
-$CheckBox135.UseCompatibleTextRendering = $true
-$CheckBox135.UseVisualStyleBackColor = $true
-#
-#CheckBox136
-#
-$CheckBox136.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]1,[System.Int32]462))
-$CheckBox136.Name = [System.String]'CheckBox136'
-$CheckBox136.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]903,[System.Int32]24))
-$CheckBox136.TabIndex = [System.Int32]17
-$CheckBox136.Text = [System.String]'CheckBox136'
-$CheckBox136.UseCompatibleTextRendering = $true
-$CheckBox136.UseVisualStyleBackColor = $true
-#
-#CheckBox137
-#
-$CheckBox137.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]0,[System.Int32]492))
-$CheckBox137.Name = [System.String]'CheckBox137'
-$CheckBox137.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]904,[System.Int32]24))
-$CheckBox137.TabIndex = [System.Int32]18
-$CheckBox137.Text = [System.String]'CheckBox137'
-$CheckBox137.UseCompatibleTextRendering = $true
-$CheckBox137.UseVisualStyleBackColor = $true
-#
 #Form1
 #
 $Form1.BackColor = [System.Drawing.SystemColors]::Control
@@ -2991,6 +3020,7 @@ $Form1.Controls.Add($TabControl1)
 $Form1.Controls.Add($Panel1)
 $Form1.Controls.Add($Label3)
 $Form1.Controls.Add($Label1)
+$Form1.Icon = ([System.Drawing.Icon]$resources.'$this.Icon')
 $Form1.Text = [System.String]'The Geek Freaks Tuning Pack 4.2'
 $Form1.add_Load($Form1_Load)
 ([System.ComponentModel.ISupportInitialize]$PictureBox1).EndInit()

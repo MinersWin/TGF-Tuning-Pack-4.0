@@ -177,12 +177,6 @@ if (Test-Path .\Config\Accept.dat){
    Out-File -FilePath .\Config\Accept.dat
 }
 
-#Icon
-$bitmap = [System.Drawing.Bitmap]::FromFile($Config.Application.Icon)
-$bitmap.MakeTransparent()
-$hicon = $bitmap.GetHicon()
-$Form1.Icon = [system.drawing.icon]::FromHandle($hicon)
-
 
 #Alles Ausgrauen
 $Panel1.Enabled = $false
@@ -204,19 +198,6 @@ $TabPage8.Visible = $false
 $SpecialTweaks.Enabled = $false
 $SpecialTweaks.Visible = $false
 $TabControl1.Controls.Remove($SpecialTweaks)
-
-#Geek Freaks Logo
-$Picture = ".\Images\Logo_v1.png"
-$img = [System.Drawing.Image]::Fromfile($Picture)
-$PictureBox1.BackgroundImage = $img
-$PictureBox1.BackgroundImageLayout = "Stretch"
-$PictureBox1.Add_Click({About})
-
-#Tuning Pack Banner
-$Picture48 = ".\Images\Logo_4.0.png"
-$img48 = [System.Drawing.Image]::FromFile($Picture48)
-$PictureBox2.BackgroundImage = $img48
-$PictureBox2.BackgroundImageLayout = "Stretch"
 
 #Button 43 PayPal Button
 $ButtonPicture43 = ".\Images\48935-4-paypal-donate-button-image-free-transparent-image-hq.png"
