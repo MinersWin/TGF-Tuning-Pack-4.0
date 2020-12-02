@@ -1,4 +1,4 @@
-$Form1 = New-Object -TypeName System.Windows.Forms.Form
+$FormTuningPack = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.Label]$Label1 = $null
 [System.Windows.Forms.PictureBox]$PictureBox1 = $null
 [System.Windows.Forms.Label]$Label2 = $null
@@ -478,7 +478,7 @@ $Panel8.SuspendLayout()
 $Panel3.SuspendLayout()
 $Panel4.SuspendLayout()
 $Panel7.SuspendLayout()
-$Form1.SuspendLayout()
+$FormTuningPack.SuspendLayout()
 #
 #Label1
 #
@@ -3009,20 +3009,20 @@ $Label10.UseCompatibleTextRendering = $true
 #
 #Form1
 #
-$Form1.BackColor = [System.Drawing.SystemColors]::Control
-$Form1.ClientSize = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]1242,[System.Int32]632))
-$Form1.Controls.Add($Panel7)
-$Form1.Controls.Add($Panel4)
-$Form1.Controls.Add($Button19)
-$Form1.Controls.Add($Panel3)
-$Form1.Controls.Add($PictureBox1)
-$Form1.Controls.Add($TabControl1)
-$Form1.Controls.Add($Panel1)
-$Form1.Controls.Add($Label3)
-$Form1.Controls.Add($Label1)
-$Form1.Icon = ([System.Drawing.Icon]$resources.'$this.Icon')
-$Form1.Text = [System.String]'The Geek Freaks Tuning Pack 4.2'
-$Form1.add_Load($Form1_Load)
+$FormTuningPack.BackColor = [System.Drawing.SystemColors]::Control
+$FormTuningPack.ClientSize = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]1242,[System.Int32]632))
+$FormTuningPack.Controls.Add($Panel7)
+$FormTuningPack.Controls.Add($Panel4)
+$FormTuningPack.Controls.Add($Button19)
+$FormTuningPack.Controls.Add($Panel3)
+$FormTuningPack.Controls.Add($PictureBox1)
+$FormTuningPack.Controls.Add($TabControl1)
+$FormTuningPack.Controls.Add($Panel1)
+$FormTuningPack.Controls.Add($Label3)
+$FormTuningPack.Controls.Add($Label1)
+$FormTuningPack.Icon = ([System.Drawing.Icon]$resources.'$this.Icon')
+$FormTuningPack.Text = [System.String]'The Geek Freaks Tuning Pack 4.2'
+$FormTuningPack.add_Load($FormTuningPack_Load)
 ([System.ComponentModel.ISupportInitialize]$PictureBox1).EndInit()
 $Panel1.ResumeLayout($false)
 $TabControl1.ResumeLayout($false)
@@ -3047,233 +3047,233 @@ $Panel8.ResumeLayout($false)
 $Panel3.ResumeLayout($false)
 $Panel4.ResumeLayout($false)
 $Panel7.ResumeLayout($false)
-$Form1.ResumeLayout($false)
-Add-Member -InputObject $Form1 -Name base -Value $base -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Label1 -Value $Label1 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name PictureBox1 -Value $PictureBox1 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Label2 -Value $Label2 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox1 -Value $CheckBox1 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox2 -Value $CheckBox2 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox3 -Value $CheckBox3 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox4 -Value $CheckBox4 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox5 -Value $CheckBox5 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox6 -Value $CheckBox6 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox7 -Value $CheckBox7 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox8 -Value $CheckBox8 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox9 -Value $CheckBox9 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox10 -Value $CheckBox10 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox11 -Value $CheckBox11 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox12 -Value $CheckBox12 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox13 -Value $CheckBox13 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox14 -Value $CheckBox14 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox15 -Value $CheckBox15 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox16 -Value $CheckBox16 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Label3 -Value $Label3 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox17 -Value $CheckBox17 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox18 -Value $CheckBox18 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox19 -Value $CheckBox19 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox20 -Value $CheckBox20 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox21 -Value $CheckBox21 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox22 -Value $CheckBox22 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox23 -Value $CheckBox23 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox24 -Value $CheckBox24 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox25 -Value $CheckBox25 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox26 -Value $CheckBox26 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox27 -Value $CheckBox27 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox28 -Value $CheckBox28 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox29 -Value $CheckBox29 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox30 -Value $CheckBox30 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox31 -Value $CheckBox31 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox32 -Value $CheckBox32 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox33 -Value $CheckBox33 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox34 -Value $CheckBox34 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox35 -Value $CheckBox35 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Label4 -Value $Label4 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox36 -Value $CheckBox36 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox37 -Value $CheckBox37 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox38 -Value $CheckBox38 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Panel1 -Value $Panel1 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button2 -Value $Button2 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button1 -Value $Button1 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name ComboBox1 -Value $ComboBox1 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name TabControl1 -Value $TabControl1 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name TabPage3 -Value $TabPage3 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button43 -Value $Button43 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name PictureBox2 -Value $PictureBox2 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name LinkLabel6 -Value $LinkLabel6 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button18 -Value $Button18 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox63 -Value $CheckBox63 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name TabPage1 -Value $TabPage1 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Panel5 -Value $Panel5 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox77 -Value $CheckBox77 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox76 -Value $CheckBox76 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name TabPage2 -Value $TabPage2 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Panel6 -Value $Panel6 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox39 -Value $CheckBox39 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox75 -Value $CheckBox75 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox40 -Value $CheckBox40 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox74 -Value $CheckBox74 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox41 -Value $CheckBox41 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox73 -Value $CheckBox73 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox42 -Value $CheckBox42 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox72 -Value $CheckBox72 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox43 -Value $CheckBox43 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox71 -Value $CheckBox71 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox44 -Value $CheckBox44 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox70 -Value $CheckBox70 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox45 -Value $CheckBox45 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox69 -Value $CheckBox69 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox46 -Value $CheckBox46 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox68 -Value $CheckBox68 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox47 -Value $CheckBox47 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox67 -Value $CheckBox67 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox48 -Value $CheckBox48 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox66 -Value $CheckBox66 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox49 -Value $CheckBox49 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox65 -Value $CheckBox65 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox50 -Value $CheckBox50 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox64 -Value $CheckBox64 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox51 -Value $CheckBox51 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox60 -Value $CheckBox60 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox52 -Value $CheckBox52 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox59 -Value $CheckBox59 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox53 -Value $CheckBox53 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox58 -Value $CheckBox58 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox54 -Value $CheckBox54 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox57 -Value $CheckBox57 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox55 -Value $CheckBox55 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name TabPage5 -Value $TabPage5 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox102 -Value $CheckBox102 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox101 -Value $CheckBox101 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox100 -Value $CheckBox100 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox99 -Value $CheckBox99 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox98 -Value $CheckBox98 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox97 -Value $CheckBox97 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox96 -Value $CheckBox96 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox95 -Value $CheckBox95 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox94 -Value $CheckBox94 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox93 -Value $CheckBox93 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox92 -Value $CheckBox92 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox91 -Value $CheckBox91 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox90 -Value $CheckBox90 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox89 -Value $CheckBox89 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox88 -Value $CheckBox88 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox87 -Value $CheckBox87 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox86 -Value $CheckBox86 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name TabPage6 -Value $TabPage6 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox113 -Value $CheckBox113 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox112 -Value $CheckBox112 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox111 -Value $CheckBox111 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox110 -Value $CheckBox110 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox109 -Value $CheckBox109 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox108 -Value $CheckBox108 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox107 -Value $CheckBox107 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox106 -Value $CheckBox106 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox105 -Value $CheckBox105 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox104 -Value $CheckBox104 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox103 -Value $CheckBox103 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox80 -Value $CheckBox80 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox79 -Value $CheckBox79 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name TabPage8 -Value $TabPage8 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button15 -Value $Button15 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button44 -Value $Button44 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox118 -Value $CheckBox118 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox115 -Value $CheckBox115 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox117 -Value $CheckBox117 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Label32 -Value $Label32 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Label33 -Value $Label33 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox114 -Value $CheckBox114 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox78 -Value $CheckBox78 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox85 -Value $CheckBox85 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox84 -Value $CheckBox84 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox56 -Value $CheckBox56 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox83 -Value $CheckBox83 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox82 -Value $CheckBox82 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox81 -Value $CheckBox81 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name SpecialTweaks -Value $SpecialTweaks -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Panel13 -Value $Panel13 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox137 -Value $CheckBox137 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox136 -Value $CheckBox136 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox135 -Value $CheckBox135 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox134 -Value $CheckBox134 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox133 -Value $CheckBox133 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox132 -Value $CheckBox132 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox131 -Value $CheckBox131 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox130 -Value $CheckBox130 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox129 -Value $CheckBox129 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox128 -Value $CheckBox128 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox127 -Value $CheckBox127 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox126 -Value $CheckBox126 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox125 -Value $CheckBox125 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox124 -Value $CheckBox124 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox123 -Value $CheckBox123 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox122 -Value $CheckBox122 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox121 -Value $CheckBox121 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox120 -Value $CheckBox120 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox116 -Value $CheckBox116 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name TabPage4 -Value $TabPage4 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button46 -Value $Button46 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Label18 -Value $Label18 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button6 -Value $Button6 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Panel2 -Value $Panel2 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button41 -Value $Button41 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Panel12 -Value $Panel12 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button29 -Value $Button29 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button40 -Value $Button40 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button38 -Value $Button38 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button37 -Value $Button37 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button36 -Value $Button36 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button3 -Value $Button3 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button35 -Value $Button35 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button34 -Value $Button34 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Label17 -Value $Label17 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Panel11 -Value $Panel11 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button33 -Value $Button33 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button32 -Value $Button32 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Label16 -Value $Label16 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Panel10 -Value $Panel10 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button42 -Value $Button42 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button39 -Value $Button39 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Label15 -Value $Label15 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button31 -Value $Button31 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button11 -Value $Button11 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button12 -Value $Button12 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button30 -Value $Button30 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button27 -Value $Button27 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button28 -Value $Button28 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Panel9 -Value $Panel9 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button10 -Value $Button10 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button9 -Value $Button9 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button8 -Value $Button8 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button7 -Value $Button7 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Label14 -Value $Label14 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Panel8 -Value $Panel8 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button26 -Value $Button26 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button25 -Value $Button25 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button24 -Value $Button24 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button23 -Value $Button23 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button22 -Value $Button22 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button21 -Value $Button21 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button20 -Value $Button20 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button4 -Value $Button4 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Label13 -Value $Label13 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button5 -Value $Button5 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button45 -Value $Button45 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox119 -Value $CheckBox119 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Panel3 -Value $Panel3 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button14 -Value $Button14 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button13 -Value $Button13 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Label5 -Value $Label5 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox61 -Value $CheckBox61 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button16 -Value $Button16 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button17 -Value $Button17 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name CheckBox62 -Value $CheckBox62 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Button19 -Value $Button19 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Panel4 -Value $Panel4 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name ProgressBar1 -Value $ProgressBar1 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Panel7 -Value $Panel7 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Label12 -Value $Label12 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Label11 -Value $Label11 -MemberType NoteProperty
-Add-Member -InputObject $Form1 -Name Label10 -Value $Label10 -MemberType NoteProperty
+$FormTuningPack.ResumeLayout($false)
+Add-Member -InputObject $FormTuningPack -Name base -Value $base -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Label1 -Value $Label1 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name PictureBox1 -Value $PictureBox1 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Label2 -Value $Label2 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox1 -Value $CheckBox1 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox2 -Value $CheckBox2 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox3 -Value $CheckBox3 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox4 -Value $CheckBox4 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox5 -Value $CheckBox5 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox6 -Value $CheckBox6 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox7 -Value $CheckBox7 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox8 -Value $CheckBox8 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox9 -Value $CheckBox9 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox10 -Value $CheckBox10 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox11 -Value $CheckBox11 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox12 -Value $CheckBox12 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox13 -Value $CheckBox13 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox14 -Value $CheckBox14 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox15 -Value $CheckBox15 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox16 -Value $CheckBox16 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Label3 -Value $Label3 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox17 -Value $CheckBox17 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox18 -Value $CheckBox18 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox19 -Value $CheckBox19 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox20 -Value $CheckBox20 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox21 -Value $CheckBox21 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox22 -Value $CheckBox22 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox23 -Value $CheckBox23 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox24 -Value $CheckBox24 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox25 -Value $CheckBox25 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox26 -Value $CheckBox26 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox27 -Value $CheckBox27 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox28 -Value $CheckBox28 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox29 -Value $CheckBox29 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox30 -Value $CheckBox30 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox31 -Value $CheckBox31 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox32 -Value $CheckBox32 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox33 -Value $CheckBox33 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox34 -Value $CheckBox34 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox35 -Value $CheckBox35 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Label4 -Value $Label4 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox36 -Value $CheckBox36 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox37 -Value $CheckBox37 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox38 -Value $CheckBox38 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Panel1 -Value $Panel1 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button2 -Value $Button2 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button1 -Value $Button1 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name ComboBox1 -Value $ComboBox1 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name TabControl1 -Value $TabControl1 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name TabPage3 -Value $TabPage3 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button43 -Value $Button43 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name PictureBox2 -Value $PictureBox2 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name LinkLabel6 -Value $LinkLabel6 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button18 -Value $Button18 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox63 -Value $CheckBox63 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name TabPage1 -Value $TabPage1 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Panel5 -Value $Panel5 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox77 -Value $CheckBox77 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox76 -Value $CheckBox76 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name TabPage2 -Value $TabPage2 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Panel6 -Value $Panel6 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox39 -Value $CheckBox39 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox75 -Value $CheckBox75 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox40 -Value $CheckBox40 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox74 -Value $CheckBox74 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox41 -Value $CheckBox41 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox73 -Value $CheckBox73 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox42 -Value $CheckBox42 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox72 -Value $CheckBox72 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox43 -Value $CheckBox43 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox71 -Value $CheckBox71 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox44 -Value $CheckBox44 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox70 -Value $CheckBox70 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox45 -Value $CheckBox45 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox69 -Value $CheckBox69 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox46 -Value $CheckBox46 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox68 -Value $CheckBox68 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox47 -Value $CheckBox47 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox67 -Value $CheckBox67 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox48 -Value $CheckBox48 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox66 -Value $CheckBox66 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox49 -Value $CheckBox49 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox65 -Value $CheckBox65 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox50 -Value $CheckBox50 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox64 -Value $CheckBox64 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox51 -Value $CheckBox51 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox60 -Value $CheckBox60 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox52 -Value $CheckBox52 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox59 -Value $CheckBox59 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox53 -Value $CheckBox53 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox58 -Value $CheckBox58 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox54 -Value $CheckBox54 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox57 -Value $CheckBox57 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox55 -Value $CheckBox55 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name TabPage5 -Value $TabPage5 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox102 -Value $CheckBox102 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox101 -Value $CheckBox101 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox100 -Value $CheckBox100 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox99 -Value $CheckBox99 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox98 -Value $CheckBox98 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox97 -Value $CheckBox97 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox96 -Value $CheckBox96 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox95 -Value $CheckBox95 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox94 -Value $CheckBox94 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox93 -Value $CheckBox93 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox92 -Value $CheckBox92 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox91 -Value $CheckBox91 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox90 -Value $CheckBox90 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox89 -Value $CheckBox89 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox88 -Value $CheckBox88 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox87 -Value $CheckBox87 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox86 -Value $CheckBox86 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name TabPage6 -Value $TabPage6 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox113 -Value $CheckBox113 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox112 -Value $CheckBox112 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox111 -Value $CheckBox111 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox110 -Value $CheckBox110 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox109 -Value $CheckBox109 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox108 -Value $CheckBox108 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox107 -Value $CheckBox107 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox106 -Value $CheckBox106 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox105 -Value $CheckBox105 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox104 -Value $CheckBox104 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox103 -Value $CheckBox103 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox80 -Value $CheckBox80 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox79 -Value $CheckBox79 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name TabPage8 -Value $TabPage8 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button15 -Value $Button15 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button44 -Value $Button44 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox118 -Value $CheckBox118 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox115 -Value $CheckBox115 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox117 -Value $CheckBox117 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Label32 -Value $Label32 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Label33 -Value $Label33 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox114 -Value $CheckBox114 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox78 -Value $CheckBox78 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox85 -Value $CheckBox85 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox84 -Value $CheckBox84 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox56 -Value $CheckBox56 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox83 -Value $CheckBox83 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox82 -Value $CheckBox82 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox81 -Value $CheckBox81 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name SpecialTweaks -Value $SpecialTweaks -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Panel13 -Value $Panel13 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox137 -Value $CheckBox137 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox136 -Value $CheckBox136 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox135 -Value $CheckBox135 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox134 -Value $CheckBox134 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox133 -Value $CheckBox133 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox132 -Value $CheckBox132 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox131 -Value $CheckBox131 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox130 -Value $CheckBox130 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox129 -Value $CheckBox129 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox128 -Value $CheckBox128 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox127 -Value $CheckBox127 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox126 -Value $CheckBox126 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox125 -Value $CheckBox125 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox124 -Value $CheckBox124 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox123 -Value $CheckBox123 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox122 -Value $CheckBox122 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox121 -Value $CheckBox121 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox120 -Value $CheckBox120 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox116 -Value $CheckBox116 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name TabPage4 -Value $TabPage4 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button46 -Value $Button46 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Label18 -Value $Label18 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button6 -Value $Button6 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Panel2 -Value $Panel2 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button41 -Value $Button41 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Panel12 -Value $Panel12 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button29 -Value $Button29 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button40 -Value $Button40 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button38 -Value $Button38 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button37 -Value $Button37 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button36 -Value $Button36 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button3 -Value $Button3 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button35 -Value $Button35 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button34 -Value $Button34 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Label17 -Value $Label17 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Panel11 -Value $Panel11 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button33 -Value $Button33 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button32 -Value $Button32 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Label16 -Value $Label16 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Panel10 -Value $Panel10 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button42 -Value $Button42 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button39 -Value $Button39 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Label15 -Value $Label15 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button31 -Value $Button31 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button11 -Value $Button11 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button12 -Value $Button12 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button30 -Value $Button30 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button27 -Value $Button27 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button28 -Value $Button28 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Panel9 -Value $Panel9 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button10 -Value $Button10 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button9 -Value $Button9 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button8 -Value $Button8 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button7 -Value $Button7 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Label14 -Value $Label14 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Panel8 -Value $Panel8 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button26 -Value $Button26 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button25 -Value $Button25 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button24 -Value $Button24 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button23 -Value $Button23 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button22 -Value $Button22 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button21 -Value $Button21 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button20 -Value $Button20 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button4 -Value $Button4 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Label13 -Value $Label13 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button5 -Value $Button5 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button45 -Value $Button45 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox119 -Value $CheckBox119 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Panel3 -Value $Panel3 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button14 -Value $Button14 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button13 -Value $Button13 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Label5 -Value $Label5 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox61 -Value $CheckBox61 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button16 -Value $Button16 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button17 -Value $Button17 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name CheckBox62 -Value $CheckBox62 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Button19 -Value $Button19 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Panel4 -Value $Panel4 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name ProgressBar1 -Value $ProgressBar1 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Panel7 -Value $Panel7 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Label12 -Value $Label12 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Label11 -Value $Label11 -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name Label10 -Value $Label10 -MemberType NoteProperty
 }
 . InitializeComponent

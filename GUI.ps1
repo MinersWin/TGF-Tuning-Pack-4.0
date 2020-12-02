@@ -165,7 +165,7 @@ if ($Language -eq "de-DE"){
 [System.Windows.Forms.MessageBox]::Show("This is a very early alpha version. Some of the tweaks are not yet functional.","The Geek Freaks Tuning Pack 4.2 by MinersWin",'OK','Info')
 }
 WriteLog "Sprache $($Language)"
-$Form1.Text = $Config.Application.Name
+$FormTuningPack.Text = $Config.Application.Name
 
 #New Update
 if (Test-Path .\Config\Accept.dat){
@@ -435,7 +435,7 @@ if ($Language -eq "de-DE"){
     $LinkLabel6.Text = "We do not take responsibility for problems that accompany the execution of our program! This is a hobby project! Everything can create errors and problems! Use at your own risk! Problems and bugs are welcome in the Discord: https://discordapp.com/invite/qrXmqSq . The pack is not a miracle cure, it cannot get more power out of your system than you have. Depending on the PC, composition, usage behavior, area of application ... the performance improvements can vary extremely"
 }
 #Close when Click Close
-$button17.Add_Click{WriteLog "TuningPack Closed";($Form1.Close())}
+$button17.Add_Click{WriteLog "TuningPack Closed";($FormTuningPack.Close())}
 
 #Open Tool Folder
 $Button6.Add_Click{(Start "$($MyDir)\");WriteLog "Opened the Tool Folder"}
@@ -1465,4 +1465,4 @@ function About {
 
 
 Apply-Template
-$Form1.ShowDialog()
+$FormTuningPack.ShowDialog()
