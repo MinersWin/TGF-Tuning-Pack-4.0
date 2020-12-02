@@ -1,5 +1,5 @@
 #Form
-$Label3.Text = "created by MinersWin"
+$LabelCreatedBy.Text = "created by MinersWin"
 
 #Registry Tweaks
 $CheckBox1.Text = "Show Computer Shortcut on Desktop"
@@ -132,25 +132,25 @@ $CheckBox115.Text = "Enable Clipboard History"
 $Button44.Text = "Clear Clipboard"
 
 #Tools
-$Button5.Text = "Download Tools"
-$Button6.Text = "Open Folder"
+$ButtonToolsDownloadAllTools.Text = "Download Tools"
+$ButtonToolsGotoFolder.Text = "Open Folder"
 $Button46.Text = "Refresh"
 
 #Side Menu
-$Label4.Text = "Templates"
-$CheckBox62.Text = "Backup Registry"
-$CheckBox61.Text = "Create System Recovery Point"
-$Button17.Text = "Close"
-$Button16.Text = "Make FPS Rain!"
+$LabelTemplates.Text = "Templates"
+$CheckBoxBackupRegistry.Text = "Backup Registry"
+$CheckBoxBackupRecoveryPoint.Text = "Create System Recovery Point"
+$ButtonClose.Text = "Close"
+$ButtonStart.Text = "Make FPS Rain!"
 
 #Tabs
-$TabPage3.Text = "Home"
+$TabPageHome.Text = "Home"
 $TabPage1.Text = "Registry Tweaks"
 $TabPage2.Text = "Removing Services"
 $TabPage5.Text = "Scheduled Tasks"
 $TabPage6.Text = "Windows Default Apps"
 $TabPage8.Text = "Misc."
-$TabPage4.Text = "Tools (Legacy)"
+$TabPageTools.Text = "Tools"
 
 #######################################################################################################################################################################################################
 #ToolTips
@@ -210,3 +210,6 @@ $tooltip.SetToolTip($CheckBox39,"")
 $tooltip.SetToolTip($CheckBox39,"")
 $tooltip.SetToolTip($CheckBox39,"")
 $tooltip.SetToolTip($CheckBox39,"")
+
+
+$LinkLabelDisclaimer.Text = "We do not take responsibility for problems that accompany the execution of our program! This is a hobby project! Everything can create errors and problems! Use at your own risk! Problems and bugs are welcome in the Discord: https://discordapp.com/invite/qrXmqSq . The pack is not a miracle cure, it cannot get more power out of your system than you have. Depending on the PC, composition, usage behavior, area of application ... the performance improvements can vary extremely"

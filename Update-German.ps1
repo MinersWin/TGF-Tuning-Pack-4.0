@@ -1,5 +1,5 @@
 #Form
-$Label3.Text = "erstellt von MinersWin"
+$LabelCreatedBy.Text = "erstellt von MinersWin"
 
 #Registry Tweaks
 $CheckBox1.Text = "Zeige die 'Dieser PC' Verknüpfung auf dem Desktop"
@@ -132,23 +132,25 @@ $CheckBox115.Text = "Aktiviere Zwischenspeicher History"
 $Button44.Text = "Lösche Zwischenspeicher"
 
 #Tools
-$Button5.Text = "Tools herunterladen"
-$Button6.Text = "Ordner öffnen"
+$ButtonToolsDownloadAllTools.Text = "Tools herunterladen"
+$ButtonToolsGotoFolder.Text = "Ordner öffnen"
 $Button46.Text = "Neu laden"
 
 #Side Menu
-$Label4.Text = "Vorlagen"
-$CheckBox62.Text = "Registry sichern"
-$CheckBox61.Text = "Wiederherstellungspunkt erstellen"
-$Button17.Text = "Schließen"
-$Button16.Text = "Make FPS Rain!"
+$LabelTemplates.Text = "Vorlagen"
+$CheckBoxBackupRegistry.Text = "Registry sichern"
+$CheckBoxBackupRecoveryPoint.Text = "Wiederherstellungspunkt erstellen"
+$ButtonClose.Text = "Schließen"
+$ButtonStart.Text = "Make FPS Rain!"
 
    
 #Tabs
-$TabPage3.Text = "Home"
+$TabPageHome.Text = "Home"
 $TabPage1.Text = "Registry Tweaks"
 $TabPage2.Text = "Lösche Dienste"
 $TabPage5.Text = "Geplante Aufgaben"
 $TabPage6.Text = "Windows Standart Programme"
 $TabPage8.Text = "Misc."
-$TabPage4.Text = "Werkzeuge (alt)"
+$TabPageTools.Text = "Werkzeuge"
+
+$LinkLabelDisclaimer.Text = "Wir Übernehmen keine Verantwortung für Probleme, die mit der Ausführung unseres Programms einhergehen! Dies ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr! Probleme und Bugs kÃ¶nnen gerne im Discord gemeldet werden: https://discordapp.com/invite/qrXmqSq Das Pack ist kein Wundermittel, es kann nicht mehr Leistung aus deinem System holen als du hast. Je nach PC, zusammenstellung, Nutzungsverhalten, Anwendungsgebiet ... können die Performanceverbesserungen extrem Variieren"
