@@ -6,6 +6,14 @@ $tooltip = New-Object System.Windows.Forms.ToolTip
 $Config = Import-LocalizedData -BaseDirectory .\Config\ -FileName Config.psd1
 $WinVersion = [System.Environment]::OSVersion.Version.Major
 
+$SupportClick = [System.Windows.Forms.MessageBox]::Show("Do you want to support us?`nA few browser tabs will open, you don't have to do anything.","TGF Mouse Tuning Pack 2.0 by MinersWin",'YesNoCancel','Information')
+if ($SupportClick -eq "YES"){
+    explorer "https://youtu.be/ftVBV-XmAP4"
+    explorer "https://amzn.to/3dX3I7x"
+    explorer "https://youtu.be/hRr6sEoUUd0"
+    explorer "https://paypal.me/minerswin"
+}
+
 ####################################################################################################################################################
 #Write Log Function
 function WriteLog {
