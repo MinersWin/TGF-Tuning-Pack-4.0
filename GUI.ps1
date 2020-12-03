@@ -228,24 +228,24 @@ function CheckTools{
         $LabelToolsDownloaded.ForeColor = "GREEN"
         $LabelToolsDownloaded.Text = "Tools found"
         $PanelToolsClean.Enabled = $true
-        $Panel9.Enabled = $true
-        $Panel10.Enabled = $true
-        $Panel11.Enabled = $true
+        $PannelToolsDisinfect.Enabled = $true
+        $PanelToolsRepair.Enabled = $true
+        $PanelToolsOptimize.Enabled = $true
         $PanelToolsManual.Enabled = $true
         WriteLog "Tools Found"
     } else {
         $LabelToolsDownloaded.ForeColor = "RED"
         $LabelToolsDownloaded.Text = "Could not find the tools, please download first."
         $PanelToolsClean.Enabled = $false
-        $Panel9.Enabled = $false
-        $Panel10.Enabled = $false
-        $Panel11.Enabled = $false
+        $PannelToolsDisinfect.Enabled = $false
+        $PanelToolsRepair.Enabled = $false
+        $PanelToolsOptimize.Enabled = $false
         $PanelToolsManual.Enabled = $false
         WriteLog "Tools not found, you have to Download them first"
     }
 }
 CheckTools
-$Button46.Add_Click{(CheckTools)}
+$ButtonToolsRefresh.Add_Click{(CheckTools)}
 
 #Clipboard History
 $Button44.Add_Click{(start cmd.exe 'cmd /c "echo off | clip"');WriteLog "Cleared Clipboard History"}

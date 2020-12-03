@@ -134,7 +134,7 @@ $Button44.Text = "Lösche Zwischenspeicher"
 #Tools
 $ButtonToolsDownloadAllTools.Text = "Tools herunterladen"
 $ButtonToolsGotoFolder.Text = "Ordner öffnen"
-$Button46.Text = "Neu laden"
+$ButtonToolsRefresh.Text = "Neu laden"
 
 #Side Menu
 $LabelTemplates.Text = "Vorlagen"

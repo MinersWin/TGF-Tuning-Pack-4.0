@@ -134,7 +134,7 @@ $Button44.Text = "Clear Clipboard"
 #Tools
 $ButtonToolsDownloadAllTools.Text = "Download Tools"
 $ButtonToolsGotoFolder.Text = "Open Folder"
-$Button46.Text = "Refresh"
+$ButtonToolsRefresh.Text = "Refresh"
 
 #Side Menu
 $LabelTemplates.Text = "Templates"

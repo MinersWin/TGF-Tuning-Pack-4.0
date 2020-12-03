@@ -5,11 +5,11 @@
 function Test_Kill_Process{
     $Kill_Process = Test-Path .\Scripts\ProcessKiller-Tuning-Pack.bat
     if ($Kill_Process){
-        $Button3.Add_Click{(Kill-Process)}
-        $Button3.ForeColor = 'Green'
+        $ButtonToolsKillProcess.Add_Click{(Kill-Process)}
+        $ButtonToolsKillProcess.ForeColor = 'Green'
     } else {
-        $Button3.Add_Click{(Download_Kill-Process)}
-        $Button3.ForeColor = 'RED'
+        $ButtonToolsKillProcess.Add_Click{(Download_Kill-Process)}
+        $ButtonToolsKillProcess.ForeColor = 'RED'
     }
     }
     function Kill-Process{
@@ -164,54 +164,54 @@ function Test_Kill_Process{
             Test_Clear-UpdateCache
         }
     #Clear CryptNet SSL Cache
-    $Button7.Add_Click{(Clear-SSL)}
+    $ButtonToolsClearCryptNetSSLCache.Add_Click{(Clear-SSL)}
     function Clear-SSL{
         certutil -URLcache * delete
     }
     #Malwarebytes
-    $Button8.Add_Click{(Malwarebytes)}
+    $ButtonToolsMalwarebytesAntiMalware.Add_Click{(Malwarebytes)}
     function Malwarebytes{
         .\Tools\Malwarebytes\mb3-setup-consumer-3.8.3.2965-1.0.613-1.0.11878.exe
     }
     #Kaspersky Virus Removal Tool
-    $Button9.Add_Click{(KVRT)}
+    $ButtonToolsKasperskyVirusRemovalTool.Add_Click{(KVRT)}
     function KVRT{
         .\Tools\KVRT\KVRT.exe
     }
     #Sophos Virus Removal Tool
-    $Button40.Add_Click{(Sophos)}
+    $ButtonToolsNetAdapterRepair.Add_Click{(Sophos)}
     function Sophos{
         & '.\tools\Sophos Virus Removal Tool\Sophos Virus Removal Tool.exe'
     }
     #MSI installer Cleanup
-    $Button11.Add_Click{(Installer-Cleanup)}
+    $ButtonToolsMSIInstallerCleanup.Add_Click{(Installer-Cleanup)}
     function Installer-Cleanup{
         [System.Windows.Forms.MessageBox]::Show("Diese funktion ist momentan nicht verfÃ¼gbar, Microsoft hat dieses Feature eingestellt. Ich arbeite momentan an einer Alternative","TGF Tuning Pack 4.1 by MinersWin",1)
     }
     #System File Checker
-    $Button12.Add_Click{(System-File-Checker)}
+    $ButtonToolsSystemFileChecker.Add_Click{(System-File-Checker)}
     function System-File-Checker{
         [System.Windows.Forms.MessageBox]::Show("Es wird sich gleich ein Konsolenfenster Ã¶ffnen, in welchem ein Windows Image heruntergeladen wird, mit welchem das System auf Fehler geprÃ¼ft wird. Das Image wird nach Abschluss des Vorgangs wieder gelÃ¶scht. Zum BestÃ¤tigen OK drÃ¼cken","TGF Tuning Pack 4.1 by MinersWin",1)    
         & '.\Tools\System File Checker\Check.bat'
     }
     #DISM image check and repair
-    $Button27.Add_Click{(System-File-Checker)}
+    $ButtonToolsDISMImageCheckandRepair.Add_Click{(System-File-Checker)}
     #CheckDisk
-    $button28.Add_Click{(start cmd.exe 'chkdsk C: /f /r')}
+    $buttontoolschkdsk.Add_Click{(start cmd.exe 'chkdsk C: /f /r')}
     #Network Repair
-    $Button30.Add_Click{(Network-Repair)}
+    $ButtonToolsNetworkRepair.Add_Click{(Network-Repair)}
     function Network-Repair{
         ipconfig /flushdns
         netsh interface ip delete arpcache
         netsh winsock reset catalog
     }
     #Page File Reset
-    $Button32.Add_Click{(Page-File-Reset)}
+    $ButtonToolsPageFileReset.Add_Click{(Page-File-Reset)}
     function Page-File-Reset{
         C: computersystem where name="%computername%" set AutomaticManagedPagefile=True
     }
     #Defraggler
-    $Button33.Add_Click{(Defraggler-Start)}
+    $ButtonToolsDefraggler.Add_Click{(Defraggler-Start)}
     function Defraggler-Start{
         .\Tools\Defraggler\Defraggler64.exe
     }
@@ -220,42 +220,42 @@ function Test_Kill_Process{
         .\Tools\ADSSpy\ADSSpy.exe
     }
     #Adwcleaner
-    $Button35.Add_Click{(ADWCleaner)}
+    $ButtonToolsAdwCleaner.Add_Click{(ADWCleaner)}
     function ADWCleaner{
         .\Tools\AdwCleaner\adwcleaner_7.4.1.exe
     }
     #aswMBR
-    $Button36.Add_Click{(aswMBR)}
+    $ButtonToolsaswMBR.Add_Click{(aswMBR)}
     function aswMBR{
         .\Tools\aswMBR\aswmbr.exe
     }
     #autorun
-    $button37.Add_Click{(autorun)}
+    $buttontoolsautorun.Add_Click{(autorun)}
     function autorun{
         .\Tools\autorun\Autoruns64.exe
     }
     #PCHunter
-    $Button38.Add_Click{(PCHunter)}
+    $ButtonToolsPCHunter.Add_Click{(PCHunter)}
     function PCHunter{
         .\Tools\PCHunter\PCHunter64.exe
     }
     #Net Adapter Repair
-    $Button40.Add_Click{(Net-Adapter-Repair)}
+    $ButtonToolsNetAdapterRepair.Add_Click{(Net-Adapter-Repair)}
     function Net-Adapter-Repair{
         .\tools\NetAdapterRepair\NetAdapterRepair1.2.exe
     }
     #ParkControl
-    $Button29.Add_Click{(Park-Control)}
+    $ButtonToolsParkControl.Add_Click{(Park-Control)}
     function Park-Control{
         .\Tools\ParkControl\ParkControl.exe
     }
     #System Recovery
-    $Button39.Add_Click{(System-Recovery)}
+    $ButtonToolsSystemRecovery.Add_Click{(System-Recovery)}
     function System-Recovery{
         rstrui.exe
     }
     #Reboot to Recovery
-    $Button42.Add_Click{(Reboot-Recovery)}
+    $ButtonToolsReboottoRecovery.Add_Click{(Reboot-Recovery)}
     function Reboot-Recovery{
         shutdown /r /o /f /t 00
     }
