@@ -5,9 +5,17 @@ Add-Type -AssemblyName System.Windows.Forms
 $tooltip = New-Object System.Windows.Forms.ToolTip
 $Config = Import-LocalizedData -BaseDirectory .\Config\ -FileName Config.psd1
 $WinVersion = [System.Environment]::OSVersion.Version.Major
+$Language = Get-Content .\Config\Language.txt
 
-$SupportClick = [System.Windows.Forms.MessageBox]::Show("Do you want to support us?`nA few browser tabs will open, you don't have to do anything.","TGF Tuning Pack 4.3 by MinersWin",'YesNoCancel','Information')
-if ($SupportClick -eq "YES"){
+####################################################################################################################################################
+#Support us Function
+
+if ($Language -eq "de-DE"){
+    $SupportClick = [System.Windows.Forms.MessageBox]::Show("Willst du uns unterstützen?`nEin paar Browserfenster werden sich öffnen, du musst nichts machen. ;)","TGF Tuning Pack 4.3 by MinersWin",'YesNoCancel','Information')
+} else {
+    $SupportClick = [System.Windows.Forms.MessageBox]::Show("Do you want to support us?`nA few browser tabs will open, you don't have to do anything. ;)","TGF Tuning Pack 4.3 by MinersWin",'YesNoCancel','Information')
+}
+if ($SupportClick -ne "NO"){
     explorer "https://youtu.be/ftVBV-XmAP4"
     explorer "https://amzn.to/3dX3I7x"
     explorer "https://youtu.be/hRr6sEoUUd0"
@@ -88,7 +96,7 @@ Forum: forum.thegeekfreaks.de
 #Funktion für BaloonTips
 Add-Type -AssemblyName  System.Windows.Forms 
 $script:balloon = New-Object System.Windows.Forms.NotifyIcon 
-Get-Member -InputObject  $script:balloon 
+Unregister-Event  -SourceIdentifier IconClicked
 [void](Register-ObjectEvent  -InputObject $balloon  -EventName MouseDoubleClick  -SourceIdentifier IconClicked  -Action {
     $script:balloon.dispose()
     Unregister-Event  -SourceIdentifier IconClicked
@@ -129,7 +137,7 @@ ______________________________ ___________           .__
 |_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
         __/ |                                                  
        |___/     
-The Geek Freaks Tuning Pack 4.3 Update 18.11.2020
+The Geek Freaks Tuning Pack 4.3 Update 04.12.2020
 Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0/releases/
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
@@ -140,7 +148,7 @@ Forum: forum.thegeekfreaks.de
 Tutorials: youtube.com/thegeekfreaks
 " -ForegroundColor Green
 Write-Host "Forum: forum.thegeekfreaks.de" -ForegroundColor Green
-$LabelTitle.Text = "TGF Tuning Pack 4.2"
+$LabelTitle.Text = "TGF Tuning Pack 4.3"
 Write-Host "Windoof $($WinVersion)"
 WriteLog "Windows Version: $($WinVersion)"
 WriteLog "User: $($env:username)"
@@ -157,16 +165,15 @@ function Test-InternetConnection {
         $script:Internet = $true
     }
     if ($Internet){
-        "$(Get-Date) Internetverbindung: Online"
+        "$(Get-Date) Internetconnection: Online"
         WriteLog "Internet: Online"
     } else {
-        "$(Get-Date) Internetverbindung: Offline"
+        "$(Get-Date) Internetconnection: Offline"
         WriteLog "Internet: Offline"
     }
 }
 Test-InternetConnection
 ##################################################################################################################################################################################
-$Language = Get-Content .\Config\Language.txt
 if ($Language -eq "de-DE"){
 [System.Windows.Forms.MessageBox]::Show("Dies ist ein Hobbyprojekt, wir geben dir Viele Möglichkeiten dein Windows einzustellen. Sei vorsichtig was du machst!.","The Geek Freaks Tuning Pack 4.3 by MinersWin",'OK','Info')
 } else {
@@ -305,9 +312,9 @@ function Accept-Everything{
         $TabControlMain.SelectedTab = $TabPage1
     } else {
         if ($Language -eq "de-DE"){
-            [System.Windows.Forms.MessageBox]::Show("Bitte Akzeptieren","TGF Tuning Pack 4.2","OK","Error")
+            [System.Windows.Forms.MessageBox]::Show("Bitte Akzeptieren","TGF Tuning Pack 3","OK","Error")
         } else {
-            [System.Windows.Forms.MessageBox]::Show("Please Accept","TGF Tuning Pack 4.2","OK","Error")
+            [System.Windows.Forms.MessageBox]::Show("Please Accept","TGF Tuning Pack 4.3","OK","Error")
         }
     }
 }
@@ -369,10 +376,10 @@ $ButtonStart.Add_Click{(Make-Tweaks)}
 function Make-Tweaks{
     WriteLog "Clicked 'Make FPS Rain'"
     if ($Language -eq "de-DE"){
-        Write-Host "Tuning Pack 4.2 by MinersWin: https://tuning-pack.de/"
+        Write-Host "Tuning Pack 4.3 by MinersWin: https://tuning-pack.de/"
         $msgBoxInput = [System.Windows.Forms.MessageBox]::Show("Tweaks werden ausgeführt. Bitte vor dem Bestätigen nochmal alle Tweaks Überprüfen. Hierbei kann einiges Kaputt gehen.","Tuning Pack Sicherheitswarnung",'YesNoCancel','Question')
         } else {
-        Write-Host "Tuning Pack 4.2 by MinersWin: https://tuning-pack.de/"
+        Write-Host "Tuning Pack 4.3 by MinersWin: https://tuning-pack.de/"
         $msgBoxInput = [System.Windows.Forms.MessageBox]::Show("Tweaks are in progress. Please check all tweaks again before confirming. This can break some things.","Tuning Pack Security Warning",'YesNoCancel','Question')
         }
         switch  ($msgBoxInput) {
@@ -401,19 +408,20 @@ function TWEAK_THE_SHIT{
         WriteLog "Created System Restore Point"
         wmic /namespace:\\root\default path SystemRestore call Enable C:\
         Write-Host "Die erstellung von Wiederherstellungspunkten wurde aktiviert"
-        Checkpoint-Computer -Description "TGF_Tuning_Pack_4.2-$(Get-Date)"
+        Checkpoint-Computer -Description "TGF_Tuning_Pack_4.3-$(Get-Date)"
         $Date = Get-Date
         Write-Host "Der Wiederherstellungspunkt wurde erstellt. Er trägt den Namen: $($Date) TGF Tuning Pack" -ForegroundColor Green
         WriteLog "Created System Restore Point with the Name: $($Date) TGF Tuning Pack"
     }
     if ($CheckBoxBackupRegistry.Checked){
         if ($Language -eq "de-DE"){
-            $Backup = [System.Windows.Forms.MessageBox]::Show("Ein Backup der Registry wird ausgeführt. Eine Normale Windows Registry ist im Normalfall ca. 500mb Groß. Das Backup wird unter C:\RegBack\ Gespeichert.","TGF Tuning Pack 4.2 by MinersWin",'OK','Info')
+            $Backup = [System.Windows.Forms.MessageBox]::Show("Ein Backup der Registry wird ausgeführt. Eine Normale Windows Registry ist im Normalfall ca. 500mb Groß. Das Backup wird unter C:\RegBack\ Gespeichert.","TGF Tuning Pack 4.3 by MinersWin",'OK','Info')
+            Write-Host "Ein Backup der Registry wird ausgeführt.... Eine Normale Windows Registry ist im Normalfall ca. 500mb Groß. Das Backup wird unter C:\RegBack\ Gespeichert." -ForegroundColor Green
         } else {
-            $Backup = [System.Windows.Forms.MessageBox]::Show("The registry is backed up. A normal Windows registry is usually about 500mb in size. The backup is saved under C:\RegBack\.","TGF Tuning Pack 4.2 by MinersWin",'OK','Info')
+            $Backup = [System.Windows.Forms.MessageBox]::Show("The registry is backed up. A normal Windows registry is usually about 500mb in size. The backup is saved under C:\RegBack\.","TGF Tuning Pack 4.3 by MinersWin",'OK','Info')
+            Write-Host "A backup of the registry is performed.... A normal Windows registry is normally about 500mb in size. The backup is stored under C:\RegBack\." -ForegroundColor Green
         }
         mkdir C:\RegBack\        
-        Write-Host "Ein Backup der Registry wird ausgeführt.... Eine Normale Windows Registry ist im Normalfall ca. 500mb Groß. Das Backup wird unter C:\RegBack\ Gespeichert." -ForegroundColor Green
         WriteLog "Registry Backup started ..."
         reg export HKCR C:\RegBack\HKLM.Reg /y
         reg export HKCU C:\RegBack\HKCU.Reg /y
