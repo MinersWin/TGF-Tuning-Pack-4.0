@@ -283,7 +283,7 @@ $ButtonToolsDownloadAllTools.Add_Click{
         WriteLog "Download wurde abgeschlossen"
     } else {
         WriteLog "Verbindung zum Server kann nicht hergestellt werden"
-        Write-Host "Keine Internetverbindung mÃ¶glich. Bitte zu einem späteren Zeitpunkt erneut versuchen."
+        Write-Host "Keine Internetverbindung möglich. Bitte zu einem späteren Zeitpunkt erneut versuchen."
     }    
 }
 
@@ -312,7 +312,7 @@ function Accept-Everything{
         $TabControlMain.SelectedTab = $TabPage1
     } else {
         if ($Language -eq "de-DE"){
-            [System.Windows.Forms.MessageBox]::Show("Bitte Akzeptieren","TGF Tuning Pack 3","OK","Error")
+            [System.Windows.Forms.MessageBox]::Show("Bitte Akzeptieren","TGF Tuning Pack 4.3","OK","Error")
         } else {
             [System.Windows.Forms.MessageBox]::Show("Please Accept","TGF Tuning Pack 4.3","OK","Error")
         }
@@ -1257,7 +1257,7 @@ function TWEAK_THE_SHIT{
         Write-Host "Fertig" -ForegroundColor Blue
         Write-Host "--------------------------------------------------------------------------------------------------" -ForegroundColor Red
         Write-Host "Die Tweaks wurden erfolgreich abgeschlossen. Sollten Fehlermeldungen aufgetreten sein Liegt das wahrscheinlich am Auswählen nicht geeigneter Tweaks wie zum Beispiel Das entfernen von Windows 10 Apps unter Windows 7."  -ForegroundColor Green
-        Write-Host "Wir Übernehmen keine Verantwortung für die Folgen und eventuelle SchÃ¤den an euren Systemen. Alle Tweaks wurden von euch Ausgewählt und mehrfach Bestätigt." -ForegroundColor Green
+        Write-Host "Wir Übernehmen keine Verantwortung für die Folgen und eventuelle Schäden an euren Systemen. Alle Tweaks wurden von euch Ausgewählt und mehrfach Bestätigt." -ForegroundColor Green
         Write-Host "Bei Fragen oder Problemen gerne im Discord nach Lösung Fragen, im Forum einen Thread erstellen oder auf den TeamSpeak joinen." -ForegroundColor Green
         Write-Host "Wir wärden uns Freuen eure Erfahrungen und Ergenisse zu sehen. Postet gerne Feedback im Discord." -ForegroundColor Green
         Write-Host "Unterstützung dieses und weiteren Tools: https://paypal.me/minerswin" -ForegroundColor Green
@@ -1281,7 +1281,7 @@ function TWEAK_THE_SHIT{
 }
 
 #Templates 
-$ButtonCreateTemplate.Add_Click{($ShopLink = [System.Windows.Forms.MessageBox]::Show("In Version 5 (or 4.5 PRO)`nhttps://shop.thegeekfreaks.de","TGF Tuning Pack 4.2",1)); if ($ShopLink -eq "Cancel"){}else{explorer https://shop.thegeekfreaks.de}} #Will open the shop site, if OK is clicked
+$ButtonCreateTemplate.Add_Click{($ShopLink = [System.Windows.Forms.MessageBox]::Show("In Version 5 (or 4.5 PRO)`nhttps://shop.thegeekfreaks.de","TGF Tuning Pack 4.3",1)); if ($ShopLink -eq "Cancel"){}else{explorer https://shop.thegeekfreaks.de}} #Will open the shop site, if OK is clicked
 $ButtonApplyTemplate.Add_Click{(Apply-Template)}
 
 function Apply-Template{
@@ -1339,8 +1339,8 @@ function About {
     # About Text Label
     $aboutFormText.Location = "100, 40"
     $aboutFormText.Size     = "300, 30"
-    $aboutFormText.Text     = "          Created by MinersWin `n`r https://www.thegeekfreaks.de"
-    $aboutFormText.Add_Click{(explorer https://thegeekfreaks.de); explorer https://youtube.com/minerswin}
+    $aboutFormText.Text     = "          Created by MinersWin `n`r https://thegeekfreaks.de"
+    $aboutFormText.Add_Click{(explorer https://thegeekfreaks.de); explorer https://youtube.com/minerswin; explorer https://miners.win}
     $aboutForm.Controls.Add($aboutFormText)
     # About Exit Button
     $aboutFormExit.Location = "135, 70"
