@@ -27,6 +27,7 @@ if ($SupportClick -ne "NO"){
 function WriteLog {
     Param ([string]$t)
     Write-Output "$(Get-Date) $t" >> "$($MyDir)\Log\Latest.log"
+    Write-Verbose $t
 }
 
 function WriteTweak([int]$Percent,[string]$string){
@@ -147,7 +148,7 @@ ______________________________ ___________           .__
 |_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
         __/ |                                                  
        |___/     
-The Geek Freaks Tuning Pack 4.3 Update 04.12.2020
+The Geek Freaks Tuning Pack 4.3 Update 18.12.2020
 Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0/releases/
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
@@ -981,6 +982,10 @@ function About {
     $aboutFormExit.Text     = "OK"
     $aboutForm.Controls.Add($aboutFormExit)
     [void]$aboutForm.ShowDialog()
+    explorer "https://youtu.be/ftVBV-XmAP4"
+    explorer "https://amzn.to/3dX3I7x"
+    explorer "https://youtu.be/hRr6sEoUUd0"
+    explorer "https://paypal.me/minerswin"
 } # End About
 
 
