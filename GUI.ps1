@@ -7,6 +7,9 @@ $Config = Import-LocalizedData -BaseDirectory .\Config\ -FileName Config.psd1
 $WinVersion = [System.Environment]::OSVersion.Version.Major
 $Language = Get-Content .\Config\Language.txt
 
+#Run script to Define the Tool Variables
+. (Join-Path $PSScriptRoot 'Tools.ps1')
+
 ####################################################################################################################################################
 #Support us Function
 
@@ -148,7 +151,7 @@ ______________________________ ___________           .__
 |_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
         __/ |                                                  
        |___/     
-The Geek Freaks Tuning Pack 4.3 Update 18.12.2020
+The Geek Freaks Tuning Pack 4.3 Update 03.02.2020
 Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0/releases/
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
@@ -164,6 +167,8 @@ Write-Host "Windoof $($WinVersion)"
 WriteLog "Windows Version: $($WinVersion)"
 WriteLog "User: $($env:username)"
 WriteLog "Hostname: $($env:COMPUTERNAME)"
+
+
 
 function Test-InternetConnection {
     while (!(test-connection 37.120.179.48 -Count 1 -Quiet)) {
@@ -194,14 +199,14 @@ WriteLog "Sprache $($Language)"
 $FormTuningPack.Text = $Config.Application.Name
 
 #New Update
-if (Test-Path .\Config\Accept.dat){
-    WriteLog "Found Accepted File, dont show Changelog again"
-} else {
-    WriteLog "First Startup, Show Changelog"
-    .\Changelog\Changelog.ps1
-    WriteLog "Changelog Accepted"
-   Out-File -FilePath .\Config\Accept.dat
-}
+#if (Test-Path .\Config\Accept.dat){
+#    WriteLog "Found Accepted File, dont show Changelog again"
+#} else {
+#    WriteLog "First Startup, Show Changelog"
+#    .\Changelog\Changelog.ps1
+#    WriteLog "Changelog Accepted"
+#   Out-File -FilePath .\Config\Accept.dat
+#}
 
 
 #Alles Ausgrauen
@@ -937,9 +942,6 @@ function Apply-Template{
     }
 }
 
-#Run script to Define the Tool Variables
-.\Tools.ps1
-
 
 #About Button
 function About {
@@ -987,7 +989,6 @@ function About {
     explorer "https://youtu.be/hRr6sEoUUd0"
     explorer "https://paypal.me/minerswin"
 } # End About
-
 
 Apply-Template
 $FormTuningPack.ShowDialog()
