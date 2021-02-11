@@ -139,7 +139,7 @@ function Test_Kill_Process{
     #$ButtonToolsCleanupDuplicateDownloads.Add_Click{([System.Windows.Forms.MessageBox]::Show("WIP","TGF Tuning Pack 4.1"1))}
     
     #Clear Windows event logs
-    $ButtonToolsClearWindowsEventLogs.ForeColor = 'GREEN'
+    #$ButtonToolsClearWindowsEventLogs.ForeColor = 'GREEN'
     $ButtonToolsClearWindowsEventLogs.Add_Click{(Clear-EventLog Application,Security,System)}
     #Clear Windows Update Cache
     function Test_Clear-UpdateCache{
@@ -174,10 +174,10 @@ function Test_Kill_Process{
         .\Tools\Malwarebytes\mb3-setup-consumer-3.8.3.2965-1.0.613-1.0.11878.exe
     }
     #Kaspersky Virus Removal Tool
-    $ButtonToolsKasperskyVirusRemovalTool.Add_Click{(KVRT)}
     function KVRT{
         .\Tools\KVRT\KVRT.exe
     }
+    $ButtonToolsKasperskyVirusRemovalTool.Add_Click{(KVRT)}
     #Sophos Virus Removal Tool
     $ButtonToolsNetAdapterRepair.Add_Click{(Sophos)}
     function Sophos{
