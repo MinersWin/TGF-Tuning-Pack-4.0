@@ -154,3 +154,5 @@ $TabPage8.Text = "Misc."
 $TabPageTools.Text = "Werkzeuge"
 
 $LinkLabelDisclaimer.Text = "Wir Übernehmen keine Verantwortung für Probleme, die mit der Ausführung unseres Programms einhergehen! Dies ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzung auf eigene Gefahr! Probleme und Bugs kÃ¶nnen gerne im Discord gemeldet werden: https://discordapp.com/invite/qrXmqSq Das Pack ist kein Wundermittel, es kann nicht mehr Leistung aus deinem System holen als du hast. Je nach PC, zusammenstellung, Nutzungsverhalten, Anwendungsgebiet ... können die Performanceverbesserungen extrem Variieren"
+
+$tooltip.SetToolTip($CheckBox1,"Fügt das Icon 'Dieser PC' zum Desktop hinzu")
