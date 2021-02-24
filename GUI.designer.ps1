@@ -123,7 +123,6 @@ $FormTuningPack = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.CheckBox]$CheckBox104 = $null
 [System.Windows.Forms.CheckBox]$CheckBox103 = $null
 [System.Windows.Forms.CheckBox]$CheckBox80 = $null
-[System.Windows.Forms.CheckBox]$CheckBox79 = $null
 [System.Windows.Forms.TabPage]$TabPage8 = $null
 [System.Windows.Forms.Button]$Button15 = $null
 [System.Windows.Forms.Button]$Button44 = $null
@@ -226,9 +225,12 @@ $FormTuningPack = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.Label]$LabelProgressText = $null
 [System.Windows.Forms.Label]$LabelProgressPercent = $null
 [System.Windows.Forms.Label]$LabelProgress = $null
+[System.Windows.Forms.Button]$ButtonSpenden = $null
+[System.Windows.Forms.Button]$ButtonMinersWin = $null
+[System.Windows.Forms.Button]$ButtonGeekFreaks = $null
 function InitializeComponent
 {
-$resources = . (Join-Path $PSScriptRoot 'GUI.resources.ps1')
+$resources = . (Join-Path $PSScriptRoot 'gui.resources.ps1')
 $LabelTitle = (New-Object -TypeName System.Windows.Forms.Label)
 $PictureBoxLogo = (New-Object -TypeName System.Windows.Forms.PictureBox)
 $Label2 = (New-Object -TypeName System.Windows.Forms.Label)
@@ -353,7 +355,6 @@ $CheckBox105 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox104 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox103 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $CheckBox80 = (New-Object -TypeName System.Windows.Forms.CheckBox)
-$CheckBox79 = (New-Object -TypeName System.Windows.Forms.CheckBox)
 $TabPage8 = (New-Object -TypeName System.Windows.Forms.TabPage)
 $Button15 = (New-Object -TypeName System.Windows.Forms.Button)
 $Button44 = (New-Object -TypeName System.Windows.Forms.Button)
@@ -456,6 +457,9 @@ $PanelProgress = (New-Object -TypeName System.Windows.Forms.Panel)
 $LabelProgressText = (New-Object -TypeName System.Windows.Forms.Label)
 $LabelProgressPercent = (New-Object -TypeName System.Windows.Forms.Label)
 $LabelProgress = (New-Object -TypeName System.Windows.Forms.Label)
+$ButtonSpenden = (New-Object -TypeName System.Windows.Forms.Button)
+$ButtonMinersWin = (New-Object -TypeName System.Windows.Forms.Button)
+$ButtonGeekFreaks = (New-Object -TypeName System.Windows.Forms.Button)
 ([System.ComponentModel.ISupportInitialize]$PictureBoxLogo).BeginInit()
 $PanelTemplates.SuspendLayout()
 $TabControlMain.SuspendLayout()
@@ -489,7 +493,7 @@ $LabelTitle.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList 
 $LabelTitle.Name = [System.String]'LabelTitle'
 $LabelTitle.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]737,[System.Int32]35))
 $LabelTitle.TabIndex = [System.Int32]0
-$LabelTitle.Text = [System.String]'The Geek Freaks Tuning Pack 4.2'
+$LabelTitle.Text = [System.String]'The Geek Freaks Tuning Pack 4.3'
 $LabelTitle.UseCompatibleTextRendering = $true
 #
 #PictureBoxLogo
@@ -952,7 +956,7 @@ $ButtonCreateTemplate.UseVisualStyleBackColor = $true
 $ComboBoxTemplates.FormattingEnabled = $true
 $ComboBoxTemplates.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]1,[System.Int32]35))
 $ComboBoxTemplates.Name = [System.String]'ComboBoxTemplates'
-$ComboBoxTemplates.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]268,[System.Int32]25))
+$ComboBoxTemplates.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]268,[System.Int32]21))
 $ComboBoxTemplates.TabIndex = [System.Int32]41
 #
 #TabControlMain
@@ -980,9 +984,9 @@ $TabPageHome.Controls.Add($PictureBoxBanner)
 $TabPageHome.Controls.Add($LinkLabelDisclaimer)
 $TabPageHome.Controls.Add($ButtonLetsGoDisclaimer)
 $TabPageHome.Controls.Add($CheckBoxAcceptedDisclaimer)
-$TabPageHome.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]26))
+$TabPageHome.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]22))
 $TabPageHome.Name = [System.String]'TabPageHome'
-$TabPageHome.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]528))
+$TabPageHome.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]532))
 $TabPageHome.TabIndex = [System.Int32]2
 $TabPageHome.Text = [System.String]'Home'
 $TabPageHome.ToolTipText = [System.String]'Test'
@@ -1044,10 +1048,10 @@ $CheckBoxAcceptedDisclaimer.add_CheckedChanged($CheckBoxAcceptedDisclaimer_Check
 #TabPage1
 #
 $TabPage1.Controls.Add($Panel5)
-$TabPage1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]25))
+$TabPage1.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]22))
 $TabPage1.Name = [System.String]'TabPage1'
 $TabPage1.Padding = (New-Object -TypeName System.Windows.Forms.Padding -ArgumentList @([System.Int32]3))
-$TabPage1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]529))
+$TabPage1.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]532))
 $TabPage1.TabIndex = [System.Int32]0
 $TabPage1.Text = [System.String]'Registry Tweaks'
 $TabPage1.UseVisualStyleBackColor = $true
@@ -1126,10 +1130,10 @@ $CheckBox76.UseVisualStyleBackColor = $true
 #TabPage2
 #
 $TabPage2.Controls.Add($Panel6)
-$TabPage2.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]25))
+$TabPage2.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]22))
 $TabPage2.Name = [System.String]'TabPage2'
 $TabPage2.Padding = (New-Object -TypeName System.Windows.Forms.Padding -ArgumentList @([System.Int32]3))
-$TabPage2.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]529))
+$TabPage2.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]532))
 $TabPage2.TabIndex = [System.Int32]1
 $TabPage2.Text = [System.String]'Removing Services'
 $TabPage2.UseVisualStyleBackColor = $true
@@ -1527,9 +1531,9 @@ $TabPage5.Controls.Add($CheckBox89)
 $TabPage5.Controls.Add($CheckBox88)
 $TabPage5.Controls.Add($CheckBox87)
 $TabPage5.Controls.Add($CheckBox86)
-$TabPage5.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]25))
+$TabPage5.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]22))
 $TabPage5.Name = [System.String]'TabPage5'
-$TabPage5.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]529))
+$TabPage5.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]532))
 $TabPage5.TabIndex = [System.Int32]4
 $TabPage5.Text = [System.String]'Scheduled Tasks'
 $TabPage5.UseVisualStyleBackColor = $true
@@ -1719,10 +1723,9 @@ $TabPage6.Controls.Add($CheckBox105)
 $TabPage6.Controls.Add($CheckBox104)
 $TabPage6.Controls.Add($CheckBox103)
 $TabPage6.Controls.Add($CheckBox80)
-$TabPage6.Controls.Add($CheckBox79)
-$TabPage6.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]25))
+$TabPage6.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]22))
 $TabPage6.Name = [System.String]'TabPage6'
-$TabPage6.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]529))
+$TabPage6.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]532))
 $TabPage6.TabIndex = [System.Int32]5
 $TabPage6.Text = [System.String]'Windows Default Apps'
 $TabPage6.UseVisualStyleBackColor = $true
@@ -1848,14 +1851,6 @@ $CheckBox80.Text = [System.String]'Remove 3D-Viewer'
 $CheckBox80.UseCompatibleTextRendering = $true
 $CheckBox80.UseVisualStyleBackColor = $true
 #
-#CheckBox79
-#
-$CheckBox79.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]0,[System.Int32]0))
-$CheckBox79.Name = [System.String]'CheckBox79'
-$CheckBox79.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]104,[System.Int32]24))
-$CheckBox79.TabIndex = [System.Int32]13
-$CheckBox79.UseCompatibleTextRendering = $true
-#
 #TabPage8
 #
 $TabPage8.Controls.Add($Button15)
@@ -1873,9 +1868,9 @@ $TabPage8.Controls.Add($CheckBox56)
 $TabPage8.Controls.Add($CheckBox83)
 $TabPage8.Controls.Add($CheckBox82)
 $TabPage8.Controls.Add($CheckBox81)
-$TabPage8.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]25))
+$TabPage8.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]22))
 $TabPage8.Name = [System.String]'TabPage8'
-$TabPage8.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]529))
+$TabPage8.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]532))
 $TabPage8.TabIndex = [System.Int32]7
 $TabPage8.Text = [System.String]'Misc.'
 $TabPage8.UseVisualStyleBackColor = $true
@@ -2039,9 +2034,9 @@ $CheckBox81.UseVisualStyleBackColor = $true
 #
 $SpecialTweaks.AutoScroll = $true
 $SpecialTweaks.Controls.Add($Panel13)
-$SpecialTweaks.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]25))
+$SpecialTweaks.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]22))
 $SpecialTweaks.Name = [System.String]'SpecialTweaks'
-$SpecialTweaks.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]529))
+$SpecialTweaks.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]532))
 $SpecialTweaks.TabIndex = [System.Int32]8
 $SpecialTweaks.Text = [System.String]'SpecialTweaks'
 $SpecialTweaks.UseVisualStyleBackColor = $true
@@ -2271,9 +2266,9 @@ $TabPageTools.Controls.Add($LabelToolsDownloaded)
 $TabPageTools.Controls.Add($ButtonToolsGotoFolder)
 $TabPageTools.Controls.Add($PanelTools)
 $TabPageTools.Controls.Add($ButtonToolsDownloadAllTools)
-$TabPageTools.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]26))
+$TabPageTools.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]4,[System.Int32]22))
 $TabPageTools.Name = [System.String]'TabPageTools'
-$TabPageTools.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]528))
+$TabPageTools.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]936,[System.Int32]532))
 $TabPageTools.TabIndex = [System.Int32]3
 $TabPageTools.Text = [System.String]'Other Tools'
 $TabPageTools.UseVisualStyleBackColor = $true
@@ -2972,7 +2967,7 @@ $PanelBackup.TabIndex = [System.Int32]56
 #
 $TextBoxBackups.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]220,[System.Int32]102))
 $TextBoxBackups.Name = [System.String]'TextBoxBackups'
-$TextBoxBackups.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]49,[System.Int32]24))
+$TextBoxBackups.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]49,[System.Int32]21))
 $TextBoxBackups.TabIndex = [System.Int32]55
 $TextBoxBackups.Text = [System.String]'3'
 #
@@ -3025,10 +3020,43 @@ $LabelProgress.TabIndex = [System.Int32]59
 $LabelProgress.Text = [System.String]'Progress'
 $LabelProgress.UseCompatibleTextRendering = $true
 #
+#ButtonSpenden
+#
+$ButtonSpenden.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]881,[System.Int32]12))
+$ButtonSpenden.Name = [System.String]'ButtonSpenden'
+$ButtonSpenden.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]75,[System.Int32]23))
+$ButtonSpenden.TabIndex = [System.Int32]59
+$ButtonSpenden.Text = [System.String]'Spenden'
+$ButtonSpenden.UseCompatibleTextRendering = $true
+$ButtonSpenden.UseVisualStyleBackColor = $true
+#
+#ButtonMinersWin
+#
+$ButtonMinersWin.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]800,[System.Int32]12))
+$ButtonMinersWin.Name = [System.String]'ButtonMinersWin'
+$ButtonMinersWin.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]75,[System.Int32]23))
+$ButtonMinersWin.TabIndex = [System.Int32]60
+$ButtonMinersWin.Text = [System.String]'MinersWin'
+$ButtonMinersWin.UseCompatibleTextRendering = $true
+$ButtonMinersWin.UseVisualStyleBackColor = $true
+#
+#ButtonGeekFreaks
+#
+$ButtonGeekFreaks.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]800,[System.Int32]39))
+$ButtonGeekFreaks.Name = [System.String]'ButtonGeekFreaks'
+$ButtonGeekFreaks.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]75,[System.Int32]23))
+$ButtonGeekFreaks.TabIndex = [System.Int32]61
+$ButtonGeekFreaks.Text = [System.String]'GeekFreaks'
+$ButtonGeekFreaks.UseCompatibleTextRendering = $true
+$ButtonGeekFreaks.UseVisualStyleBackColor = $true
+#
 #FormTuningPack
 #
 $FormTuningPack.BackColor = [System.Drawing.SystemColors]::Control
 $FormTuningPack.ClientSize = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]1242,[System.Int32]632))
+$FormTuningPack.Controls.Add($ButtonGeekFreaks)
+$FormTuningPack.Controls.Add($ButtonMinersWin)
+$FormTuningPack.Controls.Add($ButtonSpenden)
 $FormTuningPack.Controls.Add($PanelProgress)
 $FormTuningPack.Controls.Add($PanelBackup)
 $FormTuningPack.Controls.Add($ButtonNinite)
@@ -3039,7 +3067,7 @@ $FormTuningPack.Controls.Add($PanelTemplates)
 $FormTuningPack.Controls.Add($LabelCreatedBy)
 $FormTuningPack.Controls.Add($LabelTitle)
 $FormTuningPack.Icon = ([System.Drawing.Icon]$resources.'$this.Icon')
-$FormTuningPack.Text = [System.String]'The Geek Freaks Tuning Pack 4.2'
+$FormTuningPack.Text = [System.String]'The Geek Freaks Tuning Pack 4.3'
 $FormTuningPack.add_Load($FormTuningPack_Load)
 ([System.ComponentModel.ISupportInitialize]$PictureBoxLogo).EndInit()
 $PanelTemplates.ResumeLayout($false)
@@ -3192,7 +3220,6 @@ Add-Member -InputObject $FormTuningPack -Name CheckBox105 -Value $CheckBox105 -M
 Add-Member -InputObject $FormTuningPack -Name CheckBox104 -Value $CheckBox104 -MemberType NoteProperty
 Add-Member -InputObject $FormTuningPack -Name CheckBox103 -Value $CheckBox103 -MemberType NoteProperty
 Add-Member -InputObject $FormTuningPack -Name CheckBox80 -Value $CheckBox80 -MemberType NoteProperty
-Add-Member -InputObject $FormTuningPack -Name CheckBox79 -Value $CheckBox79 -MemberType NoteProperty
 Add-Member -InputObject $FormTuningPack -Name TabPage8 -Value $TabPage8 -MemberType NoteProperty
 Add-Member -InputObject $FormTuningPack -Name Button15 -Value $Button15 -MemberType NoteProperty
 Add-Member -InputObject $FormTuningPack -Name Button44 -Value $Button44 -MemberType NoteProperty
@@ -3295,5 +3322,8 @@ Add-Member -InputObject $FormTuningPack -Name PanelProgress -Value $PanelProgres
 Add-Member -InputObject $FormTuningPack -Name LabelProgressText -Value $LabelProgressText -MemberType NoteProperty
 Add-Member -InputObject $FormTuningPack -Name LabelProgressPercent -Value $LabelProgressPercent -MemberType NoteProperty
 Add-Member -InputObject $FormTuningPack -Name LabelProgress -Value $LabelProgress -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name ButtonSpenden -Value $ButtonSpenden -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name ButtonMinersWin -Value $ButtonMinersWin -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name ButtonGeekFreaks -Value $ButtonGeekFreaks -MemberType NoteProperty
 }
 . InitializeComponent

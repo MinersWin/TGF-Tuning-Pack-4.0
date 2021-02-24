@@ -1,4 +1,4 @@
-$MyDir = Split-Path $script:MyInvocation.MyCommand.Path
+$MyDir = Split-Path $MyInvocation.MyCommand.Path
 Set-Location $MyDir
 Add-Type -AssemblyName System.Windows.Forms
 . (Join-Path $PSScriptRoot 'GUI.designer.ps1')
@@ -23,6 +23,7 @@ if ($SupportClick -ne "NO"){
     explorer "https://amzn.to/3dX3I7x"
     explorer "https://youtu.be/hRr6sEoUUd0"
     explorer "https://paypal.me/minerswin"
+    explorer "https://selfmade-videos.de/watch/windows-10-schneller-machen-in-5-minuten-mehr-fps-in-allen-spielen-tgf-tuning-pack-4-3_cqkPWWlBtJOQbKy.html"
 }
 
 ####################################################################################################################################################
@@ -110,7 +111,7 @@ Forum: forum.thegeekfreaks.de
 #Funktion für BaloonTips
 Add-Type -AssemblyName  System.Windows.Forms 
 $script:balloon = New-Object System.Windows.Forms.NotifyIcon 
-Unregister-Event  -SourceIdentifier IconClicked
+#Unregister-Event  -SourceIdentifier IconClicked
 [void](Register-ObjectEvent  -InputObject $balloon  -EventName MouseDoubleClick  -SourceIdentifier IconClicked  -Action {
     $script:balloon.dispose()
     Unregister-Event  -SourceIdentifier IconClicked
@@ -151,7 +152,7 @@ ______________________________ ___________           .__
 |_.__/ \__, | |_|  |_|_|_| |_|\___|_|  |___/ \/  \/   |_|_| |_|
         __/ |                                                  
        |___/     
-The Geek Freaks Tuning Pack 4.3 Update 03.02.2020
+The Geek Freaks Tuning Pack 4.3 Update 19.02.2020
 Download the newest Version: https://Github.com/MinersWin/TGF-Tuning-Pack-4.0/releases/
 WE ASSUME NO RESPONSIBILITY FOR PROBLEMS WHICH COME WITH THE EXECUTION OF OUR PROGRAM!
 This is a hobby project! Everything can create errors and problems! Use at your own risk!
@@ -160,15 +161,21 @@ Das hier ist ein Hobbyprojekt! Alles kann Fehler und Probleme erzeugen! Benutzun
 TeamSpeak: ts.thegeekfreaks.de
 Forum: forum.thegeekfreaks.de
 Tutorials: youtube.com/thegeekfreaks
+Spenden: https://paypal.me/minerswin
 " -ForegroundColor Green
-Write-Host "Forum: forum.thegeekfreaks.de" -ForegroundColor Green
 $LabelTitle.Text = "TGF Tuning Pack 4.3"
 Write-Host "Windoof $($WinVersion)"
 WriteLog "Windows Version: $($WinVersion)"
 WriteLog "User: $($env:username)"
 WriteLog "Hostname: $($env:COMPUTERNAME)"
-
-
+WriteLog "Plattform: $([System.Environment]::OSVersion.Platform)"
+WriteLog "Servicepack: $([System.Environment]::OSVersion.ServicePack)"
+WriteLog "Version: $([System.Environment]::OSVersion.Version)"
+WriteLog "VersionString: $([System.Environment]::OSVersion.VersionString)"
+WriteLog "VersionCaption: $((Get-WmiObject -class Win32_OperatingSystem).Caption)"
+WriteLog "PowerShell Version: $($PSVersionTable.PSVersion)"
+WriteLog ".Net Framework: $((Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release)"
+WriteLog "Verbindung zum Server: $($Internet)"
 
 function Test-InternetConnection {
     while (!(test-connection 37.120.179.48 -Count 1 -Quiet)) {
@@ -230,11 +237,19 @@ $SpecialTweaks.Visible = $false
 $TabControlMain.Controls.Remove($SpecialTweaks)
 
 #$ButtonDonatePayPal PayPal Button
-$ButtonDonatePayPal.Add_Click{(explorer https://paypal.me/minerswin);WriteLog "clicked on PayPal Button, YAY"}
+$ButtonDonatePayPal.Add_Click{(explorer https://paypal.me/minerswin);explorer "https://forum.thegeekfreaks.de/index.php?donation-add/";WriteLog "clicked on PayPal Button, YAY"}
 
 #$PictureBoxBanner TuningPack.de Link onclick
 $PictureBoxBanner.Add_Click{(explorer https://tuning-pack.de);WriteLog "Opened Tuning-Pack.de, Clicked on Banner"}
 
+#About Window on Logo
+$PictureBoxLogo.Add_Click{(About)}
+
+#Donation Button
+$ButtonSpenden.Add_Click{explorer "https://paypal.me/minerswin";explorer "https://forum.thegeekfreaks.de/index.php?donation-add/"}
+
+$ButtonMinersWin.Add_Click{explorer "https://www.youtube.com/minerswin";explorer "https://tgf.click/minerswintuningpack"}
+$ButtonGeekFreaks.Add_Click{explorer "https://www.youtube.com/thegeekfreaks";explorer "https://tgf.click/thegeekfreakstuningpack"}
 
 #German Language Image
 $Picture2 = ".\Images\German.jpg"
@@ -827,10 +842,10 @@ function TWEAK_THE_SHIT{
         WriteTweak 43 "Removed XBox"
     }
     #Remove Remove OneDrive
-    if ($CheckBox79.Checked){
-        & '.\Scripts\Batch\Remove OneDrive\RemoveOneDrive.bat'
-        WriteTweak 44 "Removed OneDrive"
-    }
+  #  if ($CheckBox79.Checked){
+  #      & '.\Scripts\Batch\Remove OneDrive\RemoveOneDrive.bat'
+  #      WriteTweak 44 "Removed OneDrive"
+  #  }
 
     #Misc
 
