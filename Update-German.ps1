@@ -110,7 +110,7 @@ $CheckBox110.Text = "Entferne Camera App"
 $CheckBox111.Text = "Entferne Microsoft People"
 $CheckBox112.Text = "Entferne Office Live"
 $CheckBox113.Text = "Entferne XBox"
-$CheckBox79.Text = "Deaktiviere/Entferne OneDrive"
+#$CheckBox79.Text = "Deaktiviere/Entferne OneDrive"
 
 #Misc
 $CheckBox81.Text = "Deaktiviere Windows Error Recovery beim Hochfahren"

@@ -110,7 +110,7 @@ $CheckBox110.Text = "Remove Camera App"
 $CheckBox111.Text = "Remove Microsoft People"
 $CheckBox112.Text = "Remove Office Live"
 $CheckBox113.Text = "Remove XBox"
-$CheckBox79.Text = "Disable/Remove OneDrive"
+#$CheckBox79.Text = "Disable/Remove OneDrive"
 
 #Misc
 $CheckBox81.Text = "Disable Widnows Error Recovery on Startup"

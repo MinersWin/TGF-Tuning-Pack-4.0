@@ -108,7 +108,7 @@ $CheckBox110.Checked = $true            #Remove Camera App"
 $CheckBox111.Checked = $true            #Remove Microsoft People"
 $CheckBox112.Checked = $true            #Remove Office Live"
 $CheckBox113.Checked = $false           #Remove XBox"
-$CheckBox79.Checked =  $false           #Disable/Remove OneDrive"
+#$CheckBox79.Checked =  $false           #Disable/Remove OneDrive"
 
 #Misc
 $CheckBox81.Checked = $true             #Disable Windows Error Recovery on Startup
