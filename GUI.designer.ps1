@@ -48,6 +48,7 @@ $FormTuningPack = New-Object -TypeName System.Windows.Forms.Form
 [System.Windows.Forms.ComboBox]$ComboBoxTemplates = $null
 [System.Windows.Forms.TabControl]$TabControlMain = $null
 [System.Windows.Forms.TabPage]$TabPageHome = $null
+[System.Windows.Forms.Button]$ButtonDarkmode = $null
 [System.Windows.Forms.Button]$ButtonDonatePayPal = $null
 [System.Windows.Forms.PictureBox]$PictureBoxBanner = $null
 [System.Windows.Forms.LinkLabel]$LinkLabelDisclaimer = $null
@@ -460,6 +461,7 @@ $LabelProgress = (New-Object -TypeName System.Windows.Forms.Label)
 $ButtonSpenden = (New-Object -TypeName System.Windows.Forms.Button)
 $ButtonMinersWin = (New-Object -TypeName System.Windows.Forms.Button)
 $ButtonGeekFreaks = (New-Object -TypeName System.Windows.Forms.Button)
+$ButtonDarkmode = (New-Object -TypeName System.Windows.Forms.Button)
 ([System.ComponentModel.ISupportInitialize]$PictureBoxLogo).BeginInit()
 $PanelTemplates.SuspendLayout()
 $TabControlMain.SuspendLayout()
@@ -979,6 +981,7 @@ $TabControlMain.add_SelectedIndexChanged($TabControlMain_SelectedIndexChanged)
 #TabPageHome
 #
 $TabPageHome.BackColor = [System.Drawing.SystemColors]::Control
+$TabPageHome.Controls.Add($ButtonDarkmode)
 $TabPageHome.Controls.Add($ButtonDonatePayPal)
 $TabPageHome.Controls.Add($PictureBoxBanner)
 $TabPageHome.Controls.Add($LinkLabelDisclaimer)
@@ -3050,6 +3053,18 @@ $ButtonGeekFreaks.Text = [System.String]'GeekFreaks'
 $ButtonGeekFreaks.UseCompatibleTextRendering = $true
 $ButtonGeekFreaks.UseVisualStyleBackColor = $true
 #
+#ButtonDarkmode
+#
+$ButtonDarkmode.BackgroundImage = ([System.Drawing.Image]$resources.'ButtonDarkmode.BackgroundImage')
+$ButtonDarkmode.BackgroundImageLayout = [System.Windows.Forms.ImageLayout]::Stretch
+$ButtonDarkmode.Location = (New-Object -TypeName System.Drawing.Point -ArgumentList @([System.Int32]865,[System.Int32]291))
+$ButtonDarkmode.Name = [System.String]'ButtonDarkmode'
+$ButtonDarkmode.Size = (New-Object -TypeName System.Drawing.Size -ArgumentList @([System.Int32]63,[System.Int32]50))
+$ButtonDarkmode.TabIndex = [System.Int32]62
+$ButtonDarkmode.UseCompatibleTextRendering = $true
+$ButtonDarkmode.UseVisualStyleBackColor = $true
+$ButtonDarkmode.add_Click($Button1_Click)
+#
 #FormTuningPack
 #
 $FormTuningPack.BackColor = [System.Drawing.SystemColors]::Control
@@ -3145,6 +3160,7 @@ Add-Member -InputObject $FormTuningPack -Name ButtonCreateTemplate -Value $Butto
 Add-Member -InputObject $FormTuningPack -Name ComboBoxTemplates -Value $ComboBoxTemplates -MemberType NoteProperty
 Add-Member -InputObject $FormTuningPack -Name TabControlMain -Value $TabControlMain -MemberType NoteProperty
 Add-Member -InputObject $FormTuningPack -Name TabPageHome -Value $TabPageHome -MemberType NoteProperty
+Add-Member -InputObject $FormTuningPack -Name ButtonDarkmode -Value $ButtonDarkmode -MemberType NoteProperty
 Add-Member -InputObject $FormTuningPack -Name ButtonDonatePayPal -Value $ButtonDonatePayPal -MemberType NoteProperty
 Add-Member -InputObject $FormTuningPack -Name PictureBoxBanner -Value $PictureBoxBanner -MemberType NoteProperty
 Add-Member -InputObject $FormTuningPack -Name LinkLabelDisclaimer -Value $LinkLabelDisclaimer -MemberType NoteProperty
