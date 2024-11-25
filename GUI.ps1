@@ -20,10 +20,9 @@ if ($Language -eq "de-DE"){
 }
 if ($SupportClick -ne "NO"){
     explorer "https://youtu.be/ftVBV-XmAP4"
-    explorer "https://amzn.to/3dX3I7x"
     explorer "https://youtu.be/hRr6sEoUUd0"
     explorer "https://paypal.me/minerswin"
-    explorer "https://selfmade-videos.de/watch/windows-10-schneller-machen-in-5-minuten-mehr-fps-in-allen-spielen-tgf-tuning-pack-4-3_cqkPWWlBtJOQbKy.html"
+    explorer "https://tgf.video"
 }
 
 ####################################################################################################################################################
@@ -164,7 +163,7 @@ Tutorials: youtube.com/thegeekfreaks
 Spenden: https://paypal.me/minerswin
 " -ForegroundColor Green
 $LabelTitle.Text = "TGF Tuning Pack 4.3"
-Write-Host "Windoof $($WinVersion)"
+Write-Host "Windows $($WinVersion)"
 WriteLog "Windows Version: $($WinVersion)"
 WriteLog "User: $($env:username)"
 WriteLog "Hostname: $($env:COMPUTERNAME)"
@@ -178,7 +177,7 @@ WriteLog ".Net Framework: $((Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\NET Fram
 WriteLog "Verbindung zum Server: $($Internet)"
 
 function Test-InternetConnection {
-    while (!(test-connection 37.120.179.48 -Count 1 -Quiet)) {
+    while (!(test-connection 1.1.1.1 -Count 1 -Quiet)) {
     $Verbindungbesteht = $true
     break
     }
